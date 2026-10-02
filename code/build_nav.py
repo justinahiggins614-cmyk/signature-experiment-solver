@@ -21,7 +21,7 @@ SITES = [
     ("signature-comics", "Comic Store", ""),
     ("signature-newspapers", "Global Newspaper Archive", ""),
     ("signature-3d-print", "3D Print Depository", ""),
-    ("signature-backend", "Signature Backend", ""),
+    ("signature-backend", "Mad Scientist Lab", ""),
     ("signature-boundless-generators", "Boundless Generator Archive", ""),
     ("signature-ai-mixlab", "AI Mix Lab", ""),
     ("signature-ai-olypics", "AI Olypics", ""),
