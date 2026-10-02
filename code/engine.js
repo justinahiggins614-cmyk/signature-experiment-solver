@@ -32,8 +32,7 @@
     };
   }
   function pick(rng, arr) { return arr[Math.floor(rng() * arr.length)]; }
-  function fmt(v, unit) {
-    var s;
+  function fmt(v, unit) {    var s;
     if (Math.abs(v) >= 1000) s = v.toFixed(0);
     else if (Math.abs(v) >= 100) s = v.toFixed(1);
     else if (Math.abs(v) >= 10) s = v.toFixed(2);
@@ -45,6 +44,8 @@
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
+
+  function pad6(n) { var s = String(n); while (s.length < 6) s = "0" + s; return s; }
 
   /* ---------------- types ---------------- */
   var TYPES_ARR = null, TYPES_MAP = null;
@@ -62,12 +63,18 @@
     TYPES_ARR = arr || [];
     TYPES_MAP = {};
     for (var i = 0; i < TYPES_ARR.length; i++) TYPES_MAP[TYPES_ARR[i].key] = TYPES_ARR[i];
-    // hidden universal design type
+    // hidden universal design type — carries a real generic model so EVERY
+    // input gets an actual matrix run, never a dead-end blueprint.
     TYPES_MAP["universal-design"] = {
-      key: "universal-design", name: "Universal Experiment Designer",
-      discipline: "All Sciences", blurb: "Turns any question into a full experimental plan.",
-      keywords: [], model: "design", params: [],
-      subject: "your test subject", apparatus: "measuring tools, notebook, safety gear", safety: null
+      key: "universal-design", name: "Universal Matrix Runner",
+      discipline: "All Sciences", blurb: "Runs any experiment as a live simulation matrix.",
+      keywords: [], model: "umatrix",
+      params: [
+        { name: "magnitude", label: "Input magnitude", unit: "units", default: 100,
+          extract: ["(\\d+(?:\\.\\d+)?)\\s*(?:mph|m\\/s|km\\/h|m|kg|g|ml|l|c|°c|degrees|v|w)?"],
+          min: 0.001, max: 1000000000 }
+      ],
+      subject: "your test system", apparatus: "measuring tools, notebook, safety gear", safety: null
     };
     return TYPES_MAP;
   }
@@ -200,8 +207,140 @@
         keyStat: "largest group " + rows.slice().sort(function (a, b) { return b[1] - a[1]; })[0][0] +
           " with " + rows.slice().sort(function (a, b) { return b[1] - a[1]; })[0][1] + " of " + n, chart: "bar" };
     },
-    "design": function () { return null; }
+    "design": function () { return null; },
+    /* Universal matrix: generic saturating-response model for inputs that match
+       no domain model. x sweeps the extracted input magnitude; the response rises
+       steeply then levels off. Clearly labeled as illustrative — never a prediction. */
+    "umatrix": function (p, rng, T) {
+      var x0 = p.magnitude != null ? p.magnitude : 100;
+      var unit = p._unit || "units";
+      var A = 100, k = 1.4 / x0, rows = [], n = 5;
+      for (var i = 0; i < n; i++) {
+        var x = x0 * (0.5 + 0.25 * i);
+        var y = A * (1 - Math.exp(-k * x));
+        rows.push([+x.toFixed(2), +y.toFixed(2)]);
+      }
+      return {
+        columns: ["Input magnitude (" + unit + ")", "Response (model units)"],
+        rows: rows, dir: 1, dep: "system response", depUnit: "units",
+        trend: "rises steeply at first, then levels off (saturating response)",
+        keyStat: "response " + fmt(A * (1 - Math.exp(-k * x0)), "units") +
+          " at the stated input of " + fmt(x0, unit) +
+          " — generic model; treat as illustration, not prediction",
+        chart: "line", generic: true
+      };
+    }
   };
+
+  /* ---------------- universal matrix ----------------
+     Every run — matched type or not — becomes a visible parameters × trials
+     matrix: the model's own settings sweep × 3 seeded trials each with small
+     measurement jitter. Findings and conclusion are derived from the matrix. */
+  var DANGER_RES = [
+    /uranium/i, /plutonium/i, /nuclear/i, /\bbomb\b/i, /explosive/i, /gunpowder/i,
+    /\btnt\b/i, /nitroglycerin/i, /dynamite/i, /cyanide/i, /anthrax/i,
+    /bleach.*ammonia|ammonia.*bleach/i, /chlorine gas/i, /mustard gas/i,
+    /suicide/i, /kill (myself|him|her|them|people)/i, /bioweapon/i
+  ];
+  function dangerNote(query) {
+    var q = String(query || "");
+    for (var i = 0; i < DANGER_RES.length; i++) {
+      if (DANGER_RES[i].test(q)) {
+        return "⚠ DO NOT ATTEMPT THIS EXPERIMENT. It involves materials or conditions " +
+          "that are dangerous or illegal to handle outside a licensed facility. " +
+          "What you see here is a PURE COMPUTER SIMULATION for illustration only — " +
+          "no real uranium, explosives, or hazardous materials were used, and none should be.";
+      }
+    }
+    return null;
+  }
+  var UNIT_WORDS = ["mph", "m/s", "km/h", "km", "m", "cm", "mm", "kg", "g", "mg",
+    "ml", "l", "°c", "c", "v", "w", "hz", "s", "min", "hours"];
+  function detectUnit(query) {
+    var m = String(query || "").toLowerCase().match(/(\d+(?:\.\d+)?)\s*(mph|m\/s|km\/h|km|cm|mm|kg|mg|ml|°c|hz|min|hours|v|w)\b/);
+    if (m) return m[2] === "c" ? "°C" : m[2];
+    return null;
+  }
+  function extractParams(T, low) {
+    var params = {}, phit = 0;
+    (T.params || []).forEach(function (p) {
+      var v = p.default;
+      for (var e = 0; e < p.extract.length; e++) {
+        var m = low.match(new RegExp(p.extract[e], "i"));
+        if (m) { v = parseFloat(m[1]); phit += 2; break; }
+      }
+      params[p.name] = v;
+    });
+    return { params: params, phit: phit };
+  }
+  /* Build the trials matrix from a model's own sweep table. Deterministic. */
+  function buildMatrix(T, params, rng, query) {
+    var meas = MODELS[T.model](params, rng, T);
+    var rows = [], i, j;
+    for (i = 0; i < meas.rows.length; i++) {
+      var x = meas.rows[i][0], y = meas.rows[i][1], trials = [];
+      for (j = 0; j < 3; j++) {
+        var jit = 1 + (rng() * 2 - 1) * 0.015;
+        var t = y * jit;
+        if (meas.chart === "bar") t = Math.max(0, Math.round(t));
+        else t = +t.toFixed(3);
+        trials.push(t);
+      }
+      var mean = trials[0] + trials[1] + trials[2];
+      mean = meas.chart === "bar" ? Math.round(mean / 3) : +(mean / 3).toFixed(3);
+      rows.push({ setting: x, trials: trials, mean: mean });
+    }
+    return { meas: meas, rows: rows, nTrials: 3,
+      dep: meas.dep, depUnit: meas.depUnit, generic: !!meas.generic };
+  }
+  var MODEL_INSIGHT = {
+    "gravity-drop": "Doubling the drop height does NOT double the fall time — the square-root law keeps returns diminishing.",
+    "projectile": "The 45° launch angle wins in a vacuum; air drag would pull the real optimum a few degrees lower.",
+    "pendulum": "The period depends on length, not on the mass of the bob — a classic, testable prediction.",
+    "hooke": "Stretch stays proportional to load only inside the elastic limit; past it, the spring deforms permanently.",
+    "cooling": "The fastest temperature change happens in the first minutes — early readings matter most.",
+    "exponential-decay": "After about 7 half-lives, less than 1% remains — the tail is long but thin.",
+    "titration": "Most of the pH action happens within a few mL of the equivalence point — titrate slowly there.",
+    "rate-temp": "A 10 °C rise roughly halves the reaction time — the Q10 rule of thumb in action.",
+    "osmosis": "The isotonic point (near-zero mass change) is the single most informative reading.",
+    "circuit": "Current tracks voltage linearly here — the signature of an ohmic resistor.",
+    "optics": "As the object moves far away, the image settles at the focal length.",
+    "linear": "The steady slope is the model's whole story — check whether real data bends away from the line.",
+    "survey": "The seeded split is illustrative; a real survey's uncertainty shrinks with the square root of sample size.",
+    "umatrix": "No domain model matched this description, so the Universal Matrix used its generic saturating-response model — every number illustrates the method, not a prediction."
+  };
+  function buildFindings(T, matrix, rng, danger) {
+    var F = [], rows = matrix.rows, dep = matrix.dep, unit = matrix.depUnit;
+    var means = rows.map(function (r) { return r.mean; });
+    var imax = 0, imin = 0, i;
+    for (i = 1; i < means.length; i++) {
+      if (means[i] > means[imax]) imax = i;
+      if (means[i] < means[imin]) imin = i;
+    }
+    var spread = 0;
+    rows.forEach(function (r) {
+      var lo = Math.min(r.trials[0], r.trials[1], r.trials[2]);
+      var hi = Math.max(r.trials[0], r.trials[1], r.trials[2]);
+      var m = r.mean || 1;
+      spread = Math.max(spread, (hi - lo) / Math.abs(m));
+    });
+    spread = +(spread * 100).toFixed(1);
+    if (danger) F.push("SAFETY FIRST: " + danger);
+    F.push("Across " + rows.length + " matrix settings, " + dep + " " + matrix.meas.trend +
+      " — from " + fmt(rows[0].mean, unit) + " at the low setting to " +
+      fmt(rows[rows.length - 1].mean, unit) + " at the high setting.");
+    F.push("Strongest response at setting " + fmt(rows[imax].setting) +
+      ": " + fmt(rows[imax].mean, unit) + ". Weakest at " + fmt(rows[imin].setting) +
+      ": " + fmt(rows[imin].mean, unit) + ".");
+    F.push("Repeatability: the three trials at each setting agreed within ±" + spread +
+      "% — " + (spread < 3 ? "high consistency; the model signal dominates the noise." :
+        spread < 8 ? "good consistency; readings are stable." :
+        "moderate scatter; more trials would tighten the means."));
+    var insight = MODEL_INSIGHT[T.model] || MODEL_INSIGHT["linear"];
+    F.push(insight);
+    F.push("Key number: " + matrix.meas.keyStat + ".");
+    return F;
+  }
 
   /* ---------------- text builders ---------------- */
   var CTRL_BANK = ["room temperature", "humidity", "the same batch of materials",
@@ -221,20 +360,33 @@
 
   function buildRecord(T, seed, params, query, customId) {
     var rng = mulberry32(fnv1a(T.key + ":" + seed + ":" + JSON.stringify(params)));
-    var id = customId || ("JAH-EXP-" + String(seed).padStart(6, "0"));
+    var id = customId || ("JAH-EXP-" + pad6(seed));
     var pk = T.params[0] || null;
     var pl = pk ? pk.label : "test condition";
-    var pval = pk ? fmt(params[pk.name], pk.unit) : "";
-    var meas = T.model === "design" ? null : MODELS[T.model](params, rng, T);
-    var dep = meas ? meas.dep : "the measured outcome";
-    var trend = meas ? meas.trend : "follow the planned analysis";
+    var unit = (pk && pk.unit) ? pk.unit : (params._unit || "");
+    var pval = pk ? fmt(params[pk.name], unit) : "";
+    var danger = dangerNote(query);
+    var matrix = buildMatrix(T, params, rng, query);
+    var meas = matrix.meas;
+    var dep = meas.dep;
+    var trend = meas.trend;
     var tw = trendWord(meas);
 
-    var title = T.name + " — " + T.subject + (pk ? " at " + pval : "");
-    var question = "How does " + pl.toLowerCase() + " affect " + dep + " for " + T.subject + "?";
-    var hypothesis = pick(rng, HYP).replace("{pl}", pl).replace("{dep}", dep)
-      .replace("{trendword}", tw).replace("{n}", meas ? meas.rows.length : 6)
-      .replace("{modelname}", T.model);
+    var title, question, hypothesis;
+    if (T.key === "universal-design") {
+      var qs = String(query || "custom experiment");
+      title = "Universal Matrix Run — " + (qs.length > 64 ? qs.slice(0, 64) + "…" : qs);
+      question = "What happens when: " + qs + "?";
+      hypothesis = "The Universal Matrix sweeps the stated input magnitude across five " +
+        "levels and three trials each. Expect the system response to rise steeply at " +
+        "first and then level off (saturating response) — " + meas.keyStat + ".";
+    } else {
+      title = T.name + " — " + T.subject + (pk ? " at " + pval : "");
+      question = "How does " + pl.toLowerCase() + " affect " + dep + " for " + T.subject + "?";
+      hypothesis = pick(rng, HYP).replace("{pl}", pl).replace("{dep}", dep)
+        .replace("{trendword}", tw).replace("{n}", meas.rows.length)
+        .replace("{modelname}", T.model);
+    }
 
     var ctrls = [];
     var cb = CTRL_BANK.slice();
@@ -242,32 +394,36 @@
 
     var materials = [];
     T.apparatus.split(",").forEach(function (a) { materials.push(a.trim()); });
-    materials.push(T.subject, "lab notebook and pen", "safety goggles");
-    if (T.safety) materials.push("gloves (see safety notes)");
+    materials.push(T.key === "universal-design" ? "the system under test" : T.subject,
+      "lab notebook and pen", "safety goggles");
+    if (danger || T.safety) materials.push("gloves (see safety notes)");
 
+    var subjWord = T.key === "universal-design" ? "test system" : T.subject;
     var steps = [
-      "Gather everything: " + T.apparatus + ", plus " + T.subject + ", safety gear, and a lab notebook.",
-      pk ? "Set " + pl.toLowerCase() + " to the starting value of " + pval + "." : "Define the starting condition and record it.",
-      "Prepare the " + T.subject + " and zero every measuring instrument.",
-      "Run trial 1 and record " + dep + " carefully in the data table.",
-      "Repeat for at least 3 trials at this setting; keep " + ctrls.join(", ") + " constant.",
-      pk ? "Change " + pl.toLowerCase() + " to the next value and repeat all trials." : "Change one condition at a time and repeat all trials.",
-      "Average the repeats, tabulate " + dep + " against the changing condition, and plot the trend.",
-      "Compare the pattern with the model prediction, then write the conclusion below."
+      "⚗ MATRIX SETUP — lock the chamber: " + T.apparatus + ", plus " + subjWord + ", safety gear, and a lab notebook.",
+      pk ? "Dial " + pl.toLowerCase() + " to the base value of " + pval + " — the matrix sweeps five levels around it." : "Define the starting condition and record it.",
+      "Calibrate: zero every instrument, then run 3 back-to-back trials at each of the 5 matrix settings (" + matrix.rows.length * 3 + " readings total).",
+      "Log every trial reading into the matrix grid below — no cherry-picking.",
+      "Average the 3 trials per setting; keep " + ctrls.join(", ") + " constant throughout.",
+      "Read the findings list: trend, strongest setting, repeatability, key number.",
+      "Write the conclusion from the findings — the matrix decides, not the hypothesis."
     ];
 
-    var results, conclusion;
-    if (meas) {
-      var first = meas.rows[0], last = meas.rows[meas.rows.length - 1];
-      results = "Across " + meas.rows.length + " settings, " + dep + " " + trend + " — from " +
-        fmt(first[1], meas.depUnit) + " at the low end to " + fmt(last[1], meas.depUnit) +
-        " at the high end. Key finding: " + meas.keyStat + ".";
+    var findings = buildFindings(T, matrix, rng, danger);
+    var results = "The matrix ran " + matrix.rows.length + " settings × " +
+      matrix.nTrials + " trials (" + (matrix.rows.length * matrix.nTrials) +
+      " readings). " + findings[1];
+    var conclusion;
+    if (matrix.generic) {
+      conclusion = "The Universal Matrix completed a full run: " + dep + " " +
+        trendWord(trend) + "d across the sweep, " + meas.keyStat.charAt(0).toLowerCase() +
+        meas.keyStat.slice(1) + ". Because no domain model matched this description, " +
+        "these are illustrative numbers from the generic saturating-response model — " +
+        "a demonstration of method, not a prediction about the real world.";
+    } else {
       conclusion = "The hypothesis was supported: " + dep + " " + trendWord(trend) + "d as " +
         pl.toLowerCase() + " increased. " + meas.keyStat.charAt(0).toUpperCase() + meas.keyStat.slice(1) +
         ". These are solver-computed values from the " + T.model + " model — illustrative, not lab-measured.";
-    } else {
-      results = "This is a design blueprint: run the procedure, fill the data table with your own measurements, and the pattern will emerge from real data.";
-      conclusion = "Once run, compare the measured trend against the hypothesis and note any controlled variables that drifted.";
     }
 
     return {
@@ -275,19 +431,25 @@
       title: title, query: query || title, seed: seed, params: params,
       question: question, hypothesis: hypothesis,
       variables: {
-        independent: pl + (pk && pk.unit ? " (" + pk.unit + ")" : ""),
-        dependent: dep + (meas && meas.depUnit ? " (" + meas.depUnit + ")" : ""),
+        independent: pl + (unit ? " (" + unit + ")" : ""),
+        dependent: dep + (meas.depUnit ? " (" + meas.depUnit + ")" : ""),
         controlled: ctrls
       },
       materials: materials, procedure: steps,
-      measurements: meas ? {
+      measurements: {
         columns: meas.columns, rows: meas.rows, chart: meas.chart,
         note: SIM_LABEL
-      } : null,
+      },
+      matrix: {
+        columns: [meas.columns[0], "Trial 1", "Trial 2", "Trial 3", "Mean " + (meas.depUnit ? "(" + meas.depUnit + ")" : "")],
+        rows: matrix.rows.map(function (r) { return [r.setting].concat(r.trials, [r.mean]); }),
+        nTrials: matrix.nTrials, generic: matrix.generic
+      },
+      findings: findings,
       results: results, conclusion: conclusion,
-      safety: T.safety || "Standard lab care: goggles on, tidy bench, clean spills promptly, adult supervision for young scientists.",
-      sim: T.model !== "design",
-      simLabel: SIM_LABEL
+      safety: danger || T.safety || "Standard lab care: goggles on, tidy bench, clean spills promptly, adult supervision for young scientists.",
+      sim: true,
+      simLabel: (matrix.generic ? "UNIVERSAL MATRIX — " : "") + SIM_LABEL
     };
   }
 
@@ -308,36 +470,26 @@
   function solveText(text) {
     loadTypes();
     var low = String(text).toLowerCase();
-    var best = null, bestScore = 0, bestParams = null;
-    for (var i = 0; i < TYPES_ARR.length; i++) {
+    var best = null, bestScore = 0, i, k;
+    for (i = 0; i < TYPES_ARR.length; i++) {
       var T = TYPES_ARR[i], score = 0;
-      for (var k = 0; k < T.keywords.length; k++) {
+      for (k = 0; k < T.keywords.length; k++) {
         var kw = T.keywords[k].toLowerCase();
         if (kw.indexOf(" ") >= 0) { if (low.indexOf(kw) >= 0) score += 3; }
         else if (new RegExp("\\b" + kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b").test(low)) score += 2;
       }
-      var params = {}, phit = 0;
-      T.params.forEach(function (p) {
-        var v = p.default;
-        for (var e = 0; e < p.extract.length; e++) {
-          var m = low.match(new RegExp(p.extract[e], "i"));
-          if (m) { v = parseFloat(m[1]); phit += 2; break; }
-        }
-        params[p.name] = v;
-      });
-      score += phit;
-      if (score > bestScore) { bestScore = score; best = T; bestParams = params; }
+      score += extractParams(T, low).phit;
+      if (score > bestScore) { bestScore = score; best = T; }
     }
     var seed = fnv1a("q:" + low) % 1000000;
-    if (!best || bestScore < 3) {
-      var U = TYPES_MAP["universal-design"];
-      var rec = buildRecord(U, seed, {}, text, "JAH-EXP-C" + (100000 + (seed % 899999)));
-      rec.matchedType = null;
-      return rec;
-    }
-    var rec2 = buildRecord(best, seed, bestParams, text, "JAH-EXP-C" + (100000 + (seed % 899999)));
-    rec2.matchedType = best.key;
-    return rec2;
+    var chosen = (best && bestScore >= 3) ? best : TYPES_MAP["universal-design"];
+    var ep = extractParams(chosen, low);
+    var unit = detectUnit(text);
+    if (unit) ep.params._unit = unit;
+    var rec = buildRecord(chosen, seed, ep.params, text,
+      "JAH-EXP-C" + (100000 + (seed % 899999)));
+    rec.matchedType = (chosen === best) ? best.key : null;
+    return rec;
   }
 
   function titleFor(typeKey, seed) {

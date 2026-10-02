@@ -117,11 +117,32 @@ footer.site a{color:#8fd0ff}
 .method{font-size:.92em;color:#3c4568}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:10002}
+/* mad-scientist laboratory theme for the run */
+.lab{background:linear-gradient(180deg,#141126,#1e1a38);color:#e9e5ff;border:2px solid #7CFC00;
+border-radius:14px;padding:18px;margin:8px 0;box-shadow:0 0 26px rgba(124,252,0,.14)}
+.lab h3{color:#7CFC00;font-family:Arial,Helvetica,sans-serif;margin:0 0 2px;font-size:1.25em;letter-spacing:.03em}
+.lab .labsub{font-family:Arial,Helvetica,sans-serif;font-size:.82em;color:#b9b3e6;margin:0 0 8px}
+.lab .steps{display:flex;gap:8px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:.76em;margin:10px 0 4px}
+.lab .step{background:#0c0a1c;border:1px solid #3a3560;color:#b9b3e6;padding:6px 12px;border-radius:20px}
+.lab .step.done{border-color:#7CFC00;color:#7CFC00;font-weight:bold}
+table.mx{border-collapse:collapse;width:100%;font-family:'Courier New',Courier,monospace;font-size:.86em;margin:10px 0}
+table.mx th,table.mx td{border:1px solid #3a3560;padding:7px 10px;text-align:right;color:#e9e5ff}
+table.mx th{background:#241f45;color:#7CFC00}
+table.mx td:first-child,table.mx th:first-child{text-align:left;color:#ffd970}
+table.mx tr:nth-child(even) td{background:rgba(124,252,0,.05)}
+.lab .simnote2{background:#0c0a1c;border:1px dashed #7CFC00;color:#c9f5a8;font-family:Arial,Helvetica,sans-serif;
+font-size:.8em;padding:9px 13px;border-radius:8px;margin:10px 0}
+ol.findings{font-family:Arial,Helvetica,sans-serif;margin:8px 0;padding-left:24px}
+ol.findings li{margin:9px 0;line-height:1.5}
+ol.findings li::marker{color:#7CFC00;font-weight:bold}
+.labconcl{background:#0c0a1c;border-left:4px solid #7CFC00;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.labconcl h4{font-family:Arial,Helvetica,sans-serif;color:#7CFC00;margin:0 0 6px}
+.labconcl p{margin:0}
 </style>
 </head>
 <body>
 <a class="skip" href="#solver">Skip to the solver</a>
-<nav class="jahnet" aria-label="The JAH Network"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Video Maker AI</a></nav>
+<nav class="jahnet" aria-label="The JAH Network"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Signature Music Studio</a></nav>
 <div class="wrap">
 <header class="hero">
 <div class="wrap">
@@ -136,9 +157,6 @@ footer.site a{color:#8fd0ff}
 </div>
 <!--STATIC-COUNT-->
 <p class="staticcount">2,925 solved experiment records and counting — marching to 1,000,000.</p>
-<p class="staticcount">1,925 solved experiment records and counting — marching to 1,000,000.</p>
-<p class="staticcount">1,920 solved experiment records and counting — marching to 1,000,000.</p>
-<p class="staticcount">1,920 solved experiment records and counting — marching to 1,000,000.</p>
 </div>
 </header>
 
@@ -195,7 +213,7 @@ footer.site a{color:#8fd0ff}
 
 <footer class="site">
 <div class="wrap">
-<nav class="jahnet" aria-label="The JAH Network"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Video Maker AI</a></nav>
+<nav class="jahnet" aria-label="The JAH Network"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Signature Music Studio</a></nav>
 <p>Part of <b>THE JAH NETWORK</b> — 24 free Signature websites. The Signature Experiment Solver · marching to 1,000,000 solved experiments.</p>
 <p style="color:#7c88b8">All experiment records are original solver-generated works. Numeric tables are labeled simulations for illustration, not measured data.</p>
 </div>
@@ -221,35 +239,45 @@ function E2(s){return ExpEngine.esc(s);}
 function renderRecord(rec){
   curRec=rec;
   var box=document.getElementById("result");box.style.display="block";
-  var m=rec.measurements, h="";
+  var m=rec.measurements, mx=rec.matrix, h="";
   h+='<div class="exphead"><h3>'+E2(rec.title)+'</h3>'
     +'<span class="pill id">'+E2(rec.id)+'</span>'
     +'<span class="pill">'+E2(rec.discipline)+'</span>'
     +'<span class="pill">'+E2(rec.typeName)+'</span></div>';
   if(rec.query&&rec.query!==rec.title)h+='<p style="font-family:Arial;color:var(--muted)">Request: &ldquo;'+E2(rec.query)+'&rdquo;</p>';
-  h+='<div class="simnote">⚗ '+E2(rec.simLabel)+'</div>';
+  /* ---- mad-scientist universal matrix panel ---- */
+  h+='<div class="lab" role="region" aria-label="Universal matrix run">'
+    +'<h3>⚗&#xFE0E; THE UNIVERSAL MATRIX — LIVE RUN</h3>'
+    +'<p class="labsub">The chamber is sealed. Every setting below was actually simulated — no blanks, no blueprints.</p>'
+    +'<div class="steps"><span class="step done">⚙&#xFE0E; Setup ✓</span>'
+    +'<span class="step done">🧪 Trials ×3 ✓</span>'
+    +'<span class="step done">📋 Findings ✓</span>'
+    +'<span class="step done">✅ Concluded ✓</span></div>'
+    +'<div class="simnote2">🔬 '+E2(rec.simLabel)+'</div>';
+  if(mx){
+    h+='<div style="overflow-x:auto"><table class="mx" aria-label="Simulation matrix: settings by trials"><tr>'
+      +mx.columns.map(function(c){return "<th>"+E2(c)+"</th>";}).join("")+'</tr>'
+      +mx.rows.map(function(r){return "<tr>"+r.map(function(c){return "<td>"+E2(c)+"</td>";}).join("")+'</tr>';}).join("")
+      +'</table></div>';
+  }
+  if(rec.findings&&rec.findings.length){
+    h+='<h4 style="font-family:Arial;color:#7CFC00;margin:14px 0 4px">🧪 ALL FINDINGS</h4>'
+      +'<ol class="findings">'+rec.findings.map(function(f){return "<li>"+E2(f)+"</li>";}).join("")+'</ol>';
+  }
+  h+='<div class="labconcl"><h4>✅ CONCLUSION</h4><p>'+E2(rec.conclusion)+'</p></div></div>';
+  /* ---- experiment detail grid ---- */
   h+='<div class="expgrid"><div><h4>❓ Question</h4><p>'+E2(rec.question)+'</p>'
     +'<h4>🔬 Hypothesis</h4><p>'+E2(rec.hypothesis)+'</p>'
     +'<h4>🎛 Variables</h4><ul><li><b>Independent:</b> '+E2(rec.variables.independent)+'</li>'
     +'<li><b>Dependent:</b> '+E2(rec.variables.dependent)+'</li>'
     +'<li><b>Controlled:</b> '+E2(rec.variables.controlled.join("; "))+'</li></ul>'
     +'<h4>🧰 Materials</h4><ul>'+rec.materials.map(function(x){return "<li>"+E2(x)+"</li>";}).join("")+'</ul></div>'
-    +'<div><h4>📋 Procedure</h4><ol>'+rec.procedure.map(function(x){return "<li>"+E2(x)+"</li>";}).join("")+'</ol>'
-    +'<h4>📊 Measurements</h4>';
+    +'<div><h4>📋 Procedure</h4><ol>'+rec.procedure.map(function(x){return "<li>"+E2(x)+"</li>";}).join("")+'</ol>';
   if(m){
-    h+='<div style="overflow-x:auto"><table class="data"><tr>'+m.columns.map(function(c){return "<th>"+E2(c)+"</th>";}).join("")+'</tr>'
-      +m.rows.map(function(r){return "<tr>"+r.map(function(c){return "<td>"+E2(c)+"</td>";}).join("")+'</tr>';}).join("")+'</table></div>'
-      +'<canvas class="chart" id="expchart" width="640" height="300" aria-label="Chart of measurements"></canvas>'
+    h+='<h4>📊 Chart</h4><canvas class="chart" id="expchart" width="640" height="300" aria-label="Chart of measurements"></canvas>'
       +'<p style="font-family:Arial;font-size:.8em;color:var(--muted)">'+E2(m.note)+'</p>';
-  }else{
-    h+='<p>Design blueprint — run it yourself and fill this table with your own measurements.</p>'
-      +'<div style="overflow-x:auto"><table class="data"><tr><th>Trial</th><th>Condition</th><th>Reading 1</th><th>Reading 2</th><th>Reading 3</th><th>Average</th></tr>'
-      +'<tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>'
-      +'<tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>'
-      +'<tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr></table></div>';
   }
-  h+='<h4>📈 Results</h4><p>'+E2(rec.results)+'</p>'
-    +'<h4>✅ Conclusion</h4><p>'+E2(rec.conclusion)+'</p></div></div>';
+  h+='<h4>📈 Results</h4><p>'+E2(rec.results)+'</p></div></div>';
   h+='<div class="safetybox"><h4>⚠ Safety</h4><p>'+E2(rec.safety)+'</p></div>';
   h+='<div class="toolbar">'
     +'<button class="btn ghost small" id="btnread">🔊 Read aloud</button>'
@@ -278,6 +306,11 @@ function recordText(rec){
   if(rec.measurements){L.push("","MEASUREMENTS ("+rec.simLabel+"):");
     L.push(rec.measurements.columns.join(" | "));
     rec.measurements.rows.forEach(function(r){L.push(r.join(" | "));});}
+  if(rec.matrix){L.push("","UNIVERSAL MATRIX (settings × 3 trials):");
+    L.push(rec.matrix.columns.join(" | "));
+    rec.matrix.rows.forEach(function(r){L.push(r.join(" | "));});}
+  if(rec.findings&&rec.findings.length){L.push("","ALL FINDINGS:");
+    rec.findings.forEach(function(f,i){L.push((i+1)+". "+f);});}
   L.push("","RESULTS: "+rec.results,"","CONCLUSION: "+rec.conclusion,"","SAFETY: "+rec.safety);
   return L.join("\n");
 }
@@ -366,7 +399,10 @@ function audMsg(m){var t=document.getElementById("audmsg");if(!t){t=document.cre
 function readRecord(rec){
   auStop();
   var txt=rec.title+". Question: "+rec.question+" Hypothesis: "+rec.hypothesis
-    +" Procedure: "+rec.procedure.join(" ")+" Results: "+rec.results+" Conclusion: "+rec.conclusion;
+    +" Procedure: "+rec.procedure.join(" ")
+    +(rec.findings&&rec.findings.length?(" All findings: "+rec.findings.join(" ")):"")
+    +" Results: "+rec.results+" Conclusion: "+rec.conclusion
+    +" Safety: "+rec.safety;
   AU.q=auChunks(txt);AU.i=0;AU.active=true;AU.paused=false;AU.label=rec.id;
   if(hasSpeech())auSpeakNext();else auTier2();
 }
@@ -393,6 +429,8 @@ function aiAnswer(q){
   if(has("material")||has("need")||has("equipment"))return "You need: "+r.materials.map(E).join("; ")+".";
   if(has("procedure")||has("steps")||has("how do")||has("how to"))return "Procedure: "+r.procedure.map(function(s,i){return (i+1)+". "+s;}).join(" ");
   if(has("result")||has("found")||has("outcome")||has("data"))return E(r.results)+" "+(r.measurements?E(r.measurements.note):"");
+  if(has("finding"))return r.findings&&r.findings.length?("Every finding: "+r.findings.map(function(f,i){return (i+1)+". "+f;}).join(" ")):"No findings listed.";
+  if(has("matrix")||has("trial")||has("setting"))return r.matrix?("The Universal Matrix ran "+r.matrix.rows.length+" settings × 3 trials ("+(r.matrix.rows.length*3)+" readings). Means ran from "+r.matrix.rows[0][4]+" to "+r.matrix.rows[r.matrix.rows.length-1][4]+"."):"No matrix on this record.";
   if(has("conclu"))return E(r.conclusion);
   if(has("safe")||has("danger")||has("hazard"))return "Safety: "+E(r.safety);
   if(has("chart")||has("graph")||has("plot"))return r.measurements?("The chart plots "+E(r.measurements.columns[1])+" against "+E(r.measurements.columns[0])+" across "+r.measurements.rows.length+" settings."):("This is a design blueprint — the chart appears once you run it and fill the table.");
