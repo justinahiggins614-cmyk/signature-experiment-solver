@@ -1,0 +1,7175 @@
+[
+ {
+  "key": "free-fall",
+  "name": "Free-Fall Gravity Drop",
+  "discipline": "Physics",
+  "blurb": "Drop objects from measured heights and time their fall.",
+  "keywords": [
+   "drop",
+   "fall",
+   "gravity",
+   "free fall",
+   "freefall",
+   "height",
+   "drop a ball",
+   "falling"
+  ],
+  "model": "gravity-drop",
+  "params": [
+   {
+    "name": "height",
+    "label": "Drop height",
+    "unit": "m",
+    "default": 10,
+    "extract": [
+     "from (\\d+(?:\\.\\d+)?)\\s*m",
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?\\b.*(?:drop|fall|height)",
+     "height(?: of)? (\\d+(?:\\.\\d+)?)\\s*m"
+    ],
+    "min": 0.5,
+    "max": 120
+   }
+  ],
+  "subject": "steel ball",
+  "apparatus": "measuring tape, stopwatch, release clamp",
+  "safety": null
+ },
+ {
+  "key": "projectile-motion",
+  "name": "Projectile Launch Angle",
+  "discipline": "Physics",
+  "blurb": "Launch projectiles at angles and measure range.",
+  "keywords": [
+   "projectile",
+   "launch",
+   "angle",
+   "cannon",
+   "catapult",
+   "range",
+   "trajectory"
+  ],
+  "model": "projectile",
+  "params": [
+   {
+    "name": "velocity",
+    "label": "Launch speed",
+    "unit": "m/s",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m/s",
+     "speed(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 200
+   },
+   {
+    "name": "angle",
+    "label": "Launch angle",
+    "unit": "deg",
+    "default": 45,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg(?:ree)?s?",
+     "angle(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 85
+   }
+  ],
+  "subject": "foam dart",
+  "apparatus": "protractor launcher, measuring tape, level ground",
+  "safety": null
+ },
+ {
+  "key": "pendulum-period",
+  "name": "Pendulum Period vs Length",
+  "discipline": "Physics",
+  "blurb": "Swing pendulums of different lengths and time the period.",
+  "keywords": [
+   "pendulum",
+   "swing",
+   "period",
+   "grandfather clock",
+   "oscillat"
+  ],
+  "model": "pendulum",
+  "params": [
+   {
+    "name": "length",
+    "label": "String length",
+    "unit": "m",
+    "default": 1.0,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?",
+     "length(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.1,
+    "max": 5
+   }
+  ],
+  "subject": "brass bob",
+  "apparatus": "string, support stand, stopwatch, protractor",
+  "safety": null
+ },
+ {
+  "key": "hookes-law",
+  "name": "Hooke's Law Spring Stretch",
+  "discipline": "Physics",
+  "blurb": "Hang masses on springs and measure stretch.",
+  "keywords": [
+   "spring",
+   "hooke",
+   "stretch",
+   "elastic",
+   "k constant"
+  ],
+  "model": "hooke",
+  "params": [
+   {
+    "name": "k",
+    "label": "Spring constant",
+    "unit": "N/m",
+    "default": 50,
+    "extract": [
+     "k\\s*=\\s*(\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?)\\s*N/m"
+    ],
+    "min": 5,
+    "max": 500
+   }
+  ],
+  "subject": "coil spring",
+  "apparatus": "slotted masses, ruler, retort stand",
+  "safety": null
+ },
+ {
+  "key": "friction-slide",
+  "name": "Friction Slide Distance",
+  "discipline": "Physics",
+  "blurb": "Slide blocks across surfaces and measure stopping distance.",
+  "keywords": [
+   "friction",
+   "slide",
+   "sliding",
+   "rough",
+   "smooth",
+   "skid"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mu",
+    "label": "Friction coefficient",
+    "unit": "",
+    "default": 0.4,
+    "extract": [
+     "(?:mu|\u03bc|coefficient)(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.05,
+    "max": 1.2
+   }
+  ],
+  "subject": "wooden block",
+  "apparatus": "ramps of varied texture, stopwatch, tape",
+  "safety": null
+ },
+ {
+  "key": "inclined-plane",
+  "name": "Inclined Plane Acceleration",
+  "discipline": "Physics",
+  "blurb": "Roll carts down ramps of measured angles.",
+  "keywords": [
+   "inclin",
+   "ramp",
+   "slope",
+   "cart",
+   "roll down"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "angle",
+    "label": "Ramp angle",
+    "unit": "deg",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg",
+     "angle(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "dynamics cart",
+  "apparatus": "inclined track, motion timer",
+  "safety": null
+ },
+ {
+  "key": "buoyancy",
+  "name": "Buoyancy Displacement",
+  "discipline": "Physics",
+  "blurb": "Submerge objects and measure displaced water weight.",
+  "keywords": [
+   "buoyan",
+   "float",
+   "sink",
+   "displace",
+   "archimedes"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "volume",
+    "label": "Object volume",
+    "unit": "L",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*L(?:iter)?s?",
+     "volume(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.1,
+    "max": 50
+   }
+  ],
+  "subject": "metal block",
+  "apparatus": "overflow can, graduated cylinder, scale",
+  "safety": null
+ },
+ {
+  "key": "ohms-law",
+  "name": "Ohm's Law Circuit",
+  "discipline": "Physics",
+  "blurb": "Vary voltage across resistors and measure current.",
+  "keywords": [
+   "ohm",
+   "resistor",
+   "circuit",
+   "voltage",
+   "current",
+   "v=ir",
+   "ammeter"
+  ],
+  "model": "circuit",
+  "params": [
+   {
+    "name": "resistance",
+    "label": "Resistance",
+    "unit": "\u03a9",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:ohm|\u03a9)",
+     "resistance(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 10000
+   }
+  ],
+  "subject": "carbon resistor",
+  "apparatus": "DC supply, ammeter, voltmeter, breadboard",
+  "safety": "Keep voltages under 12 V. Never short the supply terminals."
+ },
+ {
+  "key": "lens-imaging",
+  "name": "Thin Lens Imaging",
+  "discipline": "Physics",
+  "blurb": "Move objects before a lens and locate the image.",
+  "keywords": [
+   "lens",
+   "focal",
+   "image",
+   "optics",
+   "magnif"
+  ],
+  "model": "optics",
+  "params": [
+   {
+    "name": "f",
+    "label": "Focal length",
+    "unit": "cm",
+    "default": 15,
+    "extract": [
+     "f\\s*=\\s*(\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "focal(?: length)?(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 50
+   }
+  ],
+  "subject": "converging lens",
+  "apparatus": "optical bench, light source, screen",
+  "safety": null
+ },
+ {
+  "key": "wave-speed",
+  "name": "Wave Speed on a String",
+  "discipline": "Physics",
+  "blurb": "Measure wave speed vs string tension.",
+  "keywords": [
+   "wave",
+   "string",
+   "tension",
+   "frequency",
+   "standing wave"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "tension",
+    "label": "Tension",
+    "unit": "N",
+    "default": 40,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*N(?:ewton)?s?",
+     "tension(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 200
+   }
+  ],
+  "subject": "elastic cord",
+  "apparatus": "pulley, hanging masses, vibrator",
+  "safety": null
+ },
+ {
+  "key": "specific-heat",
+  "name": "Specific Heat Calorimetry",
+  "discipline": "Physics",
+  "blurb": "Heat metals and measure temperature change in water.",
+  "keywords": [
+   "specific heat",
+   "calorimet",
+   "heat capacity",
+   "warming water"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Metal mass",
+    "unit": "g",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?",
+     "mass(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 1000
+   }
+  ],
+  "subject": "aluminum block",
+  "apparatus": "calorimeter, thermometer, hot plate",
+  "safety": "Hot plates and boiling water burn. Use tongs and goggles."
+ },
+ {
+  "key": "newtons-cooling",
+  "name": "Newton's Law of Cooling",
+  "discipline": "Physics",
+  "blurb": "Track a hot object's temperature as it cools.",
+  "keywords": [
+   "cooling",
+   "cool down",
+   "newton",
+   "temperature drop"
+  ],
+  "model": "cooling",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Starting temperature",
+    "unit": "\u00b0C",
+    "default": 90,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)",
+     "(?:start|from)(?:ing)?(?: at)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 40,
+    "max": 100
+   }
+  ],
+  "subject": "cup of water",
+  "apparatus": "thermometer, timer, insulated sleeve",
+  "safety": null
+ },
+ {
+  "key": "doppler",
+  "name": "Doppler Shift Sound",
+  "discipline": "Physics",
+  "blurb": "Measure pitch change of a moving sound source.",
+  "keywords": [
+   "doppler",
+   "pitch",
+   "siren",
+   "moving source",
+   "redshift"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "speed",
+    "label": "Source speed",
+    "unit": "m/s",
+    "default": 25,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m/s",
+     "speed(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 100
+   }
+  ],
+  "subject": "buzzer on cart",
+  "apparatus": "track, frequency meter app",
+  "safety": null
+ },
+ {
+  "key": "torque-lever",
+  "name": "Torque Balance Lever",
+  "discipline": "Physics",
+  "blurb": "Balance a lever with masses at measured positions.",
+  "keywords": [
+   "torque",
+   "lever",
+   "fulcrum",
+   "balance",
+   "seesaw"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "arm",
+    "label": "Effort arm length",
+    "unit": "m",
+    "default": 0.8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?",
+     "arm(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.2,
+    "max": 2
+   }
+  ],
+  "subject": "meter stick",
+  "apparatus": "fulcrum, hooked masses",
+  "safety": null
+ },
+ {
+  "key": "pulley-advantage",
+  "name": "Pulley Mechanical Advantage",
+  "discipline": "Physics",
+  "blurb": "Count rope segments and measure lifting force.",
+  "keywords": [
+   "pulley",
+   "mechanical advantage",
+   "lift",
+   "rope"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "Supporting ropes",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*ropes?",
+     "(\\d+(?:\\.\\d+)?)\\s*pulleys?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "pulley set",
+  "apparatus": "spring scale, load mass, cord",
+  "safety": null
+ },
+ {
+  "key": "resonance-tube",
+  "name": "Resonance Tube Wavelength",
+  "discipline": "Physics",
+  "blurb": "Find resonant air-column lengths for a tuning fork.",
+  "keywords": [
+   "resonan",
+   "tuning fork",
+   "sound tube",
+   "wavelength"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "freq",
+    "label": "Fork frequency",
+    "unit": "Hz",
+    "default": 512,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*Hz",
+     "frequency(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 128,
+    "max": 2048
+   }
+  ],
+  "subject": "tuning fork",
+  "apparatus": "resonance tube, water reservoir",
+  "safety": null
+ },
+ {
+  "key": "half-life",
+  "name": "Radioactive Half-Life Dice",
+  "discipline": "Physics",
+  "blurb": "Simulate decay by removing dice each round.",
+  "keywords": [
+   "half-life",
+   "half life",
+   "decay",
+   "radioactive",
+   "dice"
+  ],
+  "model": "exponential-decay",
+  "params": [
+   {
+    "name": "halflife",
+    "label": "Half-life",
+    "unit": "rounds",
+    "default": 3,
+    "extract": [
+     "half[- ]life(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 10
+   }
+  ],
+  "subject": "100 dice",
+  "apparatus": "tray, tally sheet",
+  "safety": null
+ },
+ {
+  "key": "terminal-velocity",
+  "name": "Terminal Velocity Filters",
+  "discipline": "Physics",
+  "blurb": "Drop coffee filters and time their steady fall.",
+  "keywords": [
+   "terminal velocity",
+   "air resistance",
+   "coffee filter",
+   "parachute"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "Number of filters",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*filters?"
+    ],
+    "min": 1,
+    "max": 10
+   }
+  ],
+  "subject": "coffee filters",
+  "apparatus": "stopwatch, tall drop zone",
+  "safety": null
+ },
+ {
+  "key": "bernoulli",
+  "name": "Bernoulli Lift Paper",
+  "discipline": "Physics",
+  "blurb": "Blow over paper strips and measure lift angle.",
+  "keywords": [
+   "bernoulli",
+   "lift",
+   "airplane wing",
+   "blow over"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "speed",
+    "label": "Air speed",
+    "unit": "m/s",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m/s"
+    ],
+    "min": 2,
+    "max": 30
+   }
+  ],
+  "subject": "paper strip",
+  "apparatus": "fan with speed settings, protractor",
+  "safety": null
+ },
+ {
+  "key": "solar-cell",
+  "name": "Solar Cell Angle Power",
+  "discipline": "Physics",
+  "blurb": "Tilt a solar cell to light and measure power.",
+  "keywords": [
+   "solar",
+   "photovoltaic",
+   "panel",
+   "sun angle"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "angle",
+    "label": "Tilt angle",
+    "unit": "deg",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg",
+     "angle(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0,
+    "max": 90
+   }
+  ],
+  "subject": "mini solar cell",
+  "apparatus": "lamp, multimeter, protractor",
+  "safety": "Lamp gets hot. Do not stare into bright lamps."
+ },
+ {
+  "key": "wind-turbine",
+  "name": "Wind Turbine Blade Pitch",
+  "discipline": "Physics",
+  "blurb": "Vary blade pitch and measure generator voltage.",
+  "keywords": [
+   "wind turbine",
+   "blade",
+   "turbine",
+   "windmill"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pitch",
+    "label": "Blade pitch",
+    "unit": "deg",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg",
+     "pitch(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0,
+    "max": 45
+   }
+  ],
+  "subject": "model turbine",
+  "apparatus": "fan, voltmeter, tachometer",
+  "safety": null
+ },
+ {
+  "key": "flywheel",
+  "name": "Flywheel Energy Storage",
+  "discipline": "Physics",
+  "blurb": "Spin flywheels and time the coast-down.",
+  "keywords": [
+   "flywheel",
+   "spin",
+   "energy storage",
+   "coast"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Rotor mass",
+    "unit": "kg",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*kg",
+     "mass(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.5,
+    "max": 10
+   }
+  ],
+  "subject": "steel disc",
+  "apparatus": "axle bearings, tachometer, stopwatch",
+  "safety": null
+ },
+ {
+  "key": "heat-engine",
+  "name": "Heat Engine Efficiency",
+  "discipline": "Physics",
+  "blurb": "Run a Stirling engine across temperature gaps.",
+  "keywords": [
+   "heat engine",
+   "stirling",
+   "efficiency",
+   "carnot"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "dt",
+    "label": "Temperature gap",
+    "unit": "\u00b0C",
+    "default": 60,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees?)",
+     "gap(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 150
+   }
+  ],
+  "subject": "Stirling engine",
+  "apparatus": "hot plate, ice bath, tachometer",
+  "safety": "Hot surfaces burn. Handle with tongs."
+ },
+ {
+  "key": "seismograph",
+  "name": "Seismograph Shake Table",
+  "discipline": "Physics",
+  "blurb": "Shake a model building and record the trace.",
+  "keywords": [
+   "earthquake",
+   "seismograph",
+   "shake",
+   "tremor"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "amp",
+    "label": "Shake amplitude",
+    "unit": "cm",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "amplitude(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 20
+   }
+  ],
+  "subject": "model tower",
+  "apparatus": "shake table, pen recorder",
+  "safety": null
+ },
+ {
+  "key": "crater-impacts",
+  "name": "Crater Impact Scaling",
+  "discipline": "Physics",
+  "blurb": "Drop balls into flour and measure crater width.",
+  "keywords": [
+   "crater",
+   "impact",
+   "meteor",
+   "flour"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "height",
+    "label": "Drop height",
+    "unit": "m",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m",
+     "height(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.5,
+    "max": 5
+   }
+  ],
+  "subject": "marbles",
+  "apparatus": "tray of flour, ruler, sieve",
+  "safety": null
+ },
+ {
+  "key": "rocket-staging",
+  "name": "Water Rocket Staging",
+  "discipline": "Physics",
+  "blurb": "Vary water fill and measure rocket apogee.",
+  "keywords": [
+   "water rocket",
+   "bottle rocket",
+   "staging",
+   "apogee"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "fill",
+    "label": "Water fill",
+    "unit": "%",
+    "default": 33,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "fill(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 80
+   }
+  ],
+  "subject": "2L bottle rocket",
+  "apparatus": "launcher, pump, altimeter",
+  "safety": "Launch outdoors away from people. Wear eye protection."
+ },
+ {
+  "key": "capillary",
+  "name": "Capillary Rise Tubes",
+  "discipline": "Physics",
+  "blurb": "Stand thin tubes in water and measure rise height.",
+  "keywords": [
+   "capillary",
+   "rise",
+   "thin tube",
+   "wicking"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Tube diameter",
+    "unit": "mm",
+    "default": 1,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mm",
+     "diameter(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.2,
+    "max": 5
+   }
+  ],
+  "subject": "glass capillaries",
+  "apparatus": "dyed water, ruler, stand",
+  "safety": null
+ },
+ {
+  "key": "gas-pressure",
+  "name": "Gas Pressure vs Volume",
+  "discipline": "Physics",
+  "blurb": "Compress trapped air and read the pressure.",
+  "keywords": [
+   "gas",
+   "boyle",
+   "pressure",
+   "syringe",
+   "compress"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "v0",
+    "label": "Starting volume",
+    "unit": "mL",
+    "default": 60,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL",
+     "volume(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 100
+   }
+  ],
+  "subject": "sealed syringe",
+  "apparatus": "pressure sensor, clamp",
+  "safety": null
+ },
+ {
+  "key": "acid-base-titration",
+  "name": "Acid-Base Titration",
+  "discipline": "Chemistry",
+  "blurb": "Titrate an acid with base and find the equivalence point.",
+  "keywords": [
+   "titration",
+   "titrate",
+   "acid",
+   "base",
+   "equivalence",
+   "burette",
+   "neutralize"
+  ],
+  "model": "titration",
+  "params": [
+   {
+    "name": "conc",
+    "label": "Acid concentration",
+    "unit": "M",
+    "default": 0.1,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*M(?:olar)?",
+     "concentration(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.01,
+    "max": 1
+   }
+  ],
+  "subject": "hydrochloric acid",
+  "apparatus": "burette, phenolphthalein, flask",
+  "safety": "Acids and bases burn skin and eyes. Goggles and gloves required."
+ },
+ {
+  "key": "reaction-rate-temp",
+  "name": "Reaction Rate vs Temperature",
+  "discipline": "Chemistry",
+  "blurb": "Time a color-change reaction in warm and cold baths.",
+  "keywords": [
+   "reaction rate",
+   "temperature",
+   "speed up",
+   "arrhenius",
+   "iodine clock"
+  ],
+  "model": "rate-temp",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Base temperature",
+    "unit": "\u00b0C",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "iodine clock mix",
+  "apparatus": "water baths, thermometers, timers",
+  "safety": "Some reagents stain and irritate. Goggles on."
+ },
+ {
+  "key": "electrolysis-water",
+  "name": "Electrolysis of Water",
+  "discipline": "Chemistry",
+  "blurb": "Split water with electricity and collect the gases.",
+  "keywords": [
+   "electrolysis",
+   "split water",
+   "hydrogen",
+   "hoffman"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "current",
+    "label": "Current",
+    "unit": "A",
+    "default": 1.5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*A(?:mp)?s?",
+     "current(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.5,
+    "max": 5
+   }
+  ],
+  "subject": "Hoffman apparatus",
+  "apparatus": "DC supply, electrolyte",
+  "safety": "Hydrogen is flammable. Ventilate; no open flames."
+ },
+ {
+  "key": "galvanic-cell",
+  "name": "Galvanic Cell Voltage",
+  "discipline": "Chemistry",
+  "blurb": "Build metal-pair cells and measure voltage.",
+  "keywords": [
+   "galvanic",
+   "battery",
+   "cell",
+   "electrochemical",
+   "voltaic"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pairs",
+    "label": "Metal pairs tested",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*pairs?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "zinc/copper strips",
+  "apparatus": "voltmeter, salt bridge, beakers",
+  "safety": null
+ },
+ {
+  "key": "corrosion-rust",
+  "name": "Nail Corrosion Conditions",
+  "discipline": "Chemistry",
+  "blurb": "Expose nails to air, water, salt and compare rust.",
+  "keywords": [
+   "rust",
+   "corrosion",
+   "nail",
+   "oxidation"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Exposure days",
+    "unit": "days",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?",
+     "for (\\d+(?:\\.\\d+)?) day"
+    ],
+    "min": 3,
+    "max": 21
+   }
+  ],
+  "subject": "iron nails",
+  "apparatus": "test tubes, salt, oil, labels",
+  "safety": null
+ },
+ {
+  "key": "solubility-temp",
+  "name": "Solubility vs Temperature",
+  "discipline": "Chemistry",
+  "blurb": "Dissolve salt in water at temperatures and weigh saturation.",
+  "keywords": [
+   "solubility",
+   "dissolve",
+   "saturated",
+   "recrystallize"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "t",
+    "label": "Water temperature",
+    "unit": "\u00b0C",
+    "default": 40,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 10,
+    "max": 90
+   }
+  ],
+  "subject": "potassium nitrate",
+  "apparatus": "hot plate, balance, filter",
+  "safety": "Hot solutions scald. Handle with care."
+ },
+ {
+  "key": "chromatography",
+  "name": "Paper Chromatography",
+  "discipline": "Chemistry",
+  "blurb": "Separate ink dyes on paper strips and compute Rf.",
+  "keywords": [
+   "chromatography",
+   "separate",
+   "ink",
+   "rf value",
+   "dye"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "solvent",
+    "label": "Solvent front",
+    "unit": "cm",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm"
+    ],
+    "min": 4,
+    "max": 12
+   }
+  ],
+  "subject": "marker inks",
+  "apparatus": "chromatography paper, solvent chamber",
+  "safety": "Use low-toxicity solvents; ventilate."
+ },
+ {
+  "key": "flame-tests",
+  "name": "Flame Test Colors",
+  "discipline": "Chemistry",
+  "blurb": "Burn metal salts and record flame colors.",
+  "keywords": [
+   "flame test",
+   "flame color",
+   "metal ion",
+   "burn"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "salts",
+    "label": "Salts tested",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*salts?"
+    ],
+    "min": 3,
+    "max": 10
+   }
+  ],
+  "subject": "chloride salts",
+  "apparatus": "nichrome wire, Bunsen burner",
+  "safety": "Open flame and hot wire. Tie hair back; goggles on."
+ },
+ {
+  "key": "calorimetry-food",
+  "name": "Food Calorimetry Energy",
+  "discipline": "Chemistry",
+  "blurb": "Burn food samples under water and measure warming.",
+  "keywords": [
+   "calorie",
+   "food energy",
+   "burn peanut",
+   "calorimeter"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Food mass",
+    "unit": "g",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 0.5,
+    "max": 10
+   }
+  ],
+  "subject": "peanut halves",
+  "apparatus": "soda-can calorimeter, thermometer",
+  "safety": "Open flame. Burn in a fume hood or outdoors."
+ },
+ {
+  "key": "enzyme-catalase",
+  "name": "Catalase Enzyme Rate",
+  "discipline": "Chemistry",
+  "blurb": "Add liver to peroxide and measure oxygen foam.",
+  "keywords": [
+   "enzyme",
+   "catalase",
+   "peroxide",
+   "liver"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "ph",
+    "label": "Solution pH",
+    "unit": "",
+    "default": 7,
+    "extract": [
+     "pH\\s*(\\d+(?:\\.\\d+)?)",
+     "ph(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 3,
+    "max": 11
+   }
+  ],
+  "subject": "liver cubes",
+  "apparatus": "hydrogen peroxide, graduated cylinder",
+  "safety": "Peroxide bleaches skin. Gloves and goggles."
+ },
+ {
+  "key": "fermentation",
+  "name": "Yeast Fermentation Sugar",
+  "discipline": "Chemistry",
+  "blurb": "Feed yeast sugars and capture the CO2.",
+  "keywords": [
+   "fermentation",
+   "yeast",
+   "sugar",
+   "co2",
+   "bread",
+   "balloon"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "sugar",
+    "label": "Sugar mass",
+    "unit": "g",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 2,
+    "max": 30
+   }
+  ],
+  "subject": "baker's yeast",
+  "apparatus": "warm water, balloons, flasks",
+  "safety": null
+ },
+ {
+  "key": "electroplating",
+  "name": "Copper Electroplating",
+  "discipline": "Chemistry",
+  "blurb": "Plate copper onto a key and weigh the deposit.",
+  "keywords": [
+   "electroplat",
+   "plate",
+   "copper",
+   "key"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "current",
+    "label": "Current",
+    "unit": "A",
+    "default": 1.0,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*A(?:mp)?s?"
+    ],
+    "min": 0.3,
+    "max": 3
+   }
+  ],
+  "subject": "steel key",
+  "apparatus": "copper sulfate bath, DC supply",
+  "safety": "Copper sulfate is toxic. Gloves; no tasting."
+ },
+ {
+  "key": "soap-saponification",
+  "name": "Soap Saponification",
+  "discipline": "Chemistry",
+  "blurb": "React oil with lye and test the soap.",
+  "keywords": [
+   "soap",
+   "saponification",
+   "lye",
+   "oil"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "oil",
+    "label": "Oil mass",
+    "unit": "g",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 50,
+    "max": 500
+   }
+  ],
+  "subject": "olive oil",
+  "apparatus": "sodium hydroxide, mold, thermometer",
+  "safety": "Lye causes severe burns. Goggles, gloves, adult supervision."
+ },
+ {
+  "key": "polymer-slime",
+  "name": "Polymer Slime Cross-Linking",
+  "discipline": "Chemistry",
+  "blurb": "Mix glue with borax and test stretch distance.",
+  "keywords": [
+   "slime",
+   "polymer",
+   "borax",
+   "glue",
+   "stretch"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "borax",
+    "label": "Borax solution",
+    "unit": "mL",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "PVA glue",
+  "apparatus": "borax, cups, rulers",
+  "safety": "Do not ingest. Wash hands after handling."
+ },
+ {
+  "key": "antacid",
+  "name": "Antacid Neutralization",
+  "discipline": "Chemistry",
+  "blurb": "Drop antacid tablets in acid and time the fizz.",
+  "keywords": [
+   "antacid",
+   "neutralize",
+   "tablet",
+   "stomach acid",
+   "fizz"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "tablets",
+    "label": "Tablets tested",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*tablets?"
+    ],
+    "min": 1,
+    "max": 6
+   }
+  ],
+  "subject": "antacid tablets",
+  "apparatus": "dilute acid, beakers, timer",
+  "safety": "Even dilute acid irritates. Goggles on."
+ },
+ {
+  "key": "lemon-battery",
+  "name": "Lemon Battery Power",
+  "discipline": "Chemistry",
+  "blurb": "Stick electrodes in fruit and light an LED.",
+  "keywords": [
+   "lemon battery",
+   "fruit battery",
+   "potato battery",
+   "led"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "cells",
+    "label": "Fruit cells",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cells?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "lemons",
+  "apparatus": "zinc/copper electrodes, LED, wires",
+  "safety": null
+ },
+ {
+  "key": "iodine-clock",
+  "name": "Iodine Clock Timing",
+  "discipline": "Chemistry",
+  "blurb": "Mix clock reagents and time the color snap.",
+  "keywords": [
+   "iodine clock",
+   "clock reaction",
+   "color change",
+   "snap"
+  ],
+  "model": "rate-temp",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Solution temperature",
+    "unit": "\u00b0C",
+    "default": 22,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 10,
+    "max": 50
+   }
+  ],
+  "subject": "clock reagents",
+  "apparatus": "beakers, thermometer, stopwatch",
+  "safety": "Stains skin and benches. Gloves recommended."
+ },
+ {
+  "key": "distillation",
+  "name": "Simple Distillation Purity",
+  "discipline": "Chemistry",
+  "blurb": "Distill salt water and test the distillate.",
+  "keywords": [
+   "distillation",
+   "distill",
+   "boil",
+   "condense",
+   "purity"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "vol",
+    "label": "Starting volume",
+    "unit": "mL",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 50,
+    "max": 250
+   }
+  ],
+  "subject": "salt water",
+  "apparatus": "distillation kit, thermometer",
+  "safety": "Glass gets hot; steam scalds. Use clamps."
+ },
+ {
+  "key": "molar-mass",
+  "name": "Molar Mass by Gas",
+  "discipline": "Chemistry",
+  "blurb": "Vaporize liquid in a flask and weigh the gas.",
+  "keywords": [
+   "molar mass",
+   "dumas",
+   "vapor",
+   "flask"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "t",
+    "label": "Water bath temp",
+    "unit": "\u00b0C",
+    "default": 95,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 70,
+    "max": 100
+   }
+  ],
+  "subject": "volatile liquid",
+  "apparatus": "Erlenmeyer, hot bath, balance",
+  "safety": "Hot bath and vapors. Ventilate; goggles on."
+ },
+ {
+  "key": "biodiesel",
+  "name": "Biodiesel Yield",
+  "discipline": "Chemistry",
+  "blurb": "Transesterify oil and measure fuel layer.",
+  "keywords": [
+   "biodiesel",
+   "transesterification",
+   "fuel",
+   "methanol"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "oil",
+    "label": "Oil volume",
+    "unit": "mL",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 100,
+    "max": 500
+   }
+  ],
+  "subject": "used cooking oil",
+  "apparatus": "methanol, catalyst, separatory funnel",
+  "safety": "Methanol is toxic and flammable. Fume hood only."
+ },
+ {
+  "key": "water-filtration",
+  "name": "Water Filtration Layers",
+  "discipline": "Chemistry",
+  "blurb": "Pour muddy water through filter stacks and rate clarity.",
+  "keywords": [
+   "filter",
+   "filtration",
+   "purify",
+   "muddy water",
+   "charcoal"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "layers",
+    "label": "Filter layers",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*layers?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "muddy water",
+  "apparatus": "bottles, sand, gravel, charcoal, cloth",
+  "safety": null
+ },
+ {
+  "key": "vitamin-c",
+  "name": "Vitamin C Titration",
+  "discipline": "Chemistry",
+  "blurb": "Titrate juice with iodine to rank vitamin C.",
+  "keywords": [
+   "vitamin c",
+   "ascorbic",
+   "juice",
+   "iodine"
+  ],
+  "model": "titration",
+  "params": [
+   {
+    "name": "juices",
+    "label": "Juices tested",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*juices?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "fruit juices",
+  "apparatus": "iodine solution, starch, burette",
+  "safety": "Iodine stains. Gloves recommended."
+ },
+ {
+  "key": "nylon-rope",
+  "name": "Nylon Rope Trick",
+  "discipline": "Chemistry",
+  "blurb": "Pull nylon rope from a two-layer reaction.",
+  "keywords": [
+   "nylon",
+   "rope trick",
+   "polymer",
+   "interface"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pulls",
+    "label": "Pull length",
+    "unit": "cm",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm"
+    ],
+    "min": 10,
+    "max": 100
+   }
+  ],
+  "subject": "diamine/adipoyl solutions",
+  "apparatus": "beaker, forceps",
+  "safety": "Organic solvents irritate. Gloves; ventilate."
+ },
+ {
+  "key": "chemiluminescence",
+  "name": "Glow Stick Temperature",
+  "discipline": "Chemistry",
+  "blurb": "Chill and warm glow sticks and compare brightness.",
+  "keywords": [
+   "glow",
+   "chemiluminescence",
+   "glow stick",
+   "light"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "t",
+    "label": "Bath temperature",
+    "unit": "\u00b0C",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 0,
+    "max": 60
+   }
+  ],
+  "subject": "glow sticks",
+  "apparatus": "ice bath, warm bath, light meter",
+  "safety": null
+ },
+ {
+  "key": "photosynthesis-rate",
+  "name": "Photosynthesis Bubble Rate",
+  "discipline": "Biology",
+  "blurb": "Count oxygen bubbles from pondweed in light.",
+  "keywords": [
+   "photosynthesis",
+   "pondweed",
+   "elodea",
+   "bubbles",
+   "oxygen",
+   "light"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "dist",
+    "label": "Lamp distance",
+    "unit": "cm",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "distance(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "pondweed sprig",
+  "apparatus": "lamp, beaker, timer",
+  "safety": null
+ },
+ {
+  "key": "osmosis-potato",
+  "name": "Osmosis Potato Cylinders",
+  "discipline": "Biology",
+  "blurb": "Soak potato cores in salt solutions and weigh change.",
+  "keywords": [
+   "osmosis",
+   "potato",
+   "salt solution",
+   "turgid",
+   "plasmolysis"
+  ],
+  "model": "osmosis",
+  "params": [
+   {
+    "name": "conc",
+    "label": "Salt concentration",
+    "unit": "%",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "concentration(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0,
+    "max": 20
+   }
+  ],
+  "subject": "potato cores",
+  "apparatus": "salt solutions, balance, cork borer",
+  "safety": null
+ },
+ {
+  "key": "diffusion-agar",
+  "name": "Diffusion in Agar Cubes",
+  "discipline": "Biology",
+  "blurb": "Soak dyed agar cubes and measure color depth.",
+  "keywords": [
+   "diffusion",
+   "agar",
+   "cube",
+   "surface area"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "size",
+    "label": "Cube edge",
+    "unit": "cm",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "(?:edge|size)(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 4
+   }
+  ],
+  "subject": "agar cubes",
+  "apparatus": "dye bath, ruler, timer",
+  "safety": null
+ },
+ {
+  "key": "mitosis-onion",
+  "name": "Mitosis Onion Root Tip",
+  "discipline": "Biology",
+  "blurb": "Stain root tips and tally cell phases.",
+  "keywords": [
+   "mitosis",
+   "onion",
+   "root tip",
+   "cell division",
+   "phases"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "cells",
+    "label": "Cells counted",
+    "unit": "",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cells?"
+    ],
+    "min": 100,
+    "max": 500
+   }
+  ],
+  "subject": "onion root tips",
+  "apparatus": "microscope, stain, slides",
+  "safety": null
+ },
+ {
+  "key": "respiration-peas",
+  "name": "Respiration Germinating Peas",
+  "discipline": "Biology",
+  "blurb": "Measure oxygen uptake of sprouting peas.",
+  "keywords": [
+   "respiration",
+   "germinating",
+   "peas",
+   "oxygen uptake",
+   "respirometer"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "t",
+    "label": "Bath temperature",
+    "unit": "\u00b0C",
+    "default": 22,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 10,
+    "max": 35
+   }
+  ],
+  "subject": "pea seeds",
+  "apparatus": "respirometer, KOH pellets, baths",
+  "safety": null
+ },
+ {
+  "key": "bacterial-growth",
+  "name": "Bacterial Growth Plates",
+  "discipline": "Biology",
+  "blurb": "Swab surfaces, incubate plates, count colonies.",
+  "keywords": [
+   "bacteria",
+   "agar plate",
+   "colonies",
+   "swab",
+   "incubate"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "hours",
+    "label": "Incubation hours",
+    "unit": "h",
+    "default": 48,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*h(?:ours?)?",
+     "for (\\d+(?:\\.\\d+)?) hour"
+    ],
+    "min": 24,
+    "max": 96
+   }
+  ],
+  "subject": "nutrient agar plates",
+  "apparatus": "sterile swabs, incubator",
+  "safety": "Never open incubated plates. Seal and dispose safely."
+ },
+ {
+  "key": "antibiotic-zones",
+  "name": "Antibiotic Zone Inhibition",
+  "discipline": "Biology",
+  "blurb": "Place discs on lawns and measure clear zones.",
+  "keywords": [
+   "antibiotic",
+   "zone",
+   "inhibition",
+   "disc",
+   "kirby"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "discs",
+    "label": "Discs tested",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*discs?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "bacterial lawns",
+  "apparatus": "antibiotic discs, calipers",
+  "safety": "Sealed plates only. Do not culture pathogens."
+ },
+ {
+  "key": "mark-recapture",
+  "name": "Mark-Recapture Population",
+  "discipline": "Biology",
+  "blurb": "Tag beans, remix, and estimate the hidden total.",
+  "keywords": [
+   "mark recapture",
+   "population",
+   "estimate",
+   "tag",
+   "lincoln"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "marked",
+    "label": "Marked released",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*marked?",
+     "mark(?:ed)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 100
+   }
+  ],
+  "subject": "dry beans",
+  "apparatus": "bag, marker, tally sheet",
+  "safety": null
+ },
+ {
+  "key": "heart-rate-exercise",
+  "name": "Heart Rate vs Exercise",
+  "discipline": "Biology",
+  "blurb": "Step up and down, then track pulse recovery.",
+  "keywords": [
+   "heart rate",
+   "pulse",
+   "exercise",
+   "recovery",
+   "fitness"
+  ],
+  "model": "cooling",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Exercise minutes",
+    "unit": "min",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?",
+     "for (\\d+(?:\\.\\d+)?) min"
+    ],
+    "min": 1,
+    "max": 10
+   }
+  ],
+  "subject": "student volunteer",
+  "apparatus": "step platform, timer, pulse watch",
+  "safety": "Stop if dizzy. Volunteers only."
+ },
+ {
+  "key": "lung-capacity",
+  "name": "Lung Capacity Balloon",
+  "discipline": "Biology",
+  "blurb": "Exhale into balloons and measure circumference.",
+  "keywords": [
+   "lung",
+   "balloon",
+   "vital capacity",
+   "exhale",
+   "spirometer"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials per person",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 1,
+    "max": 5
+   }
+  ],
+  "subject": "balloons",
+  "apparatus": "tape measure, nose clips",
+  "safety": "One balloon per person. Discard after use."
+ },
+ {
+  "key": "seed-germination",
+  "name": "Seed Germination Conditions",
+  "discipline": "Biology",
+  "blurb": "Sprout seeds in light/dark, wet/dry and count.",
+  "keywords": [
+   "germination",
+   "seed",
+   "sprout",
+   "cress"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "seeds",
+    "label": "Seeds per dish",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*seeds?"
+    ],
+    "min": 10,
+    "max": 50
+   }
+  ],
+  "subject": "cress seeds",
+  "apparatus": "petri dishes, paper towels",
+  "safety": null
+ },
+ {
+  "key": "plant-tropism",
+  "name": "Plant Phototropism Turn",
+  "discipline": "Biology",
+  "blurb": "Grow seedlings sideways to light and measure bend.",
+  "keywords": [
+   "tropism",
+   "phototropism",
+   "bend",
+   "seedling",
+   "light"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "hours",
+    "label": "Light hours",
+    "unit": "h",
+    "default": 48,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*h(?:ours?)?"
+    ],
+    "min": 12,
+    "max": 96
+   }
+  ],
+  "subject": "bean seedlings",
+  "apparatus": "dark box, side lamp, protractor",
+  "safety": null
+ },
+ {
+  "key": "composting",
+  "name": "Compost Heat Pile",
+  "discipline": "Biology",
+  "blurb": "Build mini composts and log core temperature.",
+  "keywords": [
+   "compost",
+   "decomposition",
+   "pile",
+   "rot"
+  ],
+  "model": "cooling",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days tracked",
+    "unit": "days",
+    "default": 14,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 7,
+    "max": 30
+   }
+  ],
+  "subject": "yard waste mix",
+  "apparatus": "bins, thermometer, scale",
+  "safety": null
+ },
+ {
+  "key": "brine-shrimp",
+  "name": "Brine Shrimp Hatch Rate",
+  "discipline": "Biology",
+  "blurb": "Hatch shrimp eggs at salinities and count.",
+  "keywords": [
+   "brine shrimp",
+   "artemia",
+   "hatch",
+   "salinity",
+   "sea monkeys"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "salt",
+    "label": "Salinity",
+    "unit": "ppt",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*ppt",
+     "salinity(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "shrimp cysts",
+  "apparatus": "salt mixes, dishes, pipettes",
+  "safety": null
+ },
+ {
+  "key": "pillbugs-choice",
+  "name": "Pillbug Choice Chamber",
+  "discipline": "Biology",
+  "blurb": "Offer damp/dry halves and tally pillbug picks.",
+  "keywords": [
+   "pillbug",
+   "choice",
+   "roly poly",
+   "habitat",
+   "kinesis"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "bugs",
+    "label": "Pillbugs used",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:pillbugs?|bugs?)"
+    ],
+    "min": 5,
+    "max": 20
+   }
+  ],
+  "subject": "pillbugs",
+  "apparatus": "choice chamber, damp/dry paper",
+  "safety": null
+ },
+ {
+  "key": "mold-growth",
+  "name": "Bread Mold Growth",
+  "discipline": "Biology",
+  "blurb": "Store bread damp/dry and map mold spread.",
+  "keywords": [
+   "mold",
+   "bread",
+   "fungus",
+   "spoilage"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days observed",
+    "unit": "days",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 3,
+    "max": 14
+   }
+  ],
+  "subject": "bread slices",
+  "apparatus": "bags, spray bottle, grid sheet",
+  "safety": "Do not open moldy bags. Seal and bin them."
+ },
+ {
+  "key": "pond-ecology",
+  "name": "Pond Water Survey",
+  "discipline": "Biology",
+  "blurb": "Dip pond samples and key out the micro-life.",
+  "keywords": [
+   "pond",
+   "ecology",
+   "micro",
+   "dip",
+   "sample"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "sites",
+    "label": "Sites sampled",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*sites?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "pond water jars",
+  "apparatus": "nets, keys, microscopes",
+  "safety": null
+ },
+ {
+  "key": "taste-buds",
+  "name": "Taste Bud Mapping",
+  "discipline": "Biology",
+  "blurb": "Dab flavors on tongues and map the hits.",
+  "keywords": [
+   "taste",
+   "tongue",
+   "flavor",
+   "bitter",
+   "sweet"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "tasters",
+    "label": "Tasters",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*tasters?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "flavor solutions",
+  "apparatus": "cotton swabs, cups, water",
+  "safety": "Food-safe solutions only. No sharing swabs."
+ },
+ {
+  "key": "reflex-arc",
+  "name": "Ruler Drop Reflex",
+  "discipline": "Biology",
+  "blurb": "Catch a dropped ruler and convert to reaction time.",
+  "keywords": [
+   "reflex",
+   "reaction time",
+   "ruler drop",
+   "catch"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 3,
+    "max": 10
+   }
+  ],
+  "subject": "meter ruler",
+  "apparatus": "table edge, data sheet",
+  "safety": null
+ },
+ {
+  "key": "erosion-stream",
+  "name": "Stream Table Erosion",
+  "discipline": "Earth & Space",
+  "blurb": "Run water over sand and map the channels.",
+  "keywords": [
+   "erosion",
+   "stream",
+   "sand",
+   "channel",
+   "delta"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "slope",
+    "label": "Table slope",
+    "unit": "deg",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg",
+     "slope(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 25
+   }
+  ],
+  "subject": "stream table",
+  "apparatus": "sand, water jug, food coloring",
+  "safety": null
+ },
+ {
+  "key": "volcano-model",
+  "name": "Volcano Eruption Model",
+  "discipline": "Earth & Space",
+  "blurb": "Build cones and erupt baking-soda magma.",
+  "keywords": [
+   "volcano",
+   "eruption",
+   "lava",
+   "magma",
+   "cone",
+   "baking soda",
+   "vinegar",
+   "fizz",
+   "erupt"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "vinegar",
+    "label": "Vinegar volume",
+    "unit": "mL",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 50,
+    "max": 250
+   }
+  ],
+  "subject": "paper-mache cone",
+  "apparatus": "baking soda, vinegar, tray",
+  "safety": null
+ },
+ {
+  "key": "earthquake-waves",
+  "name": "Slinky Earthquake Waves",
+  "discipline": "Earth & Space",
+  "blurb": "Send P and S pulses down a slinky and time them.",
+  "keywords": [
+   "earthquake",
+   "slinky",
+   "p wave",
+   "s wave",
+   "seismic"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "length",
+    "label": "Slinky length",
+    "unit": "m",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "metal slinky",
+  "apparatus": "stopwatch, tape, partner",
+  "safety": null
+ },
+ {
+  "key": "soil-permeability",
+  "name": "Soil Permeability Columns",
+  "discipline": "Earth & Space",
+  "blurb": "Pour water through soil columns and time drainage.",
+  "keywords": [
+   "soil",
+   "permeability",
+   "drainage",
+   "column",
+   "clay",
+   "sand"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "soils",
+    "label": "Soil types",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*soils?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "soil samples",
+  "apparatus": "columns, water, timers",
+  "safety": null
+ },
+ {
+  "key": "cloud-formation",
+  "name": "Cloud in a Bottle",
+  "discipline": "Earth & Space",
+  "blurb": "Pressurize a bottle and watch a cloud bloom.",
+  "keywords": [
+   "cloud",
+   "bottle",
+   "pressure",
+   "condensation"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pumps",
+    "label": "Pump strokes",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:pumps?|strokes?)"
+    ],
+    "min": 5,
+    "max": 20
+   }
+  ],
+  "subject": "2L bottle",
+  "apparatus": "pump, match smoke, water",
+  "safety": "Release pressure away from faces."
+ },
+ {
+  "key": "greenhouse-model",
+  "name": "Greenhouse Jar Model",
+  "discipline": "Earth & Space",
+  "blurb": "Compare lidded vs open jars in sunlight.",
+  "keywords": [
+   "greenhouse",
+   "jar",
+   "warming",
+   "climate"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Sun minutes",
+    "unit": "min",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "glass jars",
+  "apparatus": "thermometers, sun or lamp",
+  "safety": null
+ },
+ {
+  "key": "moon-phases",
+  "name": "Moon Phase Lamp Model",
+  "discipline": "Earth & Space",
+  "blurb": "Orbit a ball around a lamp and sketch phases.",
+  "keywords": [
+   "moon",
+   "phases",
+   "lunar",
+   "orbit"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "stops",
+    "label": "Orbit stops",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*stops?"
+    ],
+    "min": 4,
+    "max": 12
+   }
+  ],
+  "subject": "foam ball",
+  "apparatus": "lamp in dark room, stickers",
+  "safety": null
+ },
+ {
+  "key": "water-cycle",
+  "name": "Water Cycle Bag",
+  "discipline": "Earth & Space",
+  "blurb": "Tape a water bag to a window and watch the cycle.",
+  "keywords": [
+   "water cycle",
+   "evaporation",
+   "condensation",
+   "bag"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "water",
+    "label": "Water volume",
+    "unit": "mL",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 50,
+    "max": 200
+   }
+  ],
+  "subject": "zip bag",
+  "apparatus": "water, blue dye, sunny window",
+  "safety": null
+ },
+ {
+  "key": "ocean-currents",
+  "name": "Ocean Current Tank",
+  "discipline": "Earth & Space",
+  "blurb": "Float ice at one end and dye the currents.",
+  "keywords": [
+   "ocean",
+   "current",
+   "convection",
+   "ice"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "ice",
+    "label": "Ice cubes",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:ice|cubes?)"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "fish tank",
+  "apparatus": "ice, dye, warm water",
+  "safety": null
+ },
+ {
+  "key": "telescope-optics",
+  "name": "Telescope Optics Bench",
+  "discipline": "Earth & Space",
+  "blurb": "Pair lenses and measure magnification.",
+  "keywords": [
+   "telescope",
+   "magnification",
+   "eyepiece",
+   "objective"
+  ],
+  "model": "optics",
+  "params": [
+   {
+    "name": "f",
+    "label": "Objective focal length",
+    "unit": "cm",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "f\\s*=\\s*(\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "lens pair",
+  "apparatus": "tubes, distant target",
+  "safety": null
+ },
+ {
+  "key": "satellite-orbits",
+  "name": "Satellite Orbit Periods",
+  "discipline": "Earth & Space",
+  "blurb": "Swing tethered balls and time the orbits.",
+  "keywords": [
+   "satellite",
+   "orbit",
+   "period",
+   "kepler"
+  ],
+  "model": "pendulum",
+  "params": [
+   {
+    "name": "length",
+    "label": "Tether length",
+    "unit": "m",
+    "default": 1.5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?"
+    ],
+    "min": 0.5,
+    "max": 3
+   }
+  ],
+  "subject": "foam satellites",
+  "apparatus": "tether, open space, stopwatch",
+  "safety": "Clear the swing zone of people."
+ },
+ {
+  "key": "seasons-tilt",
+  "name": "Seasons Tilt Lamp",
+  "discipline": "Earth & Space",
+  "blurb": "Tilt a globe to a lamp and compare light patches.",
+  "keywords": [
+   "seasons",
+   "tilt",
+   "axis",
+   "solstice"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "tilt",
+    "label": "Axial tilt",
+    "unit": "deg",
+    "default": 23,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg",
+     "tilt(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0,
+    "max": 45
+   }
+  ],
+  "subject": "desk globe",
+  "apparatus": "lamp, light meter, stickers",
+  "safety": null
+ },
+ {
+  "key": "landslide",
+  "name": "Landslide Slope Tray",
+  "discipline": "Earth & Space",
+  "blurb": "Tilt a soil tray until it slips.",
+  "keywords": [
+   "landslide",
+   "slope",
+   "slip",
+   "angle of repose"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "wet",
+    "label": "Water added",
+    "unit": "mL",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mL"
+    ],
+    "min": 0,
+    "max": 300
+   }
+  ],
+  "subject": "soil tray",
+  "apparatus": "protractor, spray bottle",
+  "safety": null
+ },
+ {
+  "key": "beam-deflection",
+  "name": "Beam Deflection Load",
+  "discipline": "Engineering",
+  "blurb": "Load a spanning ruler and measure the sag.",
+  "keywords": [
+   "beam",
+   "deflection",
+   "sag",
+   "load",
+   "bridge"
+  ],
+  "model": "hooke",
+  "params": [
+   {
+    "name": "k",
+    "label": "Beam stiffness",
+    "unit": "N/m",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*N/m",
+     "stiffness(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 50,
+    "max": 1000
+   }
+  ],
+  "subject": "wooden ruler",
+  "apparatus": "supports, masses, dial gauge",
+  "safety": null
+ },
+ {
+  "key": "truss-bridge",
+  "name": "Truss Bridge Pasta",
+  "discipline": "Engineering",
+  "blurb": "Build pasta trusses and load to failure.",
+  "keywords": [
+   "truss",
+   "bridge",
+   "pasta",
+   "spaghetti",
+   "load"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "span",
+    "label": "Span length",
+    "unit": "cm",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "span(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 15,
+    "max": 60
+   }
+  ],
+  "subject": "dry spaghetti",
+  "apparatus": "glue, bucket, sand",
+  "safety": "Snapping pasta flies. Goggles on."
+ },
+ {
+  "key": "egg-drop",
+  "name": "Egg Drop Cushion",
+  "discipline": "Engineering",
+  "blurb": "Drop protected eggs and score the survivors.",
+  "keywords": [
+   "egg drop",
+   "cushion",
+   "protect",
+   "container"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "height",
+    "label": "Drop height",
+    "unit": "m",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m",
+     "height(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 2,
+    "max": 12
+   }
+  ],
+  "subject": "raw eggs",
+  "apparatus": "building materials, drop zone",
+  "safety": "Drop zone clear below. Clean spills promptly."
+ },
+ {
+  "key": "mousetrap-car",
+  "name": "Mousetrap Car Distance",
+  "discipline": "Engineering",
+  "blurb": "Wind a trap car and measure travel distance.",
+  "keywords": [
+   "mousetrap",
+   "car",
+   "wind",
+   "distance"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "arm",
+    "label": "Lever arm",
+    "unit": "cm",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "arm(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 40
+   }
+  ],
+  "subject": "trap chassis",
+  "apparatus": "string, wheels, tape",
+  "safety": "Traps snap hard. Keep fingers clear."
+ },
+ {
+  "key": "water-rocket",
+  "name": "Water Rocket Apogee",
+  "discipline": "Engineering",
+  "blurb": "Tune fill and pressure for max height.",
+  "keywords": [
+   "water rocket",
+   "bottle rocket",
+   "apogee",
+   "pressure"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "fill",
+    "label": "Water fill",
+    "unit": "%",
+    "default": 33,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "fill(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 10,
+    "max": 80
+   }
+  ],
+  "subject": "2L bottle rocket",
+  "apparatus": "launcher, pump, altimeter",
+  "safety": "Launch outdoors. Eye protection on."
+ },
+ {
+  "key": "hydraulic-arm",
+  "name": "Hydraulic Syringe Arm",
+  "discipline": "Engineering",
+  "blurb": "Link syringes and measure lift force.",
+  "keywords": [
+   "hydraulic",
+   "syringe",
+   "arm",
+   "pascal"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "ratio",
+    "label": "Piston ratio",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "ratio(?: of)? (\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?):1"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "syringes + tubing",
+  "apparatus": "water, frame, scale",
+  "safety": null
+ },
+ {
+  "key": "catapult",
+  "name": "Catapult Range Tuning",
+  "discipline": "Engineering",
+  "blurb": "Adjust arm stop and measure throw range.",
+  "keywords": [
+   "catapult",
+   "trebuchet",
+   "throw",
+   "range",
+   "siege"
+  ],
+  "model": "projectile",
+  "params": [
+   {
+    "name": "velocity",
+    "label": "Release speed",
+    "unit": "m/s",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m/s"
+    ],
+    "min": 5,
+    "max": 30
+   },
+   {
+    "name": "angle",
+    "label": "Release angle",
+    "unit": "deg",
+    "default": 45,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*deg"
+    ],
+    "min": 20,
+    "max": 70
+   }
+  ],
+  "subject": "tabletop catapult",
+  "apparatus": "foam balls, tape measure",
+  "safety": "Fire downrange only. Goggles on."
+ },
+ {
+  "key": "parachute",
+  "name": "Parachute Canopy Drop",
+  "discipline": "Engineering",
+  "blurb": "Cut canopy sizes and time the descent.",
+  "keywords": [
+   "parachute",
+   "canopy",
+   "drop",
+   "descent"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Canopy diameter",
+    "unit": "cm",
+    "default": 40,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "diameter(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 80
+   }
+  ],
+  "subject": "trash-bag canopies",
+  "apparatus": "string, washers, stopwatch",
+  "safety": null
+ },
+ {
+  "key": "tower-stability",
+  "name": "Tower Shake Stability",
+  "discipline": "Engineering",
+  "blurb": "Build towers and shake to failure.",
+  "keywords": [
+   "tower",
+   "stability",
+   "shake",
+   "toothpick",
+   "marshmallow"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "height",
+    "label": "Tower height",
+    "unit": "cm",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "height(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 15,
+    "max": 60
+   }
+  ],
+  "subject": "toothpicks + marshmallows",
+  "apparatus": "shake board, ruler",
+  "safety": null
+ },
+ {
+  "key": "gear-trains",
+  "name": "Gear Train Ratio",
+  "discipline": "Engineering",
+  "blurb": "Mesh gears and count output turns.",
+  "keywords": [
+   "gear",
+   "ratio",
+   "train",
+   "teeth",
+   "mesh"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "teeth",
+    "label": "Driven teeth",
+    "unit": "",
+    "default": 40,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*teeth",
+     "teeth(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 12,
+    "max": 80
+   }
+  ],
+  "subject": "gear set",
+  "apparatus": "crank, counter, frame",
+  "safety": null
+ },
+ {
+  "key": "solar-tracker",
+  "name": "Solar Tracker Gain",
+  "discipline": "Engineering",
+  "blurb": "Track the sun vs fixed panel and log power.",
+  "keywords": [
+   "solar tracker",
+   "track",
+   "panel",
+   "gain"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "hours",
+    "label": "Hours logged",
+    "unit": "h",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*h(?:ours?)?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "tracker rig",
+  "apparatus": "two panels, data logger",
+  "safety": null
+ },
+ {
+  "key": "material-tensile",
+  "name": "Tensile Strip Pull",
+  "discipline": "Engineering",
+  "blurb": "Pull material strips and record break force.",
+  "keywords": [
+   "tensile",
+   "pull",
+   "break",
+   "strength",
+   "strip"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "width",
+    "label": "Strip width",
+    "unit": "mm",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mm",
+     "width(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 25
+   }
+  ],
+  "subject": "plastic strips",
+  "apparatus": "clamp rig, spring scale",
+  "safety": "Snapping strips whip. Goggles on."
+ },
+ {
+  "key": "vibration-damping",
+  "name": "Vibration Damping Pads",
+  "discipline": "Engineering",
+  "blurb": "Shake a plate on pads and measure settle time.",
+  "keywords": [
+   "vibration",
+   "damping",
+   "pad",
+   "settle",
+   "shake"
+  ],
+  "model": "cooling",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Start amplitude",
+    "unit": "mm",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mm"
+    ],
+    "min": 5,
+    "max": 50
+   }
+  ],
+  "subject": "foam pads",
+  "apparatus": "plate, shaker, ruler",
+  "safety": null
+ },
+ {
+  "key": "bridge-resonance",
+  "name": "Bridge Resonance Walk",
+  "discipline": "Engineering",
+  "blurb": "Step a model bridge at rhythms and watch sway.",
+  "keywords": [
+   "resonance",
+   "bridge",
+   "sway",
+   "tacoma",
+   "rhythm"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "bpm",
+    "label": "Step rate",
+    "unit": "bpm",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*bpm",
+     "rate(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 60,
+    "max": 180
+   }
+  ],
+  "subject": "balsa bridge",
+  "apparatus": "metronome, camera",
+  "safety": null
+ },
+ {
+  "key": "3d-print-strength",
+  "name": "3D Print Infill Strength",
+  "discipline": "Engineering",
+  "blurb": "Print hooks at infills and hang weight to fail.",
+  "keywords": [
+   "3d print",
+   "infill",
+   "strength",
+   "hook",
+   "layer"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "infill",
+    "label": "Infill percent",
+    "unit": "%",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "infill(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 100
+   }
+  ],
+  "subject": "printed hooks",
+  "apparatus": "weights, bucket, calipers",
+  "safety": "Falling weights hurt. Clear the drop zone."
+ },
+ {
+  "key": "reaction-time",
+  "name": "Ruler Reaction Time",
+  "discipline": "Psychology",
+  "blurb": "Catch falling rulers and compare groups.",
+  "keywords": [
+   "reaction",
+   "reflex",
+   "ruler",
+   "catch"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 3,
+    "max": 10
+   }
+  ],
+  "subject": "meter ruler",
+  "apparatus": "data sheet",
+  "safety": null
+ },
+ {
+  "key": "stroop-effect",
+  "name": "Stroop Color Words",
+  "discipline": "Psychology",
+  "blurb": "Time naming ink colors of mismatched words.",
+  "keywords": [
+   "stroop",
+   "color",
+   "word",
+   "interference"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "words",
+    "label": "Words listed",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*words?"
+    ],
+    "min": 10,
+    "max": 40
+   }
+  ],
+  "subject": "word lists",
+  "apparatus": "timer, quiet room",
+  "safety": null
+ },
+ {
+  "key": "memory-span",
+  "name": "Digit Memory Span",
+  "discipline": "Psychology",
+  "blurb": "Read lengthening digit strings and score recall.",
+  "keywords": [
+   "memory",
+   "digit span",
+   "recall",
+   "short term"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "start",
+    "label": "Start length",
+    "unit": "digits",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*digits?"
+    ],
+    "min": 2,
+    "max": 5
+   }
+  ],
+  "subject": "digit lists",
+  "apparatus": "reader, score sheet",
+  "safety": null
+ },
+ {
+  "key": "framing-effect",
+  "name": "Framing Choice Effect",
+  "discipline": "Psychology",
+  "blurb": "Pose the same choice as gain vs loss and tally.",
+  "keywords": [
+   "framing",
+   "gain",
+   "loss",
+   "choice",
+   "decision"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants|subjects?)"
+    ],
+    "min": 10,
+    "max": 100
+   }
+  ],
+  "subject": "survey cards",
+  "apparatus": "tally sheet",
+  "safety": null
+ },
+ {
+  "key": "anchoring",
+  "name": "Anchoring Number Estimates",
+  "discipline": "Psychology",
+  "blurb": "Flash high/low anchors then ask for estimates.",
+  "keywords": [
+   "anchoring",
+   "anchor",
+   "estimate",
+   "bias"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 10,
+    "max": 100
+   }
+  ],
+  "subject": "question cards",
+  "apparatus": "calculator",
+  "safety": null
+ },
+ {
+  "key": "multitasking",
+  "name": "Multitasking Cost",
+  "discipline": "Psychology",
+  "blurb": "Time a task alone vs with a second task.",
+  "keywords": [
+   "multitask",
+   "distraction",
+   "cost",
+   "dual task"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "sorting task",
+  "apparatus": "timer, distractor audio",
+  "safety": null
+ },
+ {
+  "key": "music-focus",
+  "name": "Music vs Focus Score",
+  "discipline": "Psychology",
+  "blurb": "Score puzzles in silence vs with music.",
+  "keywords": [
+   "music",
+   "focus",
+   "concentration",
+   "puzzle"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 8,
+    "max": 50
+   }
+  ],
+  "subject": "puzzle sheets",
+  "apparatus": "headphones, timer",
+  "safety": null
+ },
+ {
+  "key": "color-mood",
+  "name": "Color Mood Rating",
+  "discipline": "Psychology",
+  "blurb": "Rate mood words under colored light.",
+  "keywords": [
+   "color",
+   "mood",
+   "light",
+   "emotion"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "colors",
+    "label": "Colors tested",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*colors?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "colored bulbs",
+  "apparatus": "rating sheets",
+  "safety": null
+ },
+ {
+  "key": "sleep-memory",
+  "name": "Sleep vs Memory Quiz",
+  "discipline": "Psychology",
+  "blurb": "Quiz word pairs after sleep vs all-nighters (survey).",
+  "keywords": [
+   "sleep",
+   "memory",
+   "quiz",
+   "rest"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 24,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "word-pair lists",
+  "apparatus": "quiz sheets",
+  "safety": null
+ },
+ {
+  "key": "habit-formation",
+  "name": "Habit Streak Tracking",
+  "discipline": "Psychology",
+  "blurb": "Track a tiny habit for weeks and chart streaks.",
+  "keywords": [
+   "habit",
+   "streak",
+   "routine",
+   "21 days"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days tracked",
+    "unit": "days",
+    "default": 21,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 7,
+    "max": 60
+   }
+  ],
+  "subject": "habit log",
+  "apparatus": "calendar, reminder",
+  "safety": null
+ },
+ {
+  "key": "supply-demand",
+  "name": "Supply-Demand Market Game",
+  "discipline": "Economics & Math",
+  "blurb": "Trade tokens as buyers/sellers and find the price.",
+  "keywords": [
+   "supply",
+   "demand",
+   "market",
+   "price",
+   "trade"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "traders",
+    "label": "Traders",
+    "unit": "",
+    "default": 16,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*traders?"
+    ],
+    "min": 8,
+    "max": 40
+   }
+  ],
+  "subject": "token cards",
+  "apparatus": "play money, ledger",
+  "safety": null
+ },
+ {
+  "key": "compound-interest",
+  "name": "Compound Interest Growth",
+  "discipline": "Economics & Math",
+  "blurb": "Grow play money at rates and chart the curve.",
+  "keywords": [
+   "compound",
+   "interest",
+   "invest",
+   "growth",
+   "savings"
+  ],
+  "model": "exponential-decay",
+  "params": [
+   {
+    "name": "halflife",
+    "label": "Rate (%)",
+    "unit": "%",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "rate(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 15
+   }
+  ],
+  "subject": "ledger sheet",
+  "apparatus": "calculator, graph paper",
+  "safety": null
+ },
+ {
+  "key": "monty-hall",
+  "name": "Monty Hall Doors",
+  "discipline": "Economics & Math",
+  "blurb": "Play the three-door game switching vs staying.",
+  "keywords": [
+   "monty hall",
+   "doors",
+   "switch",
+   "probability",
+   "game show"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Rounds",
+    "unit": "",
+    "default": 60,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rounds?"
+    ],
+    "min": 20,
+    "max": 200
+   }
+  ],
+  "subject": "door cards",
+  "apparatus": "host script, tally",
+  "safety": null
+ },
+ {
+  "key": "birthday-paradox",
+  "name": "Birthday Paradox Groups",
+  "discipline": "Economics & Math",
+  "blurb": "Check birthdays in groups and count matches.",
+  "keywords": [
+   "birthday",
+   "paradox",
+   "match",
+   "probability"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Group size",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|students?)"
+    ],
+    "min": 15,
+    "max": 60
+   }
+  ],
+  "subject": "birthday lists",
+  "apparatus": "calendar, tally",
+  "safety": null
+ },
+ {
+  "key": "pi-estimation",
+  "name": "Pi by Toothpick Drop",
+  "discipline": "Economics & Math",
+  "blurb": "Drop toothpicks on lines and estimate pi.",
+  "keywords": [
+   "pi",
+   "buffon",
+   "toothpick",
+   "needle",
+   "estimate"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "drops",
+    "label": "Drops",
+    "unit": "",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*drops?"
+    ],
+    "min": 50,
+    "max": 1000
+   }
+  ],
+  "subject": "toothpicks",
+  "apparatus": "lined paper, counter",
+  "safety": null
+ },
+ {
+  "key": "tragedy-commons",
+  "name": "Tragedy of the Commons",
+  "discipline": "Economics & Math",
+  "blurb": "Harvest a shared bowl and watch it collapse.",
+  "keywords": [
+   "commons",
+   "tragedy",
+   "shared",
+   "harvest",
+   "overfish"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "players",
+    "label": "Players",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*players?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "bean bowl",
+  "apparatus": "cups, round tracker",
+  "safety": null
+ },
+ {
+  "key": "auction-bidding",
+  "name": "Auction Strategy Bids",
+  "discipline": "Economics & Math",
+  "blurb": "Auction prizes with play money and log winners.",
+  "keywords": [
+   "auction",
+   "bid",
+   "winner",
+   "gavel"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "lots",
+    "label": "Lots",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*lots?"
+    ],
+    "min": 4,
+    "max": 16
+   }
+  ],
+  "subject": "prize tokens",
+  "apparatus": "play money, gavel",
+  "safety": null
+ },
+ {
+  "key": "voting-paradox",
+  "name": "Voting Paradox Ballots",
+  "discipline": "Economics & Math",
+  "blurb": "Rank candidates three ways and compare winners.",
+  "keywords": [
+   "voting",
+   "paradox",
+   "ballot",
+   "ranked",
+   "condorcet"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "voters",
+    "label": "Voters",
+    "unit": "",
+    "default": 21,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*voters?"
+    ],
+    "min": 9,
+    "max": 51
+   }
+  ],
+  "subject": "ballot cards",
+  "apparatus": "tally board",
+  "safety": null
+ },
+ {
+  "key": "fractals",
+  "name": "Fractal Coastline Length",
+  "discipline": "Economics & Math",
+  "blurb": "Measure a wiggly line with shrinking rulers.",
+  "keywords": [
+   "fractal",
+   "coastline",
+   "ruler",
+   "dimension"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "steps",
+    "label": "Ruler sizes",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:sizes?|steps?)"
+    ],
+    "min": 3,
+    "max": 8
+   }
+  ],
+  "subject": "wiggly map",
+  "apparatus": "rulers, string",
+  "safety": null
+ },
+ {
+  "key": "cryptography-caesar",
+  "name": "Caesar Cipher Crack",
+  "discipline": "Economics & Math",
+  "blurb": "Encode messages and crack by frequency.",
+  "keywords": [
+   "cipher",
+   "caesar",
+   "code",
+   "encode",
+   "secret"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "shift",
+    "label": "Shift key",
+    "unit": "",
+    "default": 7,
+    "extract": [
+     "shift(?: of)? (\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?)\\s*shift"
+    ],
+    "min": 1,
+    "max": 25
+   }
+  ],
+  "subject": "message strips",
+  "apparatus": "frequency chart",
+  "safety": null
+ },
+ {
+  "key": "sorting-race",
+  "name": "Sorting Algorithm Race",
+  "discipline": "Computer Science",
+  "blurb": "Race bubble vs quick sort on card decks.",
+  "keywords": [
+   "sorting",
+   "bubble sort",
+   "quick sort",
+   "race",
+   "algorithm"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "Cards",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cards?"
+    ],
+    "min": 8,
+    "max": 52
+   }
+  ],
+  "subject": "card deck",
+  "apparatus": "timer, score sheet",
+  "safety": null
+ },
+ {
+  "key": "binary-search",
+  "name": "Binary vs Linear Search",
+  "discipline": "Computer Science",
+  "blurb": "Find pages in a phone book two ways and time it.",
+  "keywords": [
+   "binary search",
+   "linear search",
+   "find",
+   "phone book"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pages",
+    "label": "Pages",
+    "unit": "",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*pages?"
+    ],
+    "min": 20,
+    "max": 500
+   }
+  ],
+  "subject": "numbered pages",
+  "apparatus": "timer, target slips",
+  "safety": null
+ },
+ {
+  "key": "maze-solvers",
+  "name": "Maze Solver Showdown",
+  "discipline": "Computer Science",
+  "blurb": "Run wall-follower vs random mouse in a maze.",
+  "keywords": [
+   "maze",
+   "solver",
+   "wall follower",
+   "random"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "runs",
+    "label": "Runs",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*runs?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "floor maze",
+  "apparatus": "two wind-up mice, timer",
+  "safety": null
+ },
+ {
+  "key": "cellular-automata",
+  "name": "Cellular Automata Rows",
+  "discipline": "Computer Science",
+  "blurb": "Grow Rule 30 rows and count the pattern.",
+  "keywords": [
+   "cellular",
+   "automata",
+   "rule 30",
+   "game of life"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rows",
+    "label": "Rows grown",
+    "unit": "",
+    "default": 25,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rows?"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "grid paper",
+  "apparatus": "two colors, rule card",
+  "safety": null
+ },
+ {
+  "key": "compression",
+  "name": "Text Compression Ratio",
+  "discipline": "Computer Science",
+  "blurb": "Compress passages by hand-code and measure ratio.",
+  "keywords": [
+   "compression",
+   "huffman",
+   "ratio",
+   "shrink"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "chars",
+    "label": "Characters",
+    "unit": "",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:chars?|characters?)"
+    ],
+    "min": 50,
+    "max": 1000
+   }
+  ],
+  "subject": "passage cards",
+  "apparatus": "code table, calculator",
+  "safety": null
+ },
+ {
+  "key": "gradient-descent",
+  "name": "Gradient Descent Marble",
+  "discipline": "Computer Science",
+  "blurb": "Roll a marble down a bowl to find the bottom.",
+  "keywords": [
+   "gradient",
+   "descent",
+   "marble",
+   "bowl",
+   "minimum"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rolls",
+    "label": "Rolls",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rolls?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "salad bowl",
+  "apparatus": "marble, ruler, marker",
+  "safety": null
+ },
+ {
+  "key": "dijkstra",
+  "name": "Dijkstra Map Race",
+  "discipline": "Computer Science",
+  "blurb": "Find shortest paths on a node map by hand.",
+  "keywords": [
+   "dijkstra",
+   "shortest path",
+   "graph",
+   "nodes",
+   "map"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "nodes",
+    "label": "Nodes",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*nodes?"
+    ],
+    "min": 6,
+    "max": 25
+   }
+  ],
+  "subject": "node map",
+  "apparatus": "tokens, distance table",
+  "safety": null
+ },
+ {
+  "key": "towers-hanoi",
+  "name": "Towers of Hanoi Moves",
+  "discipline": "Computer Science",
+  "blurb": "Move the stack and count moves vs theory.",
+  "keywords": [
+   "hanoi",
+   "towers",
+   "disks",
+   "moves",
+   "recursion"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "disks",
+    "label": "Disks",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*disks?"
+    ],
+    "min": 3,
+    "max": 8
+   }
+  ],
+  "subject": "disk set",
+  "apparatus": "three pegs, counter",
+  "safety": null
+ },
+ {
+  "key": "solar-oven",
+  "name": "Solar Oven S'mores",
+  "discipline": "Environmental",
+  "blurb": "Bake in a box oven and log inside temperature.",
+  "keywords": [
+   "solar oven",
+   "smores",
+   "box oven",
+   "bake"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Sun minutes",
+    "unit": "min",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 15,
+    "max": 90
+   }
+  ],
+  "subject": "pizza-box oven",
+  "apparatus": "thermometer, foil, s'mores",
+  "safety": null
+ },
+ {
+  "key": "rain-garden",
+  "name": "Rain Garden Infiltration",
+  "discipline": "Environmental",
+  "blurb": "Pour measured water on plots and time soak-in.",
+  "keywords": [
+   "rain garden",
+   "infiltration",
+   "soak",
+   "runoff"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "water",
+    "label": "Water poured",
+    "unit": "L",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*L(?:iter)?s?"
+    ],
+    "min": 1,
+    "max": 20
+   }
+  ],
+  "subject": "test plots",
+  "apparatus": "watering can, timer",
+  "safety": null
+ },
+ {
+  "key": "air-quality",
+  "name": "Air Quality Tape Test",
+  "discipline": "Environmental",
+  "blurb": "Hang sticky cards and count the specks.",
+  "keywords": [
+   "air quality",
+   "pollution",
+   "sticky",
+   "particulate"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "hours",
+    "label": "Hours hung",
+    "unit": "h",
+    "default": 24,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*h(?:ours?)?"
+    ],
+    "min": 6,
+    "max": 72
+   }
+  ],
+  "subject": "index cards",
+  "apparatus": "petroleum jelly, hand lens",
+  "safety": null
+ },
+ {
+  "key": "compost-tea",
+  "name": "Compost Tea Growth",
+  "discipline": "Environmental",
+  "blurb": "Brew compost tea and compare seedling growth.",
+  "keywords": [
+   "compost tea",
+   "brew",
+   "seedling",
+   "fertilizer"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days grown",
+    "unit": "days",
+    "default": 14,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 7,
+    "max": 28
+   }
+  ],
+  "subject": "seedlings",
+  "apparatus": "compost, bubbler, ruler",
+  "safety": null
+ },
+ {
+  "key": "noise-pollution",
+  "name": "Noise Map Survey",
+  "discipline": "Environmental",
+  "blurb": "Meter decibels around campus and map hot spots.",
+  "keywords": [
+   "noise",
+   "decibel",
+   "loud",
+   "map",
+   "sound meter"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "spots",
+    "label": "Spots measured",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*spots?"
+    ],
+    "min": 5,
+    "max": 25
+   }
+  ],
+  "subject": "campus map",
+  "apparatus": "phone decibel app",
+  "safety": null
+ },
+ {
+  "key": "microplastics",
+  "name": "Microplastic Sieve Count",
+  "discipline": "Environmental",
+  "blurb": "Sieve beach sand and count the flecks.",
+  "keywords": [
+   "microplastic",
+   "sieve",
+   "beach",
+   "flecks"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "scoops",
+    "label": "Sand scoops",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*scoops?"
+    ],
+    "min": 2,
+    "max": 12
+   }
+  ],
+  "subject": "beach sand",
+  "apparatus": "sieves, tweezers, lens",
+  "safety": "Do not ingest sand. Wash hands."
+ },
+ {
+  "key": "density-column",
+  "name": "Density Column Layers",
+  "discipline": "Physics",
+  "blurb": "Stack immiscible liquids and float objects at their levels.",
+  "keywords": [
+   "density",
+   "column",
+   "layer",
+   "immiscible",
+   "float"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "layers",
+    "label": "Liquid layers",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*layers?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "dyed liquids",
+  "apparatus": "graduated cylinder, droppers",
+  "safety": null
+ },
+ {
+  "key": "siphon",
+  "name": "Siphon Over the Rim",
+  "discipline": "Physics",
+  "blurb": "Start a siphon and time the transfer rate.",
+  "keywords": [
+   "siphon",
+   "tube",
+   "transfer",
+   "drain"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "height",
+    "label": "Lift height",
+    "unit": "cm",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "height(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "rubber tube",
+  "apparatus": "two buckets, stopwatch",
+  "safety": null
+ },
+ {
+  "key": "stokes-viscosity",
+  "name": "Stokes Viscosity Drop",
+  "discipline": "Physics",
+  "blurb": "Drop balls through oil and time the fall.",
+  "keywords": [
+   "viscosity",
+   "stokes",
+   "oil",
+   "drop",
+   "syrup"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Ball diameter",
+    "unit": "mm",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*mm",
+     "diameter(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 3,
+    "max": 30
+   }
+  ],
+  "subject": "steel balls",
+  "apparatus": "graduated cylinder, oil, calipers",
+  "safety": null
+ },
+ {
+  "key": "surface-tension",
+  "name": "Surface Tension Clip Float",
+  "discipline": "Physics",
+  "blurb": "Float clips on water and count the load.",
+  "keywords": [
+   "surface tension",
+   "float",
+   "clip",
+   "needle",
+   "pepper"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "clips",
+    "label": "Clips floated",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*clips?"
+    ],
+    "min": 1,
+    "max": 15
+   }
+  ],
+  "subject": "paper clips",
+  "apparatus": "bowl, tissue, tweezers",
+  "safety": null
+ },
+ {
+  "key": "thermal-conduction",
+  "name": "Thermal Conduction Rods",
+  "discipline": "Physics",
+  "blurb": "Heat rod ends and time wax melts along them.",
+  "keywords": [
+   "conduction",
+   "rod",
+   "heat",
+   "wax",
+   "metal"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rods",
+    "label": "Rod metals",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:rods?|metals?)"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "metal rods",
+  "apparatus": "wax, burner, clamps",
+  "safety": "Hot rods burn. Handle with tongs; goggles on."
+ },
+ {
+  "key": "convection-cells",
+  "name": "Convection Current Cells",
+  "discipline": "Physics",
+  "blurb": "Heat water from below and dye the rising cells.",
+  "keywords": [
+   "convection",
+   "current",
+   "cells",
+   "heat",
+   "rise"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "power",
+    "label": "Heater power",
+    "unit": "W",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*W(?:att)?s?",
+     "power(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 25,
+    "max": 300
+   }
+  ],
+  "subject": "fish tank",
+  "apparatus": "hot plate, dye, ruler",
+  "safety": "Hot plate burns. Do not touch the tank bottom."
+ },
+ {
+  "key": "peltier",
+  "name": "Peltier Hot-Cold Faces",
+  "discipline": "Physics",
+  "blurb": "Power a Peltier chip and log both face temperatures.",
+  "keywords": [
+   "peltier",
+   "thermoelectric",
+   "hot cold",
+   "chip"
+  ],
+  "model": "cooling",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Start temperature",
+    "unit": "\u00b0C",
+    "default": 22,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 10,
+    "max": 35
+   }
+  ],
+  "subject": "peltier module",
+  "apparatus": "supply, two thermometers, heatsink",
+  "safety": null
+ },
+ {
+  "key": "hall-effect",
+  "name": "Hall Effect Voltage",
+  "discipline": "Physics",
+  "blurb": "Run current through foil in a magnet field and read microvolts.",
+  "keywords": [
+   "hall",
+   "magnet",
+   "voltage",
+   "foil",
+   "effect"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "current",
+    "label": "Current",
+    "unit": "A",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*A(?:mp)?s?",
+     "current(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.5,
+    "max": 5
+   }
+  ],
+  "subject": "aluminum foil",
+  "apparatus": "neodymium magnets, microvolt meter",
+  "safety": null
+ },
+ {
+  "key": "frank-hertz",
+  "name": "Franck-Hertz Dip Model",
+  "discipline": "Physics",
+  "blurb": "Simulate electron energy dips with a stepped ramp and marbles.",
+  "keywords": [
+   "franck",
+   "hertz",
+   "quantum",
+   "dip",
+   "energy levels"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "steps",
+    "label": "Ramp steps",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*steps?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "marbles",
+  "apparatus": "stepped ramp, cups",
+  "safety": null
+ },
+ {
+  "key": "sonometer",
+  "name": "Sonometer String Pitch",
+  "discipline": "Physics",
+  "blurb": "Tune string tension and match pitch to a tuner.",
+  "keywords": [
+   "sonometer",
+   "pitch",
+   "string",
+   "tune",
+   "frequency"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "tension",
+    "label": "Tension",
+    "unit": "N",
+    "default": 50,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*N(?:ewton)?s?"
+    ],
+    "min": 10,
+    "max": 150
+   }
+  ],
+  "subject": "monochord wire",
+  "apparatus": "weights, tuner app",
+  "safety": null
+ },
+ {
+  "key": "kundt-tube",
+  "name": "Kundt's Tube Nodes",
+  "discipline": "Physics",
+  "blurb": "Rattle a rod and dust the standing-wave nodes.",
+  "keywords": [
+   "kundt",
+   "nodes",
+   "standing wave",
+   "dust",
+   "tube"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "freq",
+    "label": "Rod frequency",
+    "unit": "Hz",
+    "default": 2500,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*Hz"
+    ],
+    "min": 1000,
+    "max": 5000
+   }
+  ],
+  "subject": "glass tube",
+  "apparatus": "metal rod, cork dust",
+  "safety": null
+ },
+ {
+  "key": "chladni",
+  "name": "Chladni Plate Patterns",
+  "discipline": "Physics",
+  "blurb": "Bow a plate and watch sand draw the modes.",
+  "keywords": [
+   "chladni",
+   "plate",
+   "sand",
+   "modes",
+   "bow"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "notes",
+    "label": "Notes played",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*notes?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "metal plate",
+  "apparatus": "violin bow, sand",
+  "safety": null
+ },
+ {
+  "key": "inverse-square-light",
+  "name": "Inverse-Square Light Falloff",
+  "discipline": "Physics",
+  "blurb": "Move a lamp from a meter and log lux.",
+  "keywords": [
+   "inverse square",
+   "light",
+   "lux",
+   "falloff",
+   "distance"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Lamp distance",
+    "unit": "m",
+    "default": 1,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?",
+     "distance(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 0.25,
+    "max": 3
+   }
+  ],
+  "subject": "desk lamp",
+  "apparatus": "lux meter app, tape",
+  "safety": "Lamp gets hot. Do not stare into it."
+ },
+ {
+  "key": "mirage-tank",
+  "name": "Mirage Gradient Tank",
+  "discipline": "Physics",
+  "blurb": "Layer salty water and watch the bent straw.",
+  "keywords": [
+   "mirage",
+   "gradient",
+   "refraction",
+   "bent",
+   "straw"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "layers",
+    "label": "Salt layers",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*layers?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "fish tank",
+  "apparatus": "salt, straw, divider",
+  "safety": null
+ },
+ {
+  "key": "newton-rings",
+  "name": "Newton's Rings Spacing",
+  "discipline": "Physics",
+  "blurb": "Press a lens on glass and count the rings.",
+  "keywords": [
+   "newton rings",
+   "interference",
+   "rings",
+   "lens"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rings",
+    "label": "Rings counted",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rings?"
+    ],
+    "min": 3,
+    "max": 20
+   }
+  ],
+  "subject": "convex lens",
+  "apparatus": "glass plate, lamp",
+  "safety": null
+ },
+ {
+  "key": "camera-obscura",
+  "name": "Camera Obscura Room",
+  "discipline": "Physics",
+  "blurb": "Darken a room and project the window on the wall.",
+  "keywords": [
+   "camera obscura",
+   "pinhole",
+   "project",
+   "dark room"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Hole to wall",
+    "unit": "m",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "darkened room",
+  "apparatus": "foil, pin, white sheet",
+  "safety": null
+ },
+ {
+  "key": "depth-of-field",
+  "name": "Depth of Field Apertures",
+  "discipline": "Physics",
+  "blurb": "Shoot a ruler row at apertures and note sharp range.",
+  "keywords": [
+   "depth of field",
+   "aperture",
+   "focus",
+   "sharp"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "fstop",
+    "label": "F-stop",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "f/?(\\d+(?:\\.\\d+)?)",
+     "aperture(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 2,
+    "max": 22
+   }
+  ],
+  "subject": "camera",
+  "apparatus": "ruler row, tripod",
+  "safety": null
+ },
+ {
+  "key": "microscope-build",
+  "name": "Compound Microscope Build",
+  "discipline": "Physics",
+  "blurb": "Stack two lenses and measure total magnification.",
+  "keywords": [
+   "microscope",
+   "compound",
+   "magnification",
+   "lenses"
+  ],
+  "model": "optics",
+  "params": [
+   {
+    "name": "f",
+    "label": "Objective focal",
+    "unit": "cm",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "f\\s*=\\s*(\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 2,
+    "max": 15
+   }
+  ],
+  "subject": "lens pair",
+  "apparatus": "tubes, stage, slide",
+  "safety": null
+ },
+ {
+  "key": "le-chatelier",
+  "name": "Le Chatelier Shift",
+  "discipline": "Chemistry",
+  "blurb": "Stress an equilibrium and watch the color shift.",
+  "keywords": [
+   "le chatelier",
+   "equilibrium",
+   "shift",
+   "stress",
+   "color"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Stress trials",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "cobalt complex",
+  "apparatus": "test tubes, hot/cold baths",
+  "safety": "Some complexes are toxic. Gloves; goggles on."
+ },
+ {
+  "key": "ksp",
+  "name": "Ksp Precipitation Point",
+  "discipline": "Chemistry",
+  "blurb": "Drip ions together and find the cloud point.",
+  "keywords": [
+   "ksp",
+   "solubility product",
+   "precipitate",
+   "cloud"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "drops",
+    "label": "Drops added",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*drops?"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "silver nitrate",
+  "apparatus": "pipettes, beakers, dark paper",
+  "safety": "Silver nitrate stains. Gloves on."
+ },
+ {
+  "key": "redox-balancing",
+  "name": "Redox Titration Iron",
+  "discipline": "Chemistry",
+  "blurb": "Titrate iron(II) with permanganate to the pink snap.",
+  "keywords": [
+   "redox",
+   "permanganate",
+   "iron",
+   "titration",
+   "pink"
+  ],
+  "model": "titration",
+  "params": [
+   {
+    "name": "conc",
+    "label": "Iron concentration",
+    "unit": "M",
+    "default": 0.05,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*M(?:olar)?"
+    ],
+    "min": 0.01,
+    "max": 0.2
+   }
+  ],
+  "subject": "iron solution",
+  "apparatus": "burette, flask",
+  "safety": "Acidic permanganate stains and irritates. Goggles on."
+ },
+ {
+  "key": "fuel-cell",
+  "name": "Hydrogen Fuel Cell",
+  "discipline": "Chemistry",
+  "blurb": "Feed a fuel cell and log voltage vs load.",
+  "keywords": [
+   "fuel cell",
+   "hydrogen",
+   "voltage",
+   "load"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "load",
+    "label": "Load resistance",
+    "unit": "\u03a9",
+    "default": 50,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:ohm|\u03a9)"
+    ],
+    "min": 10,
+    "max": 500
+   }
+  ],
+  "subject": "demo fuel cell",
+  "apparatus": "resistors, voltmeter",
+  "safety": "Hydrogen is flammable. Ventilate well."
+ },
+ {
+  "key": "activation-energy",
+  "name": "Activation Energy Slopes",
+  "discipline": "Chemistry",
+  "blurb": "Run a reaction at temperatures and plot Arrhenius.",
+  "keywords": [
+   "activation energy",
+   "arrhenius",
+   "slope",
+   "plot"
+  ],
+  "model": "rate-temp",
+  "params": [
+   {
+    "name": "t0",
+    "label": "Base temperature",
+    "unit": "\u00b0C",
+    "default": 25,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|degrees? c)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "clock reaction",
+  "apparatus": "baths, timers, graph paper",
+  "safety": "Reagents may stain. Goggles on."
+ },
+ {
+  "key": "recrystallization",
+  "name": "Recrystallization Purity",
+  "discipline": "Chemistry",
+  "blurb": "Dissolve, filter hot, and weigh the crystals.",
+  "keywords": [
+   "recrystallize",
+   "crystals",
+   "purity",
+   "filter hot"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Impure mass",
+    "unit": "g",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 1,
+    "max": 20
+   }
+  ],
+  "subject": "benzoic acid",
+  "apparatus": "hot filtration kit, ice bath",
+  "safety": "Hot glass burns. Use clamps; goggles on."
+ },
+ {
+  "key": "sublimation",
+  "name": "Sublimation Iodine",
+  "discipline": "Chemistry",
+  "blurb": "Heat iodine and watch crystals form on cold glass.",
+  "keywords": [
+   "sublimation",
+   "iodine",
+   "crystals",
+   "vapor"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Iodine mass",
+    "unit": "g",
+    "default": 1,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 0.5,
+    "max": 5
+   }
+  ],
+  "subject": "iodine",
+  "apparatus": "evaporating dish, cold finger",
+  "safety": "Iodine vapor irritates. Fume hood only."
+ },
+ {
+  "key": "beer-lambert",
+  "name": "Beer's Law Colorimetry",
+  "discipline": "Chemistry",
+  "blurb": "Dilute dye and plot absorbance vs concentration.",
+  "keywords": [
+   "beer",
+   "lambert",
+   "absorbance",
+   "colorimeter",
+   "dye"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "stds",
+    "label": "Standards",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*standards?"
+    ],
+    "min": 3,
+    "max": 10
+   }
+  ],
+  "subject": "food dye",
+  "apparatus": "cuvettes, colorimeter app",
+  "safety": null
+ },
+ {
+  "key": "polarimetry",
+  "name": "Polarimetry Sugar Twist",
+  "discipline": "Chemistry",
+  "blurb": "Shine polarized light through sugar and read rotation.",
+  "keywords": [
+   "polarimetry",
+   "polarized",
+   "sugar",
+   "rotation",
+   "optical"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "conc",
+    "label": "Sugar concentration",
+    "unit": "%",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "concentration(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 2,
+    "max": 30
+   }
+  ],
+  "subject": "sugar solutions",
+  "apparatus": "polarizing filters, tube",
+  "safety": null
+ },
+ {
+  "key": "bomb-calorimeter",
+  "name": "Bomb Calorimeter Demo",
+  "discipline": "Chemistry",
+  "blurb": "Burn a pellet in a sealed can and log the rise.",
+  "keywords": [
+   "bomb calorimeter",
+   "combustion",
+   "pellet",
+   "energy"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mass",
+    "label": "Pellet mass",
+    "unit": "g",
+    "default": 1,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*g(?:ram)?s?"
+    ],
+    "min": 0.5,
+    "max": 3
+   }
+  ],
+  "subject": "benzoic pellets",
+  "apparatus": "steel can rig, thermometer",
+  "safety": "Sealed combustion. Adult supervision; goggles on."
+ },
+ {
+  "key": "reverse-osmosis",
+  "name": "Reverse Osmosis Pressure",
+  "discipline": "Chemistry",
+  "blurb": "Press salt water through membrane and test the drip.",
+  "keywords": [
+   "reverse osmosis",
+   "membrane",
+   "desalination",
+   "pressure"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "psi",
+    "label": "Applied pressure",
+    "unit": "psi",
+    "default": 60,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*psi",
+     "pressure(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 150
+   }
+  ],
+  "subject": "salt water",
+  "apparatus": "membrane cell, pump, TDS meter",
+  "safety": null
+ },
+ {
+  "key": "ion-exchange",
+  "name": "Ion Exchange Softening",
+  "discipline": "Chemistry",
+  "blurb": "Run hard water through resin and test hardness.",
+  "keywords": [
+   "ion exchange",
+   "soften",
+   "resin",
+   "hardness"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "vol",
+    "label": "Water volume",
+    "unit": "L",
+    "default": 2,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*L(?:iter)?s?"
+    ],
+    "min": 0.5,
+    "max": 10
+   }
+  ],
+  "subject": "hard water",
+  "apparatus": "resin column, test strips",
+  "safety": null
+ },
+ {
+  "key": "dissolved-oxygen",
+  "name": "Dissolved Oxygen Winkler",
+  "discipline": "Chemistry",
+  "blurb": "Fix oxygen in pond samples and titrate.",
+  "keywords": [
+   "dissolved oxygen",
+   "winkler",
+   "pond",
+   "oxygen"
+  ],
+  "model": "titration",
+  "params": [
+   {
+    "name": "sites",
+    "label": "Sites sampled",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*sites?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "pond water",
+  "apparatus": "Winkler reagents, burette",
+  "safety": "Reagents are caustic. Gloves; goggles on."
+ },
+ {
+  "key": "alkalinity",
+  "name": "Alkalinity Titration",
+  "discipline": "Chemistry",
+  "blurb": "Titrate water samples to the methyl-orange end.",
+  "keywords": [
+   "alkalinity",
+   "titrate",
+   "methyl orange",
+   "buffer"
+  ],
+  "model": "titration",
+  "params": [
+   {
+    "name": "samples",
+    "label": "Samples",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*samples?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "tap/pond water",
+  "apparatus": "acid burette, indicator",
+  "safety": "Dilute acid irritates. Goggles on."
+ },
+ {
+  "key": "extraction",
+  "name": "Liquid-Liquid Extraction",
+  "discipline": "Chemistry",
+  "blurb": "Shake dye between water and oil and split the layers.",
+  "keywords": [
+   "extraction",
+   "separate",
+   "funnel",
+   "layers",
+   "partition"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "shakes",
+    "label": "Shake count",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*shakes?"
+    ],
+    "min": 3,
+    "max": 30
+   }
+  ],
+  "subject": "dyed water",
+  "apparatus": "separatory funnel, oil",
+  "safety": null
+ },
+ {
+  "key": "hardy-weinberg",
+  "name": "Hardy-Weinberg Beads",
+  "discipline": "Biology",
+  "blurb": "Draw bead alleles for generations and check the math.",
+  "keywords": [
+   "hardy",
+   "weinberg",
+   "allele",
+   "beads",
+   "genetics"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "gens",
+    "label": "Generations",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*gen(?:eration)?s?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "allele beads",
+  "apparatus": "bag, tally sheet",
+  "safety": null
+ },
+ {
+  "key": "drift-bottleneck",
+  "name": "Genetic Drift Bottleneck",
+  "discipline": "Biology",
+  "blurb": "Crash a bead population and watch alleles vanish.",
+  "keywords": [
+   "drift",
+   "bottleneck",
+   "alleles",
+   "founder"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "crash",
+    "label": "Survivors",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*survivors?"
+    ],
+    "min": 2,
+    "max": 30
+   }
+  ],
+  "subject": "bead gene pool",
+  "apparatus": "narrow-neck bottle",
+  "safety": null
+ },
+ {
+  "key": "phylogeny",
+  "name": "Phylogeny Card Sort",
+  "discipline": "Biology",
+  "blurb": "Sort organism cards into a tree by traits.",
+  "keywords": [
+   "phylogeny",
+   "tree",
+   "cladogram",
+   "traits",
+   "sort"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "cards",
+    "label": "Organism cards",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cards?"
+    ],
+    "min": 6,
+    "max": 24
+   }
+  ],
+  "subject": "trait cards",
+  "apparatus": "wall, tape",
+  "safety": null
+ },
+ {
+  "key": "transect",
+  "name": "Transect Line Survey",
+  "discipline": "Biology",
+  "blurb": "Lay a tape and tally every touch-point species.",
+  "keywords": [
+   "transect",
+   "tape",
+   "tally",
+   "survey",
+   "line"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "m",
+    "label": "Transect meters",
+    "unit": "m",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*m(?:eter)?s?"
+    ],
+    "min": 5,
+    "max": 50
+   }
+  ],
+  "subject": "field plot",
+  "apparatus": "tape, ID keys",
+  "safety": null
+ },
+ {
+  "key": "pitfall-traps",
+  "name": "Pitfall Trap Census",
+  "discipline": "Biology",
+  "blurb": "Sink cups overnight and count the catch.",
+  "keywords": [
+   "pitfall",
+   "trap",
+   "census",
+   "insects",
+   "cups"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "traps",
+    "label": "Traps set",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*traps?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "garden bed",
+  "apparatus": "cups, covers, keys",
+  "safety": "Release catch alive. Wash hands."
+ },
+ {
+  "key": "kick-sampling",
+  "name": "Kick-Sample Stream Life",
+  "discipline": "Biology",
+  "blurb": "Kick the streambed into a net and score the biotic index.",
+  "keywords": [
+   "kick",
+   "stream",
+   "biotic",
+   "net",
+   "macroinvertebrate"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "kicks",
+    "label": "Kick samples",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*kicks?"
+    ],
+    "min": 1,
+    "max": 6
+   }
+  ],
+  "subject": "riffle zone",
+  "apparatus": "D-net, tray, keys",
+  "safety": "Return animals to the stream. Watch footing."
+ },
+ {
+  "key": "eutrophication",
+  "name": "Eutrophication Jar Bloom",
+  "discipline": "Biology",
+  "blurb": "Fertilize jars and track the green bloom.",
+  "keywords": [
+   "eutrophication",
+   "algae",
+   "bloom",
+   "fertilizer",
+   "green"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "fert",
+    "label": "Fertilizer drops",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*drops?"
+    ],
+    "min": 0,
+    "max": 15
+   }
+  ],
+  "subject": "pond jars",
+  "apparatus": "fertilizer, light, color chart",
+  "safety": null
+ },
+ {
+  "key": "biomagnification",
+  "name": "Biomagnification Beads",
+  "discipline": "Biology",
+  "blurb": "Pass toxin beads up a food chain and count the load.",
+  "keywords": [
+   "biomagnification",
+   "toxin",
+   "food chain",
+   "ddt"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "levels",
+    "label": "Trophic levels",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*levels?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "bead tokens",
+  "apparatus": "cups labeled by level",
+  "safety": null
+ },
+ {
+  "key": "mycorrhizae",
+  "name": "Mycorrhizae Root Stain",
+  "discipline": "Biology",
+  "blurb": "Stain roots and score fungal colonization.",
+  "keywords": [
+   "mycorrhizae",
+   "fungi",
+   "roots",
+   "stain",
+   "symbiosis"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "roots",
+    "label": "Root segments",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:roots?|segments?)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "potted plants",
+  "apparatus": "stain, microscope",
+  "safety": null
+ },
+ {
+  "key": "nitrogen-cycle",
+  "name": "Nitrogen Cycle Beads",
+  "discipline": "Biology",
+  "blurb": "Move nitrogen beads through cycle stations.",
+  "keywords": [
+   "nitrogen",
+   "cycle",
+   "beads",
+   "stations",
+   "fixation"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Cycle rounds",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rounds?"
+    ],
+    "min": 1,
+    "max": 6
+   }
+  ],
+  "subject": "station cards",
+  "apparatus": "beads, dice",
+  "safety": null
+ },
+ {
+  "key": "dichotomous-keys",
+  "name": "Dichotomous Key Leaves",
+  "discipline": "Biology",
+  "blurb": "Key out leaves with paired questions.",
+  "keywords": [
+   "dichotomous",
+   "key",
+   "leaves",
+   "identify"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "leaves",
+    "label": "Leaves keyed",
+    "unit": "",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*leaves?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "leaf set",
+  "apparatus": "printed key, lens",
+  "safety": null
+ },
+ {
+  "key": "operon-model",
+  "name": "Lac Operon Bead Model",
+  "discipline": "Biology",
+  "blurb": "Flip repressor beads and transcribe the genes.",
+  "keywords": [
+   "operon",
+   "lac",
+   "repressor",
+   "transcribe",
+   "gene"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "runs",
+    "label": "Simulation runs",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*runs?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "gene strip",
+  "apparatus": "beads, dice",
+  "safety": null
+ },
+ {
+  "key": "dna-extraction",
+  "name": "DNA Extraction Strawberries",
+  "discipline": "Biology",
+  "blurb": "Mash berries and spool the DNA threads.",
+  "keywords": [
+   "dna",
+   "extraction",
+   "strawberry",
+   "spool"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "berries",
+    "label": "Berries mashed",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*berr(?:y|ies)"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "strawberries",
+  "apparatus": "salt, soap, alcohol, sticks",
+  "safety": "Cold alcohol only. No tasting the mix."
+ },
+ {
+  "key": "transformation",
+  "name": "Bacterial Transformation",
+  "discipline": "Biology",
+  "blurb": "Heat-shock cells with plasmid and count glowing colonies.",
+  "keywords": [
+   "transformation",
+   "plasmid",
+   "glow",
+   "heat shock"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "plates",
+    "label": "Plates",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*plates?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "lab strain",
+  "apparatus": "plasmid, incubator",
+  "safety": "Lab strains only. Seal plates; never open."
+ },
+ {
+  "key": "mohs-hardness",
+  "name": "Mohs Hardness Scratch",
+  "discipline": "Earth & Space",
+  "blurb": "Scratch minerals in order and rank them.",
+  "keywords": [
+   "mohs",
+   "hardness",
+   "scratch",
+   "mineral"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "samples",
+    "label": "Minerals",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*minerals?"
+    ],
+    "min": 4,
+    "max": 12
+   }
+  ],
+  "subject": "mineral set",
+  "apparatus": "nail, penny, glass plate",
+  "safety": null
+ },
+ {
+  "key": "crystal-growing",
+  "name": "Crystal Growing Jars",
+  "discipline": "Earth & Space",
+  "blurb": "Grow alum crystals and measure daily growth.",
+  "keywords": [
+   "crystal",
+   "grow",
+   "alum",
+   "jar"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days grown",
+    "unit": "days",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 3,
+    "max": 21
+   }
+  ],
+  "subject": "alum solution",
+  "apparatus": "jars, string, ruler",
+  "safety": null
+ },
+ {
+  "key": "fossil-molds",
+  "name": "Fossil Mold Casts",
+  "discipline": "Earth & Space",
+  "blurb": "Press shells in clay and cast the molds.",
+  "keywords": [
+   "fossil",
+   "mold",
+   "cast",
+   "shell",
+   "clay"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "shells",
+    "label": "Shells cast",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*shells?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "shells",
+  "apparatus": "clay, plaster",
+  "safety": null
+ },
+ {
+  "key": "carbon-dating-model",
+  "name": "Carbon Dating Beads",
+  "discipline": "Earth & Space",
+  "blurb": "Remove half the beads per round and date the sample.",
+  "keywords": [
+   "carbon dating",
+   "half-life",
+   "beads",
+   "age"
+  ],
+  "model": "exponential-decay",
+  "params": [
+   {
+    "name": "halflife",
+    "label": "Half-life",
+    "unit": "rounds",
+    "default": 3,
+    "extract": [
+     "half[- ]life(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "100 beads",
+  "apparatus": "cup, chart",
+  "safety": null
+ },
+ {
+  "key": "dendrochronology",
+  "name": "Tree Ring Dating",
+  "discipline": "Earth & Space",
+  "blurb": "Match ring patterns to date a beam.",
+  "keywords": [
+   "dendrochronology",
+   "tree rings",
+   "date",
+   "beam"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "cores",
+    "label": "Cores compared",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cores?"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "core images",
+  "apparatus": "ring charts, lens",
+  "safety": null
+ },
+ {
+  "key": "seafloor-spreading",
+  "name": "Seafloor Spreading Stripes",
+  "discipline": "Earth & Space",
+  "blurb": "Pull paper through a slit and stripe the ages.",
+  "keywords": [
+   "seafloor",
+   "spreading",
+   "stripes",
+   "magnetic"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pulls",
+    "label": "Pull steps",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:pulls?|steps?)"
+    ],
+    "min": 4,
+    "max": 16
+   }
+  ],
+  "subject": "paper strip",
+  "apparatus": "slit box, crayons",
+  "safety": null
+ },
+ {
+  "key": "fault-models",
+  "name": "Fault Block Models",
+  "discipline": "Earth & Space",
+  "blurb": "Slide foam blocks into normal and reverse faults.",
+  "keywords": [
+   "fault",
+   "normal",
+   "reverse",
+   "strike-slip",
+   "blocks"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "models",
+    "label": "Fault models",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*models?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "foam blocks",
+  "apparatus": "knife, labels",
+  "safety": "Cut away from hands. Adult help for blades."
+ },
+ {
+  "key": "liquefaction",
+  "name": "Liquefaction Shake Box",
+  "discipline": "Earth & Space",
+  "blurb": "Shake wet sand with a buried block and watch it sink.",
+  "keywords": [
+   "liquefaction",
+   "shake",
+   "sand",
+   "sink"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "shakes",
+    "label": "Shake seconds",
+    "unit": "s",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*s(?:ec)?s?",
+     "for (\\d+(?:\\.\\d+)?) sec"
+    ],
+    "min": 5,
+    "max": 60
+   }
+  ],
+  "subject": "sand box",
+  "apparatus": "block, water, timer",
+  "safety": null
+ },
+ {
+  "key": "hurricane-spin",
+  "name": "Hurricane Spin Tank",
+  "discipline": "Earth & Space",
+  "blurb": "Stir a tank and dye the spiral bands.",
+  "keywords": [
+   "hurricane",
+   "spin",
+   "spiral",
+   "coriolis",
+   "tank"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "stirs",
+    "label": "Stir seconds",
+    "unit": "s",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*s(?:ec)?s?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "water tank",
+  "apparatus": "paddle, dye",
+  "safety": null
+ },
+ {
+  "key": "rain-shadow",
+  "name": "Rain Shadow Ridge",
+  "discipline": "Earth & Space",
+  "blurb": "Blow mist at a ridge and compare wet sides.",
+  "keywords": [
+   "rain shadow",
+   "ridge",
+   "mist",
+   "leeward"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Mist minutes",
+    "unit": "min",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 3,
+    "max": 30
+   }
+  ],
+  "subject": "foam ridge",
+  "apparatus": "spray bottle, paper towels",
+  "safety": null
+ },
+ {
+  "key": "sea-breeze",
+  "name": "Sea Breeze Box",
+  "discipline": "Earth & Space",
+  "blurb": "Heat one side of a box and smoke the breeze.",
+  "keywords": [
+   "sea breeze",
+   "land breeze",
+   "box",
+   "smoke"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Heat minutes",
+    "unit": "min",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 5,
+    "max": 30
+   }
+  ],
+  "subject": "long box",
+  "apparatus": "lamp, ice, smoke stick",
+  "safety": "Lamp gets hot. Ventilate the smoke."
+ },
+ {
+  "key": "urban-heat",
+  "name": "Urban Heat Island Walk",
+  "discipline": "Earth & Space",
+  "blurb": "Meter temps on pavement vs grass and map them.",
+  "keywords": [
+   "urban heat",
+   "island",
+   "pavement",
+   "grass",
+   "temperature"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "spots",
+    "label": "Spots",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*spots?"
+    ],
+    "min": 5,
+    "max": 25
+   }
+  ],
+  "subject": "campus map",
+  "apparatus": "IR thermometer",
+  "safety": null
+ },
+ {
+  "key": "inversion",
+  "name": "Inversion Smoke Layer",
+  "discipline": "Earth & Space",
+  "blurb": "Trap smoke under a cold lid and watch it hang.",
+  "keywords": [
+   "inversion",
+   "smoke",
+   "layer",
+   "trap"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Minutes watched",
+    "unit": "min",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 3,
+    "max": 20
+   }
+  ],
+  "subject": "fish tank",
+  "apparatus": "ice lid, smoke stick",
+  "safety": "Ventilate smoke after."
+ },
+ {
+  "key": "geneva-drive",
+  "name": "Geneva Drive Indexing",
+  "discipline": "Engineering",
+  "blurb": "Crank a geneva wheel and time the index steps.",
+  "keywords": [
+   "geneva",
+   "indexing",
+   "drive",
+   "wheel",
+   "step"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "slots",
+    "label": "Wheel slots",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*slots?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "cardboard geneva",
+  "apparatus": "pin crank, timer",
+  "safety": null
+ },
+ {
+  "key": "ratchet",
+  "name": "Ratchet Pawl Hold",
+  "discipline": "Engineering",
+  "blurb": "Load a ratchet wheel and measure slip torque.",
+  "keywords": [
+   "ratchet",
+   "pawl",
+   "hold",
+   "torque"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "teeth",
+    "label": "Wheel teeth",
+    "unit": "",
+    "default": 18,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*teeth"
+    ],
+    "min": 8,
+    "max": 36
+   }
+  ],
+  "subject": "ratchet set",
+  "apparatus": "spring scale, weights",
+  "safety": null
+ },
+ {
+  "key": "worm-gear",
+  "name": "Worm Gear Reduction",
+  "discipline": "Engineering",
+  "blurb": "Crank a worm and count output turns.",
+  "keywords": [
+   "worm",
+   "gear",
+   "reduction",
+   "screw"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "turns",
+    "label": "Input turns",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*turns?"
+    ],
+    "min": 5,
+    "max": 50
+   }
+  ],
+  "subject": "worm set",
+  "apparatus": "crank, counter",
+  "safety": null
+ },
+ {
+  "key": "rack-pinion",
+  "name": "Rack and Pinion Travel",
+  "discipline": "Engineering",
+  "blurb": "Turn a pinion and measure rack travel.",
+  "keywords": [
+   "rack",
+   "pinion",
+   "travel",
+   "steering"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "teeth",
+    "label": "Pinion teeth",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*teeth"
+    ],
+    "min": 8,
+    "max": 24
+   }
+  ],
+  "subject": "rack set",
+  "apparatus": "ruler, crank",
+  "safety": null
+ },
+ {
+  "key": "hydraulic-press",
+  "name": "Hydraulic Press Force",
+  "discipline": "Engineering",
+  "blurb": "Pump a jack and read the crushed-can force.",
+  "keywords": [
+   "hydraulic",
+   "press",
+   "jack",
+   "force"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "pumps",
+    "label": "Pump strokes",
+    "unit": "",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:pumps?|strokes?)"
+    ],
+    "min": 5,
+    "max": 40
+   }
+  ],
+  "subject": "bottle jack",
+  "apparatus": "cans, scale",
+  "safety": "Crushing cans snap. Goggles; hands clear."
+ },
+ {
+  "key": "anemometer-build",
+  "name": "Anemometer Spin Count",
+  "discipline": "Engineering",
+  "blurb": "Build a cup rotor and calibrate spins to wind.",
+  "keywords": [
+   "anemometer",
+   "wind",
+   "cups",
+   "spin"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "secs",
+    "label": "Count seconds",
+    "unit": "s",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*s(?:ec)?s?"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "cup rotor",
+  "apparatus": "fan, stopwatch",
+  "safety": null
+ },
+ {
+  "key": "rain-gauge",
+  "name": "Rain Gauge Catch",
+  "discipline": "Engineering",
+  "blurb": "Set gauges and compare catch after rain.",
+  "keywords": [
+   "rain gauge",
+   "catch",
+   "rain",
+   "measure"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days set",
+    "unit": "days",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 1,
+    "max": 21
+   }
+  ],
+  "subject": "bottle gauges",
+  "apparatus": "funnel, ruler",
+  "safety": null
+ },
+ {
+  "key": "thermostat-bimetal",
+  "name": "Bimetal Thermostat Snap",
+  "discipline": "Engineering",
+  "blurb": "Heat a bimetal strip and log the snap temp.",
+  "keywords": [
+   "thermostat",
+   "bimetal",
+   "snap",
+   "strip"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Heat trials",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 2,
+    "max": 10
+   }
+  ],
+  "subject": "bimetal strip",
+  "apparatus": "heat gun, thermometer",
+  "safety": "Heat gun burns. Aim away from hands."
+ },
+ {
+  "key": "faraday-cage",
+  "name": "Faraday Cage Signal",
+  "discipline": "Engineering",
+  "blurb": "Wrap a radio and log signal bars lost.",
+  "keywords": [
+   "faraday",
+   "cage",
+   "signal",
+   "shield",
+   "radio"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "layers",
+    "label": "Foil layers",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*layers?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "pocket radio",
+  "apparatus": "foil, mesh, phone",
+  "safety": null
+ },
+ {
+  "key": "antenna-dipole",
+  "name": "Dipole Antenna Length",
+  "discipline": "Engineering",
+  "blurb": "Trim a dipole and log reception bars.",
+  "keywords": [
+   "antenna",
+   "dipole",
+   "length",
+   "reception"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "cm",
+    "label": "Element length",
+    "unit": "cm",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm"
+    ],
+    "min": 10,
+    "max": 75
+   }
+  ],
+  "subject": "wire dipole",
+  "apparatus": "radio, ruler",
+  "safety": null
+ },
+ {
+  "key": "parabolic-dish",
+  "name": "Parabolic Dish Focus",
+  "discipline": "Engineering",
+  "blurb": "Shape foil dishes and meter the hot spot.",
+  "keywords": [
+   "parabolic",
+   "dish",
+   "focus",
+   "solar"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "d",
+    "label": "Dish diameter",
+    "unit": "cm",
+    "default": 40,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*cm",
+     "diameter(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 80
+   }
+  ],
+  "subject": "foil dishes",
+  "apparatus": "thermometer, sun",
+  "safety": "Focused sun burns. Goggles on."
+ },
+ {
+  "key": "emi-shielding",
+  "name": "EMI Shielding Boxes",
+  "discipline": "Engineering",
+  "blurb": "Box a buzzing phone and listen for the drop.",
+  "keywords": [
+   "emi",
+   "shielding",
+   "interference",
+   "buzz"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "boxes",
+    "label": "Box types",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:boxes?|types?)"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "buzzing phone",
+  "apparatus": "foil, steel, plastic boxes",
+  "safety": null
+ },
+ {
+  "key": "eyewitness-lineup",
+  "name": "Eyewitness Lineup Picks",
+  "discipline": "Psychology",
+  "blurb": "Show a face, then lineups, and score the picks.",
+  "keywords": [
+   "eyewitness",
+   "lineup",
+   "face",
+   "memory",
+   "pick"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 24,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "photo sets",
+  "apparatus": "lineup cards",
+  "safety": null
+ },
+ {
+  "key": "misinformation",
+  "name": "Misinformation Wording",
+  "discipline": "Psychology",
+  "blurb": "Ask 'smashed' vs 'hit' and compare speed estimates.",
+  "keywords": [
+   "misinformation",
+   "wording",
+   "smashed",
+   "leading"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 12,
+    "max": 80
+   }
+  ],
+  "subject": "crash video",
+  "apparatus": "question cards",
+  "safety": null
+ },
+ {
+  "key": "spacing-effect",
+  "name": "Spacing Study Sessions",
+  "discipline": "Psychology",
+  "blurb": "Study spaced vs massed and quiz both.",
+  "keywords": [
+   "spacing",
+   "massed",
+   "study",
+   "quiz",
+   "sessions"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 8,
+    "max": 50
+   }
+  ],
+  "subject": "word lists",
+  "apparatus": "quiz sheets",
+  "safety": null
+ },
+ {
+  "key": "change-blindness",
+  "name": "Change Blindness Flicker",
+  "discipline": "Psychology",
+  "blurb": "Flicker two scenes and time the spot.",
+  "keywords": [
+   "change blindness",
+   "flicker",
+   "spot",
+   "scene"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "scene pairs",
+  "apparatus": "screen, timer",
+  "safety": null
+ },
+ {
+  "key": "rubber-hand",
+  "name": "Rubber Hand Illusion",
+  "discipline": "Psychology",
+  "blurb": "Stroke a fake hand and test ownership ratings.",
+  "keywords": [
+   "rubber hand",
+   "illusion",
+   "ownership",
+   "stroke"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 6,
+    "max": 30
+   }
+  ],
+  "subject": "rubber hand",
+  "apparatus": "brushes, screen",
+  "safety": null
+ },
+ {
+  "key": "muller-lyer",
+  "name": "Muller-Lyer Lines",
+  "discipline": "Psychology",
+  "blurb": "Judge arrow lines and measure the illusion.",
+  "keywords": [
+   "muller-lyer",
+   "illusion",
+   "arrows",
+   "lines"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "trials",
+    "label": "Trials",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*trials?"
+    ],
+    "min": 5,
+    "max": 20
+   }
+  ],
+  "subject": "line cards",
+  "apparatus": "ruler, slider",
+  "safety": null
+ },
+ {
+  "key": "phi-phenomenon",
+  "name": "Phi Phenomenon Motion",
+  "discipline": "Psychology",
+  "blurb": "Blink two dots and find the motion threshold.",
+  "keywords": [
+   "phi",
+   "motion",
+   "blink",
+   "dots",
+   "threshold"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "ms",
+    "label": "Blink gap",
+    "unit": "ms",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*ms",
+     "gap(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 20,
+    "max": 500
+   }
+  ],
+  "subject": "LED pair",
+  "apparatus": "timer circuit",
+  "safety": null
+ },
+ {
+  "key": "cocktail-party",
+  "name": "Cocktail Party Listening",
+  "discipline": "Psychology",
+  "blurb": "Shadow one voice in noise and score words caught.",
+  "keywords": [
+   "cocktail party",
+   "listening",
+   "shadow",
+   "noise"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 16,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 8,
+    "max": 40
+   }
+  ],
+  "subject": "audio tracks",
+  "apparatus": "headphones, sheets",
+  "safety": null
+ },
+ {
+  "key": "prisoners-dilemma",
+  "name": "Prisoner's Dilemma Rounds",
+  "discipline": "Economics & Math",
+  "blurb": "Play silent vs talk rounds and tally payoffs.",
+  "keywords": [
+   "prisoner",
+   "dilemma",
+   "cooperate",
+   "defect"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Rounds",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rounds?"
+    ],
+    "min": 4,
+    "max": 20
+   }
+  ],
+  "subject": "payoff cards",
+  "apparatus": "tally sheet",
+  "safety": null
+ },
+ {
+  "key": "ultimatum-game",
+  "name": "Ultimatum Split Game",
+  "discipline": "Economics & Math",
+  "blurb": "Offer splits of $10 and log accept rates.",
+  "keywords": [
+   "ultimatum",
+   "split",
+   "offer",
+   "accept"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Pairs",
+    "unit": "",
+    "default": 15,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*pairs?"
+    ],
+    "min": 6,
+    "max": 40
+   }
+  ],
+  "subject": "play bills",
+  "apparatus": "offer slips",
+  "safety": null
+ },
+ {
+  "key": "gini-coefficient",
+  "name": "Gini Wealth Beads",
+  "discipline": "Economics & Math",
+  "blurb": "Deal beads unevenly and compute the Gini.",
+  "keywords": [
+   "gini",
+   "wealth",
+   "inequality",
+   "lorenz"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "players",
+    "label": "Players",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*players?"
+    ],
+    "min": 5,
+    "max": 25
+   }
+  ],
+  "subject": "bead wealth",
+  "apparatus": "ledger, graph paper",
+  "safety": null
+ },
+ {
+  "key": "rule-72",
+  "name": "Rule of 72 Doubling",
+  "discipline": "Economics & Math",
+  "blurb": "Time play-money doubling at rates.",
+  "keywords": [
+   "rule 72",
+   "doubling",
+   "interest",
+   "rate"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rate",
+    "label": "Rate (%)",
+    "unit": "%",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*%",
+     "rate(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 2,
+    "max": 20
+   }
+  ],
+  "subject": "ledger",
+  "apparatus": "calculator",
+  "safety": null
+ },
+ {
+  "key": "amortization",
+  "name": "Loan Amortization Table",
+  "discipline": "Economics & Math",
+  "blurb": "Build a payment table and total the interest.",
+  "keywords": [
+   "amortization",
+   "loan",
+   "payment",
+   "interest"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "years",
+    "label": "Loan years",
+    "unit": "yr",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*yr?s?",
+     "for (\\d+(?:\\.\\d+)?) year"
+    ],
+    "min": 1,
+    "max": 30
+   }
+  ],
+  "subject": "loan sheet",
+  "apparatus": "calculator, table",
+  "safety": null
+ },
+ {
+  "key": "lottery-ev",
+  "name": "Lottery Expected Value",
+  "discipline": "Economics & Math",
+  "blurb": "Price scratch-style tickets by expected value.",
+  "keywords": [
+   "lottery",
+   "expected value",
+   "tickets",
+   "ev"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "tickets",
+    "label": "Tickets priced",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*tickets?"
+    ],
+    "min": 2,
+    "max": 12
+   }
+  ],
+  "subject": "ticket cards",
+  "apparatus": "calculator",
+  "safety": null
+ },
+ {
+  "key": "monte-carlo-pi",
+  "name": "Monte Carlo Pi Darts",
+  "discipline": "Economics & Math",
+  "blurb": "Throw random darts in a square and estimate pi.",
+  "keywords": [
+   "monte carlo",
+   "pi",
+   "darts",
+   "random"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "darts",
+    "label": "Darts thrown",
+    "unit": "",
+    "default": 200,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*darts?"
+    ],
+    "min": 50,
+    "max": 1000
+   }
+  ],
+  "subject": "dart board",
+  "apparatus": "random table, counter",
+  "safety": "Throw soft darts only. Clear the board zone."
+ },
+ {
+  "key": "random-walk",
+  "name": "Random Walk Steps",
+  "discipline": "Economics & Math",
+  "blurb": "Flip coins for steps and map the drift.",
+  "keywords": [
+   "random walk",
+   "coin",
+   "drift",
+   "steps"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "flips",
+    "label": "Coin flips",
+    "unit": "",
+    "default": 50,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*flips?"
+    ],
+    "min": 20,
+    "max": 200
+   }
+  ],
+  "subject": "coin",
+  "apparatus": "grid paper",
+  "safety": null
+ },
+ {
+  "key": "diversification",
+  "name": "Diversification Coin Portfolios",
+  "discipline": "Economics & Math",
+  "blurb": "Hold coin baskets and compare the wobble.",
+  "keywords": [
+   "diversification",
+   "portfolio",
+   "risk",
+   "basket"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "coins",
+    "label": "Coins held",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*coins?"
+    ],
+    "min": 1,
+    "max": 10
+   }
+  ],
+  "subject": "coin sets",
+  "apparatus": "ledger",
+  "safety": null
+ },
+ {
+  "key": "vigenere",
+  "name": "Vigenere Cipher Keys",
+  "discipline": "Economics & Math",
+  "blurb": "Encode with keyword shifts and crack the key.",
+  "keywords": [
+   "vigenere",
+   "cipher",
+   "keyword",
+   "encode"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "len",
+    "label": "Key length",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "key(?: of)? (\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?)\\s*key"
+    ],
+    "min": 2,
+    "max": 12
+   }
+  ],
+  "subject": "message strips",
+  "apparatus": "tabula recta",
+  "safety": null
+ },
+ {
+  "key": "big-o-race",
+  "name": "Big-O Growth Race",
+  "discipline": "Computer Science",
+  "blurb": "Time nested vs single loops on growing lists.",
+  "keywords": [
+   "big-o",
+   "growth",
+   "loops",
+   "nested",
+   "race"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "List size",
+    "unit": "",
+    "default": 100,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:items?|size)"
+    ],
+    "min": 20,
+    "max": 500
+   }
+  ],
+  "subject": "stopwatch",
+  "apparatus": "paper lists, timer",
+  "safety": null
+ },
+ {
+  "key": "memoization",
+  "name": "Memoization Fibonacci",
+  "discipline": "Computer Science",
+  "blurb": "Time naive vs memoized fib by hand.",
+  "keywords": [
+   "memoization",
+   "fibonacci",
+   "cache",
+   "recursive"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "Fib index",
+    "unit": "",
+    "default": 15,
+    "extract": [
+     "(?:fib|index)(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 8,
+    "max": 25
+   }
+  ],
+  "subject": "worksheet",
+  "apparatus": "timer, table",
+  "safety": null
+ },
+ {
+  "key": "nqueens",
+  "name": "N-Queens Backtracking",
+  "discipline": "Computer Science",
+  "blurb": "Place queens by backtracking and count tries.",
+  "keywords": [
+   "n-queens",
+   "backtracking",
+   "queens",
+   "chess"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "n",
+    "label": "Board size",
+    "unit": "",
+    "default": 5,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:x(\\d+(?:\\.\\d+)?))?",
+     "board(?: of)? (\\d+(?:\\.\\d+)?)"
+    ],
+    "min": 4,
+    "max": 8
+   }
+  ],
+  "subject": "chessboard",
+  "apparatus": "queen tokens, log",
+  "safety": null
+ },
+ {
+  "key": "minimax-tictactoe",
+  "name": "Minimax Tic-Tac-Toe",
+  "discipline": "Computer Science",
+  "blurb": "Play optimal vs random X and tally.",
+  "keywords": [
+   "minimax",
+   "tic-tac-toe",
+   "optimal",
+   "game tree"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "games",
+    "label": "Games",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*games?"
+    ],
+    "min": 4,
+    "max": 30
+   }
+  ],
+  "subject": "boards",
+  "apparatus": "tally sheet",
+  "safety": null
+ },
+ {
+  "key": "kmeans-beads",
+  "name": "K-Means Bead Clusters",
+  "discipline": "Computer Science",
+  "blurb": "Iterate centroids on beads and count rounds.",
+  "keywords": [
+   "k-means",
+   "kmeans",
+   "cluster",
+   "centroid"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "k",
+    "label": "Clusters",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "k\\s*=\\s*(\\d+(?:\\.\\d+)?)",
+     "(\\d+(?:\\.\\d+)?)\\s*clusters?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "bead scatter",
+  "apparatus": "string, ruler",
+  "safety": null
+ },
+ {
+  "key": "pagerank-pennies",
+  "name": "PageRank Penny Web",
+  "discipline": "Computer Science",
+  "blurb": "Pass pennies along links and rank the nodes.",
+  "keywords": [
+   "pagerank",
+   "web",
+   "links",
+   "rank",
+   "pennies"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Rounds",
+    "unit": "",
+    "default": 10,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rounds?"
+    ],
+    "min": 4,
+    "max": 20
+   }
+  ],
+  "subject": "node web",
+  "apparatus": "pennies, tally",
+  "safety": null
+ },
+ {
+  "key": "diffie-hellman",
+  "name": "Diffie-Hellman Paint Mix",
+  "discipline": "Computer Science",
+  "blurb": "Mix secret paints publicly and share the shade.",
+  "keywords": [
+   "diffie",
+   "hellman",
+   "paint",
+   "key exchange"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Exchanges",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:rounds?|exchanges?)"
+    ],
+    "min": 1,
+    "max": 6
+   }
+  ],
+  "subject": "paint sets",
+  "apparatus": "cups, stirrers",
+  "safety": null
+ },
+ {
+  "key": "one-time-pad",
+  "name": "One-Time Pad Secrecy",
+  "discipline": "Computer Science",
+  "blurb": "XOR messages with true-random pads.",
+  "keywords": [
+   "one-time pad",
+   "xor",
+   "pad",
+   "secret"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "len",
+    "label": "Message length",
+    "unit": "",
+    "default": 12,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:chars?|length)"
+    ],
+    "min": 4,
+    "max": 30
+   }
+  ],
+  "subject": "message strips",
+  "apparatus": "coin pads, table",
+  "safety": null
+ },
+ {
+  "key": "turing-test",
+  "name": "Turing Test Chat Rounds",
+  "discipline": "Computer Science",
+  "blurb": "Judge chats as human or bot across rounds.",
+  "keywords": [
+   "turing",
+   "chat",
+   "judge",
+   "human",
+   "bot"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "rounds",
+    "label": "Rounds",
+    "unit": "",
+    "default": 6,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*rounds?"
+    ],
+    "min": 3,
+    "max": 12
+   }
+  ],
+  "subject": "chat scripts",
+  "apparatus": "blinds, score cards",
+  "safety": null
+ },
+ {
+  "key": "ecological-footprint",
+  "name": "Ecological Footprint Quiz",
+  "discipline": "Environmental",
+  "blurb": "Score lifestyle answers into planet counts.",
+  "keywords": [
+   "footprint",
+   "ecological",
+   "planets",
+   "lifestyle"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "n",
+    "label": "Participants",
+    "unit": "",
+    "default": 20,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:people|participants)"
+    ],
+    "min": 8,
+    "max": 60
+   }
+  ],
+  "subject": "quiz sheets",
+  "apparatus": "calculator",
+  "safety": null
+ },
+ {
+  "key": "food-miles",
+  "name": "Food Miles Audit",
+  "discipline": "Environmental",
+  "blurb": "Log lunch origins and total the miles.",
+  "keywords": [
+   "food miles",
+   "audit",
+   "lunch",
+   "origin"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "items",
+    "label": "Food items",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*items?"
+    ],
+    "min": 3,
+    "max": 20
+   }
+  ],
+  "subject": "lunch items",
+  "apparatus": "map, ruler",
+  "safety": null
+ },
+ {
+  "key": "green-roof",
+  "name": "Green Roof Cooling",
+  "discipline": "Environmental",
+  "blurb": "Compare sedum vs bare trays in sun.",
+  "keywords": [
+   "green roof",
+   "sedum",
+   "cooling",
+   "tray"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "mins",
+    "label": "Sun minutes",
+    "unit": "min",
+    "default": 30,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*min(?:ute)?s?"
+    ],
+    "min": 10,
+    "max": 60
+   }
+  ],
+  "subject": "trays",
+  "apparatus": "thermometers, sun",
+  "safety": null
+ },
+ {
+  "key": "permeable-pavement",
+  "name": "Permeable Pavement Pour",
+  "discipline": "Environmental",
+  "blurb": "Pour water on paver types and time soak.",
+  "keywords": [
+   "permeable",
+   "pavement",
+   "soak",
+   "paver"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "types",
+    "label": "Paver types",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*types?"
+    ],
+    "min": 2,
+    "max": 6
+   }
+  ],
+  "subject": "paver slabs",
+  "apparatus": "watering can, timer",
+  "safety": null
+ },
+ {
+  "key": "rain-barrel",
+  "name": "Rain Barrel Catch",
+  "discipline": "Environmental",
+  "blurb": "Catch roof runoff and measure the yield.",
+  "keywords": [
+   "rain barrel",
+   "catch",
+   "runoff",
+   "roof"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "storms",
+    "label": "Storms",
+    "unit": "",
+    "default": 3,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*storms?"
+    ],
+    "min": 1,
+    "max": 8
+   }
+  ],
+  "subject": "barrel",
+  "apparatus": "gutter diverter, gauge",
+  "safety": null
+ },
+ {
+  "key": "ocean-acidification",
+  "name": "Ocean Acidification Shells",
+  "discipline": "Environmental",
+  "blurb": "Soak shells in CO2 water and weigh loss.",
+  "keywords": [
+   "acidification",
+   "shells",
+   "co2",
+   "ocean"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "days",
+    "label": "Days soaked",
+    "unit": "days",
+    "default": 7,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*days?"
+    ],
+    "min": 3,
+    "max": 21
+   }
+  ],
+  "subject": "shells",
+  "apparatus": "soda water, balance",
+  "safety": null
+ },
+ {
+  "key": "albedo-ice",
+  "name": "Albedo Ice Melt Race",
+  "discipline": "Environmental",
+  "blurb": "Melt white vs black-topped ice and time it.",
+  "keywords": [
+   "albedo",
+   "ice",
+   "melt",
+   "white",
+   "black"
+  ],
+  "model": "linear",
+  "params": [
+   {
+    "name": "cubes",
+    "label": "Ice cubes",
+    "unit": "",
+    "default": 4,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*(?:cubes?|ice)"
+    ],
+    "min": 2,
+    "max": 8
+   }
+  ],
+  "subject": "ice cubes",
+  "apparatus": "trays, soot/paper, timer",
+  "safety": null
+ },
+ {
+  "key": "heat-island",
+  "name": "Heat Island Night Walk",
+  "discipline": "Environmental",
+  "blurb": "Meter night temps downtown vs park.",
+  "keywords": [
+   "heat island",
+   "night",
+   "downtown",
+   "park"
+  ],
+  "model": "survey",
+  "params": [
+   {
+    "name": "spots",
+    "label": "Spots",
+    "unit": "",
+    "default": 8,
+    "extract": [
+     "(\\d+(?:\\.\\d+)?)\\s*spots?"
+    ],
+    "min": 4,
+    "max": 20
+   }
+  ],
+  "subject": "city map",
+  "apparatus": "IR thermometer",
+  "safety": null
+ }
+]
