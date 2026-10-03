@@ -7,7 +7,7 @@
 
 ## Machine-readable sources (all JSON, CORS-open)
 - Archive manifest (the one authoritative count): experiment-manifest.json
-- Searchable compact index (11,925 rows [id, typeKey, seed, title, discipline]): data/index.json.gz
+- Searchable compact index (14,925 rows [id, typeKey, seed, title, discipline]): data/index.json.gz
 - Machine feed of all experiments: data/experiments-catalog.json
 - Record content hashes (sha256 of canonical record JSON): data/hashes.json.gz
 - Solver-type catalog (240 types, A–Z): data/solver-catalog.json

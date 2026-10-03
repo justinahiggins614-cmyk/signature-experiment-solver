@@ -11,7 +11,7 @@ count lives in `experiment-manifest.json`; everything else derives from it.
 |---|---|
 | `experiment-manifest.json` | The ONE authoritative manifest: totals, ID range, index hash, engine version, honesty note |
 | `api.json` | Site summary (derived from the manifest) |
-| `data/index.json.gz` | Compact index: 11,925 rows of `[id, typeKey, seed, title, discipline]` |
+| `data/index.json.gz` | Compact index: 14,925 rows of `[id, typeKey, seed, title, discipline]` |
 | `data/experiments-catalog.json` | Full record list with deep links |
 | `data/solver-catalog.json` | 240 solver types A–Z: type_id, model provenance, safety level, live record counts |
 | `data/hashes.json.gz` | `{exp_id: sha256}` content hashes of canonical record JSON |
