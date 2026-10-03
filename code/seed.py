@@ -252,6 +252,9 @@ def stamp_count(count):
     dup = r"(<p class=\"staticcount\">.*?</p>)\n<p class=\"staticcount\">.*?</p>"
     while re.search(dup, h):
         h = re.sub(dup, r"\1", h, count=1)
+    # re-stamp the hero counter chip's initial content (what shows before JS loads)
+    h = re.sub(r'(<span id="expcount">)[^<]*(</span>)',
+               r"\g<1>%s\g<2>" % f"{count:,}", h, count=1)
     open(p, "w").write(h)
 
 def generate(n, per_type=None):
