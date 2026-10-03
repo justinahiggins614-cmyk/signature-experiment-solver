@@ -81,7 +81,8 @@ def main():
     if m:
         check("HTML static count == chunk rows", int(m.group(1).replace(",", "")) == len(rows),
               f"stamped {m.group(1)} vs {len(rows)}")
-    check("no stale hard-coded counters", not re.search(r"4,925|3,925|2,925", html))
+    # (?<!\d) so a legit total like "12,925" isn't mistaken for a stale "2,925"
+    check("no stale hard-coded counters", not re.search(r"(?<!\d)(?:4,925|3,925|2,925)", html))
     # only the live counter element + the stamp may carry counts
     check("counter element present", 'id="expcount"' in html)
 
