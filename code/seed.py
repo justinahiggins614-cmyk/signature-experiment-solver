@@ -12,7 +12,8 @@ Usage:
   python3 code/seed.py --per-type 8     # initial seed
   python3 code/drip.py --n 1000         # 2h drip
 """
-import argparse, gzip, json, os, subprocess, sys
+import argparse, gzip, hashlib, json, os, subprocess, sys
+import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -79,6 +80,67 @@ def append_rows(new_rows):
     save_manifest(manifest)
     return manifest
 
+def canonical_bytes(obj):
+    """Canonical serialization for content hashing: sorted keys, no whitespace, UTF-8."""
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"),
+                      ensure_ascii=False).encode("utf-8")
+
+def build_hashes(idx_rows):
+    """Re-solve every archived record deterministically and hash the canonical form.
+    Returns {exp_id: sha256_hex}. Stored in data/hashes.json.gz."""
+    hashes = {}
+    for i in range(0, len(idx_rows), 2000):
+        batch = json.dumps([[r[0], r[1], r[2]] for r in idx_rows[i:i + 2000]])
+        out = sh(["node", "code/engine.js", "fullbatch", batch])
+        for rec in json.loads(out):
+            hashes[rec["id"]] = hashlib.sha256(canonical_bytes(rec)).hexdigest()
+    with gzip.open(os.path.join(DATA, "hashes.json.gz"), "wt") as fh:
+        json.dump(hashes, fh)
+    return hashes
+
+def build_experiment_manifest(manifest, idx_rows):
+    """Authoritative experiment-manifest.json — the ONE count source.
+    Every visible counter, the API, and the sitemap derive from this."""
+    count = manifest["count"]
+    idx_path = os.path.join(DATA, "index.json.gz")
+    idx_hash = hashlib.sha256(open(idx_path, "rb").read()).hexdigest()
+    hashes_path = os.path.join(DATA, "hashes.json.gz")
+    hashes_hash = hashlib.sha256(open(hashes_path, "rb").read()).hexdigest()
+    types = load_types()
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    m = {
+        "site_id": "SIGNATURE-EXPERIMENT-SOLVER",
+        "site_name": "The Signature Experiment Solver",
+        "site_version": "1.0",
+        "archive_version": "2026-10-03",
+        "schema_version": "JAH-EXP-RECORD/1.0",
+        "total_experiments": count,
+        "total_solver_types": len(types),
+        "total_simulations": count,
+        "total_validated_experiments": 0,
+        "earliest_exp_id": idx_rows[0][0] if idx_rows else None,
+        "latest_exp_id": idx_rows[-1][0] if idx_rows else None,
+        "index_version": "1.0",
+        "index_hash": "sha256:" + idx_hash,
+        "hashes_file": "data/hashes.json.gz",
+        "hashes_hash": "sha256:" + hashes_hash,
+        "solver_engine": "SOLVER-ENGINE-V1",
+        "solver_engine_version": "1.0",
+        "seed_algorithm": "FNV-1a-32",
+        "prng_algorithm": "mulberry32",
+        "chunk_size": CHUNK_SIZE,
+        "chunk_count": len(manifest["chunks"]),
+        "goal": 1000000,
+        "disciplines": sorted(set(t["discipline"] for t in types)),
+        "last_updated": now,
+        "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data.",
+        "license": "Original solver-generated works by the Signature system.",
+        "canonical_url": SITE,
+        "deep_link_pattern": SITE + "?exp=JAH-EXP-000001",
+    }
+    json.dump(m, open(os.path.join(ROOT, "experiment-manifest.json"), "w"), indent=1)
+    return m
+
 def rebuild_derived(manifest):
     count = manifest["count"]
     # gather all rows (id,type,seed) for the index
@@ -94,27 +156,34 @@ def rebuild_derived(manifest):
         idx_rows.extend(json.loads(out))
     with gzip.open(os.path.join(DATA, "index.json.gz"), "wt") as fh:
         json.dump(idx_rows, fh)
+    # content hashes for every record (deterministic re-solve + canonical hash)
+    build_hashes(idx_rows)
+    # authoritative manifest — the ONE count source
+    exp_manifest = build_experiment_manifest(manifest, idx_rows)
     # standardized machine feed + static bot-readable batch pages
     import build_static
     build_static.build_feed(idx_rows)
     static_pages = build_static.build_pages()
-    # api.json
-    types = load_types()
+    # api.json derives from the authoritative manifest (never hand-typed)
     api = {
-        "site": "The Signature Experiment Solver",
+        "site": exp_manifest["site_name"],
         "url": SITE,
-        "experiments": count,
-        "goal": 1000000,
-        "solver_types": len(types),
-        "disciplines": sorted(set(t["discipline"] for t in types)),
+        "experiments": exp_manifest["total_experiments"],
+        "goal": exp_manifest["goal"],
+        "solver_types": exp_manifest["total_solver_types"],
+        "disciplines": exp_manifest["disciplines"],
         "chunk_size": CHUNK_SIZE,
-        "manifest": "data/manifest.json",
+        "manifest": "experiment-manifest.json",
+        "data_manifest": "data/manifest.json",
         "index": "data/index.json.gz",
+        "index_hash": exp_manifest["index_hash"],
         "catalog_feed": "data/experiments-catalog.json",
         "static_pages": "static/index.html",
-        "deep_link": SITE + "?exp=JAH-EXP-000001",
+        "deep_link": exp_manifest["deep_link_pattern"],
+        "solver_engine": exp_manifest["solver_engine"],
         "title_status": "PROVISIONAL — awaiting Manon's confirmation",
-        "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data.",
+        "honesty": exp_manifest["honesty"],
+        "last_updated": exp_manifest["last_updated"],
     }
     json.dump(api, open(os.path.join(ROOT, "api.json"), "w"), indent=1)
     # sitemap (sharded, 50k per file)

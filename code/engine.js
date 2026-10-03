@@ -679,6 +679,10 @@
       out(rows.map(function (r) {
         return [r[0], r[1], r[2], titleFor(r[1], r[2]), (typeOf(r[1]) || {}).discipline || ""];
       }));
+    } else if (cmd === "fullbatch") {
+      // argv[3] = JSON array of [id, typeKey, seed] -> full solved records
+      var frows = JSON.parse(argv[3]);
+      out(frows.map(function (r) { return solve(r[1], r[2], {}, r[0]); }));
     } else if (cmd === "types") {
       out(allTypes().map(function (t) { return t.key; }));
     } else if (cmd === "typeinfo") {

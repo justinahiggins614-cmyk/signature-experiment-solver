@@ -16,11 +16,15 @@
   "Psychology"
  ],
  "chunk_size": 150,
- "manifest": "data/manifest.json",
+ "manifest": "experiment-manifest.json",
+ "data_manifest": "data/manifest.json",
  "index": "data/index.json.gz",
+ "index_hash": "sha256:9d3594eab5ed3a753dc1d82c5280c7ca20b8f540a93ee710aab3bc9f498158c7",
  "catalog_feed": "data/experiments-catalog.json",
  "static_pages": "static/index.html",
  "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?exp=JAH-EXP-000001",
+ "solver_engine": "SOLVER-ENGINE-V1",
  "title_status": "PROVISIONAL \u2014 awaiting Manon's confirmation",
- "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data."
+ "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data.",
+ "last_updated": "2026-10-03T16:21:15Z"
 }
