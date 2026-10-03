@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the 25-site JAH NETWORK nav and inject it into index.html."""
+"""Build the 27-site JAH NETWORK nav and inject it into index.html."""
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
