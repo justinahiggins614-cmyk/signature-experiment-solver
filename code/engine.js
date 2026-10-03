@@ -309,6 +309,118 @@
     "survey": "The seeded split is illustrative; a real survey's uncertainty shrinks with the square root of sample size.",
     "umatrix": "No domain model matched this description, so the Universal Matrix used its generic saturating-response model — every number illustrates the method, not a prediction."
   };
+  /* Human-readable model names, plus the standing assumptions and limitations
+     the solver works under. Shown on every run; deterministic by construction. */
+  var MODEL_NAMES = {
+    "gravity-drop": "Free-fall kinematics", "projectile": "Projectile motion",
+    "pendulum": "Pendulum period", "hooke": "Hooke's law (elastic)",
+    "cooling": "Newton's law of cooling", "titration": "Acid–base titration curve",
+    "circuit": "Ohmic circuit", "optics": "Thin-lens optics",
+    "linear": "Linear response sweep", "survey": "Seeded categorical survey",
+    "design": "Design blueprint", "umatrix": "Universal Matrix (generic saturating response)",
+    "exponential-decay": "Exponential decay", "rate-temp": "Reaction rate vs temperature",
+    "osmosis": "Osmosis / water potential"
+  };
+  var MODEL_ASSUMPTIONS = {
+    "gravity-drop": ["Vacuum idealization — air resistance ignored",
+      "Constant gravitational acceleration g = 9.81 m/s²",
+      "Release from rest with zero initial velocity"],
+    "projectile": ["Vacuum idealization — no air drag on the projectile",
+      "Flat, uniform gravitational field",
+      "Launch and landing at the same height"],
+    "pendulum": ["Small-angle approximation (sin θ ≈ θ)",
+      "Massless, inextensible string; point-mass bob",
+      "No friction at the pivot, no air resistance"],
+    "hooke": ["Deformation stays inside the elastic limit",
+      "Spring mass and damping ignored",
+      "Loads applied slowly (quasi-static)"],
+    "cooling": ["Uniform object temperature (lumped capacitance)",
+      "Constant ambient temperature",
+      "Constant heat-transfer coefficient"],
+    "titration": ["Ideal dilute-solution behavior",
+      "Complete, instantaneous reaction at each addition",
+      "Temperature held constant"],
+    "circuit": ["Ideal ohmic resistor (R constant with temperature)",
+      "Ideal wires with zero resistance",
+      "Steady DC conditions"],
+    "optics": ["Thin-lens, paraxial-ray approximation",
+      "Monochromatic light (no dispersion)",
+      "Lens free of aberrations"],
+    "linear": ["Response is truly linear in the swept range",
+      "All other influences held fixed",
+      "No hysteresis or memory effects"],
+    "survey": ["Seeded illustrative distribution — not sampled from people",
+      "Categories are mutually exclusive",
+      "Illustrates the counting method only"],
+    "umatrix": ["Generic saturating-response shape assumed",
+      "Single dominant input; all else held fixed",
+      "Illustrative numbers — not a prediction about any real system"],
+    "exponential-decay": ["Constant decay probability per unit time",
+      "Large population (continuous approximation)",
+      "No replenishment of the decaying quantity"],
+    "rate-temp": ["Arrhenius-type temperature dependence",
+      "Concentrations held constant across the sweep",
+      "No competing side reactions"],
+    "osmosis": ["Ideal semipermeable membrane",
+      "Constant temperature and pressure",
+      "Dilute-solution approximation"],
+    "design": ["Blueprint-stage concept — no physical test performed",
+      "Feasibility numbers are order-of-magnitude estimates",
+      "Assumes stated materials are obtainable"]
+  };
+  var MODEL_LIMITS = {
+    "gravity-drop": ["Real falls meet air drag — light objects fall slower than computed",
+      "Does not account for wind or tumbling",
+      "g varies slightly with altitude and latitude"],
+    "projectile": ["Air drag lowers real ranges and shifts the optimum angle",
+      "No wind, spin, or lift effects modeled",
+      "Assumes a non-rotating flat Earth"],
+    "pendulum": ["Large swings break the small-angle approximation",
+      "Real pivots have friction; strings have mass",
+      "Air damping slowly shrinks the amplitude"],
+    "hooke": ["Beyond the elastic limit the spring deforms permanently",
+      "Dynamic/impact loads are not modeled",
+      "Temperature effects on stiffness ignored"],
+    "cooling": ["Real objects cool unevenly (internal gradients)",
+      "Radiation and evaporation losses not separated out",
+      "h is rarely truly constant"],
+    "titration": ["Activity effects and weak-acid equilibria simplified",
+      "Indicator error not modeled",
+      "Assumes perfect mixing at each step"],
+    "circuit": ["Real resistors heat up and drift",
+      "Contact resistance and lead inductance ignored",
+      "AC behavior not covered"],
+    "optics": ["Real lenses have spherical and chromatic aberration",
+      "Thick lenses deviate from the thin-lens formula",
+      "Diffraction limits ignored"],
+    "linear": ["Real systems saturate, bend, or break outside the linear range",
+      "Extrapolating beyond the sweep is unsafe",
+      "Noise and outliers not modeled"],
+    "survey": ["Not a real survey — no people were asked anything",
+      "Seeded split is one illustrative draw among many",
+      "Real surveys carry sampling and non-response bias"],
+    "umatrix": ["Generic shape may not match the real system's behavior",
+      "Single-input sweep ignores interactions",
+      "Demonstration of method only — not evidence"],
+    "exponential-decay": ["Discrete small populations fluctuate around the curve",
+      "Decay constant may drift with conditions",
+      "Background counts not modeled"],
+    "rate-temp": ["Catalyst deactivation at high temperature ignored",
+      "Q10 rule is approximate, not exact",
+      "Phase changes would break the trend"],
+    "osmosis": ["Real membranes leak slightly",
+      "Concentration polarization ignored",
+      "Living cells regulate actively — not passive osmometers"],
+    "design": ["Untested concept — build and measure before trusting",
+      "Cost, manufacturability, and safety reviews still required",
+      "Estimates are illustrative, not guarantees"]
+  };
+  function fmtAny(v, unit) {
+    /* settings/means are usually numbers, but some models (e.g. survey)
+       sweep categorical settings like "Group A" — never crash on those. */
+    if (typeof v === "number" && isFinite(v)) return fmt(v, unit);
+    return String(v) + (unit ? " " + unit : "");
+  }
   function buildFindings(T, matrix, rng, danger) {
     var F = [], rows = matrix.rows, dep = matrix.dep, unit = matrix.depUnit;
     var means = rows.map(function (r) { return r.mean; });
@@ -327,11 +439,11 @@
     spread = +(spread * 100).toFixed(1);
     if (danger) F.push("SAFETY FIRST: " + danger);
     F.push("Across " + rows.length + " matrix settings, " + dep + " " + matrix.meas.trend +
-      " — from " + fmt(rows[0].mean, unit) + " at the low setting to " +
-      fmt(rows[rows.length - 1].mean, unit) + " at the high setting.");
-    F.push("Strongest response at setting " + fmt(rows[imax].setting) +
-      ": " + fmt(rows[imax].mean, unit) + ". Weakest at " + fmt(rows[imin].setting) +
-      ": " + fmt(rows[imin].mean, unit) + ".");
+      " — from " + fmtAny(rows[0].mean, unit) + " at the low setting to " +
+      fmtAny(rows[rows.length - 1].mean, unit) + " at the high setting.");
+    F.push("Strongest response at setting " + fmtAny(rows[imax].setting) +
+      ": " + fmtAny(rows[imax].mean, unit) + ". Weakest at " + fmtAny(rows[imin].setting) +
+      ": " + fmtAny(rows[imin].mean, unit) + ".");
     F.push("Repeatability: the three trials at each setting agreed within ±" + spread +
       "% — " + (spread < 3 ? "high consistency; the model signal dominates the noise." :
         spread < 8 ? "good consistency; readings are stable." :
@@ -449,7 +561,11 @@
       results: results, conclusion: conclusion,
       safety: danger || T.safety || "Standard lab care: goggles on, tidy bench, clean spills promptly, adult supervision for young scientists.",
       sim: true,
-      simLabel: (matrix.generic ? "UNIVERSAL MATRIX — " : "") + SIM_LABEL
+      simLabel: (matrix.generic ? "UNIVERSAL MATRIX — " : "") + SIM_LABEL,
+      modelKey: T.model,
+      modelName: MODEL_NAMES[T.model] || T.model,
+      assumptions: MODEL_ASSUMPTIONS[T.model] || MODEL_ASSUMPTIONS["umatrix"],
+      limitations: MODEL_LIMITS[T.model] || MODEL_LIMITS["umatrix"]
     };
   }
 

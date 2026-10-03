@@ -94,6 +94,10 @@ def rebuild_derived(manifest):
         idx_rows.extend(json.loads(out))
     with gzip.open(os.path.join(DATA, "index.json.gz"), "wt") as fh:
         json.dump(idx_rows, fh)
+    # standardized machine feed + static bot-readable batch pages
+    import build_static
+    build_static.build_feed(idx_rows)
+    static_pages = build_static.build_pages()
     # api.json
     types = load_types()
     api = {
@@ -106,18 +110,20 @@ def rebuild_derived(manifest):
         "chunk_size": CHUNK_SIZE,
         "manifest": "data/manifest.json",
         "index": "data/index.json.gz",
+        "catalog_feed": "data/experiments-catalog.json",
+        "static_pages": "static/index.html",
         "deep_link": SITE + "?exp=JAH-EXP-000001",
         "title_status": "PROVISIONAL — awaiting Manon's confirmation",
         "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data.",
     }
     json.dump(api, open(os.path.join(ROOT, "api.json"), "w"), indent=1)
     # sitemap (sharded, 50k per file)
-    build_sitemap(idx_rows)
+    build_sitemap(idx_rows, static_pages)
     # stamp static count into index.html
     stamp_count(count)
     return count
 
-def build_sitemap(idx_rows):
+def build_sitemap(idx_rows, static_pages=None):
     per = 50000
     files = []
     for i in range(0, len(idx_rows), per):
@@ -139,13 +145,15 @@ def build_sitemap(idx_rows):
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         entries + "\n</sitemapindex>\n")
-    # static pages sitemap
+    # static pages sitemap (home + browse views + pre-rendered experiment batch pages)
+    static_entries = ['  <url><loc>%s%s</loc></url>\n' % (SITE, pg)
+                      for pg in ["", "?browse=az", "?browse=latest",
+                                 "static/index.html"] +
+                      ["static/" + f for f in (static_pages or [])]]
     open(os.path.join(ROOT, "pages.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-        "".join('  <url><loc>%s%s</loc></url>\n' % (SITE, pg)
-                for pg in ["", "?browse=az", "?browse=latest"]) +
-        "</urlset>\n")
+        "".join(static_entries) + "</urlset>\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(
         "User-agent: *\nAllow: /\nSitemap: %ssitemap.xml\n" % SITE)
     # remove stale shard files beyond current set
@@ -162,13 +170,18 @@ def stamp_count(count):
     marker = "<!--STATIC-COUNT-->"
     stamp = ('<p class="staticcount">%s solved experiment records and counting — '
              'marching to 1,000,000.</p>' % f"{count:,}")
-    if marker in h:
-        h = h.replace(marker, marker + "\n" + stamp.split("\n")[0], 1)
-        # replace any previous stamp line after marker
-        import re
-        h = re.sub(re.escape(marker) + r"\n<p class=\"staticcount\">.*?</p>",
-                   marker + "\n" + stamp, h, count=1)
-        open(p, "w").write(h)
+    import re
+    pat = re.escape(marker) + r"\n<p class=\"staticcount\">.*?</p>"
+    if re.search(pat, h):
+        # replace the stamped line in place (idempotent)
+        h = re.sub(pat, marker + "\n" + stamp, h, count=1)
+    else:
+        h = h.replace(marker, marker + "\n" + stamp, 1)
+    # collapse any stray duplicate stamp lines to exactly one
+    dup = r"(<p class=\"staticcount\">.*?</p>)\n<p class=\"staticcount\">.*?</p>"
+    while re.search(dup, h):
+        h = re.sub(dup, r"\1", h, count=1)
+    open(p, "w").write(h)
 
 def generate(n, per_type=None):
     """Generate n new experiment rows. per_type mode: K per type (seed)."""

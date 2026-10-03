@@ -18,6 +18,8 @@
  "chunk_size": 150,
  "manifest": "data/manifest.json",
  "index": "data/index.json.gz",
+ "catalog_feed": "data/experiments-catalog.json",
+ "static_pages": "static/index.html",
  "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?exp=JAH-EXP-000001",
  "title_status": "PROVISIONAL \u2014 awaiting Manon's confirmation",
  "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data."
