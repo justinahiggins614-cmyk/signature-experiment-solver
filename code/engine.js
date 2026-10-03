@@ -14,6 +14,17 @@
 
   "use strict";
 
+  /* ---------------- identity & versioning ----------------
+     SOLVER-ENGINE-V1: the permanent deterministic solver engine.
+     New behavior NEVER silently replaces V1 — it becomes V2 and old
+     records keep their original engine version for reproducibility. */
+  var ENGINE_VERSION = "1.0";
+  var ENGINE_ID = "SOLVER-ENGINE-V1";
+  var SEED_ALGORITHM = "FNV-1a-32";
+  var PRNG_ALGORITHM = "mulberry32";
+  var RECORD_VERSION = "1.0";
+  var SCHEMA_ID = "JAH-EXP-RECORD/1.0";
+
   /* ---------------- utils ---------------- */
   function fnv1a(str) {
     var h = 0x811c9dc5;
@@ -253,6 +264,22 @@
       }
     }
     return null;
+  }
+  /* ---------------- machine-readable safety classification ----------------
+     Deterministic, rule-based — the same type always gets the same level.
+     DO-NOT-PERFORM is only ever triggered by the user's own dangerous query
+     (dangerNote); the archive itself never contains such records. */
+  var SAFETY_LEVELS = ["SAFE-EDUCATIONAL", "ADULT-SUPERVISION", "CAUTION", "HAZARDOUS", "SIMULATION-ONLY", "DO-NOT-PERFORM"];
+  function safetyLevel(T, query) {
+    if (dangerNote(query)) return "DO-NOT-PERFORM";
+    var name = ((T.key || "") + " " + (T.name || "")).toLowerCase();
+    var mat = ((T.safety || "") + " " + (T.apparatus || "")).toLowerCase();
+    var blob = name + " " + mat;
+    if (/toxic|fume hood|\blye\b|severe burn|methanol|cyanide|pathogen/.test(mat)) return "HAZARDOUS";
+    if (/radioactive|nuclear/.test(name) && !/toxic|fume hood|severe burn/.test(mat)) return "CAUTION";
+    if (/flame|open fire|\bacid\b|alkali|electrolysis|projectile|rocket|flammable|chemical|solvent|bleach|hot surface|boiling|steam|pressure|sharp|blade|laser|high voltage|mains|radioactive|nuclear/.test(blob)) return "CAUTION";
+    if (/adult supervision|young scientist|goggles|gloves|tongs|ventilate|eye protection/.test(mat)) return "ADULT-SUPERVISION";
+    return "SAFE-EDUCATIONAL";
   }
   var UNIT_WORDS = ["mph", "m/s", "km/h", "km", "m", "cm", "mm", "kg", "g", "mg",
     "ml", "l", "°c", "c", "v", "w", "hz", "s", "min", "hours"];
@@ -540,8 +567,21 @@
 
     return {
       id: id, type: T.key, typeName: T.name, discipline: T.discipline,
+      /* ---- JAH-EXP-RECORD/1.0 standard identity ---- */
+      record_version: RECORD_VERSION, schema_id: SCHEMA_ID,
+      status: "SOLVER-GENERATED",
+      simulation_status: "SIMULATED",
+      physical_status: "NOT-PERFORMED",
+      measured: false,
+      data_status: "SIMULATED",
+      data_type_note: "SOLVER SIMULATION — NOT LABORATORY MEASUREMENT",
+      solver_engine: ENGINE_ID, solver_engine_version: ENGINE_VERSION,
+      seed_algorithm: SEED_ALGORITHM, prng_algorithm: PRNG_ALGORITHM,
+      safety_level: safetyLevel(T, query),
       title: title, query: query || title, seed: seed, params: params,
       question: question, hypothesis: hypothesis,
+      null_hypothesis: "There is no systematic relationship between " + pl.toLowerCase() +
+        " and " + dep + " for " + subjWord + "; any observed variation is random noise.",
       variables: {
         independent: pl + (unit ? " (" + unit + ")" : ""),
         dependent: dep + (meas.depUnit ? " (" + meas.depUnit + ")" : ""),
@@ -647,6 +687,10 @@
 
   return {
     solve: solve, solveText: solveText, titleFor: titleFor,
-    typeOf: typeOf, allTypes: allTypes, esc: esc, fmt: fmt, SIM_LABEL: SIM_LABEL
+    typeOf: typeOf, allTypes: allTypes, esc: esc, fmt: fmt, SIM_LABEL: SIM_LABEL,
+    ENGINE_ID: ENGINE_ID, ENGINE_VERSION: ENGINE_VERSION,
+    SEED_ALGORITHM: SEED_ALGORITHM, PRNG_ALGORITHM: PRNG_ALGORITHM,
+    RECORD_VERSION: RECORD_VERSION, SCHEMA_ID: SCHEMA_ID,
+    safetyLevel: safetyLevel, SAFETY_LEVELS: SAFETY_LEVELS
   };
 });
