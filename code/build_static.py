@@ -57,7 +57,7 @@ def page_html(num_from, num_to, recs, count):
     rows = []
     for r in recs:
         rows.append(
-            '<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+            '<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>SIMULATION</td></tr>' % (
                 html.escape(r["url"]), html.escape(r["id"]),
                 html.escape(r["title"]), html.escape(r["discipline"]),
                 html.escape(r["conclusion"])))
@@ -78,7 +78,7 @@ def page_html(num_from, num_to, recs, count):
         '<h1>Solved experiments %d-%d</h1>'
         '<p>%d of %d solved experiment records. Numeric tables are solver-computed '
         'simulations, labeled as such - not laboratory-measured data.</p>'
-        '<table><tr><th>ID</th><th>Title</th><th>Discipline</th><th>Conclusion</th></tr>'
+        '<table><tr><th>ID</th><th>Title</th><th>Discipline</th><th>Conclusion</th><th>Status</th></tr>'
         '%s</table></body></html>'
         % (num_from, num_to, num_from, num_to, SITE, num_from, num_to,
            SITE, num_from, num_to, len(recs), count, "".join(rows)))

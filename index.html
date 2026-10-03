@@ -160,6 +160,12 @@ border:3px solid #7a1410;box-shadow:0 0 18px rgba(179,38,30,.35)}
 .simbadge small{display:block;font-weight:normal;font-size:.72em;letter-spacing:0;margin-top:4px}
 .permalink{font-family:Arial;font-size:.82em;color:var(--muted);margin:8px 0;word-break:break-all}
 .permalink a{font-weight:bold}
+/* ---- batch-E 10-fix pass: status pill, record panel, AI identity card ---- */
+.pill.status{background:#fdecea;color:#b3261e;border-color:#e8a49e;font-weight:700}
+.recpanel{display:flex;flex-wrap:wrap;gap:8px 18px;background:#fffdf6;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:12px 0;font-family:Arial;font-size:.82em;color:var(--muted);align-items:center}
+.recpanel .rp b{color:var(--accent);font-weight:700;margin-right:4px}
+.aicard{background:#eef4ee;border:1px solid var(--accent);border-radius:10px;padding:10px 12px;margin:0 12px 4px;font-size:.82em}
+.aicard b{color:var(--accent)}
 table.cmp{border-collapse:collapse;width:100%;font-family:Arial;font-size:.88em;margin:10px 0}
 table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
 table.cmp th{background:#eef4ee;width:34%}
@@ -177,11 +183,11 @@ table.mx{font-size:.78em}
 </head>
 <body>
 <a class="skip" href="#solver">Skip to the solver</a>
-<nav class="jahnet" aria-label="JAH Network Global Ecosystem" role="navigation"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Signature Music Studio</a></nav>
+<nav class="jahnet" aria-label="JAH Network Global Ecosystem" role="navigation"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-song-maker/">25 Signature Music Studio</a></nav>
 <div class="wrap">
 <header class="hero">
 <div class="wrap">
-<div class="kick">SITE 23 OF 24 &middot; THE JAH NETWORK</div>
+<div class="kick">SITE 23 OF 25 &middot; THE JAH NETWORK</div>
 <h1>&#9879; The Signature Experiment Solver</h1>
 <p class="sub">Describe <b>any</b> experiment — drop a ball from 10 m, mix baking soda and vinegar at scale, test memory with music on — and the solver runs it <b>full-scale</b>: hypothesis, variables, materials, procedure, measurements, charts, conclusion. Every experiment is solved once, cataloged forever, and readable aloud.</p>
 <span class="prov">&#9888; TITLE PROVISIONAL — &ldquo;The Signature Experiment Solver&rdquo; awaits Manon&rsquo;s confirmation</span>
@@ -239,6 +245,9 @@ table.mx{font-size:.78em}
 <div id="aiScrim"></div>
 <aside id="aiPanel" aria-label="Experiment AI helper">
 <div class="aihead"><span>🤖 Experiment AI — ask anything</span><button id="aiClose" class="btn small ghost">✕</button></div>
+<div class="aicard" aria-label="AI identity card">🤖 <b>Experiment AI</b> — the AI that talks here.<br>
+<b>Duties:</b> answers your questions about the experiment on screen — its hypothesis, variables, materials, procedure, results, findings, chart, and safety — from the record only, never inventing data.
+<b>Engine:</b> grounded on-page Q&amp;A engine over the rendered record. It claims no canon JAH-AI ID.</div>
 <div id="aiLog"><div class="a">Hello! I can answer questions about the experiment on screen — its hypothesis, variables, materials, procedure, results, or safety. What would you like to know?</div></div>
 <form id="aiForm"><input id="aiQ" placeholder="Ask about this experiment…" aria-label="Ask about this experiment" autocomplete="off"><button type="submit">Ask</button></form>
 </aside>
@@ -250,8 +259,8 @@ table.mx{font-size:.78em}
 
 <footer class="site">
 <div class="wrap">
-<nav class="jahnet" aria-label="JAH Network Global Ecosystem" role="navigation"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-video-maker/">25 Signature Music Studio</a></nav>
-<p>Part of <b>THE JAH NETWORK</b> — 24 free Signature websites. The Signature Experiment Solver · marching to 1,000,000 solved experiments.</p>
+<nav class="jahnet" aria-label="JAH Network Global Ecosystem" role="navigation"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">1 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">6 Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">7 Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">8 Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">9 PC Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">10 Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">11 Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">12 Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">13 Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">14 Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">15 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">16 Mad Scientist Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">17 Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">18 AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">19 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">20 Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">21 App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">22 AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">23 Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">24 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-song-maker/">25 Signature Music Studio</a></nav>
+<p>Part of <b>THE JAH NETWORK</b> — 25 free Signature websites. The Signature Experiment Solver · marching to 1,000,000 solved experiments.</p>
 <p style="color:#7c88b8">All experiment records are original solver-generated works. Numeric tables are labeled simulations for illustration, not measured data.</p>
 </div>
 </footer>
@@ -267,7 +276,7 @@ function loadAll(){
     fetch("data/manifest.json").then(function(r){return r.json();}).then(function(m){MANIFEST=m;
       var c=m.count;document.getElementById("expcount").textContent=c.toLocaleString();
       document.getElementById("expbar").style.width=Math.min(100,c/10000)+"%";}).catch(function(){}),
-    gz("data/index.json.gz").then(function(t){INDEX=JSON.parse(t);}).catch(function(){INDEX=[];})
+    gz("data/index.json.gz").then(function(t){INDEX=JSON.parse(t);}).catch(function(){INDEX=[];window.__expFail=true;})
   ]);
 }
 
@@ -280,13 +289,25 @@ function renderRecord(rec){
   var m=rec.measurements, mx=rec.matrix, h="";
   var deeplink=location.origin+location.pathname+"?exp="+rec.id+((rec.id.indexOf("-C")>=0&&rec.query)?"&q="+encodeURIComponent(rec.query):"");
   h+='<div class="exphead"><h3>'+E2(rec.title)+'</h3>'
+    +'<span class="pill status">SIMULATION</span>'
     +'<span class="pill id">'+E2(rec.id)+'</span>'
     +'<span class="pill">'+E2(rec.discipline)+'</span>'
     +'<span class="pill">'+E2(rec.typeName)+'</span>'
     +'<span class="pill">Seed '+rec.seed+'</span></div>';
+  h+='<div class="recpanel" aria-label="Record panel">'
+    +'<span class="rp"><b>STATUS</b> SIMULATION</span>'
+    +'<span class="rp"><b>ID</b> '+E2(rec.id)+'</span>'
+    +'<span class="rp"><b>VERSION</b> v1.0</span>'
+    +'<span class="rp"><b>SOURCE</b> Signature Experiment Solver · deterministic solver engine</span>'
+    +'<span class="rp"><b>OPEN</b> <button class="btn ghost small" id="btnopen">open ↗</button></span>'
+    +'<span class="rp"><b>SHARE</b> <button class="btn ghost small" id="btnshare">share</button></span>'
+    +'<span class="rp"><b>COPY</b> <button class="btn ghost small" id="btncopy2">copy</button></span>'
+    +'<span class="rp"><b>DOWNLOAD</b> <button class="btn ghost small" id="btntxt2">.txt</button></span>'
+    +'<span class="rp"><b>READ ALOUD</b> <button class="btn ghost small" id="btnread2">read</button></span></div>';
   h+='<p class="permalink">🔗 Permanent link: <a href="'+deeplink+'">'+E2(deeplink)+'</a> — this exact run is reproducible forever from its deterministic seed.</p>';
   if(rec.query&&rec.query!==rec.title)h+='<p style="font-family:Arial;color:var(--muted)">Request: &ldquo;'+E2(rec.query)+'&rdquo;</p>';
   h+='<div class="simbadge" role="note">⚗ SOLVER SIMULATION<small>Every number below was computed by the solver engine from built-in models — not measured in a physical lab.</small></div>';
+  h+='<p class="permalink">⚙️ <b>Provenance:</b> generated by the Signature Experiment Solver engine · solver '+E2(rec.modelName||rec.typeName)+' · deterministic seed '+rec.seed+' · rendered '+new Date().toISOString().slice(0,10)+'. The same seed always reproduces this exact run.</p>';
   /* ---- mad-scientist universal matrix panel ---- */
   h+='<div class="lab" role="region" aria-label="Universal matrix run">'
     +'<h3>⚗&#xFE0E; THE UNIVERSAL MATRIX — LIVE RUN</h3>'
@@ -339,6 +360,14 @@ function renderRecord(rec){
   document.getElementById("btnread").onclick=function(){readRecord(rec);};
   document.getElementById("btncopy").onclick=function(){copyText(recordText(rec));};
   document.getElementById("btntxt").onclick=function(){download(rec.id+".txt",recordText(rec),"text/plain");};
+  /* batch-E record panel wiring */
+  document.getElementById("btnopen").onclick=function(){window.open(deeplink,"_blank","noopener");};
+  document.getElementById("btnshare").onclick=function(){
+    if(navigator.share){navigator.share({title:rec.title+" — The Signature Experiment Solver",url:deeplink}).catch(function(){});}
+    else copyText(deeplink);};
+  document.getElementById("btncopy2").onclick=function(){copyText(recordText(rec));};
+  document.getElementById("btntxt2").onclick=function(){download(rec.id+".txt",recordText(rec),"text/plain");};
+  document.getElementById("btnread2").onclick=function(){readRecord(rec);};
   document.getElementById("btnjson").onclick=function(){
     var j={};for(var k in rec){if(rec.hasOwnProperty(k))j[k]=rec[k];}
     j.honesty_note="SOLVER SIMULATION — NOT A PHYSICAL EXPERIMENT. All numbers computed by the solver engine from built-in models; never lab-measured.";
@@ -592,6 +621,10 @@ document.getElementById("randombtn").onclick=function(){
 var azLetter="A";
 function buildAZ(){
   var box=document.getElementById("azletters");
+  if(!TYPES.length){
+    document.getElementById("typegrid").innerHTML='<div class="tcard" role="alert"><b>The solver-type list could not load.</b><br><span class="d">Check your connection and reload — the archive itself is untouched.</span></div>';
+    return;
+  }
   var letters={};TYPES.forEach(function(t){letters[t.name[0].toUpperCase()]=1;});
   document.getElementById("typecount").textContent=TYPES.length+" solver types";
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(function(L){
@@ -629,6 +662,10 @@ function catCard(row){
 }
 function renderCat(filter){
   var g=document.getElementById("catgrid");g.innerHTML="";
+  if(!INDEX.length&&window.__expFail){
+    g.innerHTML='<div class="ccard" role="alert"><b>The solved-experiment catalog could not load.</b><br><span style="font-family:Arial;font-size:.85em;color:var(--muted)">Check your connection and reload — the archive itself is untouched.</span></div>';
+    return;
+  }
   var rows=INDEX.slice().reverse();
   if(filter){var f=filter.toLowerCase();rows=rows.filter(function(r){return (r[3]+" "+r[0]+" "+r[4]).toLowerCase().indexOf(f)>=0;});}
   rows.slice(0,catShown).forEach(function(r){g.appendChild(catCard(r));});
@@ -648,6 +685,9 @@ function openExp(id){
 /* ================= boot ================= */
 function boot(){
   if(window.innerWidth<768){var sc=document.querySelector(".statscoll");if(sc)sc.removeAttribute("open");}
+  /* honest loading states until data resolves — never "No results" while loading */
+  document.getElementById("typegrid").innerHTML='<div class="tcard" role="status"><b>Loading solver types…</b></div>';
+  document.getElementById("catgrid").innerHTML='<div class="ccard" role="status"><b>Loading solved experiments…</b></div>';
   loadAll().then(function(){
     fillTypeSelect();buildAZ();renderCat("");
     var q=new URLSearchParams(location.search),exp=q.get("exp");
