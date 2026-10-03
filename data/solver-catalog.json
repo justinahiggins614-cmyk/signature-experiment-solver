@@ -1,0 +1,4447 @@
+{
+ "site": "The Signature Experiment Solver",
+ "updated_utc": "2026-10-03T16:29:10Z",
+ "solver_engine": "SOLVER-ENGINE-V1",
+ "total_types": 240,
+ "types": [
+  {
+   "type_id": "JAH-EXP-TYPE-000099",
+   "key": "3d-print-strength",
+   "name": "3D Print Infill Strength",
+   "discipline": "Engineering",
+   "blurb": "Print hooks at infills and hang weight to fail.",
+   "keywords": [
+    "3d print",
+    "infill",
+    "strength",
+    "hook",
+    "layer"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=3d-print-strength"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000029",
+   "key": "acid-base-titration",
+   "name": "Acid-Base Titration",
+   "discipline": "Chemistry",
+   "blurb": "Titrate an acid with base and find the equivalence point.",
+   "keywords": [
+    "titration",
+    "titrate",
+    "acid",
+    "base",
+    "equivalence",
+    "burette",
+    "neutralize"
+   ],
+   "model": "titration",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=acid-base-titration"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000156",
+   "key": "activation-energy",
+   "name": "Activation Energy Slopes",
+   "discipline": "Chemistry",
+   "blurb": "Run a reaction at temperatures and plot Arrhenius.",
+   "keywords": [
+    "activation energy",
+    "arrhenius",
+    "slope",
+    "plot"
+   ],
+   "model": "rate-temp",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=activation-energy"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000130",
+   "key": "air-quality",
+   "name": "Air Quality Tape Test",
+   "discipline": "Environmental",
+   "blurb": "Hang sticky cards and count the specks.",
+   "keywords": [
+    "air quality",
+    "pollution",
+    "sticky",
+    "particulate"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=air-quality"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000239",
+   "key": "albedo-ice",
+   "name": "Albedo Ice Melt Race",
+   "discipline": "Environmental",
+   "blurb": "Melt white vs black-topped ice and time it.",
+   "keywords": [
+    "albedo",
+    "ice",
+    "melt",
+    "white",
+    "black"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=albedo-ice"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000165",
+   "key": "alkalinity",
+   "name": "Alkalinity Titration",
+   "discipline": "Chemistry",
+   "blurb": "Titrate water samples to the methyl-orange end.",
+   "keywords": [
+    "alkalinity",
+    "titrate",
+    "methyl orange",
+    "buffer"
+   ],
+   "model": "titration",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=alkalinity"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000104",
+   "key": "anchoring",
+   "name": "Anchoring Number Estimates",
+   "discipline": "Psychology",
+   "blurb": "Flash high/low anchors then ask for estimates.",
+   "keywords": [
+    "anchoring",
+    "anchor",
+    "estimate",
+    "bias"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=anchoring"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000199",
+   "key": "anemometer-build",
+   "name": "Anemometer Spin Count",
+   "discipline": "Engineering",
+   "blurb": "Build a cup rotor and calibrate spins to wind.",
+   "keywords": [
+    "anemometer",
+    "wind",
+    "cups",
+    "spin"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=anemometer-build"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000043",
+   "key": "antacid",
+   "name": "Antacid Neutralization",
+   "discipline": "Chemistry",
+   "blurb": "Drop antacid tablets in acid and time the fizz.",
+   "keywords": [
+    "antacid",
+    "neutralize",
+    "tablet",
+    "stomach acid",
+    "fizz"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antacid"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000059",
+   "key": "antibiotic-zones",
+   "name": "Antibiotic Zone Inhibition",
+   "discipline": "Biology",
+   "blurb": "Place discs on lawns and measure clear zones.",
+   "keywords": [
+    "antibiotic",
+    "zone",
+    "inhibition",
+    "disc",
+    "kirby"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antibiotic-zones"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000116",
+   "key": "auction-bidding",
+   "name": "Auction Strategy Bids",
+   "discipline": "Economics & Math",
+   "blurb": "Auction prizes with play money and log winners.",
+   "keywords": [
+    "auction",
+    "bid",
+    "winner",
+    "gavel"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=auction-bidding"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000058",
+   "key": "bacterial-growth",
+   "name": "Bacterial Growth Plates",
+   "discipline": "Biology",
+   "blurb": "Swab surfaces, incubate plates, count colonies.",
+   "keywords": [
+    "bacteria",
+    "agar plate",
+    "colonies",
+    "swab",
+    "incubate"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bacterial-growth"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000180",
+   "key": "transformation",
+   "name": "Bacterial Transformation",
+   "discipline": "Biology",
+   "blurb": "Heat-shock cells with plasmid and count glowing colonies.",
+   "keywords": [
+    "transformation",
+    "plasmid",
+    "glow",
+    "heat shock"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=transformation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000085",
+   "key": "beam-deflection",
+   "name": "Beam Deflection Load",
+   "discipline": "Engineering",
+   "blurb": "Load a spanning ruler and measure the sag.",
+   "keywords": [
+    "beam",
+    "deflection",
+    "sag",
+    "load",
+    "bridge"
+   ],
+   "model": "hooke",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=beam-deflection"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000159",
+   "key": "beer-lambert",
+   "name": "Beer's Law Colorimetry",
+   "discipline": "Chemistry",
+   "blurb": "Dilute dye and plot absorbance vs concentration.",
+   "keywords": [
+    "beer",
+    "lambert",
+    "absorbance",
+    "colorimeter",
+    "dye"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=beer-lambert"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000019",
+   "key": "bernoulli",
+   "name": "Bernoulli Lift Paper",
+   "discipline": "Physics",
+   "blurb": "Blow over paper strips and measure lift angle.",
+   "keywords": [
+    "bernoulli",
+    "lift",
+    "airplane wing",
+    "blow over"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bernoulli"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000224",
+   "key": "big-o-race",
+   "name": "Big-O Growth Race",
+   "discipline": "Computer Science",
+   "blurb": "Time nested vs single loops on growing lists.",
+   "keywords": [
+    "big-o",
+    "growth",
+    "loops",
+    "nested",
+    "race"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=big-o-race"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000201",
+   "key": "thermostat-bimetal",
+   "name": "Bimetal Thermostat Snap",
+   "discipline": "Engineering",
+   "blurb": "Heat a bimetal strip and log the snap temp.",
+   "keywords": [
+    "thermostat",
+    "bimetal",
+    "snap",
+    "strip"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=thermostat-bimetal"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000121",
+   "key": "binary-search",
+   "name": "Binary vs Linear Search",
+   "discipline": "Computer Science",
+   "blurb": "Find pages in a phone book two ways and time it.",
+   "keywords": [
+    "binary search",
+    "linear search",
+    "find",
+    "phone book"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=binary-search"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000048",
+   "key": "biodiesel",
+   "name": "Biodiesel Yield",
+   "discipline": "Chemistry",
+   "blurb": "Transesterify oil and measure fuel layer.",
+   "keywords": [
+    "biodiesel",
+    "transesterification",
+    "fuel",
+    "methanol"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=biodiesel"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000174",
+   "key": "biomagnification",
+   "name": "Biomagnification Beads",
+   "discipline": "Biology",
+   "blurb": "Pass toxin beads up a food chain and count the load.",
+   "keywords": [
+    "biomagnification",
+    "toxin",
+    "food chain",
+    "ddt"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=biomagnification"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000113",
+   "key": "birthday-paradox",
+   "name": "Birthday Paradox Groups",
+   "discipline": "Economics & Math",
+   "blurb": "Check birthdays in groups and count matches.",
+   "keywords": [
+    "birthday",
+    "paradox",
+    "match",
+    "probability"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=birthday-paradox"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000161",
+   "key": "bomb-calorimeter",
+   "name": "Bomb Calorimeter Demo",
+   "discipline": "Chemistry",
+   "blurb": "Burn a pellet in a sealed can and log the rise.",
+   "keywords": [
+    "bomb calorimeter",
+    "combustion",
+    "pellet",
+    "energy"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bomb-calorimeter"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000068",
+   "key": "mold-growth",
+   "name": "Bread Mold Growth",
+   "discipline": "Biology",
+   "blurb": "Store bread damp/dry and map mold spread.",
+   "keywords": [
+    "mold",
+    "bread",
+    "fungus",
+    "spoilage"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mold-growth"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000098",
+   "key": "bridge-resonance",
+   "name": "Bridge Resonance Walk",
+   "discipline": "Engineering",
+   "blurb": "Step a model bridge at rhythms and watch sway.",
+   "keywords": [
+    "resonance",
+    "bridge",
+    "sway",
+    "tacoma",
+    "rhythm"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bridge-resonance"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000066",
+   "key": "brine-shrimp",
+   "name": "Brine Shrimp Hatch Rate",
+   "discipline": "Biology",
+   "blurb": "Hatch shrimp eggs at salinities and count.",
+   "keywords": [
+    "brine shrimp",
+    "artemia",
+    "hatch",
+    "salinity",
+    "sea monkeys"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=brine-shrimp"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000007",
+   "key": "buoyancy",
+   "name": "Buoyancy Displacement",
+   "discipline": "Physics",
+   "blurb": "Submerge objects and measure displaced water weight.",
+   "keywords": [
+    "buoyan",
+    "float",
+    "sink",
+    "displace",
+    "archimedes"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=buoyancy"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000119",
+   "key": "cryptography-caesar",
+   "name": "Caesar Cipher Crack",
+   "discipline": "Economics & Math",
+   "blurb": "Encode messages and crack by frequency.",
+   "keywords": [
+    "cipher",
+    "caesar",
+    "code",
+    "encode",
+    "secret"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cryptography-caesar"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000149",
+   "key": "camera-obscura",
+   "name": "Camera Obscura Room",
+   "discipline": "Physics",
+   "blurb": "Darken a room and project the window on the wall.",
+   "keywords": [
+    "camera obscura",
+    "pinhole",
+    "project",
+    "dark room"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=camera-obscura"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000027",
+   "key": "capillary",
+   "name": "Capillary Rise Tubes",
+   "discipline": "Physics",
+   "blurb": "Stand thin tubes in water and measure rise height.",
+   "keywords": [
+    "capillary",
+    "rise",
+    "thin tube",
+    "wicking"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=capillary"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000184",
+   "key": "carbon-dating-model",
+   "name": "Carbon Dating Beads",
+   "discipline": "Earth & Space",
+   "blurb": "Remove half the beads per round and date the sample.",
+   "keywords": [
+    "carbon dating",
+    "half-life",
+    "beads",
+    "age"
+   ],
+   "model": "exponential-decay",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=carbon-dating-model"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000038",
+   "key": "enzyme-catalase",
+   "name": "Catalase Enzyme Rate",
+   "discipline": "Chemistry",
+   "blurb": "Add liver to peroxide and measure oxygen foam.",
+   "keywords": [
+    "enzyme",
+    "catalase",
+    "peroxide",
+    "liver"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=enzyme-catalase"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000091",
+   "key": "catapult",
+   "name": "Catapult Range Tuning",
+   "discipline": "Engineering",
+   "blurb": "Adjust arm stop and measure throw range.",
+   "keywords": [
+    "catapult",
+    "trebuchet",
+    "throw",
+    "range",
+    "siege"
+   ],
+   "model": "projectile",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=catapult"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000123",
+   "key": "cellular-automata",
+   "name": "Cellular Automata Rows",
+   "discipline": "Computer Science",
+   "blurb": "Grow Rule 30 rows and count the pattern.",
+   "keywords": [
+    "cellular",
+    "automata",
+    "rule 30",
+    "game of life"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cellular-automata"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000209",
+   "key": "change-blindness",
+   "name": "Change Blindness Flicker",
+   "discipline": "Psychology",
+   "blurb": "Flicker two scenes and time the spot.",
+   "keywords": [
+    "change blindness",
+    "flicker",
+    "spot",
+    "scene"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=change-blindness"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000145",
+   "key": "chladni",
+   "name": "Chladni Plate Patterns",
+   "discipline": "Physics",
+   "blurb": "Bow a plate and watch sand draw the modes.",
+   "keywords": [
+    "chladni",
+    "plate",
+    "sand",
+    "modes",
+    "bow"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chladni"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000076",
+   "key": "cloud-formation",
+   "name": "Cloud in a Bottle",
+   "discipline": "Earth & Space",
+   "blurb": "Pressurize a bottle and watch a cloud bloom.",
+   "keywords": [
+    "cloud",
+    "bottle",
+    "pressure",
+    "condensation"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cloud-formation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000213",
+   "key": "cocktail-party",
+   "name": "Cocktail Party Listening",
+   "discipline": "Psychology",
+   "blurb": "Shadow one voice in noise and score words caught.",
+   "keywords": [
+    "cocktail party",
+    "listening",
+    "shadow",
+    "noise"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cocktail-party"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000107",
+   "key": "color-mood",
+   "name": "Color Mood Rating",
+   "discipline": "Psychology",
+   "blurb": "Rate mood words under colored light.",
+   "keywords": [
+    "color",
+    "mood",
+    "light",
+    "emotion"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=color-mood"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000065",
+   "key": "composting",
+   "name": "Compost Heat Pile",
+   "discipline": "Biology",
+   "blurb": "Build mini composts and log core temperature.",
+   "keywords": [
+    "compost",
+    "decomposition",
+    "pile",
+    "rot"
+   ],
+   "model": "cooling",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=composting"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000131",
+   "key": "compost-tea",
+   "name": "Compost Tea Growth",
+   "discipline": "Environmental",
+   "blurb": "Brew compost tea and compare seedling growth.",
+   "keywords": [
+    "compost tea",
+    "brew",
+    "seedling",
+    "fertilizer"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compost-tea"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000111",
+   "key": "compound-interest",
+   "name": "Compound Interest Growth",
+   "discipline": "Economics & Math",
+   "blurb": "Grow play money at rates and chart the curve.",
+   "keywords": [
+    "compound",
+    "interest",
+    "invest",
+    "growth",
+    "savings"
+   ],
+   "model": "exponential-decay",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compound-interest"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000151",
+   "key": "microscope-build",
+   "name": "Compound Microscope Build",
+   "discipline": "Physics",
+   "blurb": "Stack two lenses and measure total magnification.",
+   "keywords": [
+    "microscope",
+    "compound",
+    "magnification",
+    "lenses"
+   ],
+   "model": "optics",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=microscope-build"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000139",
+   "key": "convection-cells",
+   "name": "Convection Current Cells",
+   "discipline": "Physics",
+   "blurb": "Heat water from below and dye the rising cells.",
+   "keywords": [
+    "convection",
+    "current",
+    "cells",
+    "heat",
+    "rise"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=convection-cells"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000040",
+   "key": "electroplating",
+   "name": "Copper Electroplating",
+   "discipline": "Chemistry",
+   "blurb": "Plate copper onto a key and weigh the deposit.",
+   "keywords": [
+    "electroplat",
+    "plate",
+    "copper",
+    "key"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=electroplating"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000025",
+   "key": "crater-impacts",
+   "name": "Crater Impact Scaling",
+   "discipline": "Physics",
+   "blurb": "Drop balls into flour and measure crater width.",
+   "keywords": [
+    "crater",
+    "impact",
+    "meteor",
+    "flour"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=crater-impacts"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000182",
+   "key": "crystal-growing",
+   "name": "Crystal Growing Jars",
+   "discipline": "Earth & Space",
+   "blurb": "Grow alum crystals and measure daily growth.",
+   "keywords": [
+    "crystal",
+    "grow",
+    "alum",
+    "jar"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=crystal-growing"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000134",
+   "key": "density-column",
+   "name": "Density Column Layers",
+   "discipline": "Physics",
+   "blurb": "Stack immiscible liquids and float objects at their levels.",
+   "keywords": [
+    "density",
+    "column",
+    "layer",
+    "immiscible",
+    "float"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=density-column"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000150",
+   "key": "depth-of-field",
+   "name": "Depth of Field Apertures",
+   "discipline": "Physics",
+   "blurb": "Shoot a ruler row at apertures and note sharp range.",
+   "keywords": [
+    "depth of field",
+    "aperture",
+    "focus",
+    "sharp"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=depth-of-field"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000177",
+   "key": "dichotomous-keys",
+   "name": "Dichotomous Key Leaves",
+   "discipline": "Biology",
+   "blurb": "Key out leaves with paired questions.",
+   "keywords": [
+    "dichotomous",
+    "key",
+    "leaves",
+    "identify"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dichotomous-keys"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000230",
+   "key": "diffie-hellman",
+   "name": "Diffie-Hellman Paint Mix",
+   "discipline": "Computer Science",
+   "blurb": "Mix secret paints publicly and share the shade.",
+   "keywords": [
+    "diffie",
+    "hellman",
+    "paint",
+    "key exchange"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diffie-hellman"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000055",
+   "key": "diffusion-agar",
+   "name": "Diffusion in Agar Cubes",
+   "discipline": "Biology",
+   "blurb": "Soak dyed agar cubes and measure color depth.",
+   "keywords": [
+    "diffusion",
+    "agar",
+    "cube",
+    "surface area"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diffusion-agar"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000102",
+   "key": "memory-span",
+   "name": "Digit Memory Span",
+   "discipline": "Psychology",
+   "blurb": "Read lengthening digit strings and score recall.",
+   "keywords": [
+    "memory",
+    "digit span",
+    "recall",
+    "short term"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=memory-span"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000126",
+   "key": "dijkstra",
+   "name": "Dijkstra Map Race",
+   "discipline": "Computer Science",
+   "blurb": "Find shortest paths on a node map by hand.",
+   "keywords": [
+    "dijkstra",
+    "shortest path",
+    "graph",
+    "nodes",
+    "map"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dijkstra"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000203",
+   "key": "antenna-dipole",
+   "name": "Dipole Antenna Length",
+   "discipline": "Engineering",
+   "blurb": "Trim a dipole and log reception bars.",
+   "keywords": [
+    "antenna",
+    "dipole",
+    "length",
+    "reception"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antenna-dipole"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000164",
+   "key": "dissolved-oxygen",
+   "name": "Dissolved Oxygen Winkler",
+   "discipline": "Chemistry",
+   "blurb": "Fix oxygen in pond samples and titrate.",
+   "keywords": [
+    "dissolved oxygen",
+    "winkler",
+    "pond",
+    "oxygen"
+   ],
+   "model": "titration",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dissolved-oxygen"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000222",
+   "key": "diversification",
+   "name": "Diversification Coin Portfolios",
+   "discipline": "Economics & Math",
+   "blurb": "Hold coin baskets and compare the wobble.",
+   "keywords": [
+    "diversification",
+    "portfolio",
+    "risk",
+    "basket"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diversification"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000179",
+   "key": "dna-extraction",
+   "name": "DNA Extraction Strawberries",
+   "discipline": "Biology",
+   "blurb": "Mash berries and spool the DNA threads.",
+   "keywords": [
+    "dna",
+    "extraction",
+    "strawberry",
+    "spool"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dna-extraction"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000013",
+   "key": "doppler",
+   "name": "Doppler Shift Sound",
+   "discipline": "Physics",
+   "blurb": "Measure pitch change of a moving sound source.",
+   "keywords": [
+    "doppler",
+    "pitch",
+    "siren",
+    "moving source",
+    "redshift"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=doppler"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000233",
+   "key": "ecological-footprint",
+   "name": "Ecological Footprint Quiz",
+   "discipline": "Environmental",
+   "blurb": "Score lifestyle answers into planet counts.",
+   "keywords": [
+    "footprint",
+    "ecological",
+    "planets",
+    "lifestyle"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ecological-footprint"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000087",
+   "key": "egg-drop",
+   "name": "Egg Drop Cushion",
+   "discipline": "Engineering",
+   "blurb": "Drop protected eggs and score the survivors.",
+   "keywords": [
+    "egg drop",
+    "cushion",
+    "protect",
+    "container"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=egg-drop"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000031",
+   "key": "electrolysis-water",
+   "name": "Electrolysis of Water",
+   "discipline": "Chemistry",
+   "blurb": "Split water with electricity and collect the gases.",
+   "keywords": [
+    "electrolysis",
+    "split water",
+    "hydrogen",
+    "hoffman"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=electrolysis-water"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000205",
+   "key": "emi-shielding",
+   "name": "EMI Shielding Boxes",
+   "discipline": "Engineering",
+   "blurb": "Box a buzzing phone and listen for the drop.",
+   "keywords": [
+    "emi",
+    "shielding",
+    "interference",
+    "buzz"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=emi-shielding"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000173",
+   "key": "eutrophication",
+   "name": "Eutrophication Jar Bloom",
+   "discipline": "Biology",
+   "blurb": "Fertilize jars and track the green bloom.",
+   "keywords": [
+    "eutrophication",
+    "algae",
+    "bloom",
+    "fertilizer",
+    "green"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=eutrophication"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000206",
+   "key": "eyewitness-lineup",
+   "name": "Eyewitness Lineup Picks",
+   "discipline": "Psychology",
+   "blurb": "Show a face, then lineups, and score the picks.",
+   "keywords": [
+    "eyewitness",
+    "lineup",
+    "face",
+    "memory",
+    "pick"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=eyewitness-lineup"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000202",
+   "key": "faraday-cage",
+   "name": "Faraday Cage Signal",
+   "discipline": "Engineering",
+   "blurb": "Wrap a radio and log signal bars lost.",
+   "keywords": [
+    "faraday",
+    "cage",
+    "signal",
+    "shield",
+    "radio"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=faraday-cage"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000187",
+   "key": "fault-models",
+   "name": "Fault Block Models",
+   "discipline": "Earth & Space",
+   "blurb": "Slide foam blocks into normal and reverse faults.",
+   "keywords": [
+    "fault",
+    "normal",
+    "reverse",
+    "strike-slip",
+    "blocks"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fault-models"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000036",
+   "key": "flame-tests",
+   "name": "Flame Test Colors",
+   "discipline": "Chemistry",
+   "blurb": "Burn metal salts and record flame colors.",
+   "keywords": [
+    "flame test",
+    "flame color",
+    "metal ion",
+    "burn"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=flame-tests"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000022",
+   "key": "flywheel",
+   "name": "Flywheel Energy Storage",
+   "discipline": "Physics",
+   "blurb": "Spin flywheels and time the coast-down.",
+   "keywords": [
+    "flywheel",
+    "spin",
+    "energy storage",
+    "coast"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=flywheel"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000037",
+   "key": "calorimetry-food",
+   "name": "Food Calorimetry Energy",
+   "discipline": "Chemistry",
+   "blurb": "Burn food samples under water and measure warming.",
+   "keywords": [
+    "calorie",
+    "food energy",
+    "burn peanut",
+    "calorimeter"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=calorimetry-food"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000234",
+   "key": "food-miles",
+   "name": "Food Miles Audit",
+   "discipline": "Environmental",
+   "blurb": "Log lunch origins and total the miles.",
+   "keywords": [
+    "food miles",
+    "audit",
+    "lunch",
+    "origin"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=food-miles"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000183",
+   "key": "fossil-molds",
+   "name": "Fossil Mold Casts",
+   "discipline": "Earth & Space",
+   "blurb": "Press shells in clay and cast the molds.",
+   "keywords": [
+    "fossil",
+    "mold",
+    "cast",
+    "shell",
+    "clay"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fossil-molds"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000118",
+   "key": "fractals",
+   "name": "Fractal Coastline Length",
+   "discipline": "Economics & Math",
+   "blurb": "Measure a wiggly line with shrinking rulers.",
+   "keywords": [
+    "fractal",
+    "coastline",
+    "ruler",
+    "dimension"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fractals"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000103",
+   "key": "framing-effect",
+   "name": "Framing Choice Effect",
+   "discipline": "Psychology",
+   "blurb": "Pose the same choice as gain vs loss and tally.",
+   "keywords": [
+    "framing",
+    "gain",
+    "loss",
+    "choice",
+    "decision"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=framing-effect"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000142",
+   "key": "frank-hertz",
+   "name": "Franck-Hertz Dip Model",
+   "discipline": "Physics",
+   "blurb": "Simulate electron energy dips with a stepped ramp and marbles.",
+   "keywords": [
+    "franck",
+    "hertz",
+    "quantum",
+    "dip",
+    "energy levels"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=frank-hertz"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000001",
+   "key": "free-fall",
+   "name": "Free-Fall Gravity Drop",
+   "discipline": "Physics",
+   "blurb": "Drop objects from measured heights and time their fall.",
+   "keywords": [
+    "drop",
+    "fall",
+    "gravity",
+    "free fall",
+    "freefall",
+    "height",
+    "drop a ball",
+    "falling"
+   ],
+   "model": "gravity-drop",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=free-fall"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000005",
+   "key": "friction-slide",
+   "name": "Friction Slide Distance",
+   "discipline": "Physics",
+   "blurb": "Slide blocks across surfaces and measure stopping distance.",
+   "keywords": [
+    "friction",
+    "slide",
+    "sliding",
+    "rough",
+    "smooth",
+    "skid"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=friction-slide"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000032",
+   "key": "galvanic-cell",
+   "name": "Galvanic Cell Voltage",
+   "discipline": "Chemistry",
+   "blurb": "Build metal-pair cells and measure voltage.",
+   "keywords": [
+    "galvanic",
+    "battery",
+    "cell",
+    "electrochemical",
+    "voltaic"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=galvanic-cell"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000028",
+   "key": "gas-pressure",
+   "name": "Gas Pressure vs Volume",
+   "discipline": "Physics",
+   "blurb": "Compress trapped air and read the pressure.",
+   "keywords": [
+    "gas",
+    "boyle",
+    "pressure",
+    "syringe",
+    "compress"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gas-pressure"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000094",
+   "key": "gear-trains",
+   "name": "Gear Train Ratio",
+   "discipline": "Engineering",
+   "blurb": "Mesh gears and count output turns.",
+   "keywords": [
+    "gear",
+    "ratio",
+    "train",
+    "teeth",
+    "mesh"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gear-trains"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000168",
+   "key": "drift-bottleneck",
+   "name": "Genetic Drift Bottleneck",
+   "discipline": "Biology",
+   "blurb": "Crash a bead population and watch alleles vanish.",
+   "keywords": [
+    "drift",
+    "bottleneck",
+    "alleles",
+    "founder"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=drift-bottleneck"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000194",
+   "key": "geneva-drive",
+   "name": "Geneva Drive Indexing",
+   "discipline": "Engineering",
+   "blurb": "Crank a geneva wheel and time the index steps.",
+   "keywords": [
+    "geneva",
+    "indexing",
+    "drive",
+    "wheel",
+    "step"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=geneva-drive"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000216",
+   "key": "gini-coefficient",
+   "name": "Gini Wealth Beads",
+   "discipline": "Economics & Math",
+   "blurb": "Deal beads unevenly and compute the Gini.",
+   "keywords": [
+    "gini",
+    "wealth",
+    "inequality",
+    "lorenz"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gini-coefficient"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000052",
+   "key": "chemiluminescence",
+   "name": "Glow Stick Temperature",
+   "discipline": "Chemistry",
+   "blurb": "Chill and warm glow sticks and compare brightness.",
+   "keywords": [
+    "glow",
+    "chemiluminescence",
+    "glow stick",
+    "light"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chemiluminescence"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000125",
+   "key": "gradient-descent",
+   "name": "Gradient Descent Marble",
+   "discipline": "Computer Science",
+   "blurb": "Roll a marble down a bowl to find the bottom.",
+   "keywords": [
+    "gradient",
+    "descent",
+    "marble",
+    "bowl",
+    "minimum"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gradient-descent"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000235",
+   "key": "green-roof",
+   "name": "Green Roof Cooling",
+   "discipline": "Environmental",
+   "blurb": "Compare sedum vs bare trays in sun.",
+   "keywords": [
+    "green roof",
+    "sedum",
+    "cooling",
+    "tray"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=green-roof"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000077",
+   "key": "greenhouse-model",
+   "name": "Greenhouse Jar Model",
+   "discipline": "Earth & Space",
+   "blurb": "Compare lidded vs open jars in sunlight.",
+   "keywords": [
+    "greenhouse",
+    "jar",
+    "warming",
+    "climate"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=greenhouse-model"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000109",
+   "key": "habit-formation",
+   "name": "Habit Streak Tracking",
+   "discipline": "Psychology",
+   "blurb": "Track a tiny habit for weeks and chart streaks.",
+   "keywords": [
+    "habit",
+    "streak",
+    "routine",
+    "21 days"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=habit-formation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000141",
+   "key": "hall-effect",
+   "name": "Hall Effect Voltage",
+   "discipline": "Physics",
+   "blurb": "Run current through foil in a magnet field and read microvolts.",
+   "keywords": [
+    "hall",
+    "magnet",
+    "voltage",
+    "foil",
+    "effect"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hall-effect"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000167",
+   "key": "hardy-weinberg",
+   "name": "Hardy-Weinberg Beads",
+   "discipline": "Biology",
+   "blurb": "Draw bead alleles for generations and check the math.",
+   "keywords": [
+    "hardy",
+    "weinberg",
+    "allele",
+    "beads",
+    "genetics"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hardy-weinberg"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000061",
+   "key": "heart-rate-exercise",
+   "name": "Heart Rate vs Exercise",
+   "discipline": "Biology",
+   "blurb": "Step up and down, then track pulse recovery.",
+   "keywords": [
+    "heart rate",
+    "pulse",
+    "exercise",
+    "recovery",
+    "fitness"
+   ],
+   "model": "cooling",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heart-rate-exercise"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000023",
+   "key": "heat-engine",
+   "name": "Heat Engine Efficiency",
+   "discipline": "Physics",
+   "blurb": "Run a Stirling engine across temperature gaps.",
+   "keywords": [
+    "heat engine",
+    "stirling",
+    "efficiency",
+    "carnot"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heat-engine"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000240",
+   "key": "heat-island",
+   "name": "Heat Island Night Walk",
+   "discipline": "Environmental",
+   "blurb": "Meter night temps downtown vs park.",
+   "keywords": [
+    "heat island",
+    "night",
+    "downtown",
+    "park"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heat-island"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000004",
+   "key": "hookes-law",
+   "name": "Hooke's Law Spring Stretch",
+   "discipline": "Physics",
+   "blurb": "Hang masses on springs and measure stretch.",
+   "keywords": [
+    "spring",
+    "hooke",
+    "stretch",
+    "elastic",
+    "k constant"
+   ],
+   "model": "hooke",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hookes-law"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000189",
+   "key": "hurricane-spin",
+   "name": "Hurricane Spin Tank",
+   "discipline": "Earth & Space",
+   "blurb": "Stir a tank and dye the spiral bands.",
+   "keywords": [
+    "hurricane",
+    "spin",
+    "spiral",
+    "coriolis",
+    "tank"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hurricane-spin"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000198",
+   "key": "hydraulic-press",
+   "name": "Hydraulic Press Force",
+   "discipline": "Engineering",
+   "blurb": "Pump a jack and read the crushed-can force.",
+   "keywords": [
+    "hydraulic",
+    "press",
+    "jack",
+    "force"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hydraulic-press"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000090",
+   "key": "hydraulic-arm",
+   "name": "Hydraulic Syringe Arm",
+   "discipline": "Engineering",
+   "blurb": "Link syringes and measure lift force.",
+   "keywords": [
+    "hydraulic",
+    "syringe",
+    "arm",
+    "pascal"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hydraulic-arm"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000155",
+   "key": "fuel-cell",
+   "name": "Hydrogen Fuel Cell",
+   "discipline": "Chemistry",
+   "blurb": "Feed a fuel cell and log voltage vs load.",
+   "keywords": [
+    "fuel cell",
+    "hydrogen",
+    "voltage",
+    "load"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fuel-cell"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000006",
+   "key": "inclined-plane",
+   "name": "Inclined Plane Acceleration",
+   "discipline": "Physics",
+   "blurb": "Roll carts down ramps of measured angles.",
+   "keywords": [
+    "inclin",
+    "ramp",
+    "slope",
+    "cart",
+    "roll down"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inclined-plane"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000146",
+   "key": "inverse-square-light",
+   "name": "Inverse-Square Light Falloff",
+   "discipline": "Physics",
+   "blurb": "Move a lamp from a meter and log lux.",
+   "keywords": [
+    "inverse square",
+    "light",
+    "lux",
+    "falloff",
+    "distance"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inverse-square-light"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000193",
+   "key": "inversion",
+   "name": "Inversion Smoke Layer",
+   "discipline": "Earth & Space",
+   "blurb": "Trap smoke under a cold lid and watch it hang.",
+   "keywords": [
+    "inversion",
+    "smoke",
+    "layer",
+    "trap"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inversion"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000045",
+   "key": "iodine-clock",
+   "name": "Iodine Clock Timing",
+   "discipline": "Chemistry",
+   "blurb": "Mix clock reagents and time the color snap.",
+   "keywords": [
+    "iodine clock",
+    "clock reaction",
+    "color change",
+    "snap"
+   ],
+   "model": "rate-temp",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=iodine-clock"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000163",
+   "key": "ion-exchange",
+   "name": "Ion Exchange Softening",
+   "discipline": "Chemistry",
+   "blurb": "Run hard water through resin and test hardness.",
+   "keywords": [
+    "ion exchange",
+    "soften",
+    "resin",
+    "hardness"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ion-exchange"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000228",
+   "key": "kmeans-beads",
+   "name": "K-Means Bead Clusters",
+   "discipline": "Computer Science",
+   "blurb": "Iterate centroids on beads and count rounds.",
+   "keywords": [
+    "k-means",
+    "kmeans",
+    "cluster",
+    "centroid"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kmeans-beads"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000172",
+   "key": "kick-sampling",
+   "name": "Kick-Sample Stream Life",
+   "discipline": "Biology",
+   "blurb": "Kick the streambed into a net and score the biotic index.",
+   "keywords": [
+    "kick",
+    "stream",
+    "biotic",
+    "net",
+    "macroinvertebrate"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kick-sampling"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000153",
+   "key": "ksp",
+   "name": "Ksp Precipitation Point",
+   "discipline": "Chemistry",
+   "blurb": "Drip ions together and find the cloud point.",
+   "keywords": [
+    "ksp",
+    "solubility product",
+    "precipitate",
+    "cloud"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ksp"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000144",
+   "key": "kundt-tube",
+   "name": "Kundt's Tube Nodes",
+   "discipline": "Physics",
+   "blurb": "Rattle a rod and dust the standing-wave nodes.",
+   "keywords": [
+    "kundt",
+    "nodes",
+    "standing wave",
+    "dust",
+    "tube"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kundt-tube"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000178",
+   "key": "operon-model",
+   "name": "Lac Operon Bead Model",
+   "discipline": "Biology",
+   "blurb": "Flip repressor beads and transcribe the genes.",
+   "keywords": [
+    "operon",
+    "lac",
+    "repressor",
+    "transcribe",
+    "gene"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=operon-model"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000084",
+   "key": "landslide",
+   "name": "Landslide Slope Tray",
+   "discipline": "Earth & Space",
+   "blurb": "Tilt a soil tray until it slips.",
+   "keywords": [
+    "landslide",
+    "slope",
+    "slip",
+    "angle of repose"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=landslide"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000152",
+   "key": "le-chatelier",
+   "name": "Le Chatelier Shift",
+   "discipline": "Chemistry",
+   "blurb": "Stress an equilibrium and watch the color shift.",
+   "keywords": [
+    "le chatelier",
+    "equilibrium",
+    "shift",
+    "stress",
+    "color"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=le-chatelier"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000044",
+   "key": "lemon-battery",
+   "name": "Lemon Battery Power",
+   "discipline": "Chemistry",
+   "blurb": "Stick electrodes in fruit and light an LED.",
+   "keywords": [
+    "lemon battery",
+    "fruit battery",
+    "potato battery",
+    "led"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lemon-battery"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000188",
+   "key": "liquefaction",
+   "name": "Liquefaction Shake Box",
+   "discipline": "Earth & Space",
+   "blurb": "Shake wet sand with a buried block and watch it sink.",
+   "keywords": [
+    "liquefaction",
+    "shake",
+    "sand",
+    "sink"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=liquefaction"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000166",
+   "key": "extraction",
+   "name": "Liquid-Liquid Extraction",
+   "discipline": "Chemistry",
+   "blurb": "Shake dye between water and oil and split the layers.",
+   "keywords": [
+    "extraction",
+    "separate",
+    "funnel",
+    "layers",
+    "partition"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=extraction"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000218",
+   "key": "amortization",
+   "name": "Loan Amortization Table",
+   "discipline": "Economics & Math",
+   "blurb": "Build a payment table and total the interest.",
+   "keywords": [
+    "amortization",
+    "loan",
+    "payment",
+    "interest"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=amortization"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000219",
+   "key": "lottery-ev",
+   "name": "Lottery Expected Value",
+   "discipline": "Economics & Math",
+   "blurb": "Price scratch-style tickets by expected value.",
+   "keywords": [
+    "lottery",
+    "expected value",
+    "tickets",
+    "ev"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lottery-ev"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000062",
+   "key": "lung-capacity",
+   "name": "Lung Capacity Balloon",
+   "discipline": "Biology",
+   "blurb": "Exhale into balloons and measure circumference.",
+   "keywords": [
+    "lung",
+    "balloon",
+    "vital capacity",
+    "exhale",
+    "spirometer"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lung-capacity"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000060",
+   "key": "mark-recapture",
+   "name": "Mark-Recapture Population",
+   "discipline": "Biology",
+   "blurb": "Tag beans, remix, and estimate the hidden total.",
+   "keywords": [
+    "mark recapture",
+    "population",
+    "estimate",
+    "tag",
+    "lincoln"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mark-recapture"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000122",
+   "key": "maze-solvers",
+   "name": "Maze Solver Showdown",
+   "discipline": "Computer Science",
+   "blurb": "Run wall-follower vs random mouse in a maze.",
+   "keywords": [
+    "maze",
+    "solver",
+    "wall follower",
+    "random"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=maze-solvers"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000225",
+   "key": "memoization",
+   "name": "Memoization Fibonacci",
+   "discipline": "Computer Science",
+   "blurb": "Time naive vs memoized fib by hand.",
+   "keywords": [
+    "memoization",
+    "fibonacci",
+    "cache",
+    "recursive"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=memoization"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000133",
+   "key": "microplastics",
+   "name": "Microplastic Sieve Count",
+   "discipline": "Environmental",
+   "blurb": "Sieve beach sand and count the flecks.",
+   "keywords": [
+    "microplastic",
+    "sieve",
+    "beach",
+    "flecks"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=microplastics"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000227",
+   "key": "minimax-tictactoe",
+   "name": "Minimax Tic-Tac-Toe",
+   "discipline": "Computer Science",
+   "blurb": "Play optimal vs random X and tally.",
+   "keywords": [
+    "minimax",
+    "tic-tac-toe",
+    "optimal",
+    "game tree"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=minimax-tictactoe"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000147",
+   "key": "mirage-tank",
+   "name": "Mirage Gradient Tank",
+   "discipline": "Physics",
+   "blurb": "Layer salty water and watch the bent straw.",
+   "keywords": [
+    "mirage",
+    "gradient",
+    "refraction",
+    "bent",
+    "straw"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mirage-tank"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000207",
+   "key": "misinformation",
+   "name": "Misinformation Wording",
+   "discipline": "Psychology",
+   "blurb": "Ask 'smashed' vs 'hit' and compare speed estimates.",
+   "keywords": [
+    "misinformation",
+    "wording",
+    "smashed",
+    "leading"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=misinformation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000056",
+   "key": "mitosis-onion",
+   "name": "Mitosis Onion Root Tip",
+   "discipline": "Biology",
+   "blurb": "Stain root tips and tally cell phases.",
+   "keywords": [
+    "mitosis",
+    "onion",
+    "root tip",
+    "cell division",
+    "phases"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mitosis-onion"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000181",
+   "key": "mohs-hardness",
+   "name": "Mohs Hardness Scratch",
+   "discipline": "Earth & Space",
+   "blurb": "Scratch minerals in order and rank them.",
+   "keywords": [
+    "mohs",
+    "hardness",
+    "scratch",
+    "mineral"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mohs-hardness"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000047",
+   "key": "molar-mass",
+   "name": "Molar Mass by Gas",
+   "discipline": "Chemistry",
+   "blurb": "Vaporize liquid in a flask and weigh the gas.",
+   "keywords": [
+    "molar mass",
+    "dumas",
+    "vapor",
+    "flask"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=molar-mass"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000220",
+   "key": "monte-carlo-pi",
+   "name": "Monte Carlo Pi Darts",
+   "discipline": "Economics & Math",
+   "blurb": "Throw random darts in a square and estimate pi.",
+   "keywords": [
+    "monte carlo",
+    "pi",
+    "darts",
+    "random"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=monte-carlo-pi"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000112",
+   "key": "monty-hall",
+   "name": "Monty Hall Doors",
+   "discipline": "Economics & Math",
+   "blurb": "Play the three-door game switching vs staying.",
+   "keywords": [
+    "monty hall",
+    "doors",
+    "switch",
+    "probability",
+    "game show"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=monty-hall"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000078",
+   "key": "moon-phases",
+   "name": "Moon Phase Lamp Model",
+   "discipline": "Earth & Space",
+   "blurb": "Orbit a ball around a lamp and sketch phases.",
+   "keywords": [
+    "moon",
+    "phases",
+    "lunar",
+    "orbit"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=moon-phases"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000088",
+   "key": "mousetrap-car",
+   "name": "Mousetrap Car Distance",
+   "discipline": "Engineering",
+   "blurb": "Wind a trap car and measure travel distance.",
+   "keywords": [
+    "mousetrap",
+    "car",
+    "wind",
+    "distance"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mousetrap-car"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000211",
+   "key": "muller-lyer",
+   "name": "Muller-Lyer Lines",
+   "discipline": "Psychology",
+   "blurb": "Judge arrow lines and measure the illusion.",
+   "keywords": [
+    "muller-lyer",
+    "illusion",
+    "arrows",
+    "lines"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=muller-lyer"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000105",
+   "key": "multitasking",
+   "name": "Multitasking Cost",
+   "discipline": "Psychology",
+   "blurb": "Time a task alone vs with a second task.",
+   "keywords": [
+    "multitask",
+    "distraction",
+    "cost",
+    "dual task"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=multitasking"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000106",
+   "key": "music-focus",
+   "name": "Music vs Focus Score",
+   "discipline": "Psychology",
+   "blurb": "Score puzzles in silence vs with music.",
+   "keywords": [
+    "music",
+    "focus",
+    "concentration",
+    "puzzle"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=music-focus"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000175",
+   "key": "mycorrhizae",
+   "name": "Mycorrhizae Root Stain",
+   "discipline": "Biology",
+   "blurb": "Stain roots and score fungal colonization.",
+   "keywords": [
+    "mycorrhizae",
+    "fungi",
+    "roots",
+    "stain",
+    "symbiosis"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mycorrhizae"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000226",
+   "key": "nqueens",
+   "name": "N-Queens Backtracking",
+   "discipline": "Computer Science",
+   "blurb": "Place queens by backtracking and count tries.",
+   "keywords": [
+    "n-queens",
+    "backtracking",
+    "queens",
+    "chess"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nqueens"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000033",
+   "key": "corrosion-rust",
+   "name": "Nail Corrosion Conditions",
+   "discipline": "Chemistry",
+   "blurb": "Expose nails to air, water, salt and compare rust.",
+   "keywords": [
+    "rust",
+    "corrosion",
+    "nail",
+    "oxidation"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=corrosion-rust"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000012",
+   "key": "newtons-cooling",
+   "name": "Newton's Law of Cooling",
+   "discipline": "Physics",
+   "blurb": "Track a hot object's temperature as it cools.",
+   "keywords": [
+    "cooling",
+    "cool down",
+    "newton",
+    "temperature drop"
+   ],
+   "model": "cooling",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=newtons-cooling"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000148",
+   "key": "newton-rings",
+   "name": "Newton's Rings Spacing",
+   "discipline": "Physics",
+   "blurb": "Press a lens on glass and count the rings.",
+   "keywords": [
+    "newton rings",
+    "interference",
+    "rings",
+    "lens"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=newton-rings"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000176",
+   "key": "nitrogen-cycle",
+   "name": "Nitrogen Cycle Beads",
+   "discipline": "Biology",
+   "blurb": "Move nitrogen beads through cycle stations.",
+   "keywords": [
+    "nitrogen",
+    "cycle",
+    "beads",
+    "stations",
+    "fixation"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nitrogen-cycle"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000132",
+   "key": "noise-pollution",
+   "name": "Noise Map Survey",
+   "discipline": "Environmental",
+   "blurb": "Meter decibels around campus and map hot spots.",
+   "keywords": [
+    "noise",
+    "decibel",
+    "loud",
+    "map",
+    "sound meter"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=noise-pollution"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000051",
+   "key": "nylon-rope",
+   "name": "Nylon Rope Trick",
+   "discipline": "Chemistry",
+   "blurb": "Pull nylon rope from a two-layer reaction.",
+   "keywords": [
+    "nylon",
+    "rope trick",
+    "polymer",
+    "interface"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nylon-rope"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000238",
+   "key": "ocean-acidification",
+   "name": "Ocean Acidification Shells",
+   "discipline": "Environmental",
+   "blurb": "Soak shells in CO2 water and weigh loss.",
+   "keywords": [
+    "acidification",
+    "shells",
+    "co2",
+    "ocean"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ocean-acidification"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000080",
+   "key": "ocean-currents",
+   "name": "Ocean Current Tank",
+   "discipline": "Earth & Space",
+   "blurb": "Float ice at one end and dye the currents.",
+   "keywords": [
+    "ocean",
+    "current",
+    "convection",
+    "ice"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ocean-currents"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000008",
+   "key": "ohms-law",
+   "name": "Ohm's Law Circuit",
+   "discipline": "Physics",
+   "blurb": "Vary voltage across resistors and measure current.",
+   "keywords": [
+    "ohm",
+    "resistor",
+    "circuit",
+    "voltage",
+    "current",
+    "v=ir",
+    "ammeter"
+   ],
+   "model": "circuit",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ohms-law"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000231",
+   "key": "one-time-pad",
+   "name": "One-Time Pad Secrecy",
+   "discipline": "Computer Science",
+   "blurb": "XOR messages with true-random pads.",
+   "keywords": [
+    "one-time pad",
+    "xor",
+    "pad",
+    "secret"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=one-time-pad"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000054",
+   "key": "osmosis-potato",
+   "name": "Osmosis Potato Cylinders",
+   "discipline": "Biology",
+   "blurb": "Soak potato cores in salt solutions and weigh change.",
+   "keywords": [
+    "osmosis",
+    "potato",
+    "salt solution",
+    "turgid",
+    "plasmolysis"
+   ],
+   "model": "osmosis",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=osmosis-potato"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000229",
+   "key": "pagerank-pennies",
+   "name": "PageRank Penny Web",
+   "discipline": "Computer Science",
+   "blurb": "Pass pennies along links and rank the nodes.",
+   "keywords": [
+    "pagerank",
+    "web",
+    "links",
+    "rank",
+    "pennies"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pagerank-pennies"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000035",
+   "key": "chromatography",
+   "name": "Paper Chromatography",
+   "discipline": "Chemistry",
+   "blurb": "Separate ink dyes on paper strips and compute Rf.",
+   "keywords": [
+    "chromatography",
+    "separate",
+    "ink",
+    "rf value",
+    "dye"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chromatography"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000204",
+   "key": "parabolic-dish",
+   "name": "Parabolic Dish Focus",
+   "discipline": "Engineering",
+   "blurb": "Shape foil dishes and meter the hot spot.",
+   "keywords": [
+    "parabolic",
+    "dish",
+    "focus",
+    "solar"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=parabolic-dish"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000092",
+   "key": "parachute",
+   "name": "Parachute Canopy Drop",
+   "discipline": "Engineering",
+   "blurb": "Cut canopy sizes and time the descent.",
+   "keywords": [
+    "parachute",
+    "canopy",
+    "drop",
+    "descent"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=parachute"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000140",
+   "key": "peltier",
+   "name": "Peltier Hot-Cold Faces",
+   "discipline": "Physics",
+   "blurb": "Power a Peltier chip and log both face temperatures.",
+   "keywords": [
+    "peltier",
+    "thermoelectric",
+    "hot cold",
+    "chip"
+   ],
+   "model": "cooling",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=peltier"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000003",
+   "key": "pendulum-period",
+   "name": "Pendulum Period vs Length",
+   "discipline": "Physics",
+   "blurb": "Swing pendulums of different lengths and time the period.",
+   "keywords": [
+    "pendulum",
+    "swing",
+    "period",
+    "grandfather clock",
+    "oscillat"
+   ],
+   "model": "pendulum",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pendulum-period"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000236",
+   "key": "permeable-pavement",
+   "name": "Permeable Pavement Pour",
+   "discipline": "Environmental",
+   "blurb": "Pour water on paver types and time soak.",
+   "keywords": [
+    "permeable",
+    "pavement",
+    "soak",
+    "paver"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=permeable-pavement"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000212",
+   "key": "phi-phenomenon",
+   "name": "Phi Phenomenon Motion",
+   "discipline": "Psychology",
+   "blurb": "Blink two dots and find the motion threshold.",
+   "keywords": [
+    "phi",
+    "motion",
+    "blink",
+    "dots",
+    "threshold"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=phi-phenomenon"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000053",
+   "key": "photosynthesis-rate",
+   "name": "Photosynthesis Bubble Rate",
+   "discipline": "Biology",
+   "blurb": "Count oxygen bubbles from pondweed in light.",
+   "keywords": [
+    "photosynthesis",
+    "pondweed",
+    "elodea",
+    "bubbles",
+    "oxygen",
+    "light"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=photosynthesis-rate"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000169",
+   "key": "phylogeny",
+   "name": "Phylogeny Card Sort",
+   "discipline": "Biology",
+   "blurb": "Sort organism cards into a tree by traits.",
+   "keywords": [
+    "phylogeny",
+    "tree",
+    "cladogram",
+    "traits",
+    "sort"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=phylogeny"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000114",
+   "key": "pi-estimation",
+   "name": "Pi by Toothpick Drop",
+   "discipline": "Economics & Math",
+   "blurb": "Drop toothpicks on lines and estimate pi.",
+   "keywords": [
+    "pi",
+    "buffon",
+    "toothpick",
+    "needle",
+    "estimate"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pi-estimation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000067",
+   "key": "pillbugs-choice",
+   "name": "Pillbug Choice Chamber",
+   "discipline": "Biology",
+   "blurb": "Offer damp/dry halves and tally pillbug picks.",
+   "keywords": [
+    "pillbug",
+    "choice",
+    "roly poly",
+    "habitat",
+    "kinesis"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pillbugs-choice"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000171",
+   "key": "pitfall-traps",
+   "name": "Pitfall Trap Census",
+   "discipline": "Biology",
+   "blurb": "Sink cups overnight and count the catch.",
+   "keywords": [
+    "pitfall",
+    "trap",
+    "census",
+    "insects",
+    "cups"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pitfall-traps"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000064",
+   "key": "plant-tropism",
+   "name": "Plant Phototropism Turn",
+   "discipline": "Biology",
+   "blurb": "Grow seedlings sideways to light and measure bend.",
+   "keywords": [
+    "tropism",
+    "phototropism",
+    "bend",
+    "seedling",
+    "light"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=plant-tropism"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000160",
+   "key": "polarimetry",
+   "name": "Polarimetry Sugar Twist",
+   "discipline": "Chemistry",
+   "blurb": "Shine polarized light through sugar and read rotation.",
+   "keywords": [
+    "polarimetry",
+    "polarized",
+    "sugar",
+    "rotation",
+    "optical"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=polarimetry"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000042",
+   "key": "polymer-slime",
+   "name": "Polymer Slime Cross-Linking",
+   "discipline": "Chemistry",
+   "blurb": "Mix glue with borax and test stretch distance.",
+   "keywords": [
+    "slime",
+    "polymer",
+    "borax",
+    "glue",
+    "stretch"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=polymer-slime"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000069",
+   "key": "pond-ecology",
+   "name": "Pond Water Survey",
+   "discipline": "Biology",
+   "blurb": "Dip pond samples and key out the micro-life.",
+   "keywords": [
+    "pond",
+    "ecology",
+    "micro",
+    "dip",
+    "sample"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pond-ecology"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000214",
+   "key": "prisoners-dilemma",
+   "name": "Prisoner's Dilemma Rounds",
+   "discipline": "Economics & Math",
+   "blurb": "Play silent vs talk rounds and tally payoffs.",
+   "keywords": [
+    "prisoner",
+    "dilemma",
+    "cooperate",
+    "defect"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=prisoners-dilemma"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000002",
+   "key": "projectile-motion",
+   "name": "Projectile Launch Angle",
+   "discipline": "Physics",
+   "blurb": "Launch projectiles at angles and measure range.",
+   "keywords": [
+    "projectile",
+    "launch",
+    "angle",
+    "cannon",
+    "catapult",
+    "range",
+    "trajectory"
+   ],
+   "model": "projectile",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=projectile-motion"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000015",
+   "key": "pulley-advantage",
+   "name": "Pulley Mechanical Advantage",
+   "discipline": "Physics",
+   "blurb": "Count rope segments and measure lifting force.",
+   "keywords": [
+    "pulley",
+    "mechanical advantage",
+    "lift",
+    "rope"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pulley-advantage"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000197",
+   "key": "rack-pinion",
+   "name": "Rack and Pinion Travel",
+   "discipline": "Engineering",
+   "blurb": "Turn a pinion and measure rack travel.",
+   "keywords": [
+    "rack",
+    "pinion",
+    "travel",
+    "steering"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rack-pinion"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000017",
+   "key": "half-life",
+   "name": "Radioactive Half-Life Dice",
+   "discipline": "Physics",
+   "blurb": "Simulate decay by removing dice each round.",
+   "keywords": [
+    "half-life",
+    "half life",
+    "decay",
+    "radioactive",
+    "dice"
+   ],
+   "model": "exponential-decay",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=half-life"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000237",
+   "key": "rain-barrel",
+   "name": "Rain Barrel Catch",
+   "discipline": "Environmental",
+   "blurb": "Catch roof runoff and measure the yield.",
+   "keywords": [
+    "rain barrel",
+    "catch",
+    "runoff",
+    "roof"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-barrel"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000129",
+   "key": "rain-garden",
+   "name": "Rain Garden Infiltration",
+   "discipline": "Environmental",
+   "blurb": "Pour measured water on plots and time soak-in.",
+   "keywords": [
+    "rain garden",
+    "infiltration",
+    "soak",
+    "runoff"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-garden"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000200",
+   "key": "rain-gauge",
+   "name": "Rain Gauge Catch",
+   "discipline": "Engineering",
+   "blurb": "Set gauges and compare catch after rain.",
+   "keywords": [
+    "rain gauge",
+    "catch",
+    "rain",
+    "measure"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-gauge"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000190",
+   "key": "rain-shadow",
+   "name": "Rain Shadow Ridge",
+   "discipline": "Earth & Space",
+   "blurb": "Blow mist at a ridge and compare wet sides.",
+   "keywords": [
+    "rain shadow",
+    "ridge",
+    "mist",
+    "leeward"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-shadow"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000221",
+   "key": "random-walk",
+   "name": "Random Walk Steps",
+   "discipline": "Economics & Math",
+   "blurb": "Flip coins for steps and map the drift.",
+   "keywords": [
+    "random walk",
+    "coin",
+    "drift",
+    "steps"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=random-walk"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000195",
+   "key": "ratchet",
+   "name": "Ratchet Pawl Hold",
+   "discipline": "Engineering",
+   "blurb": "Load a ratchet wheel and measure slip torque.",
+   "keywords": [
+    "ratchet",
+    "pawl",
+    "hold",
+    "torque"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ratchet"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000030",
+   "key": "reaction-rate-temp",
+   "name": "Reaction Rate vs Temperature",
+   "discipline": "Chemistry",
+   "blurb": "Time a color-change reaction in warm and cold baths.",
+   "keywords": [
+    "reaction rate",
+    "temperature",
+    "speed up",
+    "arrhenius",
+    "iodine clock"
+   ],
+   "model": "rate-temp",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reaction-rate-temp"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000157",
+   "key": "recrystallization",
+   "name": "Recrystallization Purity",
+   "discipline": "Chemistry",
+   "blurb": "Dissolve, filter hot, and weigh the crystals.",
+   "keywords": [
+    "recrystallize",
+    "crystals",
+    "purity",
+    "filter hot"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=recrystallization"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000154",
+   "key": "redox-balancing",
+   "name": "Redox Titration Iron",
+   "discipline": "Chemistry",
+   "blurb": "Titrate iron(II) with permanganate to the pink snap.",
+   "keywords": [
+    "redox",
+    "permanganate",
+    "iron",
+    "titration",
+    "pink"
+   ],
+   "model": "titration",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=redox-balancing"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000016",
+   "key": "resonance-tube",
+   "name": "Resonance Tube Wavelength",
+   "discipline": "Physics",
+   "blurb": "Find resonant air-column lengths for a tuning fork.",
+   "keywords": [
+    "resonan",
+    "tuning fork",
+    "sound tube",
+    "wavelength"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=resonance-tube"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000057",
+   "key": "respiration-peas",
+   "name": "Respiration Germinating Peas",
+   "discipline": "Biology",
+   "blurb": "Measure oxygen uptake of sprouting peas.",
+   "keywords": [
+    "respiration",
+    "germinating",
+    "peas",
+    "oxygen uptake",
+    "respirometer"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=respiration-peas"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000162",
+   "key": "reverse-osmosis",
+   "name": "Reverse Osmosis Pressure",
+   "discipline": "Chemistry",
+   "blurb": "Press salt water through membrane and test the drip.",
+   "keywords": [
+    "reverse osmosis",
+    "membrane",
+    "desalination",
+    "pressure"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reverse-osmosis"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000210",
+   "key": "rubber-hand",
+   "name": "Rubber Hand Illusion",
+   "discipline": "Psychology",
+   "blurb": "Stroke a fake hand and test ownership ratings.",
+   "keywords": [
+    "rubber hand",
+    "illusion",
+    "ownership",
+    "stroke"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rubber-hand"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000217",
+   "key": "rule-72",
+   "name": "Rule of 72 Doubling",
+   "discipline": "Economics & Math",
+   "blurb": "Time play-money doubling at rates.",
+   "keywords": [
+    "rule 72",
+    "doubling",
+    "interest",
+    "rate"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rule-72"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000071",
+   "key": "reflex-arc",
+   "name": "Ruler Drop Reflex",
+   "discipline": "Biology",
+   "blurb": "Catch a dropped ruler and convert to reaction time.",
+   "keywords": [
+    "reflex",
+    "reaction time",
+    "ruler drop",
+    "catch"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reflex-arc"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000100",
+   "key": "reaction-time",
+   "name": "Ruler Reaction Time",
+   "discipline": "Psychology",
+   "blurb": "Catch falling rulers and compare groups.",
+   "keywords": [
+    "reaction",
+    "reflex",
+    "ruler",
+    "catch"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reaction-time"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000082",
+   "key": "satellite-orbits",
+   "name": "Satellite Orbit Periods",
+   "discipline": "Earth & Space",
+   "blurb": "Swing tethered balls and time the orbits.",
+   "keywords": [
+    "satellite",
+    "orbit",
+    "period",
+    "kepler"
+   ],
+   "model": "pendulum",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=satellite-orbits"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000191",
+   "key": "sea-breeze",
+   "name": "Sea Breeze Box",
+   "discipline": "Earth & Space",
+   "blurb": "Heat one side of a box and smoke the breeze.",
+   "keywords": [
+    "sea breeze",
+    "land breeze",
+    "box",
+    "smoke"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sea-breeze"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000186",
+   "key": "seafloor-spreading",
+   "name": "Seafloor Spreading Stripes",
+   "discipline": "Earth & Space",
+   "blurb": "Pull paper through a slit and stripe the ages.",
+   "keywords": [
+    "seafloor",
+    "spreading",
+    "stripes",
+    "magnetic"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seafloor-spreading"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000083",
+   "key": "seasons-tilt",
+   "name": "Seasons Tilt Lamp",
+   "discipline": "Earth & Space",
+   "blurb": "Tilt a globe to a lamp and compare light patches.",
+   "keywords": [
+    "seasons",
+    "tilt",
+    "axis",
+    "solstice"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seasons-tilt"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000063",
+   "key": "seed-germination",
+   "name": "Seed Germination Conditions",
+   "discipline": "Biology",
+   "blurb": "Sprout seeds in light/dark, wet/dry and count.",
+   "keywords": [
+    "germination",
+    "seed",
+    "sprout",
+    "cress"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seed-germination"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000024",
+   "key": "seismograph",
+   "name": "Seismograph Shake Table",
+   "discipline": "Physics",
+   "blurb": "Shake a model building and record the trace.",
+   "keywords": [
+    "earthquake",
+    "seismograph",
+    "shake",
+    "tremor"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seismograph"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000046",
+   "key": "distillation",
+   "name": "Simple Distillation Purity",
+   "discipline": "Chemistry",
+   "blurb": "Distill salt water and test the distillate.",
+   "keywords": [
+    "distillation",
+    "distill",
+    "boil",
+    "condense",
+    "purity"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=distillation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000135",
+   "key": "siphon",
+   "name": "Siphon Over the Rim",
+   "discipline": "Physics",
+   "blurb": "Start a siphon and time the transfer rate.",
+   "keywords": [
+    "siphon",
+    "tube",
+    "transfer",
+    "drain"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=siphon"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000108",
+   "key": "sleep-memory",
+   "name": "Sleep vs Memory Quiz",
+   "discipline": "Psychology",
+   "blurb": "Quiz word pairs after sleep vs all-nighters (survey).",
+   "keywords": [
+    "sleep",
+    "memory",
+    "quiz",
+    "rest"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sleep-memory"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000074",
+   "key": "earthquake-waves",
+   "name": "Slinky Earthquake Waves",
+   "discipline": "Earth & Space",
+   "blurb": "Send P and S pulses down a slinky and time them.",
+   "keywords": [
+    "earthquake",
+    "slinky",
+    "p wave",
+    "s wave",
+    "seismic"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=earthquake-waves"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000041",
+   "key": "soap-saponification",
+   "name": "Soap Saponification",
+   "discipline": "Chemistry",
+   "blurb": "React oil with lye and test the soap.",
+   "keywords": [
+    "soap",
+    "saponification",
+    "lye",
+    "oil"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=soap-saponification"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000075",
+   "key": "soil-permeability",
+   "name": "Soil Permeability Columns",
+   "discipline": "Earth & Space",
+   "blurb": "Pour water through soil columns and time drainage.",
+   "keywords": [
+    "soil",
+    "permeability",
+    "drainage",
+    "column",
+    "clay",
+    "sand"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=soil-permeability"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000020",
+   "key": "solar-cell",
+   "name": "Solar Cell Angle Power",
+   "discipline": "Physics",
+   "blurb": "Tilt a solar cell to light and measure power.",
+   "keywords": [
+    "solar",
+    "photovoltaic",
+    "panel",
+    "sun angle"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-cell"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000128",
+   "key": "solar-oven",
+   "name": "Solar Oven S'mores",
+   "discipline": "Environmental",
+   "blurb": "Bake in a box oven and log inside temperature.",
+   "keywords": [
+    "solar oven",
+    "smores",
+    "box oven",
+    "bake"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-oven"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000095",
+   "key": "solar-tracker",
+   "name": "Solar Tracker Gain",
+   "discipline": "Engineering",
+   "blurb": "Track the sun vs fixed panel and log power.",
+   "keywords": [
+    "solar tracker",
+    "track",
+    "panel",
+    "gain"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-tracker"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000034",
+   "key": "solubility-temp",
+   "name": "Solubility vs Temperature",
+   "discipline": "Chemistry",
+   "blurb": "Dissolve salt in water at temperatures and weigh saturation.",
+   "keywords": [
+    "solubility",
+    "dissolve",
+    "saturated",
+    "recrystallize"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solubility-temp"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000143",
+   "key": "sonometer",
+   "name": "Sonometer String Pitch",
+   "discipline": "Physics",
+   "blurb": "Tune string tension and match pitch to a tuner.",
+   "keywords": [
+    "sonometer",
+    "pitch",
+    "string",
+    "tune",
+    "frequency"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sonometer"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000120",
+   "key": "sorting-race",
+   "name": "Sorting Algorithm Race",
+   "discipline": "Computer Science",
+   "blurb": "Race bubble vs quick sort on card decks.",
+   "keywords": [
+    "sorting",
+    "bubble sort",
+    "quick sort",
+    "race",
+    "algorithm"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sorting-race"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000208",
+   "key": "spacing-effect",
+   "name": "Spacing Study Sessions",
+   "discipline": "Psychology",
+   "blurb": "Study spaced vs massed and quiz both.",
+   "keywords": [
+    "spacing",
+    "massed",
+    "study",
+    "quiz",
+    "sessions"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=spacing-effect"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000011",
+   "key": "specific-heat",
+   "name": "Specific Heat Calorimetry",
+   "discipline": "Physics",
+   "blurb": "Heat metals and measure temperature change in water.",
+   "keywords": [
+    "specific heat",
+    "calorimet",
+    "heat capacity",
+    "warming water"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=specific-heat"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000136",
+   "key": "stokes-viscosity",
+   "name": "Stokes Viscosity Drop",
+   "discipline": "Physics",
+   "blurb": "Drop balls through oil and time the fall.",
+   "keywords": [
+    "viscosity",
+    "stokes",
+    "oil",
+    "drop",
+    "syrup"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=stokes-viscosity"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000072",
+   "key": "erosion-stream",
+   "name": "Stream Table Erosion",
+   "discipline": "Earth & Space",
+   "blurb": "Run water over sand and map the channels.",
+   "keywords": [
+    "erosion",
+    "stream",
+    "sand",
+    "channel",
+    "delta"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=erosion-stream"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000101",
+   "key": "stroop-effect",
+   "name": "Stroop Color Words",
+   "discipline": "Psychology",
+   "blurb": "Time naming ink colors of mismatched words.",
+   "keywords": [
+    "stroop",
+    "color",
+    "word",
+    "interference"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=stroop-effect"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000158",
+   "key": "sublimation",
+   "name": "Sublimation Iodine",
+   "discipline": "Chemistry",
+   "blurb": "Heat iodine and watch crystals form on cold glass.",
+   "keywords": [
+    "sublimation",
+    "iodine",
+    "crystals",
+    "vapor"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "HAZARDOUS",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sublimation"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000110",
+   "key": "supply-demand",
+   "name": "Supply-Demand Market Game",
+   "discipline": "Economics & Math",
+   "blurb": "Trade tokens as buyers/sellers and find the price.",
+   "keywords": [
+    "supply",
+    "demand",
+    "market",
+    "price",
+    "trade"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=supply-demand"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000137",
+   "key": "surface-tension",
+   "name": "Surface Tension Clip Float",
+   "discipline": "Physics",
+   "blurb": "Float clips on water and count the load.",
+   "keywords": [
+    "surface tension",
+    "float",
+    "clip",
+    "needle",
+    "pepper"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=surface-tension"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000070",
+   "key": "taste-buds",
+   "name": "Taste Bud Mapping",
+   "discipline": "Biology",
+   "blurb": "Dab flavors on tongues and map the hits.",
+   "keywords": [
+    "taste",
+    "tongue",
+    "flavor",
+    "bitter",
+    "sweet"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=taste-buds"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000081",
+   "key": "telescope-optics",
+   "name": "Telescope Optics Bench",
+   "discipline": "Earth & Space",
+   "blurb": "Pair lenses and measure magnification.",
+   "keywords": [
+    "telescope",
+    "magnification",
+    "eyepiece",
+    "objective"
+   ],
+   "model": "optics",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=telescope-optics"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000096",
+   "key": "material-tensile",
+   "name": "Tensile Strip Pull",
+   "discipline": "Engineering",
+   "blurb": "Pull material strips and record break force.",
+   "keywords": [
+    "tensile",
+    "pull",
+    "break",
+    "strength",
+    "strip"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=material-tensile"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000018",
+   "key": "terminal-velocity",
+   "name": "Terminal Velocity Filters",
+   "discipline": "Physics",
+   "blurb": "Drop coffee filters and time their steady fall.",
+   "keywords": [
+    "terminal velocity",
+    "air resistance",
+    "coffee filter",
+    "parachute"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=terminal-velocity"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000124",
+   "key": "compression",
+   "name": "Text Compression Ratio",
+   "discipline": "Computer Science",
+   "blurb": "Compress passages by hand-code and measure ratio.",
+   "keywords": [
+    "compression",
+    "huffman",
+    "ratio",
+    "shrink"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compression"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000138",
+   "key": "thermal-conduction",
+   "name": "Thermal Conduction Rods",
+   "discipline": "Physics",
+   "blurb": "Heat rod ends and time wax melts along them.",
+   "keywords": [
+    "conduction",
+    "rod",
+    "heat",
+    "wax",
+    "metal"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=thermal-conduction"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000009",
+   "key": "lens-imaging",
+   "name": "Thin Lens Imaging",
+   "discipline": "Physics",
+   "blurb": "Move objects before a lens and locate the image.",
+   "keywords": [
+    "lens",
+    "focal",
+    "image",
+    "optics",
+    "magnif"
+   ],
+   "model": "optics",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lens-imaging"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000014",
+   "key": "torque-lever",
+   "name": "Torque Balance Lever",
+   "discipline": "Physics",
+   "blurb": "Balance a lever with masses at measured positions.",
+   "keywords": [
+    "torque",
+    "lever",
+    "fulcrum",
+    "balance",
+    "seesaw"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=torque-lever"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000093",
+   "key": "tower-stability",
+   "name": "Tower Shake Stability",
+   "discipline": "Engineering",
+   "blurb": "Build towers and shake to failure.",
+   "keywords": [
+    "tower",
+    "stability",
+    "shake",
+    "toothpick",
+    "marshmallow"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=tower-stability"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000127",
+   "key": "towers-hanoi",
+   "name": "Towers of Hanoi Moves",
+   "discipline": "Computer Science",
+   "blurb": "Move the stack and count moves vs theory.",
+   "keywords": [
+    "hanoi",
+    "towers",
+    "disks",
+    "moves",
+    "recursion"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=towers-hanoi"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000115",
+   "key": "tragedy-commons",
+   "name": "Tragedy of the Commons",
+   "discipline": "Economics & Math",
+   "blurb": "Harvest a shared bowl and watch it collapse.",
+   "keywords": [
+    "commons",
+    "tragedy",
+    "shared",
+    "harvest",
+    "overfish"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=tragedy-commons"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000170",
+   "key": "transect",
+   "name": "Transect Line Survey",
+   "discipline": "Biology",
+   "blurb": "Lay a tape and tally every touch-point species.",
+   "keywords": [
+    "transect",
+    "tape",
+    "tally",
+    "survey",
+    "line"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=transect"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000185",
+   "key": "dendrochronology",
+   "name": "Tree Ring Dating",
+   "discipline": "Earth & Space",
+   "blurb": "Match ring patterns to date a beam.",
+   "keywords": [
+    "dendrochronology",
+    "tree rings",
+    "date",
+    "beam"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dendrochronology"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000086",
+   "key": "truss-bridge",
+   "name": "Truss Bridge Pasta",
+   "discipline": "Engineering",
+   "blurb": "Build pasta trusses and load to failure.",
+   "keywords": [
+    "truss",
+    "bridge",
+    "pasta",
+    "spaghetti",
+    "load"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=truss-bridge"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000232",
+   "key": "turing-test",
+   "name": "Turing Test Chat Rounds",
+   "discipline": "Computer Science",
+   "blurb": "Judge chats as human or bot across rounds.",
+   "keywords": [
+    "turing",
+    "chat",
+    "judge",
+    "human",
+    "bot"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=turing-test"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000215",
+   "key": "ultimatum-game",
+   "name": "Ultimatum Split Game",
+   "discipline": "Economics & Math",
+   "blurb": "Offer splits of $10 and log accept rates.",
+   "keywords": [
+    "ultimatum",
+    "split",
+    "offer",
+    "accept"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ultimatum-game"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000192",
+   "key": "urban-heat",
+   "name": "Urban Heat Island Walk",
+   "discipline": "Earth & Space",
+   "blurb": "Meter temps on pavement vs grass and map them.",
+   "keywords": [
+    "urban heat",
+    "island",
+    "pavement",
+    "grass",
+    "temperature"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=urban-heat"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000097",
+   "key": "vibration-damping",
+   "name": "Vibration Damping Pads",
+   "discipline": "Engineering",
+   "blurb": "Shake a plate on pads and measure settle time.",
+   "keywords": [
+    "vibration",
+    "damping",
+    "pad",
+    "settle",
+    "shake"
+   ],
+   "model": "cooling",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vibration-damping"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000223",
+   "key": "vigenere",
+   "name": "Vigenere Cipher Keys",
+   "discipline": "Economics & Math",
+   "blurb": "Encode with keyword shifts and crack the key.",
+   "keywords": [
+    "vigenere",
+    "cipher",
+    "keyword",
+    "encode"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vigenere"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000050",
+   "key": "vitamin-c",
+   "name": "Vitamin C Titration",
+   "discipline": "Chemistry",
+   "blurb": "Titrate juice with iodine to rank vitamin C.",
+   "keywords": [
+    "vitamin c",
+    "ascorbic",
+    "juice",
+    "iodine"
+   ],
+   "model": "titration",
+   "modelName": "",
+   "safety_level": "ADULT-SUPERVISION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vitamin-c"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000073",
+   "key": "volcano-model",
+   "name": "Volcano Eruption Model",
+   "discipline": "Earth & Space",
+   "blurb": "Build cones and erupt baking-soda magma.",
+   "keywords": [
+    "volcano",
+    "eruption",
+    "lava",
+    "magma",
+    "cone",
+    "baking soda",
+    "vinegar",
+    "fizz",
+    "erupt"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=volcano-model"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000117",
+   "key": "voting-paradox",
+   "name": "Voting Paradox Ballots",
+   "discipline": "Economics & Math",
+   "blurb": "Rank candidates three ways and compare winners.",
+   "keywords": [
+    "voting",
+    "paradox",
+    "ballot",
+    "ranked",
+    "condorcet"
+   ],
+   "model": "survey",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=voting-paradox"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000079",
+   "key": "water-cycle",
+   "name": "Water Cycle Bag",
+   "discipline": "Earth & Space",
+   "blurb": "Tape a water bag to a window and watch the cycle.",
+   "keywords": [
+    "water cycle",
+    "evaporation",
+    "condensation",
+    "bag"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-cycle"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000049",
+   "key": "water-filtration",
+   "name": "Water Filtration Layers",
+   "discipline": "Chemistry",
+   "blurb": "Pour muddy water through filter stacks and rate clarity.",
+   "keywords": [
+    "filter",
+    "filtration",
+    "purify",
+    "muddy water",
+    "charcoal"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-filtration"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000089",
+   "key": "water-rocket",
+   "name": "Water Rocket Apogee",
+   "discipline": "Engineering",
+   "blurb": "Tune fill and pressure for max height.",
+   "keywords": [
+    "water rocket",
+    "bottle rocket",
+    "apogee",
+    "pressure"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-rocket"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000026",
+   "key": "rocket-staging",
+   "name": "Water Rocket Staging",
+   "discipline": "Physics",
+   "blurb": "Vary water fill and measure rocket apogee.",
+   "keywords": [
+    "water rocket",
+    "bottle rocket",
+    "staging",
+    "apogee"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rocket-staging"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000010",
+   "key": "wave-speed",
+   "name": "Wave Speed on a String",
+   "discipline": "Physics",
+   "blurb": "Measure wave speed vs string tension.",
+   "keywords": [
+    "wave",
+    "string",
+    "tension",
+    "frequency",
+    "standing wave"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=wave-speed"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000021",
+   "key": "wind-turbine",
+   "name": "Wind Turbine Blade Pitch",
+   "discipline": "Physics",
+   "blurb": "Vary blade pitch and measure generator voltage.",
+   "keywords": [
+    "wind turbine",
+    "blade",
+    "turbine",
+    "windmill"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "CAUTION",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=wind-turbine"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000196",
+   "key": "worm-gear",
+   "name": "Worm Gear Reduction",
+   "discipline": "Engineering",
+   "blurb": "Crank a worm and count output turns.",
+   "keywords": [
+    "worm",
+    "gear",
+    "reduction",
+    "screw"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 49,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=worm-gear"
+  },
+  {
+   "type_id": "JAH-EXP-TYPE-000039",
+   "key": "fermentation",
+   "name": "Yeast Fermentation Sugar",
+   "discipline": "Chemistry",
+   "blurb": "Feed yeast sugars and capture the CO2.",
+   "keywords": [
+    "fermentation",
+    "yeast",
+    "sugar",
+    "co2",
+    "bread",
+    "balloon"
+   ],
+   "model": "linear",
+   "modelName": "",
+   "safety_level": "SAFE-EDUCATIONAL",
+   "solved_records": 50,
+   "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fermentation"
+  }
+ ]
+}

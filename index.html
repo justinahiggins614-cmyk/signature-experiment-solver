@@ -936,8 +936,12 @@ function boot(){
   document.getElementById("catgrid").innerHTML='<div class="ccard" role="status"><b>Loading solved experiments…</b></div>';
   loadAll().then(function(){
     fillTypeSelect();buildAZ();fillDiscFilter();renderCat("");
-    var q=new URLSearchParams(location.search),exp=q.get("exp"),ver=q.get("verify");
+    var q=new URLSearchParams(location.search),exp=q.get("exp"),ver=q.get("verify"),typ=q.get("type");
     if(ver&&/^JAH-EXP-\d{6}$/.test(ver)){verifyExp(ver);}
+    else if(typ&&ExpEngine.typeOf(typ)){
+      renderRecord(ExpEngine.solve(typ,1,{}));
+      history.replaceState(null,"","?type="+typ);
+    }
     else if(exp){
       if(/^JAH-EXP-C\d+$/.test(exp)&&q.get("q")){renderRecord(ExpEngine.solveText(q.get("q")));}
       else openExp(exp);

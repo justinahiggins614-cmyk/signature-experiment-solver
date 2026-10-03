@@ -17,6 +17,7 @@ import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
+CODE = os.path.join(ROOT, "code")
 CHUNKS = os.path.join(DATA, "chunks")
 CHUNK_SIZE = 150
 SITE = "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/"
@@ -163,6 +164,7 @@ def rebuild_derived(manifest):
     # standardized machine feed + static bot-readable batch pages
     import build_static
     build_static.build_feed(idx_rows)
+    build_static.build_solver_catalog(idx_rows)
     static_pages = build_static.build_pages()
     # api.json derives from the authoritative manifest (never hand-typed)
     api = {
@@ -285,6 +287,13 @@ def generate(n, per_type=None):
     manifest = append_rows(new_rows)
     count = rebuild_derived(manifest)
     print(f"total: {count}")
+    # Build gate: fail LOUDLY on any integrity problem (never silent).
+    qa = subprocess.run([sys.executable, os.path.join(CODE, "qa", "check.py"), "--quick"],
+                        cwd=ROOT)
+    if qa.returncode != 0:
+        print("QA GATES FAILED — investigate before committing.", flush=True)
+        raise SystemExit(3)
+    print("QA gates pass.", flush=True)
     return count
 
 def repo_size_ok():

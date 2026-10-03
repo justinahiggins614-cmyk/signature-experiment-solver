@@ -137,6 +137,43 @@ def build_feed(idx_rows):
     return feed
 
 
+def build_solver_catalog(idx_rows):
+    """A–Z machine-readable solver-type catalog: every type with its permanent
+    ID, model provenance, safety classification, and live record count."""
+    types = json.load(open(os.path.join(ROOT, "code", "solver_types.json")))
+    counts = {}
+    for r in idx_rows:
+        counts[r[1]] = counts.get(r[1], 0) + 1
+    # safety levels from the engine (deterministic rule-based classifier)
+    try:
+        out = subprocess.run(["node", "-e",
+            "var E=require('./code/engine.js');var ts=require('./code/solver_types.json');"
+            "console.log(JSON.stringify(ts.map(function(t){return [t.key,E.safetyLevel(t,null)];})))"],
+            capture_output=True, text=True, cwd=ROOT, timeout=60)
+        safety = dict(json.loads(out.stdout)) if out.returncode == 0 else {}
+    except Exception:
+        safety = {}
+    catalog = {
+        "site": "The Signature Experiment Solver",
+        "updated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "solver_engine": "SOLVER-ENGINE-V1",
+        "total_types": len(types),
+        "types": [
+            {"type_id": t["type_id"], "key": t["key"], "name": t["name"],
+             "discipline": t["discipline"], "blurb": t["blurb"],
+             "keywords": t.get("keywords", []), "model": t.get("model", ""),
+             "modelName": t.get("modelName", ""),
+             "safety_level": safety.get(t["key"], "SAFE-EDUCATIONAL"),
+             "solved_records": counts.get(t["key"], 0),
+             "deep_link": SITE + "?type=" + t["key"]}
+            for t in sorted(types, key=lambda t: t["name"].lower())
+        ],
+    }
+    with open(os.path.join(DATA, "solver-catalog.json"), "w") as fh:
+        json.dump(catalog, fh, indent=1)
+    return catalog
+
+
 if __name__ == "__main__":
     pages = build_pages()
     print("static pages:", len(pages))
