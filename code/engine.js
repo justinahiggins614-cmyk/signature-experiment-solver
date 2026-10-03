@@ -77,7 +77,8 @@
     // hidden universal design type — carries a real generic model so EVERY
     // input gets an actual matrix run, never a dead-end blueprint.
     TYPES_MAP["universal-design"] = {
-      key: "universal-design", name: "Universal Matrix Runner",
+      key: "universal-design", type_id: "JAH-EXP-TYPE-000000",
+      name: "Universal Matrix Runner",
       discipline: "All Sciences", blurb: "Runs any experiment as a live simulation matrix.",
       keywords: [], model: "umatrix",
       params: [
@@ -567,6 +568,7 @@
 
     return {
       id: id, type: T.key, typeName: T.name, discipline: T.discipline,
+      type_id: T.type_id || null,
       /* ---- JAH-EXP-RECORD/1.0 standard identity ---- */
       record_version: RECORD_VERSION, schema_id: SCHEMA_ID,
       status: "SOLVER-GENERATED",

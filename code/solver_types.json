@@ -32,7 +32,8 @@
   ],
   "subject": "steel ball",
   "apparatus": "measuring tape, stopwatch, release clamp",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000001"
  },
  {
   "key": "projectile-motion",
@@ -77,7 +78,8 @@
   ],
   "subject": "foam dart",
   "apparatus": "protractor launcher, measuring tape, level ground",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000002"
  },
  {
   "key": "pendulum-period",
@@ -108,7 +110,8 @@
   ],
   "subject": "brass bob",
   "apparatus": "string, support stand, stopwatch, protractor",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000003"
  },
  {
   "key": "hookes-law",
@@ -139,7 +142,8 @@
   ],
   "subject": "coil spring",
   "apparatus": "slotted masses, ruler, retort stand",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000004"
  },
  {
   "key": "friction-slide",
@@ -170,7 +174,8 @@
   ],
   "subject": "wooden block",
   "apparatus": "ramps of varied texture, stopwatch, tape",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000005"
  },
  {
   "key": "inclined-plane",
@@ -201,7 +206,8 @@
   ],
   "subject": "dynamics cart",
   "apparatus": "inclined track, motion timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000006"
  },
  {
   "key": "buoyancy",
@@ -232,7 +238,8 @@
   ],
   "subject": "metal block",
   "apparatus": "overflow can, graduated cylinder, scale",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000007"
  },
  {
   "key": "ohms-law",
@@ -265,7 +272,8 @@
   ],
   "subject": "carbon resistor",
   "apparatus": "DC supply, ammeter, voltmeter, breadboard",
-  "safety": "Keep voltages under 12 V. Never short the supply terminals."
+  "safety": "Keep voltages under 12 V. Never short the supply terminals.",
+  "type_id": "JAH-EXP-TYPE-000008"
  },
  {
   "key": "lens-imaging",
@@ -297,7 +305,8 @@
   ],
   "subject": "converging lens",
   "apparatus": "optical bench, light source, screen",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000009"
  },
  {
   "key": "wave-speed",
@@ -328,7 +337,8 @@
   ],
   "subject": "elastic cord",
   "apparatus": "pulley, hanging masses, vibrator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000010"
  },
  {
   "key": "specific-heat",
@@ -358,7 +368,8 @@
   ],
   "subject": "aluminum block",
   "apparatus": "calorimeter, thermometer, hot plate",
-  "safety": "Hot plates and boiling water burn. Use tongs and goggles."
+  "safety": "Hot plates and boiling water burn. Use tongs and goggles.",
+  "type_id": "JAH-EXP-TYPE-000011"
  },
  {
   "key": "newtons-cooling",
@@ -388,7 +399,8 @@
   ],
   "subject": "cup of water",
   "apparatus": "thermometer, timer, insulated sleeve",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000012"
  },
  {
   "key": "doppler",
@@ -419,7 +431,8 @@
   ],
   "subject": "buzzer on cart",
   "apparatus": "track, frequency meter app",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000013"
  },
  {
   "key": "torque-lever",
@@ -450,7 +463,8 @@
   ],
   "subject": "meter stick",
   "apparatus": "fulcrum, hooked masses",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000014"
  },
  {
   "key": "pulley-advantage",
@@ -480,7 +494,8 @@
   ],
   "subject": "pulley set",
   "apparatus": "spring scale, load mass, cord",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000015"
  },
  {
   "key": "resonance-tube",
@@ -510,7 +525,8 @@
   ],
   "subject": "tuning fork",
   "apparatus": "resonance tube, water reservoir",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000016"
  },
  {
   "key": "half-life",
@@ -540,7 +556,8 @@
   ],
   "subject": "100 dice",
   "apparatus": "tray, tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000017"
  },
  {
   "key": "terminal-velocity",
@@ -569,7 +586,8 @@
   ],
   "subject": "coffee filters",
   "apparatus": "stopwatch, tall drop zone",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000018"
  },
  {
   "key": "bernoulli",
@@ -598,7 +616,8 @@
   ],
   "subject": "paper strip",
   "apparatus": "fan with speed settings, protractor",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000019"
  },
  {
   "key": "solar-cell",
@@ -628,7 +647,8 @@
   ],
   "subject": "mini solar cell",
   "apparatus": "lamp, multimeter, protractor",
-  "safety": "Lamp gets hot. Do not stare into bright lamps."
+  "safety": "Lamp gets hot. Do not stare into bright lamps.",
+  "type_id": "JAH-EXP-TYPE-000020"
  },
  {
   "key": "wind-turbine",
@@ -658,7 +678,8 @@
   ],
   "subject": "model turbine",
   "apparatus": "fan, voltmeter, tachometer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000021"
  },
  {
   "key": "flywheel",
@@ -688,7 +709,8 @@
   ],
   "subject": "steel disc",
   "apparatus": "axle bearings, tachometer, stopwatch",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000022"
  },
  {
   "key": "heat-engine",
@@ -718,7 +740,8 @@
   ],
   "subject": "Stirling engine",
   "apparatus": "hot plate, ice bath, tachometer",
-  "safety": "Hot surfaces burn. Handle with tongs."
+  "safety": "Hot surfaces burn. Handle with tongs.",
+  "type_id": "JAH-EXP-TYPE-000023"
  },
  {
   "key": "seismograph",
@@ -748,7 +771,8 @@
   ],
   "subject": "model tower",
   "apparatus": "shake table, pen recorder",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000024"
  },
  {
   "key": "crater-impacts",
@@ -778,7 +802,8 @@
   ],
   "subject": "marbles",
   "apparatus": "tray of flour, ruler, sieve",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000025"
  },
  {
   "key": "rocket-staging",
@@ -808,7 +833,8 @@
   ],
   "subject": "2L bottle rocket",
   "apparatus": "launcher, pump, altimeter",
-  "safety": "Launch outdoors away from people. Wear eye protection."
+  "safety": "Launch outdoors away from people. Wear eye protection.",
+  "type_id": "JAH-EXP-TYPE-000026"
  },
  {
   "key": "capillary",
@@ -838,7 +864,8 @@
   ],
   "subject": "glass capillaries",
   "apparatus": "dyed water, ruler, stand",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000027"
  },
  {
   "key": "gas-pressure",
@@ -869,7 +896,8 @@
   ],
   "subject": "sealed syringe",
   "apparatus": "pressure sensor, clamp",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000028"
  },
  {
   "key": "acid-base-titration",
@@ -902,7 +930,8 @@
   ],
   "subject": "hydrochloric acid",
   "apparatus": "burette, phenolphthalein, flask",
-  "safety": "Acids and bases burn skin and eyes. Goggles and gloves required."
+  "safety": "Acids and bases burn skin and eyes. Goggles and gloves required.",
+  "type_id": "JAH-EXP-TYPE-000029"
  },
  {
   "key": "reaction-rate-temp",
@@ -932,7 +961,8 @@
   ],
   "subject": "iodine clock mix",
   "apparatus": "water baths, thermometers, timers",
-  "safety": "Some reagents stain and irritate. Goggles on."
+  "safety": "Some reagents stain and irritate. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000030"
  },
  {
   "key": "electrolysis-water",
@@ -962,7 +992,8 @@
   ],
   "subject": "Hoffman apparatus",
   "apparatus": "DC supply, electrolyte",
-  "safety": "Hydrogen is flammable. Ventilate; no open flames."
+  "safety": "Hydrogen is flammable. Ventilate; no open flames.",
+  "type_id": "JAH-EXP-TYPE-000031"
  },
  {
   "key": "galvanic-cell",
@@ -992,7 +1023,8 @@
   ],
   "subject": "zinc/copper strips",
   "apparatus": "voltmeter, salt bridge, beakers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000032"
  },
  {
   "key": "corrosion-rust",
@@ -1022,7 +1054,8 @@
   ],
   "subject": "iron nails",
   "apparatus": "test tubes, salt, oil, labels",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000033"
  },
  {
   "key": "solubility-temp",
@@ -1051,7 +1084,8 @@
   ],
   "subject": "potassium nitrate",
   "apparatus": "hot plate, balance, filter",
-  "safety": "Hot solutions scald. Handle with care."
+  "safety": "Hot solutions scald. Handle with care.",
+  "type_id": "JAH-EXP-TYPE-000034"
  },
  {
   "key": "chromatography",
@@ -1081,7 +1115,8 @@
   ],
   "subject": "marker inks",
   "apparatus": "chromatography paper, solvent chamber",
-  "safety": "Use low-toxicity solvents; ventilate."
+  "safety": "Use low-toxicity solvents; ventilate.",
+  "type_id": "JAH-EXP-TYPE-000035"
  },
  {
   "key": "flame-tests",
@@ -1110,7 +1145,8 @@
   ],
   "subject": "chloride salts",
   "apparatus": "nichrome wire, Bunsen burner",
-  "safety": "Open flame and hot wire. Tie hair back; goggles on."
+  "safety": "Open flame and hot wire. Tie hair back; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000036"
  },
  {
   "key": "calorimetry-food",
@@ -1139,7 +1175,8 @@
   ],
   "subject": "peanut halves",
   "apparatus": "soda-can calorimeter, thermometer",
-  "safety": "Open flame. Burn in a fume hood or outdoors."
+  "safety": "Open flame. Burn in a fume hood or outdoors.",
+  "type_id": "JAH-EXP-TYPE-000037"
  },
  {
   "key": "enzyme-catalase",
@@ -1169,7 +1206,8 @@
   ],
   "subject": "liver cubes",
   "apparatus": "hydrogen peroxide, graduated cylinder",
-  "safety": "Peroxide bleaches skin. Gloves and goggles."
+  "safety": "Peroxide bleaches skin. Gloves and goggles.",
+  "type_id": "JAH-EXP-TYPE-000038"
  },
  {
   "key": "fermentation",
@@ -1200,7 +1238,8 @@
   ],
   "subject": "baker's yeast",
   "apparatus": "warm water, balloons, flasks",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000039"
  },
  {
   "key": "electroplating",
@@ -1229,7 +1268,8 @@
   ],
   "subject": "steel key",
   "apparatus": "copper sulfate bath, DC supply",
-  "safety": "Copper sulfate is toxic. Gloves; no tasting."
+  "safety": "Copper sulfate is toxic. Gloves; no tasting.",
+  "type_id": "JAH-EXP-TYPE-000040"
  },
  {
   "key": "soap-saponification",
@@ -1258,7 +1298,8 @@
   ],
   "subject": "olive oil",
   "apparatus": "sodium hydroxide, mold, thermometer",
-  "safety": "Lye causes severe burns. Goggles, gloves, adult supervision."
+  "safety": "Lye causes severe burns. Goggles, gloves, adult supervision.",
+  "type_id": "JAH-EXP-TYPE-000041"
  },
  {
   "key": "polymer-slime",
@@ -1288,7 +1329,8 @@
   ],
   "subject": "PVA glue",
   "apparatus": "borax, cups, rulers",
-  "safety": "Do not ingest. Wash hands after handling."
+  "safety": "Do not ingest. Wash hands after handling.",
+  "type_id": "JAH-EXP-TYPE-000042"
  },
  {
   "key": "antacid",
@@ -1318,7 +1360,8 @@
   ],
   "subject": "antacid tablets",
   "apparatus": "dilute acid, beakers, timer",
-  "safety": "Even dilute acid irritates. Goggles on."
+  "safety": "Even dilute acid irritates. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000043"
  },
  {
   "key": "lemon-battery",
@@ -1347,7 +1390,8 @@
   ],
   "subject": "lemons",
   "apparatus": "zinc/copper electrodes, LED, wires",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000044"
  },
  {
   "key": "iodine-clock",
@@ -1376,7 +1420,8 @@
   ],
   "subject": "clock reagents",
   "apparatus": "beakers, thermometer, stopwatch",
-  "safety": "Stains skin and benches. Gloves recommended."
+  "safety": "Stains skin and benches. Gloves recommended.",
+  "type_id": "JAH-EXP-TYPE-000045"
  },
  {
   "key": "distillation",
@@ -1406,7 +1451,8 @@
   ],
   "subject": "salt water",
   "apparatus": "distillation kit, thermometer",
-  "safety": "Glass gets hot; steam scalds. Use clamps."
+  "safety": "Glass gets hot; steam scalds. Use clamps.",
+  "type_id": "JAH-EXP-TYPE-000046"
  },
  {
   "key": "molar-mass",
@@ -1435,7 +1481,8 @@
   ],
   "subject": "volatile liquid",
   "apparatus": "Erlenmeyer, hot bath, balance",
-  "safety": "Hot bath and vapors. Ventilate; goggles on."
+  "safety": "Hot bath and vapors. Ventilate; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000047"
  },
  {
   "key": "biodiesel",
@@ -1464,7 +1511,8 @@
   ],
   "subject": "used cooking oil",
   "apparatus": "methanol, catalyst, separatory funnel",
-  "safety": "Methanol is toxic and flammable. Fume hood only."
+  "safety": "Methanol is toxic and flammable. Fume hood only.",
+  "type_id": "JAH-EXP-TYPE-000048"
  },
  {
   "key": "water-filtration",
@@ -1494,7 +1542,8 @@
   ],
   "subject": "muddy water",
   "apparatus": "bottles, sand, gravel, charcoal, cloth",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000049"
  },
  {
   "key": "vitamin-c",
@@ -1523,7 +1572,8 @@
   ],
   "subject": "fruit juices",
   "apparatus": "iodine solution, starch, burette",
-  "safety": "Iodine stains. Gloves recommended."
+  "safety": "Iodine stains. Gloves recommended.",
+  "type_id": "JAH-EXP-TYPE-000050"
  },
  {
   "key": "nylon-rope",
@@ -1552,7 +1602,8 @@
   ],
   "subject": "diamine/adipoyl solutions",
   "apparatus": "beaker, forceps",
-  "safety": "Organic solvents irritate. Gloves; ventilate."
+  "safety": "Organic solvents irritate. Gloves; ventilate.",
+  "type_id": "JAH-EXP-TYPE-000051"
  },
  {
   "key": "chemiluminescence",
@@ -1581,7 +1632,8 @@
   ],
   "subject": "glow sticks",
   "apparatus": "ice bath, warm bath, light meter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000052"
  },
  {
   "key": "photosynthesis-rate",
@@ -1613,7 +1665,8 @@
   ],
   "subject": "pondweed sprig",
   "apparatus": "lamp, beaker, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000053"
  },
  {
   "key": "osmosis-potato",
@@ -1644,7 +1697,8 @@
   ],
   "subject": "potato cores",
   "apparatus": "salt solutions, balance, cork borer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000054"
  },
  {
   "key": "diffusion-agar",
@@ -1674,7 +1728,8 @@
   ],
   "subject": "agar cubes",
   "apparatus": "dye bath, ruler, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000055"
  },
  {
   "key": "mitosis-onion",
@@ -1704,7 +1759,8 @@
   ],
   "subject": "onion root tips",
   "apparatus": "microscope, stain, slides",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000056"
  },
  {
   "key": "respiration-peas",
@@ -1734,7 +1790,8 @@
   ],
   "subject": "pea seeds",
   "apparatus": "respirometer, KOH pellets, baths",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000057"
  },
  {
   "key": "bacterial-growth",
@@ -1765,7 +1822,8 @@
   ],
   "subject": "nutrient agar plates",
   "apparatus": "sterile swabs, incubator",
-  "safety": "Never open incubated plates. Seal and dispose safely."
+  "safety": "Never open incubated plates. Seal and dispose safely.",
+  "type_id": "JAH-EXP-TYPE-000058"
  },
  {
   "key": "antibiotic-zones",
@@ -1795,7 +1853,8 @@
   ],
   "subject": "bacterial lawns",
   "apparatus": "antibiotic discs, calipers",
-  "safety": "Sealed plates only. Do not culture pathogens."
+  "safety": "Sealed plates only. Do not culture pathogens.",
+  "type_id": "JAH-EXP-TYPE-000059"
  },
  {
   "key": "mark-recapture",
@@ -1826,7 +1885,8 @@
   ],
   "subject": "dry beans",
   "apparatus": "bag, marker, tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000060"
  },
  {
   "key": "heart-rate-exercise",
@@ -1857,7 +1917,8 @@
   ],
   "subject": "student volunteer",
   "apparatus": "step platform, timer, pulse watch",
-  "safety": "Stop if dizzy. Volunteers only."
+  "safety": "Stop if dizzy. Volunteers only.",
+  "type_id": "JAH-EXP-TYPE-000061"
  },
  {
   "key": "lung-capacity",
@@ -1887,7 +1948,8 @@
   ],
   "subject": "balloons",
   "apparatus": "tape measure, nose clips",
-  "safety": "One balloon per person. Discard after use."
+  "safety": "One balloon per person. Discard after use.",
+  "type_id": "JAH-EXP-TYPE-000062"
  },
  {
   "key": "seed-germination",
@@ -1916,7 +1978,8 @@
   ],
   "subject": "cress seeds",
   "apparatus": "petri dishes, paper towels",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000063"
  },
  {
   "key": "plant-tropism",
@@ -1946,7 +2009,8 @@
   ],
   "subject": "bean seedlings",
   "apparatus": "dark box, side lamp, protractor",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000064"
  },
  {
   "key": "composting",
@@ -1975,7 +2039,8 @@
   ],
   "subject": "yard waste mix",
   "apparatus": "bins, thermometer, scale",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000065"
  },
  {
   "key": "brine-shrimp",
@@ -2006,7 +2071,8 @@
   ],
   "subject": "shrimp cysts",
   "apparatus": "salt mixes, dishes, pipettes",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000066"
  },
  {
   "key": "pillbugs-choice",
@@ -2036,7 +2102,8 @@
   ],
   "subject": "pillbugs",
   "apparatus": "choice chamber, damp/dry paper",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000067"
  },
  {
   "key": "mold-growth",
@@ -2065,7 +2132,8 @@
   ],
   "subject": "bread slices",
   "apparatus": "bags, spray bottle, grid sheet",
-  "safety": "Do not open moldy bags. Seal and bin them."
+  "safety": "Do not open moldy bags. Seal and bin them.",
+  "type_id": "JAH-EXP-TYPE-000068"
  },
  {
   "key": "pond-ecology",
@@ -2095,7 +2163,8 @@
   ],
   "subject": "pond water jars",
   "apparatus": "nets, keys, microscopes",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000069"
  },
  {
   "key": "taste-buds",
@@ -2125,7 +2194,8 @@
   ],
   "subject": "flavor solutions",
   "apparatus": "cotton swabs, cups, water",
-  "safety": "Food-safe solutions only. No sharing swabs."
+  "safety": "Food-safe solutions only. No sharing swabs.",
+  "type_id": "JAH-EXP-TYPE-000070"
  },
  {
   "key": "reflex-arc",
@@ -2154,7 +2224,8 @@
   ],
   "subject": "meter ruler",
   "apparatus": "table edge, data sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000071"
  },
  {
   "key": "erosion-stream",
@@ -2185,7 +2256,8 @@
   ],
   "subject": "stream table",
   "apparatus": "sand, water jug, food coloring",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000072"
  },
  {
   "key": "volcano-model",
@@ -2219,7 +2291,8 @@
   ],
   "subject": "paper-mache cone",
   "apparatus": "baking soda, vinegar, tray",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000073"
  },
  {
   "key": "earthquake-waves",
@@ -2249,7 +2322,8 @@
   ],
   "subject": "metal slinky",
   "apparatus": "stopwatch, tape, partner",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000074"
  },
  {
   "key": "soil-permeability",
@@ -2280,7 +2354,8 @@
   ],
   "subject": "soil samples",
   "apparatus": "columns, water, timers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000075"
  },
  {
   "key": "cloud-formation",
@@ -2309,7 +2384,8 @@
   ],
   "subject": "2L bottle",
   "apparatus": "pump, match smoke, water",
-  "safety": "Release pressure away from faces."
+  "safety": "Release pressure away from faces.",
+  "type_id": "JAH-EXP-TYPE-000076"
  },
  {
   "key": "greenhouse-model",
@@ -2338,7 +2414,8 @@
   ],
   "subject": "glass jars",
   "apparatus": "thermometers, sun or lamp",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000077"
  },
  {
   "key": "moon-phases",
@@ -2367,7 +2444,8 @@
   ],
   "subject": "foam ball",
   "apparatus": "lamp in dark room, stickers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000078"
  },
  {
   "key": "water-cycle",
@@ -2396,7 +2474,8 @@
   ],
   "subject": "zip bag",
   "apparatus": "water, blue dye, sunny window",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000079"
  },
  {
   "key": "ocean-currents",
@@ -2425,7 +2504,8 @@
   ],
   "subject": "fish tank",
   "apparatus": "ice, dye, warm water",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000080"
  },
  {
   "key": "telescope-optics",
@@ -2455,7 +2535,8 @@
   ],
   "subject": "lens pair",
   "apparatus": "tubes, distant target",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000081"
  },
  {
   "key": "satellite-orbits",
@@ -2484,7 +2565,8 @@
   ],
   "subject": "foam satellites",
   "apparatus": "tether, open space, stopwatch",
-  "safety": "Clear the swing zone of people."
+  "safety": "Clear the swing zone of people.",
+  "type_id": "JAH-EXP-TYPE-000082"
  },
  {
   "key": "seasons-tilt",
@@ -2514,7 +2596,8 @@
   ],
   "subject": "desk globe",
   "apparatus": "lamp, light meter, stickers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000083"
  },
  {
   "key": "landslide",
@@ -2543,7 +2626,8 @@
   ],
   "subject": "soil tray",
   "apparatus": "protractor, spray bottle",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000084"
  },
  {
   "key": "beam-deflection",
@@ -2574,7 +2658,8 @@
   ],
   "subject": "wooden ruler",
   "apparatus": "supports, masses, dial gauge",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000085"
  },
  {
   "key": "truss-bridge",
@@ -2605,7 +2690,8 @@
   ],
   "subject": "dry spaghetti",
   "apparatus": "glue, bucket, sand",
-  "safety": "Snapping pasta flies. Goggles on."
+  "safety": "Snapping pasta flies. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000086"
  },
  {
   "key": "egg-drop",
@@ -2635,7 +2721,8 @@
   ],
   "subject": "raw eggs",
   "apparatus": "building materials, drop zone",
-  "safety": "Drop zone clear below. Clean spills promptly."
+  "safety": "Drop zone clear below. Clean spills promptly.",
+  "type_id": "JAH-EXP-TYPE-000087"
  },
  {
   "key": "mousetrap-car",
@@ -2665,7 +2752,8 @@
   ],
   "subject": "trap chassis",
   "apparatus": "string, wheels, tape",
-  "safety": "Traps snap hard. Keep fingers clear."
+  "safety": "Traps snap hard. Keep fingers clear.",
+  "type_id": "JAH-EXP-TYPE-000088"
  },
  {
   "key": "water-rocket",
@@ -2695,7 +2783,8 @@
   ],
   "subject": "2L bottle rocket",
   "apparatus": "launcher, pump, altimeter",
-  "safety": "Launch outdoors. Eye protection on."
+  "safety": "Launch outdoors. Eye protection on.",
+  "type_id": "JAH-EXP-TYPE-000089"
  },
  {
   "key": "hydraulic-arm",
@@ -2725,7 +2814,8 @@
   ],
   "subject": "syringes + tubing",
   "apparatus": "water, frame, scale",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000090"
  },
  {
   "key": "catapult",
@@ -2766,7 +2856,8 @@
   ],
   "subject": "tabletop catapult",
   "apparatus": "foam balls, tape measure",
-  "safety": "Fire downrange only. Goggles on."
+  "safety": "Fire downrange only. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000091"
  },
  {
   "key": "parachute",
@@ -2796,7 +2887,8 @@
   ],
   "subject": "trash-bag canopies",
   "apparatus": "string, washers, stopwatch",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000092"
  },
  {
   "key": "tower-stability",
@@ -2827,7 +2919,8 @@
   ],
   "subject": "toothpicks + marshmallows",
   "apparatus": "shake board, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000093"
  },
  {
   "key": "gear-trains",
@@ -2858,7 +2951,8 @@
   ],
   "subject": "gear set",
   "apparatus": "crank, counter, frame",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000094"
  },
  {
   "key": "solar-tracker",
@@ -2887,7 +2981,8 @@
   ],
   "subject": "tracker rig",
   "apparatus": "two panels, data logger",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000095"
  },
  {
   "key": "material-tensile",
@@ -2918,7 +3013,8 @@
   ],
   "subject": "plastic strips",
   "apparatus": "clamp rig, spring scale",
-  "safety": "Snapping strips whip. Goggles on."
+  "safety": "Snapping strips whip. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000096"
  },
  {
   "key": "vibration-damping",
@@ -2948,7 +3044,8 @@
   ],
   "subject": "foam pads",
   "apparatus": "plate, shaker, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000097"
  },
  {
   "key": "bridge-resonance",
@@ -2979,7 +3076,8 @@
   ],
   "subject": "balsa bridge",
   "apparatus": "metronome, camera",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000098"
  },
  {
   "key": "3d-print-strength",
@@ -3010,7 +3108,8 @@
   ],
   "subject": "printed hooks",
   "apparatus": "weights, bucket, calipers",
-  "safety": "Falling weights hurt. Clear the drop zone."
+  "safety": "Falling weights hurt. Clear the drop zone.",
+  "type_id": "JAH-EXP-TYPE-000099"
  },
  {
   "key": "reaction-time",
@@ -3039,7 +3138,8 @@
   ],
   "subject": "meter ruler",
   "apparatus": "data sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000100"
  },
  {
   "key": "stroop-effect",
@@ -3068,7 +3168,8 @@
   ],
   "subject": "word lists",
   "apparatus": "timer, quiet room",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000101"
  },
  {
   "key": "memory-span",
@@ -3097,7 +3198,8 @@
   ],
   "subject": "digit lists",
   "apparatus": "reader, score sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000102"
  },
  {
   "key": "framing-effect",
@@ -3127,7 +3229,8 @@
   ],
   "subject": "survey cards",
   "apparatus": "tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000103"
  },
  {
   "key": "anchoring",
@@ -3156,7 +3259,8 @@
   ],
   "subject": "question cards",
   "apparatus": "calculator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000104"
  },
  {
   "key": "multitasking",
@@ -3185,7 +3289,8 @@
   ],
   "subject": "sorting task",
   "apparatus": "timer, distractor audio",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000105"
  },
  {
   "key": "music-focus",
@@ -3214,7 +3319,8 @@
   ],
   "subject": "puzzle sheets",
   "apparatus": "headphones, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000106"
  },
  {
   "key": "color-mood",
@@ -3243,7 +3349,8 @@
   ],
   "subject": "colored bulbs",
   "apparatus": "rating sheets",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000107"
  },
  {
   "key": "sleep-memory",
@@ -3272,7 +3379,8 @@
   ],
   "subject": "word-pair lists",
   "apparatus": "quiz sheets",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000108"
  },
  {
   "key": "habit-formation",
@@ -3301,7 +3409,8 @@
   ],
   "subject": "habit log",
   "apparatus": "calendar, reminder",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000109"
  },
  {
   "key": "supply-demand",
@@ -3331,7 +3440,8 @@
   ],
   "subject": "token cards",
   "apparatus": "play money, ledger",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000110"
  },
  {
   "key": "compound-interest",
@@ -3362,7 +3472,8 @@
   ],
   "subject": "ledger sheet",
   "apparatus": "calculator, graph paper",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000111"
  },
  {
   "key": "monty-hall",
@@ -3392,7 +3503,8 @@
   ],
   "subject": "door cards",
   "apparatus": "host script, tally",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000112"
  },
  {
   "key": "birthday-paradox",
@@ -3421,7 +3533,8 @@
   ],
   "subject": "birthday lists",
   "apparatus": "calendar, tally",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000113"
  },
  {
   "key": "pi-estimation",
@@ -3451,7 +3564,8 @@
   ],
   "subject": "toothpicks",
   "apparatus": "lined paper, counter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000114"
  },
  {
   "key": "tragedy-commons",
@@ -3481,7 +3595,8 @@
   ],
   "subject": "bean bowl",
   "apparatus": "cups, round tracker",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000115"
  },
  {
   "key": "auction-bidding",
@@ -3510,7 +3625,8 @@
   ],
   "subject": "prize tokens",
   "apparatus": "play money, gavel",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000116"
  },
  {
   "key": "voting-paradox",
@@ -3540,7 +3656,8 @@
   ],
   "subject": "ballot cards",
   "apparatus": "tally board",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000117"
  },
  {
   "key": "fractals",
@@ -3569,7 +3686,8 @@
   ],
   "subject": "wiggly map",
   "apparatus": "rulers, string",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000118"
  },
  {
   "key": "cryptography-caesar",
@@ -3600,7 +3718,8 @@
   ],
   "subject": "message strips",
   "apparatus": "frequency chart",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000119"
  },
  {
   "key": "sorting-race",
@@ -3630,7 +3749,8 @@
   ],
   "subject": "card deck",
   "apparatus": "timer, score sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000120"
  },
  {
   "key": "binary-search",
@@ -3659,7 +3779,8 @@
   ],
   "subject": "numbered pages",
   "apparatus": "timer, target slips",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000121"
  },
  {
   "key": "maze-solvers",
@@ -3688,7 +3809,8 @@
   ],
   "subject": "floor maze",
   "apparatus": "two wind-up mice, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000122"
  },
  {
   "key": "cellular-automata",
@@ -3717,7 +3839,8 @@
   ],
   "subject": "grid paper",
   "apparatus": "two colors, rule card",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000123"
  },
  {
   "key": "compression",
@@ -3746,7 +3869,8 @@
   ],
   "subject": "passage cards",
   "apparatus": "code table, calculator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000124"
  },
  {
   "key": "gradient-descent",
@@ -3776,7 +3900,8 @@
   ],
   "subject": "salad bowl",
   "apparatus": "marble, ruler, marker",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000125"
  },
  {
   "key": "dijkstra",
@@ -3806,7 +3931,8 @@
   ],
   "subject": "node map",
   "apparatus": "tokens, distance table",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000126"
  },
  {
   "key": "towers-hanoi",
@@ -3836,7 +3962,8 @@
   ],
   "subject": "disk set",
   "apparatus": "three pegs, counter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000127"
  },
  {
   "key": "solar-oven",
@@ -3865,7 +3992,8 @@
   ],
   "subject": "pizza-box oven",
   "apparatus": "thermometer, foil, s'mores",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000128"
  },
  {
   "key": "rain-garden",
@@ -3894,7 +4022,8 @@
   ],
   "subject": "test plots",
   "apparatus": "watering can, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000129"
  },
  {
   "key": "air-quality",
@@ -3923,7 +4052,8 @@
   ],
   "subject": "index cards",
   "apparatus": "petroleum jelly, hand lens",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000130"
  },
  {
   "key": "compost-tea",
@@ -3952,7 +4082,8 @@
   ],
   "subject": "seedlings",
   "apparatus": "compost, bubbler, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000131"
  },
  {
   "key": "noise-pollution",
@@ -3982,7 +4113,8 @@
   ],
   "subject": "campus map",
   "apparatus": "phone decibel app",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000132"
  },
  {
   "key": "microplastics",
@@ -4011,7 +4143,8 @@
   ],
   "subject": "beach sand",
   "apparatus": "sieves, tweezers, lens",
-  "safety": "Do not ingest sand. Wash hands."
+  "safety": "Do not ingest sand. Wash hands.",
+  "type_id": "JAH-EXP-TYPE-000133"
  },
  {
   "key": "density-column",
@@ -4041,7 +4174,8 @@
   ],
   "subject": "dyed liquids",
   "apparatus": "graduated cylinder, droppers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000134"
  },
  {
   "key": "siphon",
@@ -4071,7 +4205,8 @@
   ],
   "subject": "rubber tube",
   "apparatus": "two buckets, stopwatch",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000135"
  },
  {
   "key": "stokes-viscosity",
@@ -4102,7 +4237,8 @@
   ],
   "subject": "steel balls",
   "apparatus": "graduated cylinder, oil, calipers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000136"
  },
  {
   "key": "surface-tension",
@@ -4132,7 +4268,8 @@
   ],
   "subject": "paper clips",
   "apparatus": "bowl, tissue, tweezers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000137"
  },
  {
   "key": "thermal-conduction",
@@ -4162,7 +4299,8 @@
   ],
   "subject": "metal rods",
   "apparatus": "wax, burner, clamps",
-  "safety": "Hot rods burn. Handle with tongs; goggles on."
+  "safety": "Hot rods burn. Handle with tongs; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000138"
  },
  {
   "key": "convection-cells",
@@ -4193,7 +4331,8 @@
   ],
   "subject": "fish tank",
   "apparatus": "hot plate, dye, ruler",
-  "safety": "Hot plate burns. Do not touch the tank bottom."
+  "safety": "Hot plate burns. Do not touch the tank bottom.",
+  "type_id": "JAH-EXP-TYPE-000139"
  },
  {
   "key": "peltier",
@@ -4222,7 +4361,8 @@
   ],
   "subject": "peltier module",
   "apparatus": "supply, two thermometers, heatsink",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000140"
  },
  {
   "key": "hall-effect",
@@ -4253,7 +4393,8 @@
   ],
   "subject": "aluminum foil",
   "apparatus": "neodymium magnets, microvolt meter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000141"
  },
  {
   "key": "frank-hertz",
@@ -4283,7 +4424,8 @@
   ],
   "subject": "marbles",
   "apparatus": "stepped ramp, cups",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000142"
  },
  {
   "key": "sonometer",
@@ -4313,7 +4455,8 @@
   ],
   "subject": "monochord wire",
   "apparatus": "weights, tuner app",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000143"
  },
  {
   "key": "kundt-tube",
@@ -4343,7 +4486,8 @@
   ],
   "subject": "glass tube",
   "apparatus": "metal rod, cork dust",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000144"
  },
  {
   "key": "chladni",
@@ -4373,7 +4517,8 @@
   ],
   "subject": "metal plate",
   "apparatus": "violin bow, sand",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000145"
  },
  {
   "key": "inverse-square-light",
@@ -4404,7 +4549,8 @@
   ],
   "subject": "desk lamp",
   "apparatus": "lux meter app, tape",
-  "safety": "Lamp gets hot. Do not stare into it."
+  "safety": "Lamp gets hot. Do not stare into it.",
+  "type_id": "JAH-EXP-TYPE-000146"
  },
  {
   "key": "mirage-tank",
@@ -4434,7 +4580,8 @@
   ],
   "subject": "fish tank",
   "apparatus": "salt, straw, divider",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000147"
  },
  {
   "key": "newton-rings",
@@ -4463,7 +4610,8 @@
   ],
   "subject": "convex lens",
   "apparatus": "glass plate, lamp",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000148"
  },
  {
   "key": "camera-obscura",
@@ -4492,7 +4640,8 @@
   ],
   "subject": "darkened room",
   "apparatus": "foil, pin, white sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000149"
  },
  {
   "key": "depth-of-field",
@@ -4522,7 +4671,8 @@
   ],
   "subject": "camera",
   "apparatus": "ruler row, tripod",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000150"
  },
  {
   "key": "microscope-build",
@@ -4552,7 +4702,8 @@
   ],
   "subject": "lens pair",
   "apparatus": "tubes, stage, slide",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000151"
  },
  {
   "key": "le-chatelier",
@@ -4582,7 +4733,8 @@
   ],
   "subject": "cobalt complex",
   "apparatus": "test tubes, hot/cold baths",
-  "safety": "Some complexes are toxic. Gloves; goggles on."
+  "safety": "Some complexes are toxic. Gloves; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000152"
  },
  {
   "key": "ksp",
@@ -4611,7 +4763,8 @@
   ],
   "subject": "silver nitrate",
   "apparatus": "pipettes, beakers, dark paper",
-  "safety": "Silver nitrate stains. Gloves on."
+  "safety": "Silver nitrate stains. Gloves on.",
+  "type_id": "JAH-EXP-TYPE-000153"
  },
  {
   "key": "redox-balancing",
@@ -4641,7 +4794,8 @@
   ],
   "subject": "iron solution",
   "apparatus": "burette, flask",
-  "safety": "Acidic permanganate stains and irritates. Goggles on."
+  "safety": "Acidic permanganate stains and irritates. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000154"
  },
  {
   "key": "fuel-cell",
@@ -4670,7 +4824,8 @@
   ],
   "subject": "demo fuel cell",
   "apparatus": "resistors, voltmeter",
-  "safety": "Hydrogen is flammable. Ventilate well."
+  "safety": "Hydrogen is flammable. Ventilate well.",
+  "type_id": "JAH-EXP-TYPE-000155"
  },
  {
   "key": "activation-energy",
@@ -4699,7 +4854,8 @@
   ],
   "subject": "clock reaction",
   "apparatus": "baths, timers, graph paper",
-  "safety": "Reagents may stain. Goggles on."
+  "safety": "Reagents may stain. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000156"
  },
  {
   "key": "recrystallization",
@@ -4728,7 +4884,8 @@
   ],
   "subject": "benzoic acid",
   "apparatus": "hot filtration kit, ice bath",
-  "safety": "Hot glass burns. Use clamps; goggles on."
+  "safety": "Hot glass burns. Use clamps; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000157"
  },
  {
   "key": "sublimation",
@@ -4757,7 +4914,8 @@
   ],
   "subject": "iodine",
   "apparatus": "evaporating dish, cold finger",
-  "safety": "Iodine vapor irritates. Fume hood only."
+  "safety": "Iodine vapor irritates. Fume hood only.",
+  "type_id": "JAH-EXP-TYPE-000158"
  },
  {
   "key": "beer-lambert",
@@ -4787,7 +4945,8 @@
   ],
   "subject": "food dye",
   "apparatus": "cuvettes, colorimeter app",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000159"
  },
  {
   "key": "polarimetry",
@@ -4818,7 +4977,8 @@
   ],
   "subject": "sugar solutions",
   "apparatus": "polarizing filters, tube",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000160"
  },
  {
   "key": "bomb-calorimeter",
@@ -4847,7 +5007,8 @@
   ],
   "subject": "benzoic pellets",
   "apparatus": "steel can rig, thermometer",
-  "safety": "Sealed combustion. Adult supervision; goggles on."
+  "safety": "Sealed combustion. Adult supervision; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000161"
  },
  {
   "key": "reverse-osmosis",
@@ -4877,7 +5038,8 @@
   ],
   "subject": "salt water",
   "apparatus": "membrane cell, pump, TDS meter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000162"
  },
  {
   "key": "ion-exchange",
@@ -4906,7 +5068,8 @@
   ],
   "subject": "hard water",
   "apparatus": "resin column, test strips",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000163"
  },
  {
   "key": "dissolved-oxygen",
@@ -4935,7 +5098,8 @@
   ],
   "subject": "pond water",
   "apparatus": "Winkler reagents, burette",
-  "safety": "Reagents are caustic. Gloves; goggles on."
+  "safety": "Reagents are caustic. Gloves; goggles on.",
+  "type_id": "JAH-EXP-TYPE-000164"
  },
  {
   "key": "alkalinity",
@@ -4964,7 +5128,8 @@
   ],
   "subject": "tap/pond water",
   "apparatus": "acid burette, indicator",
-  "safety": "Dilute acid irritates. Goggles on."
+  "safety": "Dilute acid irritates. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000165"
  },
  {
   "key": "extraction",
@@ -4994,7 +5159,8 @@
   ],
   "subject": "dyed water",
   "apparatus": "separatory funnel, oil",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000166"
  },
  {
   "key": "hardy-weinberg",
@@ -5024,7 +5190,8 @@
   ],
   "subject": "allele beads",
   "apparatus": "bag, tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000167"
  },
  {
   "key": "drift-bottleneck",
@@ -5053,7 +5220,8 @@
   ],
   "subject": "bead gene pool",
   "apparatus": "narrow-neck bottle",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000168"
  },
  {
   "key": "phylogeny",
@@ -5083,7 +5251,8 @@
   ],
   "subject": "trait cards",
   "apparatus": "wall, tape",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000169"
  },
  {
   "key": "transect",
@@ -5113,7 +5282,8 @@
   ],
   "subject": "field plot",
   "apparatus": "tape, ID keys",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000170"
  },
  {
   "key": "pitfall-traps",
@@ -5143,7 +5313,8 @@
   ],
   "subject": "garden bed",
   "apparatus": "cups, covers, keys",
-  "safety": "Release catch alive. Wash hands."
+  "safety": "Release catch alive. Wash hands.",
+  "type_id": "JAH-EXP-TYPE-000171"
  },
  {
   "key": "kick-sampling",
@@ -5173,7 +5344,8 @@
   ],
   "subject": "riffle zone",
   "apparatus": "D-net, tray, keys",
-  "safety": "Return animals to the stream. Watch footing."
+  "safety": "Return animals to the stream. Watch footing.",
+  "type_id": "JAH-EXP-TYPE-000172"
  },
  {
   "key": "eutrophication",
@@ -5203,7 +5375,8 @@
   ],
   "subject": "pond jars",
   "apparatus": "fertilizer, light, color chart",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000173"
  },
  {
   "key": "biomagnification",
@@ -5232,7 +5405,8 @@
   ],
   "subject": "bead tokens",
   "apparatus": "cups labeled by level",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000174"
  },
  {
   "key": "mycorrhizae",
@@ -5262,7 +5436,8 @@
   ],
   "subject": "potted plants",
   "apparatus": "stain, microscope",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000175"
  },
  {
   "key": "nitrogen-cycle",
@@ -5292,7 +5467,8 @@
   ],
   "subject": "station cards",
   "apparatus": "beads, dice",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000176"
  },
  {
   "key": "dichotomous-keys",
@@ -5321,7 +5497,8 @@
   ],
   "subject": "leaf set",
   "apparatus": "printed key, lens",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000177"
  },
  {
   "key": "operon-model",
@@ -5351,7 +5528,8 @@
   ],
   "subject": "gene strip",
   "apparatus": "beads, dice",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000178"
  },
  {
   "key": "dna-extraction",
@@ -5380,7 +5558,8 @@
   ],
   "subject": "strawberries",
   "apparatus": "salt, soap, alcohol, sticks",
-  "safety": "Cold alcohol only. No tasting the mix."
+  "safety": "Cold alcohol only. No tasting the mix.",
+  "type_id": "JAH-EXP-TYPE-000179"
  },
  {
   "key": "transformation",
@@ -5409,7 +5588,8 @@
   ],
   "subject": "lab strain",
   "apparatus": "plasmid, incubator",
-  "safety": "Lab strains only. Seal plates; never open."
+  "safety": "Lab strains only. Seal plates; never open.",
+  "type_id": "JAH-EXP-TYPE-000180"
  },
  {
   "key": "mohs-hardness",
@@ -5438,7 +5618,8 @@
   ],
   "subject": "mineral set",
   "apparatus": "nail, penny, glass plate",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000181"
  },
  {
   "key": "crystal-growing",
@@ -5467,7 +5648,8 @@
   ],
   "subject": "alum solution",
   "apparatus": "jars, string, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000182"
  },
  {
   "key": "fossil-molds",
@@ -5497,7 +5679,8 @@
   ],
   "subject": "shells",
   "apparatus": "clay, plaster",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000183"
  },
  {
   "key": "carbon-dating-model",
@@ -5526,7 +5709,8 @@
   ],
   "subject": "100 beads",
   "apparatus": "cup, chart",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000184"
  },
  {
   "key": "dendrochronology",
@@ -5555,7 +5739,8 @@
   ],
   "subject": "core images",
   "apparatus": "ring charts, lens",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000185"
  },
  {
   "key": "seafloor-spreading",
@@ -5584,7 +5769,8 @@
   ],
   "subject": "paper strip",
   "apparatus": "slit box, crayons",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000186"
  },
  {
   "key": "fault-models",
@@ -5614,7 +5800,8 @@
   ],
   "subject": "foam blocks",
   "apparatus": "knife, labels",
-  "safety": "Cut away from hands. Adult help for blades."
+  "safety": "Cut away from hands. Adult help for blades.",
+  "type_id": "JAH-EXP-TYPE-000187"
  },
  {
   "key": "liquefaction",
@@ -5644,7 +5831,8 @@
   ],
   "subject": "sand box",
   "apparatus": "block, water, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000188"
  },
  {
   "key": "hurricane-spin",
@@ -5674,7 +5862,8 @@
   ],
   "subject": "water tank",
   "apparatus": "paddle, dye",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000189"
  },
  {
   "key": "rain-shadow",
@@ -5703,7 +5892,8 @@
   ],
   "subject": "foam ridge",
   "apparatus": "spray bottle, paper towels",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000190"
  },
  {
   "key": "sea-breeze",
@@ -5732,7 +5922,8 @@
   ],
   "subject": "long box",
   "apparatus": "lamp, ice, smoke stick",
-  "safety": "Lamp gets hot. Ventilate the smoke."
+  "safety": "Lamp gets hot. Ventilate the smoke.",
+  "type_id": "JAH-EXP-TYPE-000191"
  },
  {
   "key": "urban-heat",
@@ -5762,7 +5953,8 @@
   ],
   "subject": "campus map",
   "apparatus": "IR thermometer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000192"
  },
  {
   "key": "inversion",
@@ -5791,7 +5983,8 @@
   ],
   "subject": "fish tank",
   "apparatus": "ice lid, smoke stick",
-  "safety": "Ventilate smoke after."
+  "safety": "Ventilate smoke after.",
+  "type_id": "JAH-EXP-TYPE-000193"
  },
  {
   "key": "geneva-drive",
@@ -5821,7 +6014,8 @@
   ],
   "subject": "cardboard geneva",
   "apparatus": "pin crank, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000194"
  },
  {
   "key": "ratchet",
@@ -5850,7 +6044,8 @@
   ],
   "subject": "ratchet set",
   "apparatus": "spring scale, weights",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000195"
  },
  {
   "key": "worm-gear",
@@ -5879,7 +6074,8 @@
   ],
   "subject": "worm set",
   "apparatus": "crank, counter",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000196"
  },
  {
   "key": "rack-pinion",
@@ -5908,7 +6104,8 @@
   ],
   "subject": "rack set",
   "apparatus": "ruler, crank",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000197"
  },
  {
   "key": "hydraulic-press",
@@ -5937,7 +6134,8 @@
   ],
   "subject": "bottle jack",
   "apparatus": "cans, scale",
-  "safety": "Crushing cans snap. Goggles; hands clear."
+  "safety": "Crushing cans snap. Goggles; hands clear.",
+  "type_id": "JAH-EXP-TYPE-000198"
  },
  {
   "key": "anemometer-build",
@@ -5966,7 +6164,8 @@
   ],
   "subject": "cup rotor",
   "apparatus": "fan, stopwatch",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000199"
  },
  {
   "key": "rain-gauge",
@@ -5995,7 +6194,8 @@
   ],
   "subject": "bottle gauges",
   "apparatus": "funnel, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000200"
  },
  {
   "key": "thermostat-bimetal",
@@ -6024,7 +6224,8 @@
   ],
   "subject": "bimetal strip",
   "apparatus": "heat gun, thermometer",
-  "safety": "Heat gun burns. Aim away from hands."
+  "safety": "Heat gun burns. Aim away from hands.",
+  "type_id": "JAH-EXP-TYPE-000201"
  },
  {
   "key": "faraday-cage",
@@ -6054,7 +6255,8 @@
   ],
   "subject": "pocket radio",
   "apparatus": "foil, mesh, phone",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000202"
  },
  {
   "key": "antenna-dipole",
@@ -6083,7 +6285,8 @@
   ],
   "subject": "wire dipole",
   "apparatus": "radio, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000203"
  },
  {
   "key": "parabolic-dish",
@@ -6113,7 +6316,8 @@
   ],
   "subject": "foil dishes",
   "apparatus": "thermometer, sun",
-  "safety": "Focused sun burns. Goggles on."
+  "safety": "Focused sun burns. Goggles on.",
+  "type_id": "JAH-EXP-TYPE-000204"
  },
  {
   "key": "emi-shielding",
@@ -6142,7 +6346,8 @@
   ],
   "subject": "buzzing phone",
   "apparatus": "foil, steel, plastic boxes",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000205"
  },
  {
   "key": "eyewitness-lineup",
@@ -6172,7 +6377,8 @@
   ],
   "subject": "photo sets",
   "apparatus": "lineup cards",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000206"
  },
  {
   "key": "misinformation",
@@ -6201,7 +6407,8 @@
   ],
   "subject": "crash video",
   "apparatus": "question cards",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000207"
  },
  {
   "key": "spacing-effect",
@@ -6231,7 +6438,8 @@
   ],
   "subject": "word lists",
   "apparatus": "quiz sheets",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000208"
  },
  {
   "key": "change-blindness",
@@ -6260,7 +6468,8 @@
   ],
   "subject": "scene pairs",
   "apparatus": "screen, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000209"
  },
  {
   "key": "rubber-hand",
@@ -6289,7 +6498,8 @@
   ],
   "subject": "rubber hand",
   "apparatus": "brushes, screen",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000210"
  },
  {
   "key": "muller-lyer",
@@ -6318,7 +6528,8 @@
   ],
   "subject": "line cards",
   "apparatus": "ruler, slider",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000211"
  },
  {
   "key": "phi-phenomenon",
@@ -6349,7 +6560,8 @@
   ],
   "subject": "LED pair",
   "apparatus": "timer circuit",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000212"
  },
  {
   "key": "cocktail-party",
@@ -6378,7 +6590,8 @@
   ],
   "subject": "audio tracks",
   "apparatus": "headphones, sheets",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000213"
  },
  {
   "key": "prisoners-dilemma",
@@ -6407,7 +6620,8 @@
   ],
   "subject": "payoff cards",
   "apparatus": "tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000214"
  },
  {
   "key": "ultimatum-game",
@@ -6436,7 +6650,8 @@
   ],
   "subject": "play bills",
   "apparatus": "offer slips",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000215"
  },
  {
   "key": "gini-coefficient",
@@ -6465,7 +6680,8 @@
   ],
   "subject": "bead wealth",
   "apparatus": "ledger, graph paper",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000216"
  },
  {
   "key": "rule-72",
@@ -6495,7 +6711,8 @@
   ],
   "subject": "ledger",
   "apparatus": "calculator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000217"
  },
  {
   "key": "amortization",
@@ -6525,7 +6742,8 @@
   ],
   "subject": "loan sheet",
   "apparatus": "calculator, table",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000218"
  },
  {
   "key": "lottery-ev",
@@ -6554,7 +6772,8 @@
   ],
   "subject": "ticket cards",
   "apparatus": "calculator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000219"
  },
  {
   "key": "monte-carlo-pi",
@@ -6583,7 +6802,8 @@
   ],
   "subject": "dart board",
   "apparatus": "random table, counter",
-  "safety": "Throw soft darts only. Clear the board zone."
+  "safety": "Throw soft darts only. Clear the board zone.",
+  "type_id": "JAH-EXP-TYPE-000220"
  },
  {
   "key": "random-walk",
@@ -6612,7 +6832,8 @@
   ],
   "subject": "coin",
   "apparatus": "grid paper",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000221"
  },
  {
   "key": "diversification",
@@ -6641,7 +6862,8 @@
   ],
   "subject": "coin sets",
   "apparatus": "ledger",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000222"
  },
  {
   "key": "vigenere",
@@ -6671,7 +6893,8 @@
   ],
   "subject": "message strips",
   "apparatus": "tabula recta",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000223"
  },
  {
   "key": "big-o-race",
@@ -6701,7 +6924,8 @@
   ],
   "subject": "stopwatch",
   "apparatus": "paper lists, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000224"
  },
  {
   "key": "memoization",
@@ -6730,7 +6954,8 @@
   ],
   "subject": "worksheet",
   "apparatus": "timer, table",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000225"
  },
  {
   "key": "nqueens",
@@ -6760,7 +6985,8 @@
   ],
   "subject": "chessboard",
   "apparatus": "queen tokens, log",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000226"
  },
  {
   "key": "minimax-tictactoe",
@@ -6789,7 +7015,8 @@
   ],
   "subject": "boards",
   "apparatus": "tally sheet",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000227"
  },
  {
   "key": "kmeans-beads",
@@ -6819,7 +7046,8 @@
   ],
   "subject": "bead scatter",
   "apparatus": "string, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000228"
  },
  {
   "key": "pagerank-pennies",
@@ -6849,7 +7077,8 @@
   ],
   "subject": "node web",
   "apparatus": "pennies, tally",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000229"
  },
  {
   "key": "diffie-hellman",
@@ -6878,7 +7107,8 @@
   ],
   "subject": "paint sets",
   "apparatus": "cups, stirrers",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000230"
  },
  {
   "key": "one-time-pad",
@@ -6907,7 +7137,8 @@
   ],
   "subject": "message strips",
   "apparatus": "coin pads, table",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000231"
  },
  {
   "key": "turing-test",
@@ -6937,7 +7168,8 @@
   ],
   "subject": "chat scripts",
   "apparatus": "blinds, score cards",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000232"
  },
  {
   "key": "ecological-footprint",
@@ -6966,7 +7198,8 @@
   ],
   "subject": "quiz sheets",
   "apparatus": "calculator",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000233"
  },
  {
   "key": "food-miles",
@@ -6995,7 +7228,8 @@
   ],
   "subject": "lunch items",
   "apparatus": "map, ruler",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000234"
  },
  {
   "key": "green-roof",
@@ -7024,7 +7258,8 @@
   ],
   "subject": "trays",
   "apparatus": "thermometers, sun",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000235"
  },
  {
   "key": "permeable-pavement",
@@ -7053,7 +7288,8 @@
   ],
   "subject": "paver slabs",
   "apparatus": "watering can, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000236"
  },
  {
   "key": "rain-barrel",
@@ -7082,7 +7318,8 @@
   ],
   "subject": "barrel",
   "apparatus": "gutter diverter, gauge",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000237"
  },
  {
   "key": "ocean-acidification",
@@ -7111,7 +7348,8 @@
   ],
   "subject": "shells",
   "apparatus": "soda water, balance",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000238"
  },
  {
   "key": "albedo-ice",
@@ -7141,7 +7379,8 @@
   ],
   "subject": "ice cubes",
   "apparatus": "trays, soot/paper, timer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000239"
  },
  {
   "key": "heat-island",
@@ -7170,6 +7409,7 @@
   ],
   "subject": "city map",
   "apparatus": "IR thermometer",
-  "safety": null
+  "safety": null,
+  "type_id": "JAH-EXP-TYPE-000240"
  }
 ]
