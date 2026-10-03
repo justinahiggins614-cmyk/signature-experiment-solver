@@ -14,15 +14,19 @@ Fails (exit 1) on ANY integrity problem:
 Usage: python3 code/qa/check.py [--quick]   (--quick skips the hash sample)
 """
 import gzip, hashlib, json, os, random, re, subprocess, sys, xml.etree.ElementTree as ET
+import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data")
 FAIL = []
+PASSED = [0]
 
 def check(name, cond, detail=""):
     print(("PASS " if cond else "FAIL ") + name + ((" — " + str(detail)) if detail and not cond else ""))
     if not cond:
         FAIL.append(name + (" — " + str(detail) if detail else ""))
+    else:
+        PASSED[0] += 1
 
 def load(p):
     with open(p) as f:
@@ -154,11 +158,18 @@ def main():
         check(f"deep link target {spot} in index", any(r[0] == spot for r in idx))
 
     print()
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     if FAIL:
         print(f"{len(FAIL)} GATE(S) FAILED:")
         for f in FAIL:
             print(" -", f)
+        json.dump({"status": "FAIL", "gates_passed": PASSED[0], "gates_failed": FAIL,
+                   "experiments": len(rows), "checked_at": now},
+                  open(os.path.join(DATA, "health.json"), "w"), indent=1)
         sys.exit(1)
+    json.dump({"status": "PASS", "gates_passed": PASSED[0], "gates_total": PASSED[0],
+               "experiments": len(rows), "checked_at": now},
+              open(os.path.join(DATA, "health.json"), "w"), indent=1)
     print("ALL GATES PASS")
 
 if __name__ == "__main__":

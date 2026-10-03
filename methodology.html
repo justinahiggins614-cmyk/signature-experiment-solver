@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — The Signature Experiment Solver</title>
+<meta name="description" content="How the Signature Experiment Solver works: deterministic solver engine, honest simulation labeling, safety classification, permanent IDs, and reproducibility.">
+<link rel="canonical" href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/methodology.html">
+<style>
+:root{--paper:#faf8f1;--ink:#1b2340;--muted:#5a6486;--accent:#0e7c4a;--accent2:#1565c0;
+--card:#ffffff;--line:#d9d4c3;--warn:#b26a00;--danger:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:1.9em;margin:.4em 0}
+h2{margin-top:1.8em;border-bottom:2px solid var(--line);padding-bottom:.25em}
+table{border-collapse:collapse;width:100%;margin:1em 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:.5em .7em;text-align:left;font-size:.92em}
+th{background:#eef2ea}
+code{background:#eef0e6;padding:.1em .35em;border-radius:4px;font-size:.9em}
+.note{background:#fff8e6;border:1px solid #e8d48a;border-radius:8px;padding:.8em 1em;margin:1em 0}
+.ok{background:#eaf7ef;border:1px solid #9fd3ae;border-radius:8px;padding:.8em 1em;margin:1em 0}
+a{color:var(--accent2)}
+.back{display:inline-block;margin-bottom:1em}
+.meta{color:var(--muted);font-size:.9em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">← Back to The Signature Experiment Solver</a>
+<h1>Methodology</h1>
+<p class="meta">The Signature Experiment Solver · SOLVER-ENGINE-V1 · record standard JAH-EXP-RECORD/1.0</p>
+
+<h2>What "solved" means</h2>
+<p>A <strong>solved</strong> experiment is a <strong>complete, structured, solver-generated
+record</strong>: question, hypothesis, null hypothesis, variables, materials, procedure,
+a three-trial Universal Matrix, measurements, findings, results, and conclusion —
+computed deterministically from a built-in mathematical model.</p>
+<div class="note"><strong>Solved ≠ performed.</strong> Solving an experiment here means the
+computer ran its model of the experiment. It does <em>not</em> mean anyone went into a
+laboratory, mixed chemicals, or measured anything physical. Every record carries this
+distinction as machine-readable fields, not just as a disclaimer.</div>
+
+<h2>The four statuses on every record</h2>
+<table>
+<tr><th>Field</th><th>Value on archived records</th><th>Meaning</th></tr>
+<tr><td><code>status</code></td><td>SOLVER-GENERATED</td><td>The record was produced by the solver engine, not by a human author.</td></tr>
+<tr><td><code>simulation_status</code></td><td>SIMULATED</td><td>Every number is computed from a built-in model.</td></tr>
+<tr><td><code>physical_status</code></td><td>NOT-PERFORMED</td><td>Nobody physically performed this experiment to make this record.</td></tr>
+<tr><td><code>measured</code></td><td>false</td><td>No real measured data is attached. Adding your own measurements flips the record to <code>data_status: MIXED</code> — the simulation values are kept and never overwritten.</td></tr>
+</table>
+<p>Every number also carries its <strong>model</strong> (equation provenance),
+<strong>seed</strong>, <strong>assumptions</strong>, and <strong>units</strong>.
+A value quoted without its model is an ungrounded value. Missing information is
+reported as <strong>NOT RECORDED</strong> — never invented.</p>
+
+<h2>Determinism</h2>
+<p>Same solver type + same seed + same parameters = the same record, on any device,
+forever. Seed algorithm <strong>FNV-1a-32</strong>, PRNG <strong>mulberry32</strong>.
+Engine versions are immutable: SOLVER-ENGINE-V1 stays reproducible; new behavior
+becomes V2. Full specification: <a href="docs/DETERMINISM.md">docs/DETERMINISM.md</a>;
+permanent test vectors: <a href="docs/test-vectors.json">docs/test-vectors.json</a>.
+Any record can be re-solved in the browser and its content hash compared with the
+published hash (<code>?verify=JAH-EXP-000123</code>).</p>
+
+<h2>Permanent IDs</h2>
+<ul>
+<li>Experiments: <code>JAH-EXP-######</code> — assigned once, sequentially, never reused, never reassigned. Canonical URL: <code>?exp=JAH-EXP-000123</code>.</li>
+<li>Solver types: <code>JAH-EXP-TYPE-######</code> — 240 types in catalog order, A–Z browsable.</li>
+</ul>
+
+<h2>Safety classification</h2>
+<p>Every record carries a machine-readable <code>safety_level</code>, assigned by a
+deterministic rule-based classifier (same type → same level, always):</p>
+<table>
+<tr><th>Level</th><th>Meaning</th></tr>
+<tr><td>SAFE-EDUCATIONAL</td><td>Ordinary classroom-safe material.</td></tr>
+<tr><td>ADULT-SUPERVISION</td><td>Young scientists should have an adult present.</td></tr>
+<tr><td>CAUTION</td><td>Heat, flame, chemicals, electricity, or projectiles involved — read the safety note first.</td></tr>
+<tr><td>HAZARDOUS</td><td>Toxic or severely harmful materials in the topic — treat with full precautions.</td></tr>
+<tr><td>SIMULATION-ONLY</td><td>Reserved for topics that must never be physically attempted.</td></tr>
+<tr><td>DO-NOT-PERFORM</td><td>Triggered only when the <em>request itself</em> asks for something dangerous or illegal. Answered with a pure-simulation disclaimer and no instructions, never with a procedure.</td></tr>
+</table>
+
+<h2>Archive integrity</h2>
+<p>One authoritative file — <a href="experiment-manifest.json">experiment-manifest.json</a> —
+holds the single true count. Every counter on the page, the API feed, and the sitemap
+derive from it; the build fails on any disagreement (see <code>code/qa/check.py</code>).
+Content hashes for every record ship in <code>data/hashes.json.gz</code>.</p>
+<div class="ok" id="health"><strong>Archive health:</strong> loading…</div>
+
+<h2>Data &amp; honesty</h2>
+<p>All experiment content is solver-generated from original models — simulations, not
+measurements. The archive grows by scheduled generation runs; records are never
+edited after creation. Corrections, when needed, are appended as new versioned
+entries, never silent edits.</p>
+
+<p><a href="./">← Back to the solver</a></p>
+</div>
+<script>
+fetch('data/health.json').then(function(r){return r.json();}).then(function(h){
+  var el=document.getElementById('health');
+  el.innerHTML='<strong>Archive health:</strong> '+h.gates_passed+'/'+h.gates_total+
+    ' QA gates passing · '+h.experiments.toLocaleString()+' experiments · checked '+h.checked_at;
+}).catch(function(){
+  document.getElementById('health').innerHTML='<strong>Archive health:</strong> NOT RECORDED yet — the next QA run will publish it.';
+});
+</script>
+</body>
+</html>

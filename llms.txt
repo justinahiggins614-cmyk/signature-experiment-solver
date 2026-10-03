@@ -1,0 +1,43 @@
+# The Signature Experiment Solver — llms.txt
+
+> Describe any experiment. The solver runs it full-scale through the Universal
+> Matrix: structured record, step-by-step simulation, findings, conclusion.
+> Every numeric result is a SOLVER SIMULATION from built-in models — labeled
+> field-level on every record, never presented as measured lab data.
+
+## Machine-readable sources (all JSON, CORS-open)
+- Archive manifest (the one authoritative count): experiment-manifest.json
+- Searchable compact index (11,925 rows [id, typeKey, seed, title, discipline]): data/index.json.gz
+- Machine feed of all experiments: data/experiments-catalog.json
+- Record content hashes (sha256 of canonical record JSON): data/hashes.json.gz
+- Solver-type catalog (240 types, A–Z): data/solver-catalog.json
+- Record standard: experiment.schema.json (JAH-EXP-RECORD/1.0)
+- Solver-type standard: solver-type.schema.json
+- Manifest standard: manifest.schema.json
+- AI access description: ai-manifest.json
+
+## Deep links
+- Record: ?exp=JAH-EXP-000123 (permanent IDs, never reused)
+- Solver type: ?type=free-fall
+- Reproducibility check: ?verify=JAH-EXP-000123 (re-solves in-browser, compares content hash)
+
+## Honest Science (read before quoting any number)
+- status=SOLVER-GENERATED, simulation_status=SIMULATED, physical_status=NOT-PERFORMED, measured=false on every archived record.
+- data_type_note="SOLVER SIMULATION — NOT LABORATORY MEASUREMENT" on every record.
+- Numbers carry model + seed + units. A value never quoted with its model is an
+  ungrounded value. Missing fields are reported as NOT RECORDED, never invented.
+
+## Determinism
+- Engine SOLVER-ENGINE-V1 (immutable). Seed algorithm FNV-1a-32, PRNG mulberry32.
+- seed = FNV-1a-32(typeKey + ":" + type_seed + ":" + JSON.stringify(params)).
+- Full spec: docs/DETERMINISM.md. Test vectors: docs/test-vectors.json.
+
+## Safety
+- safety_level on every record: SAFE-EDUCATIONAL / ADULT-SUPERVISION / CAUTION /
+  HAZARDOUS / SIMULATION-ONLY / DO-NOT-PERFORM (deterministic rule-based).
+- Anything you ask for that is dangerous is answered as DO-NOT-PERFORM with a
+  pure-simulation disclaimer, never with instructions.
+
+## Methodology
+- methodology.html (public page) + docs/DETERMINISM.md
+- Health: data/health.json (latest QA gate run)

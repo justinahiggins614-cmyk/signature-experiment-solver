@@ -1,0 +1,161 @@
+{
+ "engine": "SOLVER-ENGINE-V1",
+ "seed_algorithm": "FNV-1a-32",
+ "prng": "mulberry32",
+ "generated": "2026-10-03",
+ "vectors": [
+  {
+   "typeKey": "free-fall",
+   "seed": 1,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:79b8cda16069a4076d074de5d03f2a1fc0fb312671c5bd8d06cfbd2dbdb35069",
+   "output_hash": "sha256:dac8b12e7603ca9302ecab9283c8e4e8cd0f461a416b4a7fb7849541ee25039b",
+   "params": {
+    "height": 10
+   },
+   "title": "Free-Fall Gravity Drop — steel ball at 10 m",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "projectile-motion",
+   "seed": 7,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:7d818c38dc8f00ec5b2ed6b01ceb28bbe2788d351d90653cce73d80ca6220a17",
+   "output_hash": "sha256:75cc599131e114c05f6456c7f4af147780bc2df36c8b0d59dc6bb6da696ee4ed",
+   "params": {
+    "velocity": 20,
+    "angle": 45
+   },
+   "title": "Projectile Launch Angle — foam dart at 20 m/s",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "CAUTION"
+  },
+  {
+   "typeKey": "pendulum-period",
+   "seed": 42,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:dad513f01810d88bf35a6ba9c764c2f82c793a3b8d8cee935524c2051e715cbd",
+   "output_hash": "sha256:e5ee84eff3df16e8bb4fe7bfbe0d6cc82c903c1f0d011e7ef10d370b2c54d9be",
+   "params": {
+    "length": 1
+   },
+   "title": "Pendulum Period vs Length — brass bob at 1 m",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "ohms-law",
+   "seed": 3,
+   "overrides": {
+    "voltage": 9
+   },
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:1a76da70a095e75ac6597f46b0d04d285bc9e2511cfef3217d529935dfc15775",
+   "output_hash": "sha256:137ae402dcbabe93c6ec3858d8252c130d94b51f5db0e175c62f4004bc0113a1",
+   "params": {
+    "resistance": 100
+   },
+   "title": "Ohm's Law Circuit — carbon resistor at 100 Ω",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "acid-base-titration",
+   "seed": 11,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:33783449c5a8129e4fd71de66ae26d2182be7b801366510d12778420a9211e43",
+   "output_hash": "sha256:7c28fbdeeb54d17b05f721190809e3d825b918b8d3ee20cad3913b6ae1e0a1bf",
+   "params": {
+    "conc": 0.1
+   },
+   "title": "Acid-Base Titration — hydrochloric acid at 0.1 M",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "CAUTION"
+  },
+  {
+   "typeKey": "photosynthesis-rate",
+   "seed": 5,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:ac86d987b40617447caf7e2a2f843d61a70b0a395fd688e8d064d9e448654c43",
+   "output_hash": "sha256:c690066202fc3c652e1ffb2cddfbd5491b62b885f3360e51f49440ada9a855f6",
+   "params": {
+    "dist": 20
+   },
+   "title": "Photosynthesis Bubble Rate — pondweed sprig at 20 cm",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "bernoulli",
+   "seed": 99,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:5dd13cd98548e3f4dcebd1a46ccaeec19408c607b3c954aa58e038bad84fc730",
+   "output_hash": "sha256:cca6265d77b65dceb9a14f551cf38067f621b4adad90822582ccbaa44f48a38c",
+   "params": {
+    "speed": 8
+   },
+   "title": "Bernoulli Lift Paper — paper strip at 8 m/s",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "half-life",
+   "seed": 13,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:acb625cd454935845f4876d9630bfe20a24b08cedf6a091c0b0460e8ac99b4f3",
+   "output_hash": "sha256:2b911881912e76442a0374f34c356d2d878cb474fe97406716e55fd39884d807",
+   "params": {
+    "halflife": 3
+   },
+   "title": "Radioactive Half-Life Dice — 100 dice at 3 rounds",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "CAUTION"
+  },
+  {
+   "typeKey": "universal-design",
+   "seed": 2,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:a23de4e49126c5450a528e06774735719f13aa3bc406e3a99a77436eef98f78a",
+   "output_hash": "sha256:6101b974af379cb9f8333341b4b2456a62fdd657f54ce71be4b32a8366f71eb0",
+   "params": {
+    "magnitude": 100
+   },
+   "title": "Universal Matrix Run — custom experiment",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "SAFE-EDUCATIONAL"
+  },
+  {
+   "typeKey": "rocket-staging",
+   "seed": 21,
+   "overrides": {},
+   "note": "test IDs are placeholders; the hash covers all solver output fields",
+   "input_hash": "sha256:033d3c38ff511f8eb920efd54e272b1fa519d0e37f3eacbdc738576322ac676e",
+   "output_hash": "sha256:09ec40bb916f761ae5a068ee779d7f067dbbab3cbf5712ff43d216eb290d1810",
+   "params": {
+    "fill": 33
+   },
+   "title": "Water Rocket Staging — 2L bottle rocket at 33 %",
+   "status": "SOLVER-GENERATED",
+   "solver_engine": "SOLVER-ENGINE-V1",
+   "safety_level": "CAUTION"
+  }
+ ]
+}
