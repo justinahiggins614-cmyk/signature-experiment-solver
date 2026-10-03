@@ -219,7 +219,7 @@ def build_sitemap(idx_rows, static_pages=None):
     # static pages sitemap (home + browse views + pre-rendered experiment batch pages)
     static_entries = ['  <url><loc>%s%s</loc></url>\n' % (SITE, pg)
                       for pg in ["", "?browse=az", "?browse=latest",
-                                 "static/index.html"] +
+                                 "methodology.html", "static/index.html"] +
                       ["static/" + f for f in (static_pages or [])]]
     open(os.path.join(ROOT, "pages.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
