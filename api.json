@@ -1,7 +1,7 @@
 {
  "site": "The Signature Experiment Solver",
  "url": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/",
- "experiments": 23925,
+ "experiments": 24925,
  "goal": 1000000,
  "solver_types": 240,
  "disciplines": [
@@ -19,12 +19,12 @@
  "manifest": "experiment-manifest.json",
  "data_manifest": "data/manifest.json",
  "index": "data/index.json.gz",
- "index_hash": "sha256:5118d73abdd0230d6af671201d2131bff39fef70a182788c7b31d131bdef8624",
+ "index_hash": "sha256:e67254bf7b0002475a31ffd76eb3465b706c197d0ec8d3c4d2f9bf2432cf8de6",
  "catalog_feed": "data/experiments-catalog.json",
  "static_pages": "static/index.html",
  "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?exp=JAH-EXP-000001",
  "solver_engine": "SOLVER-ENGINE-V1",
  "title_status": "PROVISIONAL \u2014 awaiting Manon's confirmation",
  "honesty": "All numeric results are solver-computed simulations, labeled as such; never presented as measured lab data.",
- "last_updated": "2026-10-04T15:08:03Z"
+ "last_updated": "2026-10-04T17:08:07Z"
 }
