@@ -1,6 +1,6 @@
 {
  "site": "The Signature Experiment Solver",
- "updated_utc": "2026-10-04T13:08:07Z",
+ "updated_utc": "2026-10-04T15:08:03Z",
  "solver_engine": "SOLVER-ENGINE-V1",
  "total_types": 240,
  "types": [
@@ -20,7 +20,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=3d-print-strength"
   },
   {
@@ -41,7 +41,7 @@
    "model": "titration",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=acid-base-titration"
   },
   {
@@ -59,7 +59,7 @@
    "model": "rate-temp",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=activation-energy"
   },
   {
@@ -77,7 +77,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=air-quality"
   },
   {
@@ -96,7 +96,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=albedo-ice"
   },
   {
@@ -114,7 +114,7 @@
    "model": "titration",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=alkalinity"
   },
   {
@@ -132,7 +132,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=anchoring"
   },
   {
@@ -150,7 +150,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=anemometer-build"
   },
   {
@@ -169,7 +169,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antacid"
   },
   {
@@ -188,7 +188,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antibiotic-zones"
   },
   {
@@ -206,7 +206,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=auction-bidding"
   },
   {
@@ -225,7 +225,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bacterial-growth"
   },
   {
@@ -243,7 +243,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=transformation"
   },
   {
@@ -262,7 +262,7 @@
    "model": "hooke",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=beam-deflection"
   },
   {
@@ -281,7 +281,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=beer-lambert"
   },
   {
@@ -299,7 +299,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bernoulli"
   },
   {
@@ -318,7 +318,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=big-o-race"
   },
   {
@@ -336,7 +336,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=thermostat-bimetal"
   },
   {
@@ -354,7 +354,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=binary-search"
   },
   {
@@ -372,7 +372,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=biodiesel"
   },
   {
@@ -390,7 +390,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=biomagnification"
   },
   {
@@ -408,7 +408,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=birthday-paradox"
   },
   {
@@ -426,7 +426,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bomb-calorimeter"
   },
   {
@@ -444,7 +444,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mold-growth"
   },
   {
@@ -463,7 +463,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=bridge-resonance"
   },
   {
@@ -482,7 +482,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=brine-shrimp"
   },
   {
@@ -501,7 +501,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=buoyancy"
   },
   {
@@ -520,7 +520,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cryptography-caesar"
   },
   {
@@ -538,7 +538,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=camera-obscura"
   },
   {
@@ -556,7 +556,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=capillary"
   },
   {
@@ -574,7 +574,7 @@
    "model": "exponential-decay",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=carbon-dating-model"
   },
   {
@@ -592,7 +592,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=enzyme-catalase"
   },
   {
@@ -611,7 +611,7 @@
    "model": "projectile",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=catapult"
   },
   {
@@ -629,7 +629,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cellular-automata"
   },
   {
@@ -647,7 +647,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=change-blindness"
   },
   {
@@ -666,7 +666,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chladni"
   },
   {
@@ -684,7 +684,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cloud-formation"
   },
   {
@@ -702,7 +702,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=cocktail-party"
   },
   {
@@ -720,7 +720,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=color-mood"
   },
   {
@@ -738,7 +738,7 @@
    "model": "cooling",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=composting"
   },
   {
@@ -756,7 +756,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compost-tea"
   },
   {
@@ -775,7 +775,7 @@
    "model": "exponential-decay",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compound-interest"
   },
   {
@@ -793,7 +793,7 @@
    "model": "optics",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=microscope-build"
   },
   {
@@ -812,7 +812,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=convection-cells"
   },
   {
@@ -830,7 +830,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=electroplating"
   },
   {
@@ -848,7 +848,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=crater-impacts"
   },
   {
@@ -866,7 +866,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=crystal-growing"
   },
   {
@@ -885,7 +885,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=density-column"
   },
   {
@@ -903,7 +903,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=depth-of-field"
   },
   {
@@ -921,7 +921,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dichotomous-keys"
   },
   {
@@ -939,7 +939,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diffie-hellman"
   },
   {
@@ -957,7 +957,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diffusion-agar"
   },
   {
@@ -975,7 +975,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=memory-span"
   },
   {
@@ -994,7 +994,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dijkstra"
   },
   {
@@ -1012,7 +1012,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=antenna-dipole"
   },
   {
@@ -1030,7 +1030,7 @@
    "model": "titration",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dissolved-oxygen"
   },
   {
@@ -1048,7 +1048,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=diversification"
   },
   {
@@ -1066,7 +1066,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dna-extraction"
   },
   {
@@ -1085,7 +1085,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=doppler"
   },
   {
@@ -1103,7 +1103,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ecological-footprint"
   },
   {
@@ -1121,7 +1121,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=egg-drop"
   },
   {
@@ -1139,7 +1139,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=electrolysis-water"
   },
   {
@@ -1157,7 +1157,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=emi-shielding"
   },
   {
@@ -1176,7 +1176,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=eutrophication"
   },
   {
@@ -1195,7 +1195,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=eyewitness-lineup"
   },
   {
@@ -1214,7 +1214,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=faraday-cage"
   },
   {
@@ -1233,7 +1233,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fault-models"
   },
   {
@@ -1251,7 +1251,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=flame-tests"
   },
   {
@@ -1269,7 +1269,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=flywheel"
   },
   {
@@ -1287,7 +1287,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=calorimetry-food"
   },
   {
@@ -1305,7 +1305,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=food-miles"
   },
   {
@@ -1324,7 +1324,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fossil-molds"
   },
   {
@@ -1342,7 +1342,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fractals"
   },
   {
@@ -1361,7 +1361,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=framing-effect"
   },
   {
@@ -1380,7 +1380,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=frank-hertz"
   },
   {
@@ -1402,7 +1402,7 @@
    "model": "gravity-drop",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=free-fall"
   },
   {
@@ -1422,7 +1422,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=friction-slide"
   },
   {
@@ -1441,7 +1441,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=galvanic-cell"
   },
   {
@@ -1460,7 +1460,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gas-pressure"
   },
   {
@@ -1479,7 +1479,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gear-trains"
   },
   {
@@ -1497,7 +1497,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=drift-bottleneck"
   },
   {
@@ -1516,7 +1516,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=geneva-drive"
   },
   {
@@ -1534,7 +1534,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gini-coefficient"
   },
   {
@@ -1552,7 +1552,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chemiluminescence"
   },
   {
@@ -1571,7 +1571,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=gradient-descent"
   },
   {
@@ -1589,7 +1589,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=green-roof"
   },
   {
@@ -1607,7 +1607,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=greenhouse-model"
   },
   {
@@ -1625,7 +1625,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=habit-formation"
   },
   {
@@ -1644,7 +1644,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hall-effect"
   },
   {
@@ -1663,7 +1663,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hardy-weinberg"
   },
   {
@@ -1682,7 +1682,7 @@
    "model": "cooling",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heart-rate-exercise"
   },
   {
@@ -1700,7 +1700,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heat-engine"
   },
   {
@@ -1718,7 +1718,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=heat-island"
   },
   {
@@ -1737,7 +1737,7 @@
    "model": "hooke",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hookes-law"
   },
   {
@@ -1756,7 +1756,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hurricane-spin"
   },
   {
@@ -1774,7 +1774,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hydraulic-press"
   },
   {
@@ -1792,7 +1792,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=hydraulic-arm"
   },
   {
@@ -1810,7 +1810,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fuel-cell"
   },
   {
@@ -1829,7 +1829,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inclined-plane"
   },
   {
@@ -1848,7 +1848,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inverse-square-light"
   },
   {
@@ -1866,7 +1866,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=inversion"
   },
   {
@@ -1884,7 +1884,7 @@
    "model": "rate-temp",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=iodine-clock"
   },
   {
@@ -1902,7 +1902,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ion-exchange"
   },
   {
@@ -1920,7 +1920,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kmeans-beads"
   },
   {
@@ -1939,7 +1939,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kick-sampling"
   },
   {
@@ -1957,7 +1957,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ksp"
   },
   {
@@ -1976,7 +1976,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=kundt-tube"
   },
   {
@@ -1995,7 +1995,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=operon-model"
   },
   {
@@ -2013,7 +2013,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=landslide"
   },
   {
@@ -2032,7 +2032,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=le-chatelier"
   },
   {
@@ -2050,7 +2050,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lemon-battery"
   },
   {
@@ -2068,7 +2068,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=liquefaction"
   },
   {
@@ -2087,7 +2087,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=extraction"
   },
   {
@@ -2105,7 +2105,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=amortization"
   },
   {
@@ -2123,7 +2123,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lottery-ev"
   },
   {
@@ -2142,7 +2142,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lung-capacity"
   },
   {
@@ -2161,7 +2161,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mark-recapture"
   },
   {
@@ -2179,7 +2179,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=maze-solvers"
   },
   {
@@ -2197,7 +2197,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=memoization"
   },
   {
@@ -2215,7 +2215,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=microplastics"
   },
   {
@@ -2233,7 +2233,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=minimax-tictactoe"
   },
   {
@@ -2252,7 +2252,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mirage-tank"
   },
   {
@@ -2270,7 +2270,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=misinformation"
   },
   {
@@ -2289,7 +2289,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mitosis-onion"
   },
   {
@@ -2307,7 +2307,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mohs-hardness"
   },
   {
@@ -2325,7 +2325,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=molar-mass"
   },
   {
@@ -2343,7 +2343,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=monte-carlo-pi"
   },
   {
@@ -2362,7 +2362,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=monty-hall"
   },
   {
@@ -2380,7 +2380,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=moon-phases"
   },
   {
@@ -2398,7 +2398,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mousetrap-car"
   },
   {
@@ -2416,7 +2416,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=muller-lyer"
   },
   {
@@ -2434,7 +2434,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=multitasking"
   },
   {
@@ -2452,7 +2452,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=music-focus"
   },
   {
@@ -2471,7 +2471,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=mycorrhizae"
   },
   {
@@ -2489,7 +2489,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nqueens"
   },
   {
@@ -2507,7 +2507,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=corrosion-rust"
   },
   {
@@ -2525,7 +2525,7 @@
    "model": "cooling",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=newtons-cooling"
   },
   {
@@ -2543,7 +2543,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=newton-rings"
   },
   {
@@ -2562,7 +2562,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nitrogen-cycle"
   },
   {
@@ -2581,7 +2581,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=noise-pollution"
   },
   {
@@ -2599,7 +2599,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=nylon-rope"
   },
   {
@@ -2617,7 +2617,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ocean-acidification"
   },
   {
@@ -2635,7 +2635,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ocean-currents"
   },
   {
@@ -2656,7 +2656,7 @@
    "model": "circuit",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ohms-law"
   },
   {
@@ -2674,7 +2674,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=one-time-pad"
   },
   {
@@ -2693,7 +2693,7 @@
    "model": "osmosis",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=osmosis-potato"
   },
   {
@@ -2712,7 +2712,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pagerank-pennies"
   },
   {
@@ -2731,7 +2731,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=chromatography"
   },
   {
@@ -2749,7 +2749,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=parabolic-dish"
   },
   {
@@ -2767,7 +2767,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=parachute"
   },
   {
@@ -2785,7 +2785,7 @@
    "model": "cooling",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=peltier"
   },
   {
@@ -2804,7 +2804,7 @@
    "model": "pendulum",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pendulum-period"
   },
   {
@@ -2822,7 +2822,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=permeable-pavement"
   },
   {
@@ -2841,7 +2841,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=phi-phenomenon"
   },
   {
@@ -2861,7 +2861,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=photosynthesis-rate"
   },
   {
@@ -2880,7 +2880,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=phylogeny"
   },
   {
@@ -2899,7 +2899,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pi-estimation"
   },
   {
@@ -2918,7 +2918,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pillbugs-choice"
   },
   {
@@ -2937,7 +2937,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pitfall-traps"
   },
   {
@@ -2956,7 +2956,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=plant-tropism"
   },
   {
@@ -2975,7 +2975,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=polarimetry"
   },
   {
@@ -2994,7 +2994,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=polymer-slime"
   },
   {
@@ -3013,7 +3013,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pond-ecology"
   },
   {
@@ -3031,7 +3031,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=prisoners-dilemma"
   },
   {
@@ -3052,7 +3052,7 @@
    "model": "projectile",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=projectile-motion"
   },
   {
@@ -3070,7 +3070,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=pulley-advantage"
   },
   {
@@ -3088,7 +3088,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rack-pinion"
   },
   {
@@ -3107,7 +3107,7 @@
    "model": "exponential-decay",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=half-life"
   },
   {
@@ -3125,7 +3125,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-barrel"
   },
   {
@@ -3143,7 +3143,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-garden"
   },
   {
@@ -3161,7 +3161,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-gauge"
   },
   {
@@ -3179,7 +3179,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rain-shadow"
   },
   {
@@ -3197,7 +3197,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=random-walk"
   },
   {
@@ -3215,7 +3215,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ratchet"
   },
   {
@@ -3234,7 +3234,7 @@
    "model": "rate-temp",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reaction-rate-temp"
   },
   {
@@ -3252,7 +3252,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=recrystallization"
   },
   {
@@ -3271,7 +3271,7 @@
    "model": "titration",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=redox-balancing"
   },
   {
@@ -3289,7 +3289,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=resonance-tube"
   },
   {
@@ -3308,7 +3308,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=respiration-peas"
   },
   {
@@ -3326,7 +3326,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reverse-osmosis"
   },
   {
@@ -3344,7 +3344,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rubber-hand"
   },
   {
@@ -3362,7 +3362,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rule-72"
   },
   {
@@ -3380,7 +3380,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reflex-arc"
   },
   {
@@ -3398,7 +3398,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=reaction-time"
   },
   {
@@ -3416,7 +3416,7 @@
    "model": "pendulum",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=satellite-orbits"
   },
   {
@@ -3434,7 +3434,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sea-breeze"
   },
   {
@@ -3452,7 +3452,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seafloor-spreading"
   },
   {
@@ -3470,7 +3470,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seasons-tilt"
   },
   {
@@ -3488,7 +3488,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seed-germination"
   },
   {
@@ -3506,7 +3506,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=seismograph"
   },
   {
@@ -3525,7 +3525,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=distillation"
   },
   {
@@ -3543,7 +3543,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=siphon"
   },
   {
@@ -3561,7 +3561,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sleep-memory"
   },
   {
@@ -3580,7 +3580,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=earthquake-waves"
   },
   {
@@ -3598,7 +3598,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=soap-saponification"
   },
   {
@@ -3618,7 +3618,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=soil-permeability"
   },
   {
@@ -3636,7 +3636,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-cell"
   },
   {
@@ -3654,7 +3654,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-oven"
   },
   {
@@ -3672,7 +3672,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solar-tracker"
   },
   {
@@ -3690,7 +3690,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=solubility-temp"
   },
   {
@@ -3709,7 +3709,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sonometer"
   },
   {
@@ -3728,7 +3728,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sorting-race"
   },
   {
@@ -3747,7 +3747,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=spacing-effect"
   },
   {
@@ -3765,7 +3765,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=specific-heat"
   },
   {
@@ -3784,7 +3784,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=stokes-viscosity"
   },
   {
@@ -3803,7 +3803,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=erosion-stream"
   },
   {
@@ -3821,7 +3821,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=stroop-effect"
   },
   {
@@ -3839,7 +3839,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "HAZARDOUS",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=sublimation"
   },
   {
@@ -3858,7 +3858,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=supply-demand"
   },
   {
@@ -3877,7 +3877,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=surface-tension"
   },
   {
@@ -3896,7 +3896,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=taste-buds"
   },
   {
@@ -3914,7 +3914,7 @@
    "model": "optics",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=telescope-optics"
   },
   {
@@ -3933,7 +3933,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=material-tensile"
   },
   {
@@ -3951,7 +3951,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=terminal-velocity"
   },
   {
@@ -3969,7 +3969,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=compression"
   },
   {
@@ -3988,7 +3988,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=thermal-conduction"
   },
   {
@@ -4007,7 +4007,7 @@
    "model": "optics",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=lens-imaging"
   },
   {
@@ -4026,7 +4026,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=torque-lever"
   },
   {
@@ -4045,7 +4045,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=tower-stability"
   },
   {
@@ -4064,7 +4064,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=towers-hanoi"
   },
   {
@@ -4083,7 +4083,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=tragedy-commons"
   },
   {
@@ -4102,7 +4102,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=transect"
   },
   {
@@ -4120,7 +4120,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=dendrochronology"
   },
   {
@@ -4139,7 +4139,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=truss-bridge"
   },
   {
@@ -4158,7 +4158,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=turing-test"
   },
   {
@@ -4176,7 +4176,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=ultimatum-game"
   },
   {
@@ -4195,7 +4195,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=urban-heat"
   },
   {
@@ -4214,7 +4214,7 @@
    "model": "cooling",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vibration-damping"
   },
   {
@@ -4232,7 +4232,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vigenere"
   },
   {
@@ -4250,7 +4250,7 @@
    "model": "titration",
    "modelName": "",
    "safety_level": "ADULT-SUPERVISION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=vitamin-c"
   },
   {
@@ -4273,7 +4273,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=volcano-model"
   },
   {
@@ -4292,7 +4292,7 @@
    "model": "survey",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=voting-paradox"
   },
   {
@@ -4310,7 +4310,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-cycle"
   },
   {
@@ -4329,7 +4329,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-filtration"
   },
   {
@@ -4347,7 +4347,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=water-rocket"
   },
   {
@@ -4365,7 +4365,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=rocket-staging"
   },
   {
@@ -4384,7 +4384,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=wave-speed"
   },
   {
@@ -4402,7 +4402,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "CAUTION",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=wind-turbine"
   },
   {
@@ -4420,7 +4420,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 95,
+   "solved_records": 99,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=worm-gear"
   },
   {
@@ -4440,7 +4440,7 @@
    "model": "linear",
    "modelName": "",
    "safety_level": "SAFE-EDUCATIONAL",
-   "solved_records": 96,
+   "solved_records": 100,
    "deep_link": "https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?type=fermentation"
   }
  ]
