@@ -218,7 +218,7 @@ def build_sitemap(idx_rows, static_pages=None):
         entries + "\n</sitemapindex>\n")
     # static pages sitemap (home + browse views + pre-rendered experiment batch pages)
     static_entries = ['  <url><loc>%s%s</loc></url>\n' % (SITE, pg)
-                      for pg in ["", "?browse=az", "?browse=latest",
+                      for pg in ["", "browse.html",
                                  "methodology.html", "static/index.html"] +
                       ["static/" + f for f in (static_pages or [])]]
     open(os.path.join(ROOT, "pages.xml"), "w").write(
@@ -234,28 +234,31 @@ def build_sitemap(idx_rows, static_pages=None):
             os.remove(f)
 
 def stamp_count(count):
-    p = os.path.join(ROOT, "index.html")
-    if not os.path.exists(p):
-        return
-    h = open(p).read()
+    import re
     marker = "<!--STATIC-COUNT-->"
     stamp = ('<p class="staticcount">%s solved experiment records and counting — '
              'marching to 1,000,000.</p>' % f"{count:,}")
-    import re
     pat = re.escape(marker) + r"\n<p class=\"staticcount\">.*?</p>"
-    if re.search(pat, h):
-        # replace the stamped line in place (idempotent)
-        h = re.sub(pat, marker + "\n" + stamp, h, count=1)
-    else:
-        h = h.replace(marker, marker + "\n" + stamp, 1)
-    # collapse any stray duplicate stamp lines to exactly one
     dup = r"(<p class=\"staticcount\">.*?</p>)\n<p class=\"staticcount\">.*?</p>"
-    while re.search(dup, h):
-        h = re.sub(dup, r"\1", h, count=1)
-    # re-stamp the hero counter chip's initial content (what shows before JS loads)
-    h = re.sub(r'(<span id="expcount">)[^<]*(</span>)',
-               r"\g<1>%s\g<2>" % f"{count:,}", h, count=1)
-    open(p, "w").write(h)
+    # re-stamp every page carrying the static-count marker (index.html and
+    # browse.html) in the same run the index is rebuilt — never one run behind
+    for rel in ("index.html", "browse.html"):
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p):
+            continue
+        h = open(p).read()
+        if re.search(pat, h):
+            # replace the stamped line in place (idempotent)
+            h = re.sub(pat, marker + "\n" + stamp, h, count=1)
+        else:
+            h = h.replace(marker, marker + "\n" + stamp, 1)
+        # collapse any stray duplicate stamp lines to exactly one
+        while re.search(dup, h):
+            h = re.sub(dup, r"\1", h, count=1)
+        # re-stamp the hero counter chip's initial content (what shows before JS loads)
+        h = re.sub(r'(<span id="expcount">)[^<]*(</span>)',
+                   r"\g<1>%s\g<2>" % f"{count:,}", h, count=1)
+        open(p, "w").write(h)
 
 def generate(n, per_type=None):
     """Generate n new experiment rows. per_type mode: K per type (seed)."""

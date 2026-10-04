@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>try{if(localStorage.getItem("jah-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse the Full Experiment Archive A-Z — The Signature Experiment Solver</title>
+<meta name="description" content="The full catalog of every solved experiment from The Signature Experiment Solver: browse A-Z by solver type and A-Z by experiment name. Thousands of solved experiments marching to 1,000,000.">
+<link rel="canonical" href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/browse.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Browse the Full Experiment Archive A-Z — The Signature Experiment Solver">
+<meta property="og:description" content="The full catalog of every solved experiment: browse A-Z by solver type and A-Z by experiment name.">
+<meta property="og:url" content="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/browse.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Browse the Full Experiment Archive A-Z — The Signature Experiment Solver">
+<meta name="twitter:description" content="The full catalog of every solved experiment: browse A-Z by solver type and A-Z by experiment name.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Browse the Full Experiment Archive",
+"url":"https://justinahiggins614-cmyk.github.io/signature-experiment-solver/browse.html","isPartOf":{"@type":"WebSite","name":"The Signature Experiment Solver","url":"https://justinahiggins614-cmyk.github.io/signature-experiment-solver/"},
+"description":"The full A-Z catalog of solved experiments from The Signature Experiment Solver."}
+</script>
+<style>
+:root{--paper:#faf8f1;--ink:#1b2340;--muted:#5a6486;--accent:#0e7c4a;--accent2:#1565c0;
+--card:#ffffff;--line:#d9d4c3;--warn:#b26a00;--danger:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+a{color:var(--accent2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px}
+/* JAH NETWORK nav */
+.jahnet{background:#10162e;color:#dfe6ff;font-family:Arial,Helvetica,sans-serif;font-size:.78em;
+padding:8px 10px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;line-height:1.9}
+.jahnet-t{font-weight:bold;letter-spacing:.12em;color:#8fd0ff;margin-right:6px}
+.jahnet a{color:#c9d6ff;text-decoration:none;padding:2px 6px;border-radius:6px;white-space:nowrap}
+.jahnet a:hover{background:#24305e;color:#fff}
+.jahnet .here{background:#0e7c4a;color:#fff;font-weight:bold}
+.jahnet .soon{opacity:.55;font-style:italic}
+header.hero{background:linear-gradient(160deg,#0f2a1d,#123c28 60%,#0d3a5c);color:#f2f7f2;
+padding:34px 0 26px;border-bottom:6px solid var(--accent)}
+.hero h1{margin:0 0 4px;font-size:2em;letter-spacing:.02em}
+.hero .kick{color:#9fe8bd;letter-spacing:.28em;font-size:.75em;font-family:Arial}
+.hero p.sub{max-width:760px;color:#d7e6da}
+.prov{display:inline-block;background:#3a2c07;color:#ffd970;border:1px solid #8a6d1f;
+font-family:Arial;font-size:.72em;padding:4px 10px;border-radius:20px;margin-top:8px}
+.counter{display:flex;gap:14px;align-items:center;margin-top:14px;font-family:Arial;flex-wrap:wrap}
+.statscoll{margin:0}
+.statscoll>summary{display:none}
+@media(max-width:767px){.statscoll>summary{display:list-item;cursor:pointer;color:#cfe3d6;font-size:.85em;text-align:center;margin:10px 0 0;font-family:Arial}}
+.counter .big{font-size:1.5em;font-weight:bold;color:#fff}
+.counter .bar{flex:1;min-width:180px;height:12px;background:#0a1f14;border-radius:8px;overflow:hidden}
+.counter .bar i{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#7CFC00);width:0%}
+.staticcount{font-family:Arial;font-size:.85em;color:var(--muted)}
+section.block{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:18px;margin:18px 0;box-shadow:0 2px 8px rgba(27,35,64,.06)}
+h2.sec{font-family:Arial;margin:0 0 10px;font-size:1.15em;color:var(--accent);
+border-bottom:2px solid var(--accent);padding-bottom:6px}
+textarea#expinput{width:100%;min-height:96px;font-family:Georgia,serif;font-size:1.05em;
+padding:12px;border:2px solid var(--line);border-radius:10px;resize:vertical;background:#fffdf6}
+textarea#expinput:focus{outline:none;border-color:var(--accent)}
+.solverow{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:center}
+select#typesel{font-size:1em;padding:10px;border-radius:8px;border:2px solid var(--line);max-width:100%}
+.btn{font-family:Arial;font-weight:bold;border:none;border-radius:10px;cursor:pointer;
+padding:12px 22px;font-size:1em}
+.btn.go{background:var(--accent);color:#fff}
+.btn.go:hover{background:#0a5f39}
+.btn.ghost{background:#eef1f6;color:var(--ink);border:1px solid var(--line)}
+.btn.small{padding:7px 12px;font-size:.85em}
+#result{display:none}
+.exphead{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.exphead h3{margin:0;font-size:1.4em}
+.pill{font-family:Arial;font-size:.72em;background:#e8f3ec;color:#0b5c36;border:1px solid #9fd3b4;
+padding:3px 10px;border-radius:14px}
+.pill.id{background:#e8eefb;color:#1a3a8f;border-color:#a9bdea}
+.simnote{background:#fff8e1;border:1px solid #e8c547;color:#7a5b00;font-family:Arial;font-size:.82em;
+padding:10px 14px;border-radius:8px;margin:12px 0}
+.expgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.expgrid{grid-template-columns:1fr}}
+.expgrid h4{font-family:Arial;margin:0 0 6px;color:var(--accent2);font-size:.95em}
+.expgrid ul,.expgrid ol{margin:6px 0;padding-left:22px}
+table.data{border-collapse:collapse;width:100%;font-family:Arial;font-size:.9em;margin:8px 0}
+table.data th,table.data td{border:1px solid var(--line);padding:6px 10px;text-align:right}
+table.data th{background:#eef4ee;text-align:right}
+table.data td:first-child,table.data th:first-child{text-align:left}
+canvas.chart{width:100%;max-width:640px;height:300px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.safetybox{background:#fdecea;border:1px solid #e8a49e;border-radius:8px;padding:10px 14px;margin:12px 0}
+.safetybox h4{font-family:Arial;color:var(--danger);margin:0 0 6px}
+/* sidebar AI */
+#aiToggle{position:fixed;right:14px;bottom:14px;z-index:9000;background:var(--accent2);color:#fff;
+border:none;border-radius:50%;width:58px;height:58px;font-size:1.6em;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+#aiPanel{position:fixed;right:0;top:0;bottom:0;width:min(380px,94vw);background:#fff;z-index:9001;
+border-left:3px solid var(--accent2);display:none;flex-direction:column;font-family:Arial;
+box-shadow:-6px 0 20px rgba(0,0,0,.2)}
+#aiPanel.open{display:flex}
+#aiScrim{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:8999;display:none}
+#aiScrim.on{display:block}
+#aiPanel .aihead{background:var(--accent2);color:#fff;padding:12px 14px;font-weight:bold;display:flex;justify-content:space-between;align-items:center}
+#aiLog{flex:1;overflow-y:auto;padding:12px;font-size:.9em}
+#aiLog .q{background:#e8eefb;border-radius:8px;padding:8px 10px;margin:8px 0 4px}
+#aiLog .a{background:#f1f5f1;border-radius:8px;padding:8px 10px;margin:0 0 8px}
+#aiForm{display:flex;border-top:1px solid var(--line)}
+#aiForm input{flex:1;border:none;padding:12px;font-size:.95em}
+#aiForm button{background:var(--accent2);color:#fff;border:none;padding:0 18px;cursor:pointer;font-weight:bold}
+/* A-Z */
+.azletters{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;font-family:Arial;position:sticky;top:0;z-index:30;background:var(--paper);padding:8px 0}
+.azletters a{background:#eef1f6;border:1px solid var(--line);border-radius:6px;padding:4px 10px;
+text-decoration:none;color:var(--ink);font-weight:bold}
+.azletters a.on,.azletters a:hover{background:var(--accent);color:#fff}
+.typegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:10px}
+.tcard{border:1px solid var(--line);border-radius:8px;padding:10px;background:#fffdf6;cursor:pointer}
+.tcard:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(14,124,74,.15)}
+.tcard b{font-size:.95em}
+.tcard .d{font-family:Arial;font-size:.72em;color:var(--muted)}
+.tcard .bl{font-size:.82em;color:#3c4568;margin-top:4px}
+/* catalog */
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-top:10px}
+.ccard{border:1px solid var(--line);border-radius:8px;padding:10px;background:#fff;cursor:pointer}
+.ccard:hover{border-color:var(--accent2)}
+.ccard .cid{font-family:Arial;font-size:.72em;color:var(--accent2);font-weight:bold}
+.ccard b{font-size:.92em;display:block;margin:2px 0}
+#catsearch{width:100%;padding:10px;font-size:1em;border:2px solid var(--line);border-radius:8px}
+/* audio bar */
+#aubar{position:fixed;left:0;right:0;bottom:0;background:#10162e;color:#dfe6ff;z-index:9002;
+display:none;align-items:center;gap:10px;padding:10px 14px;font-family:Arial;font-size:.9em;flex-wrap:wrap}
+#aubar button{background:#24305e;color:#fff;border:1px solid #3d4c80;border-radius:8px;padding:8px 14px;cursor:pointer}
+#audmsg{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#0a0f22;
+border:1px solid #00f0ff;color:#d7e3ff;padding:10px 18px;border-radius:10px;z-index:10001;
+font-size:.9em;max-width:92vw;text-align:center;display:none;font-family:Arial}
+footer.site{background:#10162e;color:#aeb9dd;font-family:Arial;font-size:.82em;padding:26px 0;margin-top:30px}
+footer.site a{color:#8fd0ff}
+.method{font-size:.92em;color:#3c4568}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:10002}
+/* mad-scientist laboratory theme for the run */
+.lab{background:linear-gradient(180deg,#141126,#1e1a38);color:#e9e5ff;border:2px solid #7CFC00;
+border-radius:14px;padding:18px;margin:8px 0;box-shadow:0 0 26px rgba(124,252,0,.14)}
+.lab h3{color:#7CFC00;font-family:Arial,Helvetica,sans-serif;margin:0 0 2px;font-size:1.25em;letter-spacing:.03em}
+.lab .labsub{font-family:Arial,Helvetica,sans-serif;font-size:.82em;color:#b9b3e6;margin:0 0 8px}
+.lab .steps{display:flex;gap:8px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:.76em;margin:10px 0 4px}
+.lab .step{background:#0c0a1c;border:1px solid #3a3560;color:#b9b3e6;padding:6px 12px;border-radius:20px}
+.lab .step.done{border-color:#7CFC00;color:#7CFC00;font-weight:bold}
+table.mx{border-collapse:collapse;width:100%;font-family:'Courier New',Courier,monospace;font-size:.86em;margin:10px 0}
+table.mx th,table.mx td{border:1px solid #3a3560;padding:7px 10px;text-align:right;color:#e9e5ff}
+table.mx th{background:#241f45;color:#7CFC00}
+table.mx td:first-child,table.mx th:first-child{text-align:left;color:#ffd970}
+table.mx tr:nth-child(even) td{background:rgba(124,252,0,.05)}
+.lab .simnote2{background:#0c0a1c;border:1px dashed #7CFC00;color:#c9f5a8;font-family:Arial,Helvetica,sans-serif;
+font-size:.8em;padding:9px 13px;border-radius:8px;margin:10px 0}
+ol.findings{font-family:Arial,Helvetica,sans-serif;margin:8px 0;padding-left:24px}
+ol.findings li{margin:9px 0;line-height:1.5}
+ol.findings li::marker{color:#7CFC00;font-weight:bold}
+.labconcl{background:#0c0a1c;border-left:4px solid #7CFC00;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.labconcl h4{font-family:Arial,Helvetica,sans-serif;color:#7CFC00;margin:0 0 6px}
+.labconcl p{margin:0}
+/* diagnostic hardening: progress, sticky search, sim badge, compare */
+#simprog{display:none;margin-top:10px;font-family:Arial;background:#0c0a1c;border:1px solid #7CFC00;border-radius:10px;padding:10px 14px}
+#simprog .pbar{height:12px;background:#1e1a38;border-radius:8px;overflow:hidden;margin-top:6px}
+#simprog .pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#22c55e,#7CFC00);transition:width .25s}
+#simprog .pstep{color:#7CFC00;font-size:.85em}
+.btn.go:disabled{opacity:.55;cursor:wait}
+.catsearchwrap{position:sticky;top:52px;z-index:39;background:var(--card);padding:8px 0;border-bottom:1px solid var(--line)}
+#catcount{font-family:Arial;font-size:.8em;color:var(--muted);margin-left:8px}
+.simbadge{background:#b3261e;color:#fff;font-family:Arial;font-weight:bold;font-size:1.05em;
+letter-spacing:.06em;text-align:center;padding:12px;border-radius:10px;margin:12px 0;
+border:3px solid #7a1410;box-shadow:0 0 18px rgba(179,38,30,.35)}
+.simbadge small{display:block;font-weight:normal;font-size:.72em;letter-spacing:0;margin-top:4px}
+.permalink{font-family:Arial;font-size:.82em;color:var(--muted);margin:8px 0;word-break:break-all}
+.permalink a{font-weight:bold}
+/* ---- batch-E 10-fix pass: status pill, record panel, AI identity card ---- */
+.pill.status{background:#fdecea;color:#b3261e;border-color:#e8a49e;font-weight:700}
+.recpanel{display:flex;flex-wrap:wrap;gap:8px 18px;background:#fffdf6;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:12px 0;font-family:Arial;font-size:.82em;color:var(--muted);align-items:center}
+.recpanel .rp b{color:var(--accent);font-weight:700;margin-right:4px}
+.aicard{background:#eef4ee;border:1px solid var(--accent);border-radius:10px;padding:10px 12px;margin:0 12px 4px;font-size:.82em}
+.aicard b{color:var(--accent)}
+table.cmp{border-collapse:collapse;width:100%;font-family:Arial;font-size:.88em;margin:10px 0}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:#eef4ee;width:34%}
+.expgrid h4{margin-top:12px}
+@media(max-width:760px){
+.lab{padding:12px}
+.lab h3{font-size:1.05em}
+.lab .steps{font-size:.68em;gap:6px}
+.lab .step{padding:5px 9px}
+table.mx{font-size:.78em}
+.simbadge{font-size:.92em}
+.catsearchwrap{top:46px}
+}
+</style>
+<style>
+/* ---- browse.html additions (appended, never restyling index.html) ---- */
+.browsesec{margin:26px 0}
+.letterdet{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0}
+.letterdet>summary{cursor:pointer;padding:10px 14px;font-family:Arial;font-weight:bold;font-size:1.05em;list-style:none}
+.letterdet>summary::-webkit-details-marker{display:none}
+.letterdet>summary:before{content:"\25B6";margin-right:8px;color:var(--accent);font-size:.8em}
+.letterdet[open]>summary:before{content:"\25BC"}
+.letterdet .lbody{padding:4px 14px 12px}
+.tdet{border-top:1px solid var(--line);padding:6px 0}
+.tdet>summary{cursor:pointer;font-family:Arial;list-style:none;padding:4px 0}
+.tdet>summary::-webkit-details-marker{display:none}
+.tdet .tname{font-weight:bold}
+.explist{list-style:none;margin:8px 0 8px 12px;padding:0;font-family:Arial;font-size:.92em}
+.explist li{margin:5px 0;line-height:1.45}
+.explist .eid{color:var(--muted);font-size:.85em}
+.bsearchwrap{position:relative;margin:14px 0}
+#bsearch{width:100%;padding:12px 14px;font-size:1em;border:2px solid var(--line);border-radius:10px;font-family:Arial}
+#bresults{margin:10px 0 0}
+.bloadstatus{font-family:Arial;font-size:.82em;color:var(--muted);margin-left:8px}
+.bloadstatus.loading{color:var(--warn)}
+.bloadstatus.ready{color:var(--accent)}
+.bloadstatus.error{color:var(--danger)}
+.muted{color:var(--muted);font-weight:normal;font-size:.85em}
+.capnote{font-family:Arial;font-size:.82em;color:var(--muted);margin:8px 0}
+</style>
+</head>
+<body>
+<a class="skip" href="#browse">Skip to the archive</a>
+<nav class="jahnet" aria-label="JAH Network Global Ecosystem" role="navigation"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/signature-math/">1 Signature Math</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 Wiki Leaks</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">6 Signature Llama: The Fully Cyber Utilizable AI</a><a href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">7 The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">8 Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">9 Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">10 The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">11 The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">12 The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">13 The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">14 The Signature AI Mad Scientist Creation Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">15 The Signature Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">16 The Signature AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">17 AI Olypics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">18 The Signature Computer Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">19 The Signature App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">20 The Signature AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/" class="here" aria-current="page">21 The Signature Experiment Solver — YOU ARE HERE</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">22 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-song-maker/">23 Signature Music Studio</a><a href="https://justinahiggins614-cmyk.github.io/signature-fixit/">24 The Signature Mr Fix-It</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">25 The Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">26 The Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">27 The Signature 3D Print Depository</a></nav>
+<div class="wrap">
+<header class="hero">
+<div class="wrap">
+<div class="kick">SITE 21 OF 27 &middot; THE JAH NETWORK</div>
+<h1>&#128218; Browse the Full Experiment Archive</h1>
+<p class="sub">Every solved experiment the Signature Experiment Solver has ever run &mdash; the full catalog, A&ndash;Z by solver type and A&ndash;Z by experiment name. Open any record for its hypothesis, Universal Matrix, findings, charts, and conclusion.</p>
+<details class="statscoll" open><summary>Archive statistics</summary><div class="counter" role="status" aria-live="polite">
+<span class="big"><span id="expcount">17,925</span> / 1,000,000</span>
+<div class="bar" aria-hidden="true"><i id="expbar"></i></div>
+<span>solved experiments</span><br>
+<span id="bloadstatus" class="bloadstatus ready" role="status" aria-live="polite">DATA READY</span>
+<span id="countsrc" class="countsrc"></span>
+<button class="btn ghost small" id="bretry" style="display:none;margin-top:8px">&#8635; Retry loading</button>
+</div></details>
+<!--STATIC-COUNT-->
+<p class="staticcount">17,925 solved experiment records and counting — marching to 1,000,000.</p>
+<p><a class="btn go" href="index.html">&#9889; Back to the solver</a> <a class="btn ghost" href="methodology.html">How it works</a></p>
+</div>
+</header>
+
+<main id="browse">
+<section class="block browsesec" aria-label="Search the archive">
+<h2 class="sec">Search the Archive</h2>
+<div class="bsearchwrap"><input id="bsearch" type="search" placeholder="Search experiment titles, IDs, disciplines&hellip;" aria-label="Search solved experiments"><div id="bresults" role="status"></div></div>
+</section>
+
+<section class="block browsesec" aria-label="Browse by solver type">
+<h2 class="sec">Browse by Solver Type <span class="pill">240 solver types</span></h2>
+<p style="font-family:Arial;color:var(--muted)">Open a letter, then a solver type, to see every experiment ever solved with it. Records open in the solver with the full <b>SIMULATION</b> view.</p>
+<div id="typeletters"><p class="muted">Open any letter below to load the type index&hellip;</p></div>
+</section>
+
+<section class="block browsesec" aria-label="Browse by experiment name">
+<h2 class="sec">Browse by Experiment Name</h2>
+<p style="font-family:Arial;color:var(--muted)">Every solved experiment, A&ndash;Z by its title.</p>
+<div id="nameletters"><p class="muted">Open any letter below to load the experiment index&hellip;</p></div>
+</section>
+</main>
+
+<footer class="block" style="margin-top:26px">
+<p style="font-family:Arial;color:var(--muted)"><a href="index.html">The Signature Experiment Solver</a> &middot; <a href="methodology.html">methodology</a> &middot; <a href="experiment-manifest.json">experiment-manifest.json</a> (authoritative count) &middot; <a href="api.json">api.json</a> &middot; <a href="sitemap.xml">sitemap</a></p>
+<p style="font-family:Arial;color:var(--muted)"><b>Honest science:</b> every record is a solver-computed <b>SIMULATION</b>, labeled as such &mdash; never presented as laboratory-measured data. See <a href="methodology.html">methodology.html</a>.</p>
+</footer>
+</div>
+<script>
+
+var TYPES=null, INDEX=null, BYTYPE=null, MANI=null;
+var LOADSTATE="IDLE", WAITERS=[];
+function E(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function setBLoad(s,msg){
+  LOADSTATE=s;
+  var el=document.getElementById("bloadstatus");if(!el)return;
+  el.className="bloadstatus "+s.toLowerCase();
+  el.textContent=s==="READY"?"DATA READY":s==="LOADING"?"LOADING DATA\u2026":s+(msg?" \u2014 "+msg:"");
+  var rb=document.getElementById("bretry");if(rb)rb.style.display=(s==="ERROR")?"":"none";
+}
+function gzResp(r){var s=r.body.pipeThrough(new DecompressionStream("gzip"));return new Response(s).text();}
+function fetchTimeout(url,ms){
+  return new Promise(function(res,rej){
+    var t=setTimeout(function(){rej(new Error("timeout after "+ms+"ms"));},ms||20000);
+    fetch(url).then(function(r){clearTimeout(t);res(r);},function(e){clearTimeout(t);rej(e);});
+  });
+}
+function ensureData(cb){
+  if(TYPES&&INDEX){cb(null);return;}
+  WAITERS.push(cb);
+  if(LOADSTATE==="LOADING")return;
+  if(LOADSTATE==="ERROR"){var w=WAITERS;WAITERS=[];for(var i=0;i<w.length;i++)w[i](new Error("load failed"));return;}
+  LOADSTATE="LOADING";setBLoad("LOADING");
+  var pT=fetchTimeout("code/solver_types.json",20000).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();});
+  var pI=fetchTimeout("data/index.json.gz",20000).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return gzResp(r);}).then(function(t){return JSON.parse(t);});
+  var pM=fetchTimeout("experiment-manifest.json",20000).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+  Promise.all([pT,pI,pM]).then(function(v){
+    TYPES=v[0];INDEX=v[1];MANI=v[2];
+    BYTYPE={};
+    for(var i=0;i<INDEX.length;i++){var r=INDEX[i];(BYTYPE[r[1]]=BYTYPE[r[1]]||[]).push(r);}
+    setBLoad("READY");
+    paintBCount(MANI&&MANI.total_experiments?MANI.total_experiments:INDEX.length);
+    var w=WAITERS;WAITERS=[];for(var j=0;j<w.length;j++)w[j](null);
+  },function(e){
+    LOADSTATE="ERROR";setBLoad("ERROR",String(e&&e.message||e));
+    var w=WAITERS;WAITERS=[];for(var i=0;i<w.length;i++)w[i](e);
+  });
+}
+function paintBCount(c){
+  var el=document.getElementById("expcount");if(el)el.textContent=Number(c).toLocaleString();
+  var bar=document.getElementById("expbar");if(bar)bar.style.width=Math.min(100,Number(c)/10000)+"%";
+  var sr=document.getElementById("countsrc");if(sr)sr.textContent="Count source: experiment-manifest.json";
+}
+function letterOf(name){var c=String(name||"").trim().charAt(0).toUpperCase();return(c>="A"&&c<="Z")?c:"#";}
+function expLink(r){return '<li><a href="index.html?exp='+E(r[0])+'">'+E(r[0])+'</a> <span class="eid">'+E(r[3])+'</span> <span class="pill">'+E(r[4])+'</span></li>';}
+function renderTypeLetters(){
+  var host=document.getElementById("typeletters");if(!host||host.getAttribute("data-built"))return;
+  host.setAttribute("data-built","1");
+  var groups={};
+  TYPES.slice().sort(function(a,b){return a.name<b.name?-1:1;}).forEach(function(t){
+    var L=letterOf(t.name);(groups[L]=groups[L]||[]).push(t);
+  });
+  var order=Object.keys(groups).sort(function(a,b){return a==="#"?1:b==="#"?-1:a<b?-1:1;});
+  host.innerHTML=order.map(function(L){
+    var ts=groups[L];
+    var inner=ts.map(function(t){
+      var n=(BYTYPE[t.key]||[]).length;
+      return '<details class="tdet" data-tkey="'+E(t.key)+'"><summary><span class="tname">'+E(t.name)+'</span> '+
+        '<span class="pill">'+E(t.discipline)+'</span> <span class="pill id">'+n+' solved</span></summary>'+
+        '<div class="tbody"><p class="muted">'+E(t.blurb||"")+' <a href="index.html?type='+E(t.key)+'">Open solver type \u2192</a></p><div class="tlist"></div></div></details>';
+    }).join("");
+    return '<details class="letterdet"><summary>'+(L==="#"?"#":E(L))+' <span class="muted">'+ts.length+' solver types</span></summary><div class="lbody">'+inner+'</div></details>';
+  }).join("");
+}
+function renderNameLetters(){
+  var host=document.getElementById("nameletters");if(!host||host.getAttribute("data-built"))return;
+  host.setAttribute("data-built","1");
+  var groups={};
+  for(var i=0;i<INDEX.length;i++){var r=INDEX[i];var L=letterOf(r[3]);(groups[L]=groups[L]||[]).push(r);}
+  var order=Object.keys(groups).sort(function(a,b){return a==="#"?1:b==="#"?-1:a<b?-1:1;});
+  host.innerHTML=order.map(function(L){
+    return '<details class="letterdet" data-nletter="'+E(L)+'"><summary>'+(L==="#"?"#":E(L))+' <span class="muted">'+groups[L].length.toLocaleString()+' experiments</span></summary><div class="lbody"><div class="nlist"></div></div></details>';
+  }).join("");
+}
+function fillTypeBody(det){
+  var body=det.querySelector(".tlist");if(!body||body.getAttribute("data-done"))return;
+  body.setAttribute("data-done","1");
+  var rows=BYTYPE[det.getAttribute("data-tkey")]||[];
+  body.innerHTML='<ul class="explist">'+rows.map(expLink).join("")+'</ul>';
+}
+function fillNameBody(det){
+  var body=det.querySelector(".nlist");if(!body||body.getAttribute("data-done"))return;
+  body.setAttribute("data-done","1");
+  var L=det.getAttribute("data-nletter");
+  var rows=INDEX.filter(function(r){return letterOf(r[3])===L;});
+  var cap=400, shown=rows.slice(0,cap);
+  body.innerHTML='<ul class="explist">'+shown.map(expLink).join("")+'</ul>'+
+    (rows.length>cap?'<p class="capnote">Showing '+cap+' of '+rows.length.toLocaleString()+' \u2014 use the search box above to narrow it down.</p>':"");
+}
+function doSearch(q){
+  var host=document.getElementById("bresults");
+  q=String(q||"").trim().toLowerCase();
+  if(!q){host.innerHTML="";return;}
+  var hits=[],qn=q.replace(/^jah-exp-?/,"");
+  for(var i=0;i<INDEX.length&&hits.length<200;i++){
+    var r=INDEX[i];
+    if(r[0].toLowerCase().indexOf(q)>=0||r[0].toLowerCase().indexOf(qn)>=0||r[3].toLowerCase().indexOf(q)>=0||r[4].toLowerCase().indexOf(q)>=0)hits.push(r);
+  }
+  host.innerHTML='<p class="capnote">'+hits.length+(hits.length>=200?"+":"")+' matching experiment'+(hits.length===1?"":"s")+'</p>'+
+    '<ul class="explist">'+hits.slice(0,60).map(expLink).join("")+'</ul>'+
+    (hits.length>60?'<p class="capnote">Showing first 60 \u2014 refine your search.</p>':"");
+}
+document.addEventListener("DOMContentLoaded",function(){
+  document.getElementById("bretry").onclick=function(){LOADSTATE="IDLE";TYPES=null;INDEX=null;BYTYPE=null;document.getElementById("typeletters").removeAttribute("data-built");document.getElementById("nameletters").removeAttribute("data-built");ensureData(function(e){if(!e){renderTypeLetters();renderNameLetters();}});};
+  document.getElementById("bsearch").addEventListener("input",function(ev){
+    var q=ev.target.value;
+    ensureData(function(e){if(!e)doSearch(q);});
+  });
+  document.addEventListener("toggle",function(ev){
+    var det=ev.target;
+    if(!(det instanceof HTMLDetailsElement)||!det.open)return;
+    if(det.classList.contains("tdet")||det.classList.contains("letterdet")){
+      ensureData(function(e){if(e)return;
+        renderTypeLetters();renderNameLetters();
+        if(det.classList.contains("tdet"))fillTypeBody(det);
+        else if(det.getAttribute("data-nletter"))fillNameBody(det);
+      });
+    }
+  },true);
+});
+
+</script>
+</body>
+</html>
