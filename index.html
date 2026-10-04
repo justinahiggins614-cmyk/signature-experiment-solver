@@ -993,7 +993,7 @@ border-radius:8px;padding:.6em .9em;margin:.8em 0;line-height:1.7}
 .discfilter{margin:8px 0;font-family:Arial}
 .discfilter select{font-size:.9em;padding:.35em;border:1px solid var(--line);border-radius:6px}
 .srchelp{font-family:Arial;font-size:.78em;color:var(--muted);margin-top:6px}
-/* fix-wave: first-time guide + spotlight tour (theme untouched) */
+/* first-time guide + welcome tour (theme untouched) */
 #jahGuideBtn{position:fixed;left:14px;bottom:14px;z-index:9001;min-height:44px;padding:10px 16px;border-radius:24px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-family:Arial;font-weight:bold;font-size:.9em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 #jahGuideBtn:hover{border-color:var(--accent)}
 #jahGuide{position:fixed;left:14px;bottom:70px;z-index:9500;width:min(430px,calc(100vw - 28px));max-height:min(72vh,640px);overflow:auto;background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:16px 18px;font-family:Arial;display:none;box-shadow:0 8px 30px rgba(0,0,0,.25)}
@@ -1003,16 +1003,16 @@ border-radius:8px;padding:.6em .9em;margin:.8em 0;line-height:1.7}
 #jahGuide p,#jahGuide li{font-size:.85em;line-height:1.55}
 #jahGuide ul{margin:4px 0;padding-left:1.2em}
 #jahGuide .gclose{float:right;min-height:44px;min-width:44px;border:1px solid var(--line);background:#eef1f6;border-radius:8px;font-weight:bold;cursor:pointer;font-size:1em}
-.jah-tour-spot{position:fixed;z-index:9600;border:3px solid var(--accent2);border-radius:10px;box-shadow:0 0 0 9999px rgba(10,14,30,.55);pointer-events:none;transition:top .25s,left .25s,width .25s,height .25s;display:none}
-#jahTourCard{position:fixed;z-index:9601;width:min(360px,calc(100vw - 28px));background:var(--card);border:2px solid var(--accent2);border-radius:12px;padding:14px 16px;font-family:Arial;display:none;box-shadow:0 8px 30px rgba(0,0,0,.3)}
-#jahTourCard.open{display:block}
-#jahTourCard h4{margin:0 0 6px;color:var(--accent2);font-size:1em}
-#jahTourCard .trow{margin:8px 0;font-size:.86em;line-height:1.5}
-#jahTourCard .trow b{color:var(--accent)}
-#jahTourCard .tnav{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-#jahTourCard .tnav button{min-height:44px;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:#eef1f6;color:var(--ink);font-weight:bold;cursor:pointer;font-size:.92em;font-family:Arial}
-#jahTourCard .tnav button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-#jahTourCard .tstep{font-size:.74em;color:var(--muted);margin-top:8px}
+/* TOUR FIX 2026-10-04: welcome overlay only — no auto-scroll, no spotlight, no screen-leading. */
+#jahTourOver{position:fixed;inset:0;z-index:9700;background:rgba(6,10,24,.62);display:none;overflow:auto;padding:18px 14px}
+#jahTourOver.open{display:block}
+#jahTourModal{position:relative;margin:6vh auto 0;width:min(480px,94vw);background:var(--card);border:2px solid var(--accent);border-radius:14px;padding:20px 20px 16px;font-family:Arial;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#jahTourModal h3{margin:0 0 8px;font-size:1.1em;color:var(--accent)}
+#jahTourModal ol{margin:8px 0 4px;padding-left:1.3em}
+#jahTourModal li{margin:9px 0;font-size:.9em;line-height:1.55}
+#jahTourModal .touract{margin-top:16px;text-align:center}
+#jahTourOk{min-height:52px;padding:14px 46px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:bold;font-size:1.05em;font-family:Arial;cursor:pointer}
+#jahTourHelp{display:block;margin:10px auto 0;background:none;border:none;color:var(--accent2);text-decoration:underline;cursor:pointer;font-size:.85em;font-family:Arial;min-height:44px}
 </style>
 <button id="jahGuideBtn" aria-haspopup="dialog" aria-controls="jahGuide" title="How to use this site">? Guide</button>
 <aside id="jahGuide" role="dialog" aria-label="How to use the Experiment Solver" aria-hidden="true">
@@ -1056,90 +1056,49 @@ border-radius:8px;padding:.6em .9em;margin:.8em 0;line-height:1.7}
 <p>Open <b>?verify=JAH-EXP-000001</b> — the site re-solves the record from its deterministic seed and compares its hash with the published one.</p>
 <p style="color:var(--muted)">Full detail: <a href="methodology.html">methodology.html</a> · <a href="docs/DETERMINISM.md">determinism spec</a></p>
 </aside>
-<div class="jah-tour-spot" id="jahTourSpot" aria-hidden="true"></div>
-<div id="jahTourCard" role="dialog" aria-label="Site tour"></div>
+<div id="jahTourOver" aria-hidden="true">
+<div id="jahTourModal" role="dialog" aria-modal="true" aria-labelledby="jahTourH">
+<h3 id="jahTourH">Welcome to the Experiment Solver</h3>
+<ol>
+<li>Describe <b>any</b> experiment in plain words — for example, "Drop a steel ball from 10 meters and time the fall" — then press <b>▶ Run Experiment</b>.</li>
+<li>Leave <b>Auto-select</b> on, or pick one of the <b>240 solver types</b> yourself. Press <b>🎲 Surprise me</b> for a random safe experiment.</li>
+<li>The site runs a <b>computer model</b> — a step-by-step <b>SIMULATION</b> with computed numbers, never a real experiment. You get findings, a measurements table, a chart, and a conclusion. Every record gets its own <b>JAH-EXP number</b> and permanent link.</li>
+<li>Every run is solved <b>once</b> and stored forever — search or browse the archive of solved experiments any time.</li>
+</ol>
+<div class="touract"><button id="jahTourOk">Got it</button></div>
+<button id="jahTourHelp">Full guide</button>
+</div>
+</div>
 <script>
-/* fix-wave: first-time guide + spotlight tour. localStorage jah-tour-seen-solver. */
+/* TOUR FIX 2026-10-04: welcome overlay only. localStorage jah-tour-seen-solver. No auto-scroll, no spotlight. */
 (function(){
 var SEEN="jah-tour-seen-solver";
-var steps=[
- {sel:"#expinput",t:"1 · Describe your experiment",w:"Type any experiment in plain words.",d:"The solver reads your words and picks the right model for it.",h:"Try: \u201cDrop a steel ball from 10 meters and time the fall.\u201d"},
- {sel:"#typesel",t:"2 · Solver types",w:"240 ready-made solver models, one per experiment kind.",d:"Each model carries its own built-in physics, chemistry, or statistics math.",h:"Leave it on Auto-select and the site picks \u2014 or choose a solver yourself."},
- {sel:"#runbtn",t:"3 · Run Experiment",w:"Runs the computer model of your experiment \u2014 a step-by-step simulation.",d:"You get a full record: Universal Matrix (3 trials per setting), all findings, measurements, a chart, and a conclusion.",h:"Press \u25b6 Run Experiment \u2014 or \ud83c\udfb2 Surprise me for a random safe experiment."},
- {sel:"#result",dock:true,t:"4 · Results",w:"Every run renders a full record: question, hypothesis, variables, materials, procedure, matrix, findings, results, chart, conclusion.",d:"Every record is labeled SIMULATION \u2014 computed numbers, never lab measurements. Each has its own JAH-EXP number and permanent link.",h:"Run anything once and the record is yours to revisit forever."},
- {sel:"#catsearch",t:"5 · Archive search",w:"Search the whole solved-experiment archive \u2014 14,925 records and counting.",d:"Matches titles, disciplines, and exact record IDs.",h:"Tip: type JAH-EXP-000123 for an exact record. Use Show more and the Discipline filter to browse."},
- {dock:true,t:"6 · Read aloud",w:"Every record can be read to you.",d:"Press \ud83d\udd0a Read aloud on any record \u2014 a floating bar follows the reading with Pause and Stop.",h:"The tiered voice engine keeps going even if one voice fails on your device."},
- {dock:true,t:"7 · Download & share",w:"Keep any record: Copy, download .txt / .json / .csv, copy its link, share it, or compare two runs side by side.",d:"Ran it for real? \u201cAdd my measurements\u201d stores YOUR numbers next to the simulation \u2014 never overwriting it.",h:"That is the whole site. Enjoy the lab \u2014 it never closes."}
-];
-var card=document.getElementById("jahTourCard"),spot=document.getElementById("jahTourSpot"),i=-1,open=false;
+var over=document.getElementById("jahTourOver");
 function seen(){try{return localStorage.getItem(SEEN)==="1";}catch(e){return true;}}
 function mark(){try{localStorage.setItem(SEEN,"1");}catch(e){}}
-function visible(el){if(!el)return false;var r=el.getBoundingClientRect();return r.width>4&&r.height>4;}
-function show(n){
-  i=n;open=true;card.classList.add("open");
-  if(n<0){
-    spot.style.display="none";
-    card.innerHTML="<h4>Welcome to the Experiment Solver</h4><div class='trow'>New here? Take the <b>1-minute tour</b> \u2014 describe, run, results, archive, read-aloud, downloads.</div><div class='tnav'><button class='primary' id='jtStart'>Start tour</button><button id='jtSkip'>Skip</button></div><div class='tstep'>Esc closes \u00b7 you can replay anytime from ? Guide</div>";
-    dockCard();
-    document.getElementById("jtStart").onclick=function(){show(0);};
-    document.getElementById("jtSkip").onclick=end;
-    return;
-  }
-  var s=steps[n],el=s.sel?document.querySelector(s.sel):null;
-  card.innerHTML="<h4>"+s.t+"</h4><div class='trow'><b>What:</b> "+s.w+"</div><div class='trow'><b>What it does:</b> "+s.d+"</div><div class='trow'><b>How:</b> "+s.h+"</div><div class='tnav'>"+(n>0?"<button id='jtBack'>\u2190 Back</button>":"")+(n<steps.length-1?"<button class='primary' id='jtNext'>Next \u2192</button>":"<button class='primary' id='jtDone'>Done</button>")+"<button id='jtSkip2'>Skip tour</button></div><div class='tstep'>Step "+(n+1)+" of "+steps.length+" \u00b7 \u2190 \u2192 keys work \u00b7 Esc closes</div>";
-  var b=document.getElementById("jtBack");if(b)b.onclick=function(){show(n-1);};
-  var nx=document.getElementById("jtNext");if(nx)nx.onclick=function(){show(n+1);};
-  var dn=document.getElementById("jtDone");if(dn)dn.onclick=end;
-  document.getElementById("jtSkip2").onclick=end;
-  if(el&&visible(el)&&!s.dock){
-    el.scrollIntoView({behavior:"smooth",block:"center"});
-    setTimeout(place,120);
-  }else{spot.style.display="none";dockCard();}
-}
-function place(){
-  var s=steps[i],el=s.sel?document.querySelector(s.sel):null;
-  if(!el||!visible(el)){spot.style.display="none";dockCard();return;}
-  var r=el.getBoundingClientRect(),pad=8;
-  spot.style.display="block";
-  spot.style.top=(r.top-pad+window.scrollY*0)+"px";
-  spot.style.left=(r.left-pad)+"px";
-  spot.style.width=(r.width+pad*2)+"px";
-  spot.style.height=(r.height+pad*2)+"px";
-  var cw=card.offsetWidth,ch=card.offsetHeight;
-  card.style.transform="";card.style.bottom="auto";
-  var top=r.bottom+pad+14,left=Math.min(Math.max(8,r.left),window.innerWidth-cw-8);
-  if(top+ch>window.innerHeight-8)top=Math.max(8,r.top-ch-pad-14);
-  card.style.top=top+"px";card.style.left=left+"px";
-}
-function dockCard(){
-  card.style.top="auto";card.style.bottom="70px";
-  card.style.left="50%";card.style.transform="translateX(-50%)";
-}
-function undockCard(){card.style.transform="";card.style.bottom="auto";}
-function end(){open=false;card.classList.remove("open");spot.style.display="none";mark();}
-function start(){undockCard();show(-1);}
-addEventListener("scroll",function(){if(open&&i>=0)place();},{passive:true});
-addEventListener("resize",function(){if(open&&i>=0)place();});
-document.addEventListener("keydown",function(e){
-  if(document.getElementById("jahGuide").classList.contains("open")&&(e.key==="Escape")){guideHide();return;}
-  if(!open)return;
-  if(e.key==="Escape")end();
-  else if(e.key==="ArrowRight"&&i>=0&&i<steps.length-1)show(i+1);
-  else if(e.key==="ArrowLeft"&&i>0)show(i-1);
-});
+function openTour(){over.classList.add("open");over.setAttribute("aria-hidden","false");}
+function closeTour(){over.classList.remove("open");over.setAttribute("aria-hidden","true");mark();}
 /* guide panel */
 function guideShow(){var g=document.getElementById("jahGuide");g.classList.add("open");g.setAttribute("aria-hidden","false");}
 function guideHide(){var g=document.getElementById("jahGuide");g.classList.remove("open");g.setAttribute("aria-hidden","true");}
-document.getElementById("jahGuideBtn").onclick=function(){var g=document.getElementById("jahGuide");g.classList.contains("open")?guideHide():guideShow();};
+document.getElementById("jahTourOk").onclick=closeTour;
+document.getElementById("jahTourHelp").onclick=function(){closeTour();guideShow();};
+over.addEventListener("click",function(e){if(e.target===over)closeTour();});
+document.addEventListener("keydown",function(e){
+  if(over.classList.contains("open")){if(e.key==="Escape")closeTour();return;}
+  if(document.getElementById("jahGuide").classList.contains("open")&&(e.key==="Escape")){guideHide();}
+});
+/* ? Guide button re-opens the welcome tour */
+document.getElementById("jahGuideBtn").onclick=function(){guideHide();openTour();};
 document.getElementById("jahGuideClose").onclick=guideHide;
 /* replay link inside the guide */
 var g=document.getElementById("jahGuide");
 var rp=document.createElement("p");rp.style.marginTop="14px";
-rp.innerHTML="<button id='jahReplayTour' style='min-height:44px;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:#eef1f6;font-weight:bold;cursor:pointer;font-family:Arial'>\u25b6 Replay the 1-minute tour</button>";
+rp.innerHTML="<button id='jahReplayTour' style='min-height:44px;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:#eef1f6;font-weight:bold;cursor:pointer;font-family:Arial'>\u25b6 Show the welcome tour again</button>";
 g.appendChild(rp);
-document.getElementById("jahReplayTour").onclick=function(){guideHide();undockCard();show(0);open=true;};
-/* first visit: non-blocking welcome card */
-if(!seen()){undockCard();setTimeout(function(){if(!seen())show(-1);},900);}
+document.getElementById("jahReplayTour").onclick=function(){guideHide();openTour();};
+/* first visit: welcome overlay */
+if(!seen()){setTimeout(function(){if(!seen())openTour();},900);}
 })();
 </script>
 <button id="jah-theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
