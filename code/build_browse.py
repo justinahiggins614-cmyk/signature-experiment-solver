@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Build browse.html: the full experiment-archive A-Z browse page.
 
-Theme, JAH Network nav, and hero styling are copied verbatim from
-index.html at build time so the look never drifts. Re-run after any
-index.html theme/nav change to keep browse.html in sync:
+Theme, JAH Network nav, pill tab bar, and hero styling are copied verbatim
+from index.html at build time so the look never drifts. The shared nav is
+placed just above the footer (never at the top), and the archive tab carries
+the active state on the tab bar. Re-run after any index.html theme/nav/tab-bar
+change to keep browse.html in sync:
 
     python3 code/build_browse.py
 
@@ -35,6 +37,23 @@ def extract_nav(index_html):
     m = re.search(r'<nav class="jahnet".*?</nav>', index_html, re.S)
     assert m, "no jahnet nav found in index.html"
     return m.group(0)
+
+
+def extract_tabbar(index_html):
+    # Manon's 2026-10-04 order: the same pill tab bar lives on index.html AND
+    # the archive page, right after </header>. On the archive page the
+    # "1 Million Archive" tab carries class "on".
+    m = re.search(r'<!-- JAH TAB BAR.*?<style>(.*?)</style>', index_html, re.S)
+    assert m, "no JAH TAB BAR style block found in index.html"
+    style = "<style>" + m.group(1) + "</style>"
+    n = re.search(r'<nav class="jtabbar" aria-label="Site sections">.*?</nav>', index_html, re.S)
+    assert n, "no jtabbar nav found in index.html"
+    tab = n.group(0)
+    tab = tab.replace('<a class="jtab on" href="index.html">', '<a class="jtab" href="index.html">')
+    assert '<a class="jtab on" href="index.html">' not in tab
+    tab = tab.replace('<a class="jtab" href="browse.html">', '<a class="jtab on" href="browse.html">')
+    assert '<a class="jtab on" href="browse.html">' in tab
+    return style, tab
 
 
 BROWSE_CSS = """
@@ -189,7 +208,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
 BODY_TMPL = """<body>
 <a class="skip" href="#browse">Skip to the archive</a>
-{nav}
 <div class="wrap">
 <header class="hero">
 <div class="wrap">
@@ -209,6 +227,9 @@ BODY_TMPL = """<body>
 <p><a class="btn go" href="index.html">&#9889; Back to the solver</a> <a class="btn ghost" href="methodology.html">How it works</a></p>
 </div>
 </header>
+{tabbarstyle}
+{tabbar}
+
 
 <main id="browse">
 <section class="block browsesec" aria-label="Search the archive">
@@ -229,6 +250,7 @@ BODY_TMPL = """<body>
 </section>
 </main>
 
+{nav}
 <footer class="block" style="margin-top:26px">
 <p style="font-family:Arial;color:var(--muted)"><a href="index.html">The Signature Experiment Solver</a> &middot; <a href="methodology.html">methodology</a> &middot; <a href="experiment-manifest.json">experiment-manifest.json</a> (authoritative count) &middot; <a href="api.json">api.json</a> &middot; <a href="sitemap.xml">sitemap</a></p>
 <p style="font-family:Arial;color:var(--muted)"><b>Honest science:</b> every record is a solver-computed <b>SIMULATION</b>, labeled as such &mdash; never presented as laboratory-measured data. See <a href="methodology.html">methodology.html</a>.</p>
@@ -272,10 +294,12 @@ def build():
     index_html = open(os.path.join(ROOT, "index.html")).read()
     style = extract_style(index_html)
     nav = extract_nav(index_html)
+    tabbarstyle, tabbar = extract_tabbar(index_html)
     # the self page is the experiment solver root in the shared nav; keep the
     # "YOU ARE HERE" marker on the solver entry (browse is a sub-page of it)
     html = (HEAD.format(site=SITE, style=style, browse_css=BROWSE_CSS) +
-            BODY_TMPL.format(nav=nav, count=COUNT_S, js=JS))
+            BODY_TMPL.format(nav=nav, count=COUNT_S, js=JS,
+                             tabbarstyle=tabbarstyle, tabbar=tabbar))
     out = os.path.join(ROOT, "browse.html")
     open(out, "w").write(html)
     print("wrote", out, "(count %s)" % COUNT_S)
