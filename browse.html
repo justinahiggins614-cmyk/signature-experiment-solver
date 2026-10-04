@@ -188,6 +188,21 @@ table.mx{font-size:.78em}
 <style>
 /* ---- browse.html additions (appended, never restyling index.html) ---- */
 .browsesec{margin:26px 0}
+/* BEST OF THE BEST — Manon's 2026-10-04 archive pattern: the AI's top pick pinned above the A–Z list */
+.bestofbest{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:20px;margin:26px 0}
+.bestofbest h2{margin:0 0 4px;color:var(--accent)}
+.bestofbest .whybest{background:#f0f8f2;border-left:3px solid var(--accent);padding:10px 14px;margin:10px 0;font-size:.92em;font-family:Arial}
+.bestofbest .beststats{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.bestofbest .beststat{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.82em;color:var(--muted);font-family:Arial}
+.bestofbest .beststat b{color:var(--accent)}
+.bestofbest .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.bestofbest button{cursor:pointer;background:var(--paper);border:1px solid var(--accent);color:var(--accent);border-radius:8px;padding:9px 16px;font-family:Arial;font-size:.92em}
+.bestofbest button:hover{background:#e8f4ec}
+.bestofbest .openlink{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;padding:9px 16px;text-decoration:none;font-size:.92em;font-family:Arial}
+.bestflow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:12px 0;justify-content:center;font-size:.8em;font-family:Arial}
+.bestflow .bnode{background:var(--paper);border:1px solid var(--accent);border-radius:8px;padding:8px 12px;text-align:center;max-width:150px}
+.bestflow .bnode b{display:block;color:var(--accent);margin-bottom:2px}
+.bestflow .barrow{color:var(--accent2);font-size:18px;font-weight:700}
 .letterdet{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0}
 .letterdet>summary{cursor:pointer;padding:10px 14px;font-family:Arial;font-weight:bold;font-size:1.05em;list-style:none}
 .letterdet>summary::-webkit-details-marker{display:none}
@@ -373,6 +388,53 @@ document.getElementById("jah-askai-q").addEventListener("keydown",function(e){if
 </div>
 
 
+<section class="bestofbest block" aria-labelledby="besth">
+<h2 id="besth">★ Best of the Best</h2>
+<p style="font-family:Arial;color:var(--muted);margin:4px 0">The AI's top pick from this archive — the single experiment that best shows what the solver does. Popped open for you.</p>
+<details open>
+<summary style="cursor:pointer;font-size:1.1em;font-family:Arial"><b>Free-Fall Gravity Drop — steel ball at 10 m</b> <span style="font-size:.8em;color:var(--muted)">JAH-EXP-000001 · Physics · experiment #1</span></summary>
+<div style="padding-top:8px">
+<p class="whybest"><b>Why this is the best:</b> the first experiment ever solved — experiment #1 of 25,925. The genesis run of the Universal Matrix: a steel ball dropped 10 m, simulated step-by-step with all findings listed and a conclusion. It set the format every experiment since follows.</p>
+<div class="bestflow" aria-hidden="true"><div class="bnode"><b>Hypothesis</b>steel ball, 10 m drop</div><div class="barrow">→</div><div class="bnode"><b>Universal Matrix</b>step-by-step simulation</div><div class="barrow">→</div><div class="bnode"><b>Findings</b>all data listed</div><div class="barrow">→</div><div class="bnode"><b>Conclusion</b>solved</div></div>
+<p style="font-family:Arial"><b>What it does:</b> runs a free-fall gravity experiment full-scale in the Universal Matrix — a steel ball dropped from 10 m — with a visible step-by-step simulation, all findings listed, charts, and a conclusion. Every record is a solver-computed <b>SIMULATION</b>, labeled as such.</p>
+<p style="font-family:Arial"><b>Implications:</b> <b>25,925</b> experiments are solved and on file across <b>240</b> solver types, marching toward <b>1,000,000</b>. Honest science: simulations, never presented as laboratory-measured data.</p>
+<div class="beststats"><span class="beststat"><b>25,925</b> experiments solved</span><span class="beststat">Experiment <b>#1</b> — the genesis</span><span class="beststat">Discipline: <b>Physics</b></span><span class="beststat">Type: <b>free-fall</b></span></div>
+<div class="toolbar">
+<button id="best-speak" type="button">🔊 Read aloud</button>
+<button id="best-copy" type="button">⧉ Copy</button>
+<button id="best-dl" type="button">⤓ Download</button>
+<a class="openlink" href="./?exp=JAH-EXP-000001">Open the full experiment →</a>
+</div>
+</div>
+</details>
+</section>
+<script>
+(function(){
+"use strict";
+var plain="Best of the Best — Free-Fall Gravity Drop, steel ball at 10 meters, JAH-EXP-000001. The first experiment ever solved — experiment 1 of 25,925. A steel ball dropped 10 meters, simulated step-by-step in the Universal Matrix, with all findings listed and a conclusion.";
+var dl="THE SIGNATURE EXPERIMENT SOLVER — BEST OF THE BEST\nFree-Fall Gravity Drop — steel ball at 10 m — JAH-EXP-000001 (experiment 1 of 25,925)\nPhysics — free-fall solver type\n\nWHY THIS IS THE BEST\nThe first experiment ever solved — the genesis run of the Universal Matrix. It set the format every experiment since follows.\n\nWHAT IT DOES\nRuns a free-fall gravity experiment full-scale in the Universal Matrix — visible step-by-step simulation, all findings listed, charts, conclusion. Solver-computed SIMULATION, labeled as such.\n\nIMPLICATIONS\n25,925 experiments solved across 240 solver types, marching toward 1,000,000. Honest science: simulations, never laboratory-measured data.\n\nFull experiment: https://justinahiggins614-cmyk.github.io/signature-experiment-solver/?exp=JAH-EXP-000001";
+function copyText(t,btn){function done(ok){var o=btn.textContent;btn.textContent=ok?"Copied ✓":"Copy failed";setTimeout(function(){btn.textContent=o;},1500);}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});}else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done(true);}catch(e){done(false);}document.body.removeChild(ta);}}
+function download(name,text){try{var url=URL.createObjectURL(new Blob([text],{type:"text/plain"}));var a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);try{URL.revokeObjectURL(url);}catch(e){}},800);}catch(e){}}
+var speakTimer=null;
+function speakStop(){try{if(window.speechSynthesis)window.speechSynthesis.cancel();}catch(e){}if(speakTimer){clearTimeout(speakTimer);speakTimer=null;}}
+var speakBtn=document.getElementById("best-speak");
+speakBtn.onclick=function(){
+  speakStop();
+  try{
+    if(!("speechSynthesis" in window)){speakBtn.textContent="No voice on this device";setTimeout(function(){speakBtn.textContent="🔊 Read aloud";},1800);return;}
+    if(window.speechSynthesis.speaking){speakBtn.textContent="🔊 Read aloud";return;}
+    var u=new SpeechSynthesisUtterance(plain);
+    speakBtn.textContent="⏹ Stop";
+    u.onend=function(){speakBtn.textContent="🔊 Read aloud";};
+    u.onerror=function(){speakBtn.textContent="🔊 Read aloud";};
+    window.speechSynthesis.speak(u);
+    speakTimer=setTimeout(function(){speakBtn.textContent="🔊 Read aloud";},30000);
+  }catch(e){speakBtn.textContent="🔊 Read aloud";}
+};
+document.getElementById("best-copy").onclick=function(){copyText(dl,this);};
+document.getElementById("best-dl").onclick=function(){download("JAH-EXP-000001-best.txt",dl);};
+})();
+</script>
 <section class="block browsesec" aria-label="Browse by solver type">
 <h2 class="sec">Browse by Solver Type <span class="pill">240 solver types</span></h2>
 <p style="font-family:Arial;color:var(--muted)">Open a letter, then a solver type, to see every experiment ever solved with it. Records open in the solver with the full <b>SIMULATION</b> view.</p>
