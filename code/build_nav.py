@@ -20,7 +20,7 @@ SITES = [
     ("signature-books", "Book Depository", ""),
     ("signature-comics", "Comic Store", ""),
     ("signature-newspapers", "Global Newspaper Archive", ""),
-    ("signature-3d-print", "3D Print Depository", ""),
+    ("signature-3d-print", "3D Print Mega Mall", ""),
     ("signature-backend", "Mad Scientist Lab", ""),
     ("signature-boundless-generators", "Boundless Generator Archive", ""),
     ("signature-ai-mixlab", "AI Mix Lab", ""),
