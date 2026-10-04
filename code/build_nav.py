@@ -1,36 +1,42 @@
 #!/usr/bin/env python3
-"""Build the 27-site JAH NETWORK nav and inject it into index.html."""
+"""Build the 31-site JAH NETWORK nav and inject it into index.html."""
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://justinahiggins614-cmyk.github.io/"
-# (repo, label, path_suffix)
+# (repo, label, path_suffix) — canonical network order
 SITES = [
-    ("jah-ai-models", "The Signature AI Phone Book", ""),
-    ("jah-calculator", "Calculator", ""),
-    ("jah-dictionary", "Dictionary", ""),
+    ("signature-math", "Signature Math", ""),
+    ("jah-calculator", "Signature Universal Paradox Immune Calculator", ""),
+    ("jah-dictionary", "The Signature Dictionary", ""),
     ("jah-wiki", "JAH Wiki", ""),
-    ("jah-n-wiki-leaks", "JAH-N Wiki", ""),
-    ("cyber-patent-catalog", "Patent Catalog", ""),
-    ("signature-one-archive", "Spec Catalog", "specs.html"),
+    ("jah-n-wiki-leaks", "JAH-N Wiki Leaks", ""),
     ("signature-llama", "Signature Llama", ""),
-    ("jah-computer-systems", "PC Depository", ""),
-    ("signature-cyber-mega-mall", "Cyber Mega-Mall", ""),
-    ("signature-university", "Signature University", ""),
-    ("signature-books", "Book Depository", ""),
-    ("signature-comics", "Comic Store", ""),
-    ("signature-newspapers", "Global Newspaper Archive", ""),
-    ("signature-3d-print", "3D Print Mega Mall", ""),
-    ("signature-backend", "Mad Scientist Lab", ""),
-    ("signature-boundless-generators", "Boundless Generator Archive", ""),
-    ("signature-ai-mixlab", "AI Mix Lab", ""),
+    ("jah-ai-models", "The Signature AI Phone Book", ""),
+    ("cyber-patent-catalog", "Globally Rejustered Patent Catalog", ""),
+    ("signature-one-archive", "Signature Spec Catalog Pending Patents", "specs.html"),
+    ("jah-computer-systems", "The Signature PC System Depository", ""),
+    ("signature-books", "The Signature Book Depository", ""),
+    ("signature-comics", "The Signature Comic Store", ""),
+    ("signature-newspapers", "The Signature Global Newspaper Archive", ""),
+    ("signature-backend", "The Signature AI Mix and Match Generator", ""),
+    ("signature-boundless-generators", "The Signature Boundless Generator Archive", ""),
+    ("signature-ai-mixlab", "The Signature AI Mix Lab", ""),
     ("signature-ai-olypics", "AI Olympics", ""),
-    ("signature-chip-maker", "Chip Maker and Archive", ""),
-    ("signature-app-archive", "App Archive", ""),
-    ("signature-ai-robot-matcher", "AI Robot Matcher", ""),
-    ("signature-experiment-solver", "Experiment Solver", ""),
+    ("signature-chip-maker", "The Signature Computer Chip Maker and Archive", ""),
+    ("signature-app-archive", "The Signature App Archive", ""),
+    ("signature-ai-robot-matcher", "The Signature AI Robot Matcher", ""),
+    ("signature-experiment-solver", "The Signature Experiment Solver", ""),
     ("signature-ai-image-video-maker", "Signature AI Pixel", ""),
-    ("signature-ai-video-maker", "Video Maker AI", ""),
+    ("signature-ai-song-maker", "Signature Music Studio", ""),
+    ("signature-fixit", "The Signature Mr Fix-It", ""),
+    ("signature-university", "The Signature University", ""),
+    ("signature-cyber-mega-mall", "The Signature Cyber Mega-Mall", ""),
+    ("signature-3d-print", "The Signature 3D Print Mega Mall", ""),
+    ("signature-earth", "Signature Earth", ""),
+    ("signature-flight-school", "The Signature Flight School", ""),
+    ("signature-game-store", "The Signature Game Store", ""),
+    ("signature-website-creator", "The Signature Website Creator", ""),
 ]
 SELF = "signature-experiment-solver"
 
