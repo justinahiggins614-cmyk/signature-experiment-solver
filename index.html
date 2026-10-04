@@ -661,6 +661,33 @@ function drawChart(m){
   ctx.fillStyle="#1b2340";ctx.textAlign="left";
   ctx.fillText(m.columns[1]+" vs "+m.columns[0],pad,20);
 }
+/* ==== JAH global read-aloud controller (one per page): no stacked voices, no orphan audio ==== */
+(function(){
+if(window.__JAHREAD)return;
+var R={audios:[],lastTap:0,lastLabel:""};
+R.stopAll=function(){
+ try{if(window.speechSynthesis)window.speechSynthesis.cancel();}catch(e){}
+ try{if(window.responsiveVoice&&window.responsiveVoice.cancel)window.responsiveVoice.cancel();}catch(e){}
+ var i,a;
+ for(i=0;i<R.audios.length;i++){a=R.audios[i];try{a.pause();}catch(e){}try{a.removeAttribute("src");}catch(e){}try{a.load();}catch(e){}}
+ R.audios.length=0;
+ var els=document.querySelectorAll("audio");
+ for(i=0;i<els.length;i++){try{els[i].pause();}catch(e){}try{els[i].removeAttribute("src");}catch(e){}try{els[i].load();}catch(e){}}
+};
+R.reg=function(a){if(a&&R.audios.indexOf(a)<0)R.audios.push(a);return a;};
+R.playGuard=function(label){
+ var now=Date.now();
+ if(now-R.lastTap<450&&label===R.lastLabel){R.lastTap=0;R.lastLabel="";R.stopAll();return false;}
+ R.lastTap=now;R.lastLabel=String(label||"");
+ R.stopAll();return true;
+};
+try{
+ var NativeAudio=window.Audio;
+ window.Audio=function(src){var a=src===undefined?new NativeAudio():new NativeAudio(src);R.reg(a);return a;};
+ window.Audio.prototype=NativeAudio.prototype;
+}catch(e){}
+window.__JAHREAD=R;
+})();
 /* ================= tiered read-aloud ================= */
 var AU={q:[],i:0,active:false,paused:false,rate:1,label:""};
 function auVoice(){try{var vs=window.speechSynthesis.getVoices().filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf("en")===0});if(!vs.length)return null;var fem=/samantha|zira|joanna|amy|emma|kate|serena|moira|tessa|veena|fiona|karen|female|google us english/i;for(var i=0;i<vs.length;i++)if(fem.test(vs[i].name))return vs[i];var g=vs.filter(function(v){return v.name.toLowerCase().indexOf("google")>=0})[0];return g||vs[0]||null;}catch(e){return null;}}
@@ -683,9 +710,10 @@ function auTier2(){
   AU._stop2=function(){AU.active=false;clearTimeout(timer);try{audio.pause();}catch(e){}};
   step();
 }
-function auStop(){AU.active=false;AU.q=[];AU.i=0;auShowBar(false);if(AU._stop2){try{AU._stop2();}catch(e){}AU._stop2=null;}try{if(hasSpeech())window.speechSynthesis.cancel();}catch(e){}}
+function auStop(){try{if(window.__JAHREAD)window.__JAHREAD.stopAll();}catch(e){}AU.active=false;AU.q=[];AU.i=0;auShowBar(false);if(AU._stop2){try{AU._stop2();}catch(e){}AU._stop2=null;}try{if(hasSpeech())window.speechSynthesis.cancel();}catch(e){}}
 function audMsg(m){var t=document.getElementById("audmsg");if(!t){t=document.createElement("div");t.id="audmsg";document.body.appendChild(t);}t.textContent=m;t.style.display="block";clearTimeout(t._x);t._x=setTimeout(function(){t.style.display="none";},2600);}
 function readRecord(rec){
+  if(window.__JAHREAD&&!window.__JAHREAD.playGuard("readRecord"))return;
   auStop();
   var txt=rec.title+". Question: "+rec.question+" Hypothesis: "+rec.hypothesis
     +" Procedure: "+rec.procedure.join(" ")
