@@ -24,7 +24,7 @@ SITES = [
     ("signature-backend", "Mad Scientist Lab", ""),
     ("signature-boundless-generators", "Boundless Generator Archive", ""),
     ("signature-ai-mixlab", "AI Mix Lab", ""),
-    ("signature-ai-olypics", "AI Olypics", ""),
+    ("signature-ai-olypics", "AI Olympics", ""),
     ("signature-chip-maker", "Chip Maker and Archive", ""),
     ("signature-app-archive", "App Archive", ""),
     ("signature-ai-robot-matcher", "AI Robot Matcher", ""),
