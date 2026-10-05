@@ -25,7 +25,7 @@ SITES = [
     ("signature-ai-olypics", "AI Olympics", ""),
     ("signature-chip-maker", "The Signature Computer Chip Maker and Archive", ""),
     ("signature-app-archive", "The Signature App Archive", ""),
-    ("signature-ai-robot-matcher", "The Signature AI Robot Matcher", ""),
+    ("signature-ai-robot-matcher", "The Signature AI to Robot Matcher", ""),
     ("signature-experiment-solver", "The Signature Experiment Solver", ""),
     ("signature-ai-image-video-maker", "Signature AI Pixel", ""),
     ("signature-ai-song-maker", "Signature Music Studio", ""),
