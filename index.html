@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>try{if(localStorage.getItem("jah-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script src="js/signin.js"></script>
+<script>/* JAHProfile-aware storage: public = plain localStorage, signed-in = per-profile namespace */
+var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage;</script>
+<script>try{if(PS.get("jah-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Signature Experiment Solver — Run Any Experiment, Full-Scale</title>
@@ -362,7 +365,7 @@ function paintEngineLine(m){
     "</b> · <a href=\"methodology.html\">methodology</a>";
 }
 function cachedManifest(){
-  try{var c=JSON.parse(localStorage.getItem("jah-exp-manifest")||"null");
+  try{var c=JSON.parse(PS.get("jah-exp-manifest")||"null");
     if(c&&c.m&&c.m.total_experiments)return c;}catch(e){}
   return null;
 }
@@ -377,7 +380,7 @@ function loadAll(){
     .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
     .then(function(m){
       EXP_MANIFEST=m;
-      try{localStorage.setItem("jah-exp-manifest",JSON.stringify({at:Date.now(),m:m}));}catch(e){}
+      try{PS.set("jah-exp-manifest",JSON.stringify({at:Date.now(),m:m}));}catch(e){}
       paintCount(m.total_experiments,"experiment-manifest.json · updated "+String(m.last_updated).slice(0,10));
       paintEngineLine(m);
     }).catch(function(){
@@ -418,8 +421,8 @@ function safetyPill(rec){
 }
 /* ---- observed (measured) data: user-supplied, never overwrites the simulation ---- */
 function obsKey(id){return "jah-exp-obs:"+id;}
-function getObs(id){try{return JSON.parse(localStorage.getItem(obsKey(id))||"null");}catch(e){return null;}}
-function setObs(id,o){try{localStorage.setItem(obsKey(id),JSON.stringify(o));}catch(e){}}
+function getObs(id){try{return JSON.parse(PS.get(obsKey(id))||"null");}catch(e){return null;}}
+function setObs(id,o){try{PS.set(obsKey(id),JSON.stringify(o));}catch(e){}}
 function obsHTML(rec){
   var obs=getObs(rec.id);
   var h='<div class="obsdata" id="obsdata"><h4>📏 Observed data — your measurements</h4>';
@@ -460,7 +463,7 @@ function wireObs(rec){
     renderRecord(rec);audMsg("Measurements saved — simulation untouched.");
   };
   var del=document.getElementById("btnobsdel");
-  if(del)del.onclick=function(){try{localStorage.removeItem(obsKey(rec.id));}catch(e){}
+  if(del)del.onclick=function(){try{PS.remove(obsKey(rec.id));}catch(e){}
     renderRecord(rec);audMsg("Your measurements were removed.");};
 }
 /* ---- CSV download of the simulation measurements ---- */
@@ -1197,8 +1200,8 @@ border-radius:8px;padding:.6em .9em;margin:.8em 0;line-height:1.7}
 (function(){
 var SEEN="jah-tour-seen-solver";
 var over=document.getElementById("jahTourOver");
-function seen(){try{return localStorage.getItem(SEEN)==="1";}catch(e){return true;}}
-function mark(){try{localStorage.setItem(SEEN,"1");}catch(e){}}
+function seen(){try{return PS.get(SEEN)==="1";}catch(e){return true;}}
+function mark(){try{PS.set(SEEN,"1");}catch(e){}}
 function openTour(){over.classList.add("open");over.setAttribute("aria-hidden","false");}
 function closeTour(){over.classList.remove("open");over.setAttribute("aria-hidden","true");mark();}
 /* guide panel */
@@ -1227,11 +1230,11 @@ if(!seen()){setTimeout(function(){if(!seen())openTour();},900);}
 <button id="jah-theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#127769;</button>
 <script>
 /* dark-mode toggle: opt-in, default look unchanged */
-(function(){var b=document.getElementById("jah-theme-toggle");function paint(){b.innerHTML=document.documentElement.getAttribute("data-theme")==="dark"?"&#9728;&#65039;":"&#127769;"}b.addEventListener("click",function(){var dark=document.documentElement.getAttribute("data-theme")==="dark";try{if(dark){document.documentElement.removeAttribute("data-theme");localStorage.setItem("jah-theme","light")}else{document.documentElement.setAttribute("data-theme","dark");localStorage.setItem("jah-theme","dark")}}catch(e){}paint()});paint()})();
+(function(){var b=document.getElementById("jah-theme-toggle");function paint(){b.innerHTML=document.documentElement.getAttribute("data-theme")==="dark"?"&#9728;&#65039;":"&#127769;"}b.addEventListener("click",function(){var dark=document.documentElement.getAttribute("data-theme")==="dark";try{if(dark){document.documentElement.removeAttribute("data-theme");PS.set("jah-theme","light")}else{document.documentElement.setAttribute("data-theme","dark");PS.set("jah-theme","dark")}}catch(e){}paint()});paint()})();
 /* session restore: scroll + tabs + last-opened record, localStorage only */
 (function(){var KEY="jah-sr:"+location.pathname,PARAMS=["exp"];
-function rd(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){return{}}}
-function wr(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+function rd(){try{return JSON.parse(PS.get(KEY)||"{}")}catch(e){return{}}}
+function wr(o){try{PS.set(KEY,JSON.stringify(o))}catch(e){}}
 var S=rd(),q=new URLSearchParams(location.search);
 var deep=PARAMS.some(function(p){return q.has(p)});
 var t;addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){S.y=window.scrollY;wr(S)},300)},{passive:true});
@@ -1246,6 +1249,10 @@ addEventListener("load",function(){setTimeout(function(){
     if(typeof S.y==="number"&&S.y>0){window.scrollTo(0,S.y)}
     else if(S.last){var el=findRec(S.last);if(el)el.scrollIntoView({block:"center"})}}
 },400)})})();
+</script>
+<script>
+/* JAHProfile sign-in button mount (graceful header fallback) */
+(function(){var m=document.querySelector('header .booksearch')||document.querySelector('nav.jtabbar')||document.querySelector('header nav')||document.querySelector('header')||document.body;if(window.JAHProfile&&JAHProfile.ui)JAHProfile.ui.renderButton(m);})();
 </script>
 </body>
 </html>
