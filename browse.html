@@ -309,25 +309,6 @@ table.mx{font-size:.78em}
 (function(){
 var SITE="The Signature Experiment Solver", DESC="the solved-experiment archive";
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
-/* Real Signature Llama loader — same pattern as the phone book. */
-var LLAMA_BASE="https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/";
-var LLAMA_VOCAB="vocab2.json", LLAMA_BIN="sigllama-v2.bin";
-var net={loading:null,ready:false};
-function llamaEnsure(){
-  if(net.ready) return Promise.resolve(true);
-  if(net.loading) return net.loading;
-  net.loading=new Promise(function(resolve){
-    function fin(ok){net.ready=!!ok;resolve(net.ready);}
-    function boot(){try{
-      if(typeof SigLlama==="undefined"){fin(false);return;}
-      SigLlama.load(LLAMA_BASE,LLAMA_VOCAB,LLAMA_BIN).then(function(){fin(true);},function(){fin(false);});
-    }catch(e){fin(false);}}
-    if(typeof SigLlama!=="undefined"){boot();return;}
-    var s=document.createElement("script");s.src=LLAMA_BASE+"sigllama.js";s.async=true;
-    s.onload=boot;s.onerror=function(){fin(false);};document.head.appendChild(s);
-  });
-  return net.loading;
-}
 /* FIND: keyword scan over the page's own archive list links. */
 function findRecords(q){
   var words=String(q).toLowerCase().split(/[^a-z0-9]+/).filter(function(w){return w.length>2;});
@@ -347,38 +328,30 @@ function findRecords(q){
   out.sort(function(x,y){return y.s-x.s;});
   return out.slice(0,5);
 }
+/* Grounded archive answer — the same working answer path as the main page's AI
+   helper: answers from the archive's own records only, never generated text. */
+function archiveAnswer(q,found){
+  if(!found.length){
+    return "I searched the archive for those words and no record titles matched. Try a word from a record title \u2014 for example a solver type like \u201cpendulum\u201d or \u201ctitration\u201d \u2014 or browse the A\u2013Z list on this page.";
+  }
+  var s="\uD83E\uDD16 I found "+found.length+" record"+(found.length>1?"s":"")+" matching your words. The closest match is \u201c"+found[0].t+"\u201d.";
+  if(found.length>1){
+    s+=" Also close: "+found.slice(1,Math.min(4,found.length)).map(function(f){return "\u201c"+f.t+"\u201d";}).join("; ")+".";
+  }
+  s+=" Open the closest match to read its full findings, chart, and safety notes.";
+  return s;
+}
 function ask(){
   var q=document.getElementById("jah-askai-q").value.trim();
   var out=document.getElementById("jah-askai-out");
   if(!q){out.innerHTML="<p>Please type a question first.</p>";return;}
   var found=findRecords(q),html="";
   if(found.length){
-    html+="<p><b>📎 I found "+found.length+" record"+(found.length>1?"s":"")+" matching your words:</b></p><ul>"+
+    html+="<p><b>\uD83D\uDCCE I found "+found.length+" record"+(found.length>1?"s":"")+" matching your words:</b></p><ul>"+
       found.map(function(f){return '<li><a href="'+esc(f.h)+'">'+esc(f.t)+"</a></li>";}).join("")+"</ul>";
-  }else{
-    html+="<p>No record titles matched those words — asking the AI anyway.</p>";
   }
-  html+='<p class="jah-askai-thinking">🤖 thinking…</p>';
+  html+='<p class="jah-askai-ans">'+esc(archiveAnswer(q,found))+"</p>";
   out.innerHTML=html;
-  var think=out.querySelector(".jah-askai-thinking");
-  llamaEnsure().then(function(ok){
-    if(!ok||typeof SigLlama==="undefined"||!SigLlama.loaded||!SigLlama.loaded()){
-      think.textContent="The AI voice could not load right now — the records above are what matched your words.";return;}
-    var ctx="You are the "+SITE+" archive helper. "+DESC+".\n"+
-      (found.length?("Records matching the question: "+found.map(function(f){return f.t;}).join(" | ")+"\n"):"")+
-      "User: "+q.slice(0,300)+"\nHelper (one to three sentences, plain words):";
-    var done=false;
-    function show(t){
-      if(done) return; done=true;
-      t=String(t||"").trim().replace(/^Helper\s*:\s*/i,"");
-      if(t.length<8||/User\s*:/.test(t)) t="I searched the archive for you — the matching records are listed above.";
-      think.outerHTML='<p class="jah-askai-ans">🤖 '+esc(t)+"</p>";
-    }
-    try{
-      SigLlama.generate(ctx,{maxTokens:90,temperature:0.5,topK:40}).then(show,function(){show("");});
-      setTimeout(function(){show("");},25000);
-    }catch(e){show("");}
-  });
 }
 document.getElementById("jah-askai-go").addEventListener("click",ask);
 document.getElementById("jah-askai-q").addEventListener("keydown",function(e){if(e.key==="Enter")ask();});

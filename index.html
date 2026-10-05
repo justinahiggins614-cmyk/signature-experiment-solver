@@ -87,6 +87,19 @@ canvas.chart{width:100%;max-width:640px;height:300px;border:1px solid var(--line
 .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
 .safetybox{background:#fdecea;border:1px solid #e8a49e;border-radius:8px;padding:10px 14px;margin:12px 0}
 .safetybox h4{font-family:Arial;color:var(--danger);margin:0 0 6px}
+/* assumptions dialog */
+#assumeScrim{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9002;display:none}
+#assumeScrim.on{display:block}
+#assumeModal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(520px,94vw);max-height:88vh;overflow-y:auto;background:var(--card,#fff);border:2px solid var(--accent2,#0e7c4a);border-radius:12px;z-index:9003;display:none;font-family:Arial;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#assumeModal.open{display:block}
+#assumeModal .amhead{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line,#d9d4c3);font-weight:bold}
+#assumeModal .amsub{padding:10px 14px 0;color:var(--muted,#5a6486);font-size:.9em}
+#assumeModal .amparams{display:flex;flex-direction:column;gap:10px;padding:12px 14px}
+#assumeModal .amparam{display:flex;justify-content:space-between;align-items:center;gap:10px}
+#assumeModal .amparam input{width:130px;padding:8px;font-size:1em;border:1px solid var(--line,#d9d4c3);border-radius:8px}
+#assumeModal h4{margin:6px 14px 4px}
+#assumeModal .amfixed{margin:0 14px 8px;padding-left:20px;font-size:.9em;color:var(--muted,#5a6486)}
+#assumeModal .amfoot{display:flex;gap:10px;justify-content:flex-end;padding:12px 14px;border-top:1px solid var(--line,#d9d4c3)}
 /* sidebar AI */
 #aiToggle{position:fixed;right:14px;bottom:14px;z-index:9000;background:var(--accent2);color:#fff;
 border:none;border-radius:50%;width:58px;height:58px;font-size:1.6em;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
@@ -284,6 +297,12 @@ table.mx{font-size:.78em}
 </div>
 
 <button id="aiToggle" aria-label="Open the experiment AI helper">🤖</button>
+<div id="assumeScrim"></div>
+<div id="assumeModal" role="dialog" aria-modal="true" aria-labelledby="assumeH">
+<div class="amhead"><span id="assumeH">🔁 Change assumptions &amp; rerun</span><button id="assumeClose" class="btn small ghost" aria-label="Close">✕</button></div>
+<div id="assumeBody"></div>
+<div class="amfoot"><button id="assumeGo" class="btn go">🔁 Rerun with these settings</button><button id="assumeCancel" class="btn ghost">Cancel</button></div>
+</div>
 <div id="aiScrim"></div>
 <aside id="aiPanel" aria-label="Experiment AI helper">
 <div class="aihead"><span>🤖 Experiment AI — ask anything</span><button id="aiClose" class="btn small ghost">✕</button></div>
@@ -539,46 +558,47 @@ function renderRecord(rec){
     +'<button class="btn ghost small" id="btncmp">⇄ Compare with previous run</button></div>'
     +'<div id="cmpzone"></div>';
   box.innerHTML=h;
-  if(m)drawChart(m);
-  document.getElementById("btnread").onclick=function(){readRecord(rec);};
-  document.getElementById("btncopy").onclick=function(){copyText(recordText(rec));};
-  document.getElementById("btntxt").onclick=function(){download(rec.id+".txt",recordText(rec),"text/plain");};
+  /* One failing step must never unwire the rest of the panel. */
+  function wireBtn(id,fn){try{var b=document.getElementById(id);if(b)b.onclick=fn;}catch(e){if(window.console&&console.error)console.error("wireBtn "+id+":",e);}}
+  try{if(m)drawChart(m);}catch(e){if(window.console&&console.error)console.error("drawChart:",e);}
+  wireBtn("btnread",function(){readRecord(rec);});
+  wireBtn("btncopy",function(){copyText(recordText(rec));});
+  wireBtn("btntxt",function(){download(rec.id+".txt",recordText(rec),"text/plain");});
   /* batch-E record panel wiring */
-  document.getElementById("btnopen").onclick=function(){window.open(deeplink,"_blank","noopener");};
-  document.getElementById("btnshare").onclick=function(){
-    if(navigator.share){navigator.share({title:rec.title+" — The Signature Experiment Solver",url:deeplink}).catch(function(){});}
-    else copyText(deeplink);};
-  document.getElementById("btncopy2").onclick=function(){copyText(recordText(rec));};
-  document.getElementById("btntxt2").onclick=function(){download(rec.id+".txt",recordText(rec),"text/plain");};
-  document.getElementById("btnread2").onclick=function(){readRecord(rec);};
-  document.getElementById("btnjson").onclick=function(){
+  wireBtn("btnopen",function(){window.open(deeplink,"_blank","noopener");});
+  wireBtn("btnshare",function(){
+    try{
+      if(navigator.share){navigator.share({title:rec.title+" — The Signature Experiment Solver",url:deeplink}).catch(function(){copyText(deeplink);});}
+      else copyText(deeplink);
+    }catch(e){copyText(deeplink);}});
+  wireBtn("btncopy2",function(){copyText(recordText(rec));});
+  wireBtn("btntxt2",function(){download(rec.id+".txt",recordText(rec),"text/plain");});
+  wireBtn("btnread2",function(){readRecord(rec);});
+  wireBtn("btnjson",function(){
     var j={};for(var k in rec){if(rec.hasOwnProperty(k))j[k]=rec[k];}
     j.honesty_note="SOLVER SIMULATION — NOT A PHYSICAL EXPERIMENT. All numbers computed by the solver engine from built-in models; never lab-measured.";
     var obs=getObs(rec.id);
     if(obs){j.observed=obs;j.data_status="MIXED";j.physical_status="USER-PERFORMED";j.measured=true;}
-    download(rec.id+".json",JSON.stringify(j,null,1),"application/json");};
-  document.getElementById("btncsv").onclick=function(){
+    download(rec.id+".json",JSON.stringify(j,null,1),"application/json");});
+  wireBtn("btncsv",function(){
     var c=measCSV(rec);
     if(!c){audMsg("No measurement table on this record.");return;}
-    download(rec.id+".csv",c,"text/csv");};
-  wireObs(rec);
-  document.getElementById("btnlink").onclick=function(){copyText(deeplink);};
-  document.getElementById("btnrerun").onclick=function(){
-    document.getElementById("expinput").value=(rec.query&&rec.query!==rec.title)?rec.query:rec.question;
-    document.getElementById("solver").scrollIntoView({behavior:"smooth",block:"start"});
-    document.getElementById("expinput").focus();
-    audMsg("Tweak the description, then hit Run Experiment.");
-  };
-  document.getElementById("btncmp").onclick=function(){compareRuns();};
+    download(rec.id+".csv",c,"text/csv");});
+  try{wireObs(rec);}catch(e){if(window.console&&console.error)console.error("wireObs:",e);}
+  wireBtn("btnlink",function(){copyText(deeplink);});
+  wireBtn("btnrerun",function(){openAssumeDialog(rec);});
+  wireBtn("btncmp",function(){compareRuns();});
   box.scrollIntoView({behavior:"smooth",block:"start"});
   setAIContext(rec);
-  setRecordHead(rec);
+  try{setRecordHead(rec);}catch(e){if(window.console&&console.error)console.error("setRecordHead:",e);}
 }
 /* run comparison: previous run vs current run */
 function compareRuns(){
   var z=document.getElementById("cmpzone");if(!z)return;
   if(!prevRec||!curRec){
-    z.innerHTML='<p style="font-family:Arial;color:var(--muted)">Run a second experiment to compare — the previous run appears here side by side.</p>';return;}
+    z.innerHTML='<p style="font-family:Arial;color:var(--muted)">Run a second experiment to compare — the previous run appears here side by side.</p>';
+    audMsg("No previous run yet — run a second experiment to compare.");
+    return;}
   function row(k,a,b){return "<tr><th>"+k+"</th><td>"+E2(a)+"</td><td>"+E2(b)+"</td></tr>";}
   z.innerHTML='<h4 style="font-family:Arial;color:var(--accent2);margin:14px 0 4px">⇄ Run comparison</h4>'
     +'<div style="overflow-x:auto"><table class="cmp">'
@@ -592,6 +612,52 @@ function compareRuns(){
     +'</table></div>';
   z.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
+/* ---- assumptions dialog: change assumptions & rerun (in-page modal, never native prompt) ---- */
+var assumeRec=null;
+function openAssumeDialog(rec){
+  assumeRec=rec;
+  var T=null;
+  try{(TYPES||[]).forEach(function(t){if(t.key===rec.type)T=t;});}catch(e){}
+  var h="";
+  if(T&&T.params&&T.params.length){
+    h+='<p class="amsub">Tweak the solver settings below, then rerun — the same experiment re-solves with your values (a fresh seed, so it counts as a new run for comparison).</p>'
+      +'<div class="amparams">'+T.params.map(function(p){
+        var v=(rec.params&&rec.params[p.name]!=null)?rec.params[p.name]:p.default;
+        return '<label class="amparam"><span>'+E2(p.label||p.name)+(p.unit?' <i>('+E2(p.unit)+')</i>':'')+'</span>'
+          +'<input type="number" data-pname="'+E2(p.name)+'" value="'+E2(String(v))+'"'
+          +(p.min!=null?' min="'+p.min+'"':'')+(p.max!=null?' max="'+p.max+'"':'')+' step="any"></label>';
+      }).join("")+'</div>';
+  }else{
+    h+='<p class="amsub">This record type has no adjustable settings.</p>';
+  }
+  var am=rec.assumptions||[];
+  if(am.length)h+='<h4>📐 Built-in model assumptions (fixed)</h4><ol class="amfixed">'+am.map(function(a){return "<li>"+E2(a)+"</li>";}).join("")+'</ol>';
+  document.getElementById("assumeBody").innerHTML=h;
+  document.getElementById("assumeModal").classList.add("open");
+  document.getElementById("assumeScrim").classList.add("on");
+}
+function closeAssumeDialog(){
+  document.getElementById("assumeModal").classList.remove("open");
+  document.getElementById("assumeScrim").classList.remove("on");
+  assumeRec=null;
+}
+document.getElementById("assumeClose").onclick=closeAssumeDialog;
+document.getElementById("assumeCancel").onclick=closeAssumeDialog;
+document.getElementById("assumeScrim").onclick=closeAssumeDialog;
+document.getElementById("assumeGo").onclick=function(){
+  var ov={};
+  try{
+    var inputs=document.getElementById("assumeBody").querySelectorAll("input[data-pname]");
+    for(var i=0;i<inputs.length;i++){
+      var v=parseFloat(inputs[i].value);
+      if(!isNaN(v))ov[inputs[i].getAttribute("data-pname")]=v;
+    }
+  }catch(e){}
+  var rec=assumeRec;
+  closeAssumeDialog();
+  if(!rec||typeof ExpEngine==="undefined")return;
+  runWithProgress(function(){return ExpEngine.solve(rec.type,1+Math.floor(Math.random()*999999),ov);});
+};
 function recordText(rec){
   var L=[];
   L.push("SOLVER SIMULATION — NOT A PHYSICAL EXPERIMENT.",
@@ -740,6 +806,10 @@ function readRecord(rec){
     +" Results: "+rec.results+" Conclusion: "+rec.conclusion
     +" Safety: "+rec.safety;
   AU.q=auChunks(txt);AU.i=0;AU.active=true;AU.paused=false;AU.label=rec.id;
+  /* immediate visible feedback, even before the first chunk speaks */
+  auShowBar(true);
+  var _rl=document.getElementById("aulabel");if(_rl)_rl.textContent="Reading…";
+  auPaintBtn();
   if(hasSpeech())auSpeakNext();else auTier2();
 }
 document.getElementById("aupause").onclick=function(){
@@ -800,7 +870,7 @@ function runWithProgress(fn){
     simProgSet(38,"🧪 Running trials ×3 in the Universal Matrix…");
     requestAnimationFrame(function(){
       var rec;
-      try{rec=fn();}catch(e){btn.disabled=false;simProgShow(false);audMsg("The run hit an error and was stopped.");return;}
+      try{rec=fn();}catch(e){btn.disabled=false;simProgShow(false);audMsg("The run hit an error and was stopped.");if(window.console&&console.error)console.error("runWithProgress:",e);return;}
       if(!rec){btn.disabled=false;simProgShow(false);audMsg("The run hit an error and was stopped.");return;}
       simProgSet(72,"📋 Compiling all findings…");
       renderRecord(rec);
@@ -840,10 +910,13 @@ document.getElementById("runbtn").onclick=function(){
 };
 function hashStr(s){var h=0;for(var i=0;i<s.length;i++)h=(Math.imul(h,31)+s.charCodeAt(i))|0;return h;}
 document.getElementById("randombtn").onclick=function(){
+  if(typeof ExpEngine==="undefined"){audMsg("The solver engine is still loading — check your connection and reload.");return;}
+  if(!TYPES||!TYPES.length){audMsg("The solver types are still loading — wait a moment and try again.");return;}
   runWithProgress(function(){
     /* Surprise me never surfaces hazardous-classified types. */
     var safe=TYPES.filter(function(t){
-      var l=(ExpEngine.safetyLevel&&ExpEngine.safetyLevel(t,null))||"SAFE-EDUCATIONAL";
+      var l="SAFE-EDUCATIONAL";
+      try{l=(ExpEngine.safetyLevel&&ExpEngine.safetyLevel(t,null))||"SAFE-EDUCATIONAL";}catch(e){l="SAFE-EDUCATIONAL";}
       return l!=="HAZARDOUS"&&l!=="DO-NOT-PERFORM"&&l!=="SIMULATION-ONLY";});
     var pool=safe.length?safe:TYPES;
     var t=pool[Math.floor(Math.random()*pool.length)];
@@ -1004,7 +1077,7 @@ function boot(){
 document.addEventListener("DOMContentLoaded",boot);
 </script>
 <style>
-#jah-theme-toggle{position:fixed;bottom:14px;right:14px;z-index:99999;width:40px;height:40px;border-radius:50%;border:1px solid var(--line,#d9d4c3);background:var(--card,#ffffff);color:var(--ink,#1b2340);opacity:.6;cursor:pointer;font-size:18px;line-height:1;font-family:inherit}
+#jah-theme-toggle{position:fixed;bottom:14px;left:14px;z-index:99999;width:40px;height:40px;border-radius:50%;border:1px solid var(--line,#d9d4c3);background:var(--card,#ffffff);color:var(--ink,#1b2340);opacity:.6;cursor:pointer;font-size:18px;line-height:1;font-family:inherit}
 #jah-theme-toggle:hover{opacity:1}
 html[data-theme="dark"]{filter:invert(1) hue-rotate(180deg)}
 html[data-theme="dark"] img,html[data-theme="dark"] video,html[data-theme="dark"] canvas,html[data-theme="dark"] svg{filter:invert(1) hue-rotate(180deg)}
