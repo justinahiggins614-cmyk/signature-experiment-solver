@@ -211,7 +211,7 @@ BODY_TMPL = """<body>
 <div class="wrap">
 <header class="hero">
 <div class="wrap">
-<div class="kick">SITE 21 OF 31 &middot; THE JAH NETWORK</div>
+<div class="kick">SITE 21 OF 33 &middot; THE JAH NETWORK</div>
 <h1>&#128218; Browse the Full Experiment Archive</h1>
 <p class="sub">Every solved experiment the Signature Experiment Solver has ever run &mdash; the full catalog, A&ndash;Z by solver type and A&ndash;Z by experiment name. Open any record for its hypothesis, Universal Matrix, findings, charts, and conclusion.</p>
 <details class="statscoll" open><summary>Archive statistics</summary><div class="counter" role="status" aria-live="polite">
