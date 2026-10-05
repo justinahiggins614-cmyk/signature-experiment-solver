@@ -268,23 +268,10 @@ table.mx{font-size:.78em}
 <div id="result" aria-live="polite"></div>
 </section>
 
-<section class="block" id="az" aria-label="Solver types A to Z">
-<h2 class="sec">Solver Types A–Z <span class="pill" id="typecount">240 solver types</span></h2>
-<p style="font-family:Arial;color:var(--muted)">Pick a solver type — or just describe anything above and the site picks for you.</p>
-<div class="azletters" id="azletters"></div>
-<div class="typegrid" id="typegrid"></div>
-</section>
-
-<section class="block" id="catalog" aria-label="Solved experiment catalog">
-<h2 class="sec">Solved Experiments — The Showcase Catalog</h2>
+<section class="block" id="archive" aria-label="Browse the archive">
+<h2 class="sec">The Archive</h2>
+<p style="font-family:Arial;color:var(--muted)">Every solved experiment, A&ndash;Z by solver type and A&ndash;Z by experiment name &mdash; on its own archive page.</p>
 <p><a class="btn go" href="browse.html">&#128218; Browse the full A&ndash;Z archive</a></p>
-<p style="font-family:Arial;color:var(--muted)">Each experiment is solved <b>once</b>, stored permanently, and retrievable forever by its JAH-EXP number. New solutions are added automatically around the clock.</p>
-<div class="catsearchwrap"><input id="catsearch" type="search" placeholder="Search solved experiments…" aria-label="Search solved experiments"><span id="catcount" role="status"></span></div>
-<div class="discfilter"><label for="discsel">Discipline:</label>
-<select id="discsel" aria-label="Filter by discipline"><option value="">All disciplines</option></select>
-<span class="srchelp">Tip: type <b>JAH-EXP-000123</b> for an exact record lookup.</span></div>
-<div class="catgrid" id="catgrid"></div>
-<div style="margin-top:10px"><button class="btn ghost small" id="morebtn">Show more</button></div>
 </section>
 
 <section class="block method" aria-label="Methodology">
@@ -335,7 +322,7 @@ table.mx{font-size:.78em}
 <script>
 /* ================= data loading ================= */
 var TYPES=[], INDEX=[], MANIFEST={count:0}, EXP_MANIFEST=null, HASHES=null;
-var curRec=null, prevRec=null, catShown=24, LOADSTATE="LOADING";
+var curRec=null, prevRec=null, LOADSTATE="LOADING";
 function gz(url){return fetch(url).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);
   var s=r.body.pipeThrough(new DecompressionStream("gzip"));return new Response(s).text();});}
 /* Loading states: LOADING -> LIVE | INDEX ERROR | OFFLINE—CACHED | NO DATA.
@@ -927,85 +914,6 @@ document.getElementById("randombtn").onclick=function(){
     return ExpEngine.solve(t.key,1+Math.floor(Math.random()*999999),{});
   });
 };
-/* ================= A–Z ================= */
-var azLetter="A";
-function buildAZ(){
-  var box=document.getElementById("azletters");
-  if(!TYPES.length){
-    document.getElementById("typegrid").innerHTML='<div class="tcard" role="alert"><b>The solver-type list could not load.</b><br><span class="d">Check your connection and reload — the archive itself is untouched.</span></div>';
-    return;
-  }
-  var letters={};TYPES.forEach(function(t){letters[t.name[0].toUpperCase()]=1;});
-  document.getElementById("typecount").textContent=TYPES.length+" solver types";
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(function(L){
-    if(!letters[L])return;
-    var a=document.createElement("a");a.href="#az";a.textContent=L;
-    if(L===azLetter)a.className="on";
-    a.onclick=function(e){e.preventDefault();azLetter=L;buildAZ();renderTypes();};
-    box.appendChild(a);
-  });
-  renderTypes();
-}
-function renderTypes(){
-  var box=document.getElementById("azletters");
-  Array.prototype.forEach.call(box.children,function(a){a.className=a.textContent===azLetter?"on":"";});
-  var g=document.getElementById("typegrid");g.innerHTML="";
-  var counts=typeCounts();
-  TYPES.filter(function(t){return t.name[0].toUpperCase()===azLetter;})
-    .sort(function(a,b){return a.name<b.name?-1:1;}).forEach(function(t){
-    var d=document.createElement("div");d.className="tcard";
-    var n=counts[t.key]||0;
-    var lvl=(ExpEngine.safetyLevel&&ExpEngine.safetyLevel(t,null))||"SAFE-EDUCATIONAL";
-    d.innerHTML="<b>"+E2(t.name)+"</b>"
-      +"<div class='d'>"+E2(t.type_id||"")+" · "+E2(t.discipline)+"</div>"
-      +"<div class='bl'>"+E2(t.blurb)+"</div>"
-      +"<div class='d'>"+n.toLocaleString()+" solved · safety: "+E2(lvl.replace(/-/g," ").toLowerCase())+"</div>";
-    d.onclick=function(){
-      var sel=document.getElementById("typesel");sel.value=t.key;
-      document.getElementById("expinput").value="";
-      renderRecord(ExpEngine.solve(t.key,1,{}));
-      document.getElementById("solver").scrollIntoView({behavior:"smooth"});
-    };
-    g.appendChild(d);
-  });
-}
-/* ================= catalog ================= */
-function catCard(row){
-  var d=document.createElement("div");d.className="ccard";
-  d.innerHTML='<div class="cid">'+E2(row[0])+'</div><b>'+E2(row[3])+'</b><div class="cid" style="color:var(--muted);font-weight:normal">'+E2(row[4])+'</div>';
-  d.onclick=function(){openExp(row[0]);};
-  return d;
-}
-function renderCat(filter){
-  var g=document.getElementById("catgrid");g.innerHTML="";
-  if(!INDEX.length&&(LOADSTATE==="NO DATA"||LOADSTATE==="INDEX ERROR")){
-    g.innerHTML='<div class="ccard" role="alert"><b>The solved-experiment catalog could not load.</b><br><span style="font-family:Arial;font-size:.85em;color:var(--muted)">'+E2(LOADSTATE)+' — check your connection or press Retry above. The archive itself is untouched.</span></div>';
-    return;
-  }
-  var disc=document.getElementById("discsel")?document.getElementById("discsel").value:"";
-  var rows=INDEX.slice().reverse();
-  if(disc)rows=rows.filter(function(r){return r[4]===disc;});
-  if(filter){var f=filter.toLowerCase();rows=rows.filter(function(r){return (r[3]+" "+r[0]+" "+r[4]).toLowerCase().indexOf(f)>=0;});}
-  rows.slice(0,catShown).forEach(function(r){g.appendChild(catCard(r));});
-  document.getElementById("morebtn").style.display=rows.length>catShown?"":"none";
-  var cc=document.getElementById("catcount");
-  if(cc)cc.textContent=rows.length.toLocaleString()+" of "+INDEX.length.toLocaleString()+" experiments";
-}
-function fillDiscFilter(){
-  var sel=document.getElementById("discsel");if(!sel||!TYPES.length)return;
-  var seen={},list=[];
-  TYPES.forEach(function(t){if(!seen[t.discipline]){seen[t.discipline]=1;list.push(t.discipline);}});
-  list.sort().forEach(function(d){var o=document.createElement("option");o.value=d;o.textContent=d;sel.appendChild(o);});
-  sel.onchange=function(){catShown=24;renderCat(document.getElementById("catsearch").value);};
-}
-/* record counts per solver type, from the live index */
-function typeCounts(){
-  var c={};
-  for(var i=0;i<INDEX.length;i++){var k=INDEX[i][1];c[k]=(c[k]||0)+1;}
-  return c;
-}
-document.getElementById("morebtn").onclick=function(){catShown+=48;renderCat(document.getElementById("catsearch").value);};
-document.getElementById("catsearch").oninput=function(e){catShown=24;renderCat(e.target.value);};
 function findRow(id){for(var i=0;i<INDEX.length;i++)if(INDEX[i][0]===id)return INDEX[i];return null;}
 function openExp(id){
   var row=findRow(id);
@@ -1062,10 +970,8 @@ function verifyExp(id){
 function boot(){
   if(window.innerWidth<768){var sc=document.querySelector(".statscoll");if(sc)sc.removeAttribute("open");}
   /* honest loading states until data resolves — never "No results" while loading */
-  document.getElementById("typegrid").innerHTML='<div class="tcard" role="status"><b>Loading solver types…</b></div>';
-  document.getElementById("catgrid").innerHTML='<div class="ccard" role="status"><b>Loading solved experiments…</b></div>';
   loadAll().then(function(){
-    fillTypeSelect();buildAZ();fillDiscFilter();renderCat("");
+    fillTypeSelect();
     var q=new URLSearchParams(location.search),exp=q.get("exp"),ver=q.get("verify"),typ=q.get("type");
     if(ver&&/^JAH-EXP-\d{6}$/.test(ver)){verifyExp(ver);}
     else if(typ&&ExpEngine.typeOf(typ)){
