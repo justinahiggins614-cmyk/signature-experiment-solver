@@ -863,6 +863,8 @@ function runWithProgress(fn){
       simProgSet(72,"📋 Compiling all findings…");
       renderRecord(rec);
       simProgSet(100,"✅ Concluded");
+      /* Scroll results into view — the answer must be visible, not below the fold */
+      try{var rb=document.getElementById("result");if(rb)rb.scrollIntoView({behavior:"smooth",block:"start"});}catch(e){}
       btn.disabled=false;
       setTimeout(function(){simProgShow(false);},1800);
     });
