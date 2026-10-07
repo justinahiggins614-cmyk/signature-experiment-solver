@@ -761,29 +761,45 @@ try{
 }catch(e){}
 window.__JAHREAD=R;
 })();
-/* ================= tiered read-aloud ================= */
-var AU={q:[],i:0,active:false,paused:false,rate:1,label:""};
-function auVoice(){try{var vs=window.speechSynthesis.getVoices().filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf("en")===0});if(!vs.length)return null;var fem=/samantha|zira|joanna|amy|emma|kate|serena|moira|tessa|veena|fiona|karen|female|google us english/i;for(var i=0;i<vs.length;i++)if(fem.test(vs[i].name))return vs[i];var g=vs.filter(function(v){return v.name.toLowerCase().indexOf("google")>=0})[0];return g||vs[0]||null;}catch(e){return null;}}
+/* ================= tiered read-aloud: Audio-only =================
+   speechSynthesis is NEVER used for playback: on Android/Facebook WebView it
+   exists but fails SILENTLY, which made read-aloud silently dead. Tiers:
+   ResponsiveVoice -> Google TTS x2, plain <audio>, one global controller. */
+var AU={q:[],i:0,active:false,paused:false,rate:1,label:"",_audio:null,_timer:null,_cur:null};
+function auAudio(){
+  /* ResponsiveVoice -> Google TTS x2 via audio element, 12s fail-fast per tier */
+  var chunks=AU.q.slice(AU.i),idx=0,audio=new Audio();
+  AU._audio=audio;
+  var tiers=[
+    function(t){return "https://code.responsivevoice.org/getvoice.php?t="+encodeURIComponent(t)+"&tl=en-US&sv=g2&vn=&pitch=0.5&rate=0.95";},
+    function(t){return "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q="+encodeURIComponent(t);},
+    function(t){return "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q="+encodeURIComponent(t);}
+  ];
+  auShowBar(true);auPaintBtn();
+  function clearT(){if(AU._timer){clearTimeout(AU._timer);AU._timer=null;}}
+  function play(i,tier){
+    clearT();
+    if(!AU.active||AU.paused)return;
+    if(tier>=tiers.length){next();return;}
+    AU._cur={i:i,tier:tier};
+    audio.src=tiers[tier](chunks[i].slice(0,180));
+    audio.onended=function(){clearT();next();};
+    audio.onerror=function(){clearT();play(i,tier+1);};
+    try{var p=audio.play();if(p&&p.catch)p.catch(function(){clearT();play(i,tier+1);});}catch(e){play(i,tier+1);return;}
+    AU._timer=setTimeout(function(){play(i,tier+1);},12000);
+  }
+  function next(){clearT();idx++;if(idx>=chunks.length||!AU.active){auStop();return;}step();}
+  function step(){if(!AU.active||AU.paused)return;play(idx,0);}
+  AU._stop2=function(){AU.active=false;clearT();try{audio.pause();}catch(e){}AU._audio=null;AU._cur=null;};
+  AU._pause2=function(){clearT();try{audio.pause();}catch(e){}};
+  AU._resume2=function(){if(!AU.active)return;try{var p=audio.play();if(p&&p.catch)p.catch(function(){});}catch(e){}
+    if(AU._cur)AU._timer=setTimeout(function(){play(AU._cur.i,AU._cur.tier+1);},12000);};
+  step();
+}
+function auStop(){try{if(window.__JAHREAD)window.__JAHREAD.stopAll();}catch(e){}AU.active=false;AU.paused=false;AU.q=[];AU.i=0;AU._cur=null;auShowBar(false);if(AU._stop2){try{AU._stop2();}catch(e){}AU._stop2=null;}AU._pause2=null;AU._resume2=null;}
 function auChunks(text){var out=[],cur="",parts=String(text).split(/([.!?]["']?(?:\s+|$))/);for(var i=0;i<parts.length;i+=2){var sent=((parts[i]||"")+(parts[i+1]||"")).replace(/\s+/g," ").trim();if(!sent)continue;if(cur&&(cur+" "+sent).length>220){out.push(cur.trim());cur=sent;}else cur=cur?cur+" "+sent:sent;}if(cur.trim())out.push(cur.trim());return out;}
 function auShowBar(show){var bar=document.getElementById("aubar");if(bar)bar.style.display=show?"flex":"none";}
 function auPaintBtn(){var p=document.getElementById("aupause");if(p)p.innerHTML=AU.paused?"&#9654; Resume":"&#10074;&#10074; Pause";var l=document.getElementById("aulabel");if(l)l.textContent="Reading: "+AU.label;var pr=document.getElementById("auprog");if(pr)pr.textContent=AU.q.length?("chunk "+(AU.i+1)+" of "+AU.q.length):"";}
-function auSpeakNext(){if(AU.i>=AU.q.length||!AU.active){auStop();return;}auShowBar(true);auPaintBtn();try{var u=new SpeechSynthesisUtterance(AU.q[AU.i]);u.rate=AU.rate;u.lang="en-US";var v=auVoice();if(v)u.voice=v;u.onend=function(){if(!AU.active)return;AU.i++;auSpeakNext();};u.onerror=function(){if(!AU.active)return;AU.i++;auSpeakNext();};window.speechSynthesis.speak(u);}catch(e){auTier2();}}
-function hasSpeech(){try{return("speechSynthesis" in window)&&!!window.speechSynthesis&&typeof window.speechSynthesis.speak==="function";}catch(e){return false;}}
-try{if(hasSpeech()){window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=function(){try{window.speechSynthesis.getVoices();}catch(e){}};}}catch(e){}
-function auTier2(){
-  /* ResponsiveVoice -> Google TTS x2 via audio element, 12s fail-fast */
-  var chunks=AU.q.slice(AU.i),idx=0,audio=new Audio(),timer=null;
-  var rv="https://responsivevoice.org/getvoice.php?t=",g1="https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=",g2="https://translate.google.cn/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=";
-  auShowBar(true);auPaintBtn();
-  function play(i,url){clearTimeout(timer);audio.src=url;audio.play().catch(function(){next();});
-    timer=setTimeout(next,12000);audio.onended=function(){clearTimeout(timer);next();};audio.onerror=function(){clearTimeout(timer);next();};}
-  function next(){idx++;if(idx>=chunks.length||!AU.active){auStop();return;}step();}
-  function step(){var t=encodeURIComponent(chunks[idx].slice(0,180));play(idx,rv+t);var tried=0;
-    var oldErr=audio.onerror;audio.onerror=function(){tried++;if(tried===1)play(idx,g1+t);else if(tried===2)play(idx,g2+t);else{clearTimeout(timer);next();}};}
-  AU._stop2=function(){AU.active=false;clearTimeout(timer);try{audio.pause();}catch(e){}};
-  step();
-}
-function auStop(){try{if(window.__JAHREAD)window.__JAHREAD.stopAll();}catch(e){}AU.active=false;AU.q=[];AU.i=0;auShowBar(false);if(AU._stop2){try{AU._stop2();}catch(e){}AU._stop2=null;}try{if(hasSpeech())window.speechSynthesis.cancel();}catch(e){}}
 function audMsg(m){var t=document.getElementById("audmsg");if(!t){t=document.createElement("div");t.id="audmsg";document.body.appendChild(t);}t.textContent=m;t.style.display="block";clearTimeout(t._x);t._x=setTimeout(function(){t.style.display="none";},2600);}
 function readRecord(rec){
   if(window.__JAHREAD&&!window.__JAHREAD.playGuard("readRecord"))return;
@@ -798,12 +814,13 @@ function readRecord(rec){
   auShowBar(true);
   var _rl=document.getElementById("aulabel");if(_rl)_rl.textContent="Reading…";
   auPaintBtn();
-  if(hasSpeech())auSpeakNext();else auTier2();
+  auAudio(); /* Audio-only: speechSynthesis fails silently on his phone/FB WebView */
 }
 document.getElementById("aupause").onclick=function(){
   if(!AU.active)return;
-  if(AU._stop2){audMsg("Pause is available with device speech only.");return;}
-  AU.paused=!AU.paused;try{if(AU.paused)window.speechSynthesis.pause();else window.speechSynthesis.resume();}catch(e){}auPaintBtn();};
+  AU.paused=!AU.paused;
+  try{if(AU.paused){if(AU._pause2)AU._pause2();}else{if(AU._resume2)AU._resume2();}}catch(e){}
+  auPaintBtn();};
 document.getElementById("austop").onclick=function(){auStop();};
 /* ================= sidebar AI ================= */
 var aiCtx=null;
